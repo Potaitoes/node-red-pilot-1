@@ -1,0 +1,559 @@
+[
+    {
+        "id": "16c561d0bd2db4f4",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "da2aed23257803d7",
+        "type": "junction",
+        "z": "16c561d0bd2db4f4",
+        "x": 779,
+        "y": 543,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a053172554a6aedb",
+        "type": "OpcUa-Endpoint",
+        "endpoint": "opc.tcp://192.168.250.1:4840",
+        "secpol": "None",
+        "secmode": "None",
+        "none": false,
+        "login": true,
+        "usercert": false,
+        "usercertificate": "",
+        "userprivatekey": ""
+    },
+    {
+        "id": "8183cda1929e83aa",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "10584f864ba3765e",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "7b9307d1947a13f0",
+        "type": "ui_group",
+        "name": "Control with Switch",
+        "tab": "8183cda1929e83aa",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "80ae0189e474ec6e",
+        "type": "comment",
+        "z": "16c561d0bd2db4f4",
+        "name": "Read data from PLC",
+        "info": "",
+        "x": 210,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "ee3a6572681df942",
+        "type": "OpcUa-Client",
+        "z": "16c561d0bd2db4f4",
+        "endpoint": "a053172554a6aedb",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": "500",
+        "timeUnit": "ms",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "name": "",
+        "x": 720,
+        "y": 300,
+        "wires": [
+            [
+                "2cb4a5df8abfe88a",
+                "8bc0b01699c4d412"
+            ]
+        ]
+    },
+    {
+        "id": "dd1d8145487cc6b6",
+        "type": "inject",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "0.1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 340,
+        "wires": [
+            [
+                "a8283461ddd302fa",
+                "b3578a269a98ebf3"
+            ]
+        ]
+    },
+    {
+        "id": "2cb4a5df8abfe88a",
+        "type": "debug",
+        "z": "16c561d0bd2db4f4",
+        "name": "debug output from client",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 970,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "a8283461ddd302fa",
+        "type": "OpcUa-Item",
+        "z": "16c561d0bd2db4f4",
+        "item": "ns=4;s=TestBitTag",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "",
+        "x": 300,
+        "y": 300,
+        "wires": [
+            [
+                "9a2b10859adf0839"
+            ]
+        ]
+    },
+    {
+        "id": "c201dfca83113604",
+        "type": "comment",
+        "z": "16c561d0bd2db4f4",
+        "name": "Write Data to PLC",
+        "info": "There is a limited number of clients you can use.\nYou can string commands together and push into a single client.",
+        "x": 150,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "5fc5cf3c28ed8110",
+        "type": "OpcUa-Client",
+        "z": "16c561d0bd2db4f4",
+        "endpoint": "a053172554a6aedb",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": "500",
+        "timeUnit": "ms",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "name": "",
+        "x": 440,
+        "y": 760,
+        "wires": [
+            [
+                "cbf391f08b4a70a7"
+            ]
+        ]
+    },
+    {
+        "id": "cbf391f08b4a70a7",
+        "type": "debug",
+        "z": "16c561d0bd2db4f4",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "fa1e40127948deab",
+        "type": "ui_switch",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "label": "switch",
+        "tooltip": "",
+        "group": "7b9307d1947a13f0",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "x": 110,
+        "y": 760,
+        "wires": [
+            [
+                "6bca2acab5cf3ecf"
+            ]
+        ]
+    },
+    {
+        "id": "6bca2acab5cf3ecf",
+        "type": "OpcUa-Item",
+        "z": "16c561d0bd2db4f4",
+        "item": "ns=4;s=TestBitTag",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "",
+        "x": 260,
+        "y": 760,
+        "wires": [
+            [
+                "5fc5cf3c28ed8110"
+            ]
+        ]
+    },
+    {
+        "id": "45707b0dc25941b1",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "7b9307d1947a13f0",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Switch Status",
+        "label": "Switch Status",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 940,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "b3578a269a98ebf3",
+        "type": "OpcUa-Item",
+        "z": "16c561d0bd2db4f4",
+        "item": "ns=4;s=TankData",
+        "datatype": "String",
+        "value": "",
+        "name": "",
+        "x": 300,
+        "y": 400,
+        "wires": [
+            [
+                "6883df45a9ecbd49"
+            ]
+        ]
+    },
+    {
+        "id": "673d50fce5f0ce38",
+        "type": "ui_gauge",
+        "z": "16c561d0bd2db4f4",
+        "name": "Temperature 1",
+        "group": "7b9307d1947a13f0",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature 1",
+        "label": "°C",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 940,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "8bc0b01699c4d412",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "output splitter",
+        "func": "var msg1 = {};\nvar msg2 = {};\nvar index;\nvar num_outputs = 2;\nconst returnArray = new Array(num_outputs).fill(null);\nmsg1.topic = global.get(\"Topic1\");\nmsg2.topic = global.get(\"Topic2\");\n\nif (msg.topic == msg1.topic){\n    global.set(\"SwitchStatus\", msg.payload)\n    index = 0;\n}\n\nif (msg.topic == msg2.topic){\n    msg.payload = Math.round((msg.payload.temp1) * 100) / 100;\n    global.set(\"Temp1\", msg.payload);\n    index = 1;\n}\n\nreturnArray[index] = msg;\n\nreturn returnArray;\n\n",
+        "outputs": 4,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 440,
+        "wires": [
+            [
+                "45707b0dc25941b1",
+                "9b1c5fad325e14f5"
+            ],
+            [
+                "673d50fce5f0ce38",
+                "58b2a935cacd9715"
+            ],
+            [
+                "4d859a5388493dcf"
+            ],
+            [
+                "0f00d8704e4166e2"
+            ]
+        ]
+    },
+    {
+        "id": "9a2b10859adf0839",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "assign SW1 to topic",
+        "func": "var msg1 = {};\nmsg1.topic = msg.topic;\nglobal.set(\"Topic1\", String(msg1.topic));\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 300,
+        "wires": [
+            [
+                "ee3a6572681df942"
+            ]
+        ]
+    },
+    {
+        "id": "6883df45a9ecbd49",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "assign TankData to topic",
+        "func": "var msg1 = {};\nmsg1.topic = msg.topic;\nglobal.set(\"Topic2\", String(msg1.topic));\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 340,
+        "wires": [
+            [
+                "ee3a6572681df942"
+            ]
+        ]
+    },
+    {
+        "id": "58b2a935cacd9715",
+        "type": "debug",
+        "z": "16c561d0bd2db4f4",
+        "name": "debug temp",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 950,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "9b1c5fad325e14f5",
+        "type": "debug",
+        "z": "16c561d0bd2db4f4",
+        "name": "debug switch",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "4d859a5388493dcf",
+        "type": "ui_gauge",
+        "z": "16c561d0bd2db4f4",
+        "name": "Temperature 2",
+        "group": "7b9307d1947a13f0",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature 2",
+        "label": "°C",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 940,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "0f00d8704e4166e2",
+        "type": "ui_gauge",
+        "z": "16c561d0bd2db4f4",
+        "name": "Temperature 3",
+        "group": "7b9307d1947a13f0",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature 3",
+        "label": "°C",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 940,
+        "y": 500,
+        "wires": []
+    }
+]
