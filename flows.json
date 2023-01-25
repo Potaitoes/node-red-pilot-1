@@ -589,7 +589,7 @@
         "order": 2,
         "width": 0,
         "height": 0,
-        "label": "pH Wash and Digestion",
+        "label": "",
         "chartType": "line",
         "legend": "false",
         "xformat": "HH:mm:ss",
@@ -617,7 +617,7 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "x": 970,
+        "x": 910,
         "y": 540,
         "wires": [
             []
