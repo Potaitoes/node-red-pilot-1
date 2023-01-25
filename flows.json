@@ -407,7 +407,7 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "output splitter",
-        "func": "var msg1 = {};\nvar msg2 = {};\nvar index;\nvar boolOutputs = 1;\nvar tankOutputs = 3;\nvar totalOutputs = boolOutputs + tankOutputs;\nvar i = 0;\n\nconst returnArray = new Array(totalOutputs).fill(null);\nmsg1.topic = global.get(\"Topic1\");\nmsg2.topic = global.get(\"Topic2\");\n\nif (msg.topic == msg1.topic){\n    global.set(\"SwitchStatus\", msg.payload)\n    index = 0;\n}\n\nif (msg.topic == msg2.topic){\n        msg.payload = Math.round((msg.payload.temp1) * 100) / 100;\n        global.set(\"Temp1\", msg.payload);\n        index = 1;\n}\n\nreturnArray[index] = msg;\n\nreturn returnArray;\n\n",
+        "func": "var msg1 = {};\nvar msg2 = {};\nvar index;\nvar boolOutputs = 1;\nvar tankOutputs = 3;\nvar totalOutputs = boolOutputs + tankOutputs;\nvar i = 0;\n\nconst returnArray = new Array(totalOutputs).fill(null);\nmsg1.topic = global.get(\"Topic1\");\nmsg2.topic = global.get(\"Topic2\");\n\nif (msg.topic == msg1.topic){\n    global.set(\"SwitchStatus\", msg.payload)\n    index = 0;\n}\n\nif (msg.topic == msg2.topic){\n    msg.payload = Math.round((msg.payload.temp1) * 100) / 100;\n    global.set(\"Temp1\", msg.payload);\n    index = 1;\n}\n\nreturnArray[index] = msg;\n\nreturn returnArray;\n\n",
         "outputs": 4,
         "noerr": 0,
         "initialize": "",
