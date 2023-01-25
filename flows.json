@@ -418,7 +418,7 @@
         "z": "16c561d0bd2db4f4",
         "name": "output splitter",
         "func": "var msg1 = {};\nvar msg2 = {};\n\nvar t1_msg = {};\nvar t2_msg = {};\nvar t3_msg = {};\nvar pH_msg = {};\n\nvar index;\nvar boolOutputs = 1;\nvar tankOutputs = 4;\nvar totalOutputs = boolOutputs + tankOutputs;\nvar i = 0;\n\nconst returnArray = new Array(totalOutputs).fill(null);\nmsg1.topic = global.get(\"Topic1\");\nmsg2.topic = global.get(\"Topic2\");\n\nif (msg.topic == msg1.topic){\n    global.set(\"SwitchStatus\", msg.payload)\n    returnArray[0] = msg;\n    returnArray[1] = null;\n    returnArray[2] = null;\n    returnArray[3] = null;\n    returnArray[4] = null;\n}\n\nif (msg.topic == msg2.topic){\n    t1_msg.payload = Math.round((msg.payload.temp1) * 100) / 100;\n    global.set(\"Temp1\", msg.payload);\n\n    t2_msg.payload = Math.round((msg.payload.temp2) * 100) / 100;\n    global.set(\"Temp1\", msg.payload);\n\n    t3_msg.payload = Math.round((msg.payload.temp3) * 100) / 100;\n    global.set(\"Temp1\", msg.payload);\n\n    pH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\n    global.set(\"Temp1\", msg.payload);\n\n    returnArray[0] = null;\n    returnArray[1] = t1_msg;\n    returnArray[2] = t2_msg;\n    returnArray[3] = t3_msg;\n    returnArray[4] = pH_msg;\n}\n\nreturn returnArray;\n\n",
-        "outputs": 4,
+        "outputs": 5,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -439,6 +439,9 @@
             ],
             [
                 "0f00d8704e4166e2"
+            ],
+            [
+                "80b357c10add4706"
             ]
         ]
     },
@@ -565,5 +568,48 @@
         "x": 940,
         "y": 500,
         "wires": []
+    },
+    {
+        "id": "80b357c10add4706",
+        "type": "ui_chart",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "group": "7b9307d1947a13f0",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "pH Wash and Digestion",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 970,
+        "y": 540,
+        "wires": [
+            []
+        ]
     }
 ]
