@@ -451,7 +451,8 @@
                 "0f00d8704e4166e2"
             ],
             [
-                "80b357c10add4706"
+                "80b357c10add4706",
+                "1f7c50c5d6e7d504"
             ]
         ]
     },
@@ -621,5 +622,21 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "1f7c50c5d6e7d504",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "3342ef65ea84e0bc",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "pH:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 910,
+        "y": 580,
+        "wires": []
     }
 ]
