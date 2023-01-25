@@ -145,6 +145,16 @@
         "collapse": false
     },
     {
+        "id": "581cf3edde4d02e5",
+        "type": "ui_group",
+        "name": "Temperature Readouts",
+        "tab": "8183cda1929e83aa",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
         "id": "80ae0189e474ec6e",
         "type": "comment",
         "z": "16c561d0bd2db4f4",
@@ -381,7 +391,7 @@
         "type": "ui_gauge",
         "z": "16c561d0bd2db4f4",
         "name": "Temperature 1",
-        "group": "7b9307d1947a13f0",
+        "group": "581cf3edde4d02e5",
         "order": 2,
         "width": 0,
         "height": 0,
@@ -509,7 +519,7 @@
         "type": "ui_gauge",
         "z": "16c561d0bd2db4f4",
         "name": "Temperature 2",
-        "group": "7b9307d1947a13f0",
+        "group": "581cf3edde4d02e5",
         "order": 2,
         "width": 0,
         "height": 0,
@@ -535,7 +545,7 @@
         "type": "ui_gauge",
         "z": "16c561d0bd2db4f4",
         "name": "Temperature 3",
-        "group": "7b9307d1947a13f0",
+        "group": "581cf3edde4d02e5",
         "order": 2,
         "width": 0,
         "height": 0,
