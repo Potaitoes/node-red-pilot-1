@@ -660,10 +660,10 @@
                 "9d878bc63699d184"
             ],
             [
-                "61d9cc63a960f161"
+                "c23e91d4c818845a"
             ],
             [
-                "43ea732ccb82d795"
+                "9640bcda8ccee4d2"
             ]
         ]
     },
@@ -715,8 +715,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1130,
-        "y": 800,
+        "x": 1310,
+        "y": 760,
         "wires": []
     },
     {
@@ -741,8 +741,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1130,
-        "y": 840,
+        "x": 1310,
+        "y": 800,
         "wires": []
     },
     {
@@ -761,6 +761,44 @@
         "wires": [
             [
                 "de1f6b2b37e837cb"
+            ]
+        ]
+    },
+    {
+        "id": "c23e91d4c818845a",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "function 3",
+        "func": "var level;\n\nif (msg.payload == true){\n    level = 1;\n}\n\nmsg.payload = level;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1120,
+        "y": 760,
+        "wires": [
+            [
+                "61d9cc63a960f161"
+            ]
+        ]
+    },
+    {
+        "id": "9640bcda8ccee4d2",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "function 4",
+        "func": "var level;\n\nif (msg.payload == true){\n    level = 1;\n}\n\nmsg.payload = level;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1120,
+        "y": 800,
+        "wires": [
+            [
+                "43ea732ccb82d795"
             ]
         ]
     }
