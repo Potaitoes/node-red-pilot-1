@@ -137,7 +137,7 @@
     {
         "id": "7b9307d1947a13f0",
         "type": "ui_group",
-        "name": "Control with Switch",
+        "name": "Tank Levels",
         "tab": "8183cda1929e83aa",
         "order": 1,
         "disp": true,
@@ -634,8 +634,8 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "function 1",
-        "func": "var t1_msg = {};\nvar t2_msg = {};\nvar t3_msg = {};\nvar pH_msg = {};\nvar totalOutputs = 4;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\nt1_msg.payload = Math.round((msg.payload.temp1) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nt2_msg.payload = Math.round((msg.payload.temp2) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nt3_msg.payload = Math.round((msg.payload.temp3) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = t1_msg;\nreturnArray[2] = t2_msg;\nreturnArray[3] = t3_msg;\n\n\nreturn returnArray;",
-        "outputs": 4,
+        "func": "var t1_msg = {};\nvar t2_msg = {};\nvar t3_msg = {};\nvar pH_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar l3_msg = {};\n\nvar totalOutputs = 7;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\nt1_msg.payload = Math.round((msg.payload.temp1) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nt2_msg.payload = Math.round((msg.payload.temp2) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nt3_msg.payload = Math.round((msg.payload.temp3) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nl1_msg.payload = msg.payload.isTank1Full;\nl2_msg.payload = msg.payload.isTank2Full;\nl3_msg.payload = msg.payload.isTank3Full;\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = t1_msg;\nreturnArray[2] = t2_msg;\nreturnArray[3] = t3_msg;\nreturnArray[4] = l1_msg;\nreturnArray[5] = l2_msg;\nreturnArray[6] = l3_msg;\n\nreturn returnArray;",
+        "outputs": 7,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -655,7 +655,94 @@
             ],
             [
                 "0f00d8704e4166e2"
+            ],
+            [
+                "de1f6b2b37e837cb"
+            ],
+            [
+                "61d9cc63a960f161"
+            ],
+            [
+                "43ea732ccb82d795"
             ]
         ]
+    },
+    {
+        "id": "de1f6b2b37e837cb",
+        "type": "ui_gauge",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "group": "7b9307d1947a13f0",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "tank1Level",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1130,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "61d9cc63a960f161",
+        "type": "ui_gauge",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "group": "7b9307d1947a13f0",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "tank2Level",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1130,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "43ea732ccb82d795",
+        "type": "ui_gauge",
+        "z": "16c561d0bd2db4f4",
+        "name": "tank3Level",
+        "group": "7b9307d1947a13f0",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1130,
+        "y": 800,
+        "wires": []
     }
 ]
