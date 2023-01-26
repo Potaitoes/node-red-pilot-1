@@ -657,7 +657,7 @@
                 "0f00d8704e4166e2"
             ],
             [
-                "de1f6b2b37e837cb"
+                "9d878bc63699d184"
             ],
             [
                 "61d9cc63a960f161"
@@ -681,7 +681,7 @@
         "label": "units",
         "format": "{{value}}",
         "min": 0,
-        "max": "1",
+        "max": "3",
         "colors": [
             "#00b500",
             "#e6e600",
@@ -689,7 +689,7 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1130,
+        "x": 1310,
         "y": 720,
         "wires": []
     },
@@ -716,7 +716,7 @@
         "seg1": "",
         "seg2": "",
         "x": 1130,
-        "y": 760,
+        "y": 800,
         "wires": []
     },
     {
@@ -742,7 +742,26 @@
         "seg1": "",
         "seg2": "",
         "x": 1130,
-        "y": 800,
+        "y": 840,
         "wires": []
+    },
+    {
+        "id": "9d878bc63699d184",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "function 2",
+        "func": "var level;\n\nif (msg.payload == true){\n    level = 1;\n}\n\nmsg.payload = level;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1120,
+        "y": 720,
+        "wires": [
+            [
+                "de1f6b2b37e837cb"
+            ]
+        ]
     }
 ]
