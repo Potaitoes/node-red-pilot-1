@@ -224,7 +224,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "0.1",
+        "repeat": "0.2",
         "crontab": "",
         "once": true,
         "onceDelay": "0.2",
@@ -448,8 +448,7 @@
         "wires": [
             [
                 "45707b0dc25941b1",
-                "9b1c5fad325e14f5",
-                "f1e6a93921688333"
+                "9b1c5fad325e14f5"
             ],
             [
                 "673d50fce5f0ce38",
@@ -648,18 +647,6 @@
         "layout": "row-spread",
         "x": 910,
         "y": 580,
-        "wires": []
-    },
-    {
-        "id": "f1e6a93921688333",
-        "type": "ui_audio",
-        "z": "16c561d0bd2db4f4",
-        "name": "",
-        "group": "7b9307d1947a13f0",
-        "voice": "Microsoft Zira - English (United States)",
-        "always": "",
-        "x": 1120,
-        "y": 380,
         "wires": []
     }
 ]
