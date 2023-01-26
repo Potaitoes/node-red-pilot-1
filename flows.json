@@ -11,8 +11,8 @@
         "id": "da2aed23257803d7",
         "type": "junction",
         "z": "16c561d0bd2db4f4",
-        "x": 779,
-        "y": 543,
+        "x": 780,
+        "y": 580,
         "wires": [
             []
         ]
@@ -165,16 +165,6 @@
         "collapse": false
     },
     {
-        "id": "f2e5a0e9b1c99a07",
-        "type": "ui_group",
-        "name": "Audio",
-        "tab": "8183cda1929e83aa",
-        "order": 4,
-        "disp": true,
-        "width": "6",
-        "collapse": false
-    },
-    {
         "id": "80ae0189e474ec6e",
         "type": "comment",
         "z": "16c561d0bd2db4f4",
@@ -224,10 +214,10 @@
                 "vt": "str"
             }
         ],
-        "repeat": "0.2",
+        "repeat": "0.1",
         "crontab": "",
         "once": true,
-        "onceDelay": "0.2",
+        "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
@@ -386,7 +376,7 @@
         "label": "Switch Status",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 940,
+        "x": 1120,
         "y": 380,
         "wires": []
     },
@@ -428,7 +418,7 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 940,
+        "x": 1120,
         "y": 420,
         "wires": []
     },
@@ -437,32 +427,22 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "output splitter",
-        "func": "var msg1 = {};\nvar msg2 = {};\n\nvar t1_msg = {};\nvar t2_msg = {};\nvar t3_msg = {};\nvar pH_msg = {};\n\nvar index;\nvar boolOutputs = 1;\nvar tankOutputs = 4;\nvar totalOutputs = boolOutputs + tankOutputs;\nvar i = 0;\n\nconst returnArray = new Array(totalOutputs).fill(null);\nmsg1.topic = global.get(\"Topic1\");\nmsg2.topic = global.get(\"Topic2\");\n\nif (msg.topic == msg1.topic){\n    global.set(\"SwitchStatus\", msg.payload)\n    returnArray[0] = msg;\n    returnArray[1] = null;\n    returnArray[2] = null;\n    returnArray[3] = null;\n    returnArray[4] = null;\n}\n\nif (msg.topic == msg2.topic){\n    t1_msg.payload = Math.round((msg.payload.temp1) * 100) / 100;\n    global.set(\"Temp1\", msg.payload);\n\n    t2_msg.payload = Math.round((msg.payload.temp2) * 100) / 100;\n    global.set(\"Temp1\", msg.payload);\n\n    t3_msg.payload = Math.round((msg.payload.temp3) * 100) / 100;\n    global.set(\"Temp1\", msg.payload);\n\n    pH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\n    global.set(\"Temp1\", msg.payload);\n\n    returnArray[0] = null;\n    returnArray[1] = t1_msg;\n    returnArray[2] = t2_msg;\n    returnArray[3] = t3_msg;\n    returnArray[4] = pH_msg;\n}\n\nreturn returnArray;\n\n",
-        "outputs": 5,
+        "func": "var msg1 = {};\nvar msg2 = {};\n\nvar index;\nvar totalOutputs = 2\n\nconst returnArray = new Array(totalOutputs).fill(null);\nmsg1.topic = global.get(\"Topic1\");\nmsg2.topic = global.get(\"Topic2\");\n\nif (msg.topic == msg1.topic){\n    global.set(\"SwitchStatus\", msg.payload)\n    index = 0;\n}\n\nif (msg.topic == msg2.topic){\n    index = 1;\n}\n\nreturnArray[index] = msg;\n\nreturn returnArray;\n\n",
+        "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 700,
-        "y": 440,
+        "x": 680,
+        "y": 460,
         "wires": [
             [
                 "45707b0dc25941b1",
                 "9b1c5fad325e14f5"
             ],
             [
-                "673d50fce5f0ce38",
-                "58b2a935cacd9715"
-            ],
-            [
-                "4d859a5388493dcf"
-            ],
-            [
-                "0f00d8704e4166e2"
-            ],
-            [
-                "80b357c10add4706",
-                "1f7c50c5d6e7d504"
+                "58b2a935cacd9715",
+                "81f1b85473dca332"
             ]
         ]
     },
@@ -517,8 +497,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 950,
-        "y": 220,
+        "x": 670,
+        "y": 520,
         "wires": []
     },
     {
@@ -560,7 +540,7 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 940,
+        "x": 1120,
         "y": 460,
         "wires": []
     },
@@ -586,7 +566,7 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 940,
+        "x": 1120,
         "y": 500,
         "wires": []
     },
@@ -609,7 +589,7 @@
         "ymin": "0",
         "ymax": "14",
         "removeOlder": 1,
-        "removeOlderPoints": "10000",
+        "removeOlderPoints": "1000",
         "removeOlderUnit": "3600",
         "cutout": 0,
         "useOneColor": false,
@@ -627,7 +607,7 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "x": 910,
+        "x": 1090,
         "y": 540,
         "wires": [
             []
@@ -645,8 +625,37 @@
         "label": "pH:",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 910,
+        "x": 1090,
         "y": 580,
         "wires": []
+    },
+    {
+        "id": "81f1b85473dca332",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "function 1",
+        "func": "var t1_msg = {};\nvar t2_msg = {};\nvar t3_msg = {};\nvar pH_msg = {};\n\nt1_msg.payload = Math.round((msg.payload.temp1) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nt2_msg.payload = Math.round((msg.payload.temp2) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nt3_msg.payload = Math.round((msg.payload.temp3) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = t1_msg;\nreturnArray[2] = t2_msg;\nreturnArray[3] = t3_msg;\n\n\nreturn returnArray;",
+        "outputs": 4,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 520,
+        "wires": [
+            [
+                "673d50fce5f0ce38"
+            ],
+            [
+                "4d859a5388493dcf"
+            ],
+            [
+                "0f00d8704e4166e2"
+            ],
+            [
+                "1f7c50c5d6e7d504",
+                "80b357c10add4706"
+            ]
+        ]
     }
 ]
