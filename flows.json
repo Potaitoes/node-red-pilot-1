@@ -634,7 +634,7 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "function 1",
-        "func": "var t1_msg = {};\nvar t2_msg = {};\nvar t3_msg = {};\nvar pH_msg = {};\n\nt1_msg.payload = Math.round((msg.payload.temp1) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nt2_msg.payload = Math.round((msg.payload.temp2) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nt3_msg.payload = Math.round((msg.payload.temp3) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = t1_msg;\nreturnArray[2] = t2_msg;\nreturnArray[3] = t3_msg;\n\n\nreturn returnArray;",
+        "func": "var t1_msg = {};\nvar t2_msg = {};\nvar t3_msg = {};\nvar pH_msg = {};\nvar totalOutputs = 4;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\nt1_msg.payload = Math.round((msg.payload.temp1) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nt2_msg.payload = Math.round((msg.payload.temp2) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nt3_msg.payload = Math.round((msg.payload.temp3) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = t1_msg;\nreturnArray[2] = t2_msg;\nreturnArray[3] = t3_msg;\n\n\nreturn returnArray;",
         "outputs": 4,
         "noerr": 0,
         "initialize": "",
