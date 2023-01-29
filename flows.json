@@ -155,6 +155,16 @@
         "collapse": false
     },
     {
+        "id": "701c917fb989f805",
+        "type": "ui_group",
+        "name": "Switch",
+        "tab": "8183cda1929e83aa",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
         "id": "80ae0189e474ec6e",
         "type": "comment",
         "z": "16c561d0bd2db4f4",
@@ -312,7 +322,7 @@
         "name": "",
         "label": "switch",
         "tooltip": "",
-        "group": "7b9307d1947a13f0",
+        "group": "701c917fb989f805",
         "order": 0,
         "width": 0,
         "height": 0,
@@ -358,7 +368,7 @@
         "id": "45707b0dc25941b1",
         "type": "ui_text",
         "z": "16c561d0bd2db4f4",
-        "group": "7b9307d1947a13f0",
+        "group": "701c917fb989f805",
         "order": 1,
         "width": 0,
         "height": 0,
