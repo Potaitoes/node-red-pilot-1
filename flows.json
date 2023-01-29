@@ -634,7 +634,7 @@
         "name": "",
         "label": "pH:",
         "format": "{{msg.payload}}",
-        "layout": "row-center",
+        "layout": "row-left",
         "x": 1130,
         "y": 540,
         "wires": []
