@@ -618,7 +618,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "x": 1130,
-        "y": 480,
+        "y": 500,
         "wires": [
             []
         ]
@@ -636,7 +636,7 @@
         "format": "{{msg.payload}}",
         "layout": "row-center",
         "x": 1130,
-        "y": 520,
+        "y": 540,
         "wires": []
     },
     {
