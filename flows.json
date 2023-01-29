@@ -158,11 +158,19 @@
         "id": "701c917fb989f805",
         "type": "ui_group",
         "name": "Switch",
-        "tab": "8183cda1929e83aa",
+        "tab": "8fcb15dc6d9b8602",
         "order": 4,
         "disp": true,
         "width": "6",
         "collapse": false
+    },
+    {
+        "id": "8fcb15dc6d9b8602",
+        "type": "ui_tab",
+        "name": "Controls",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
     },
     {
         "id": "80ae0189e474ec6e",
