@@ -862,7 +862,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "1.5",
+        "repeat": "2",
         "crontab": "",
         "once": true,
         "onceDelay": "",
