@@ -188,7 +188,7 @@
         "name": "Live-feed",
         "link": "rtsp://admin:zinc23@192.168.1.67:554/",
         "icon": "open_in_browser",
-        "target": "iframe",
+        "target": "thistab",
         "order": 3
     },
     {
