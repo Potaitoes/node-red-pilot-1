@@ -871,7 +871,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "1",
+        "repeat": "0.5",
         "crontab": "",
         "once": true,
         "onceDelay": "",
@@ -936,19 +936,17 @@
         "name": "Reset stat",
         "props": [
             {
-                "p": "payload",
-                "v": "",
-                "vt": "date"
+                "p": "payload"
             },
             {
                 "p": "topic",
-                "v": "reset",
-                "vt": "string"
+                "vt": "str"
             }
         ],
         "repeat": "",
         "crontab": "",
         "once": false,
+        "onceDelay": "",
         "topic": "reset",
         "payload": "",
         "payloadType": "date",
@@ -1019,12 +1017,14 @@
         "height": 0,
         "passthru": false,
         "label": "Refresh image",
+        "tooltip": "",
         "color": "",
         "bgcolor": "",
         "icon": "",
         "payload": "",
         "payloadType": "str",
         "topic": "",
+        "topicType": "str",
         "x": 120,
         "y": 380,
         "wires": [
@@ -1238,6 +1238,7 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
+        "topicType": "str",
         "x": 110,
         "y": 280,
         "wires": [
