@@ -186,7 +186,7 @@
         "id": "afad9ee5d42458b6",
         "type": "ui_link",
         "name": "Live-feed",
-        "link": "http://192.168.1.67:85/",
+        "link": "rtsp://admin:zinc23@192.168.1.67:554/",
         "icon": "open_in_browser",
         "target": "iframe",
         "order": 3
