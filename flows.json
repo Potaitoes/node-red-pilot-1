@@ -916,6 +916,9 @@
         "func": "var now = new Date();\nvar stat = context.get(\"stat\");\nif (stat===undefined) {\n    // Initialize the object in case NR restart\n    stat = { \"count\": 0, \"success\": 0, \"rate\": 0.0, \"last\": now};\n}\nif (msg.topic===\"reset\") {\n    // Reset message was received: reset statistics\n    stat = { \"count\": 0, \"success\": 0, \"rate\": 0.0, \"last\": now};\n} else {\n    // Update statistics\n    stat.count++;\n    if (msg.payload.code===0) {\n        stat.success++;\n    }    \n    stat.rate=stat.success/stat.count;\n    stat.last=now;\n}\n\n// Create formatted time\nvar yyyy = now.getFullYear();\nvar mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\nvar dd  = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\nvar hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\nvar mmm  = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\nvar ss  = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\n\nmsg.formattedtime = dd + \".\" + mm + \".\" + yyyy + \" \" + hh + \":\" + mmm + \":\" + ss;\nmsg.success = stat.success;\nmsg.rate = Math.floor(stat.rate*100);\n\nnode.status({fill:\"blue\",shape:\"ring\",text:\"Frames: \"+msg.success+\" | \"+msg.rate+\"% | Last update: \"+dd + \".\" + mm + \".\" + yyyy + \" \" + hh + \":\" + mmm + \":\" + ss});\n\n\n// Saving data in the context\ncontext.set(\"stat\",stat);\n\nreturn msg;\n\n\n",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 727.9999847412109,
         "y": 330.25,
         "wires": [
@@ -1099,6 +1102,7 @@
         "format": "<div ng-bind-html=\"msg.payload\"></div>",
         "storeOutMessages": true,
         "fwdInMessages": true,
+        "resendOnRefresh": false,
         "templateScope": "local",
         "x": 926,
         "y": 210.75000095367432,
@@ -1148,9 +1152,9 @@
         "type": "watch",
         "z": "41ec38ad59c0cf49",
         "name": "",
-        "files": "/home/wago/node-red-static/grab.jpg",
+        "files": "C:\\Users\\Samon\\node-red-static\\grab.jpg",
         "recursive": "",
-        "x": 650,
+        "x": 670,
         "y": 440,
         "wires": [
             [
@@ -1179,11 +1183,12 @@
         "type": "function",
         "z": "41ec38ad59c0cf49",
         "name": "Frame grab",
-        "func": "var now = new Date();\n// Create formatted time\nvar yyyy = now.getFullYear();\nvar mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\nvar dd  = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\nvar hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\nvar mmm  = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\nvar ss  = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\n\n// Last update: \"+dd + \".\" + mm + \".\" + yyyy + \" \" + hh + \":\" + mmm + \":\" + ss});\n\n// file path with / at the end\nvar path = \"/home/wago/node-red-static/\";                     // This is the path\nvar filename = \"frame_\"+yyyy+mm+dd+\"-\"+hh+mm+ss+\".jpg\";     // file name\nmsg.payload = path + filename;                              // pass the full path to payload for the exec node to add to the end of the command\nmsg.file = filename;                                        // To be used later to store the information in the DB\nmsg.path = path;                                            // Same as above\nmsg.wwwpath = \"/\";                                          // Same as above\nmsg.topic = \"store\";                                        // Flag to store this image in the DB\nmsg.type = \"timelapse\";                                     // Image type e.g. Front camera, etc.\nmsg.epoch = now.getTime();                                  // Current timestamp\nmsg.formatteddate = dd + \".\" + mm + \".\" + yyyy + \" \" + hh + \":\" + mmm + \":\" + ss;   // Formatted timestamp to be used later\n\nreturn msg;",
+        "func": "var now = new Date();\n// Create formatted time\nvar yyyy = now.getFullYear();\nvar mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\nvar dd  = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\nvar hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\nvar mmm  = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\nvar ss  = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\n\n// Last update: \"+dd + \".\" + mm + \".\" + yyyy + \" \" + hh + \":\" + mmm + \":\" + ss});\n\n// file path with / at the end\nvar path = \"C:\\Users\\Samon\\node-red-static\";                     // This is the path\nvar filename = \"frame_\"+yyyy+mm+dd+\"-\"+hh+mm+ss+\".jpg\";     // file name\nmsg.payload = path + filename;                              // pass the full path to payload for the exec node to add to the end of the command\nmsg.file = filename;                                        // To be used later to store the information in the DB\nmsg.path = path;                                            // Same as above\nmsg.wwwpath = \"/\";                                          // Same as above\nmsg.topic = \"store\";                                        // Flag to store this image in the DB\nmsg.type = \"timelapse\";                                     // Image type e.g. Front camera, etc.\nmsg.epoch = now.getTime();                                  // Current timestamp\nmsg.formatteddate = dd + \".\" + mm + \".\" + yyyy + \" \" + hh + \":\" + mmm + \":\" + ss;   // Formatted timestamp to be used later\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
+        "libs": [],
         "x": 290,
         "y": 380,
         "wires": [
@@ -1208,6 +1213,7 @@
         "mode": "text",
         "delay": 300,
         "topic": "",
+        "topicType": "str",
         "x": 930,
         "y": 400,
         "wires": [
@@ -1250,6 +1256,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
+        "libs": [],
         "x": 490,
         "y": 340,
         "wires": [
