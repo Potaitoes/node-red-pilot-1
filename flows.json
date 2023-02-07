@@ -871,7 +871,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "1",
+        "repeat": "3",
         "crontab": "",
         "once": true,
         "onceDelay": "",
