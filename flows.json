@@ -16,14 +16,6 @@
         "env": []
     },
     {
-        "id": "2097d9a30c8e520c",
-        "type": "tab",
-        "label": "Flow 3",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "a053172554a6aedb",
         "type": "OpcUa-Endpoint",
         "endpoint": "opc.tcp://192.168.250.1:4840",
@@ -879,7 +871,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "3",
+        "repeat": "1",
         "crontab": "",
         "once": true,
         "onceDelay": "",
