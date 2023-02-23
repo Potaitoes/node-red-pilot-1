@@ -211,6 +211,18 @@
         "hidden": false
     },
     {
+        "id": "51a9be61043d2355",
+        "type": "remote-config",
+        "name": "Node-RED UI",
+        "host": "localhost",
+        "protocol": "http",
+        "port": "1880",
+        "baseurl": "pilot.automation.zinc",
+        "instancehash": "3w71j3a4l71fwshlatghxnu5wfl1j27miteqpx9k6va2m3peb6c8erkxiq8iy6hs",
+        "server": "nodered03.remote-red.com",
+        "region": "us"
+    },
+    {
         "id": "80ae0189e474ec6e",
         "type": "comment",
         "z": "16c561d0bd2db4f4",
@@ -846,6 +858,19 @@
             [
                 "43ea732ccb82d795"
             ]
+        ]
+    },
+    {
+        "id": "429d84bc44f2c781",
+        "type": "remote-access",
+        "z": "16c561d0bd2db4f4",
+        "confignode": "51a9be61043d2355",
+        "name": "",
+        "verbose": 0,
+        "x": 840,
+        "y": 860,
+        "wires": [
+            []
         ]
     },
     {
