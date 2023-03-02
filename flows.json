@@ -18,7 +18,6 @@
     {
         "id": "a053172554a6aedb",
         "type": "OpcUa-Endpoint",
-        "z": null,
         "endpoint": "opc.tcp://192.168.250.1:4840",
         "secpol": "None",
         "secmode": "None",
@@ -435,7 +434,7 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "output splitter",
-        "func": "var msg1 = {};\nvar msg2 = {};\n\nvar index;\nvar totalOutputs = 2\n\nconst returnArray = new Array(totalOutputs).fill(null);\nmsg1.topic = global.get(\"Topic1\");\nmsg2.topic = global.get(\"Topic2\");\n\nif (msg.topic == msg1.topic){\n    global.set(\"SwitchStatus\", msg.payload)\n    index = 0;\n}\n\nif (msg.topic == msg2.topic){\n    index = 1;\n}\n\nreturnArray[index] = msg;\n\nreturn returnArray;\n\n",
+        "func": "var msg1 = {};\nvar msg2 = {};\n\nvar index;\nvar totalOutputs = 2\n\nconst returnArray = new Array(totalOutputs).fill(null);\nmsg1.topic = global.get(\"Topic1\");\nmsg2.topic = global.get(\"Topic2\");\n\nif (msg.topic == msg1.topic){\n    global.set(\"SwitchStatus\", msg.payload)\n    index = 0;\n}\n\nif (msg.topic == msg2.topic){\n    index = 1;\n}\n\nreturnArray[index] = msg;\n\nreturn msg;\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
