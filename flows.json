@@ -254,7 +254,7 @@
         "y": 300,
         "wires": [
             [
-                "8bc0b01699c4d412"
+                "81f1b85473dca332"
             ]
         ]
     },
@@ -426,28 +426,9 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1360,
+        "x": 1160,
         "y": 300,
         "wires": []
-    },
-    {
-        "id": "8bc0b01699c4d412",
-        "type": "function",
-        "z": "16c561d0bd2db4f4",
-        "name": "output splitter",
-        "func": "var msg1 = {};\nvar msg2 = {};\n\nvar index;\nvar totalOutputs = 2\n\nconst returnArray = new Array(totalOutputs).fill(null);\nmsg1.topic = global.get(\"Topic1\");\nmsg2.topic = global.get(\"Topic2\");\n\nif (msg.topic == msg1.topic){\n    global.set(\"SwitchStatus\", msg.payload)\n    index = 0;\n}\n\nif (msg.topic == msg2.topic){\n    index = 1;\n}\n\nreturnArray[index] = msg;\n\nreturn msg;\n\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 900,
-        "y": 300,
-        "wires": [
-            [
-                "81f1b85473dca332"
-            ]
-        ]
     },
     {
         "id": "6883df45a9ecbd49",
@@ -505,7 +486,7 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "x": 1330,
+        "x": 1130,
         "y": 220,
         "wires": [
             []
@@ -523,7 +504,7 @@
         "label": "pH:",
         "format": "{{msg.payload}}",
         "layout": "row-left",
-        "x": 1330,
+        "x": 1130,
         "y": 260,
         "wires": []
     },
@@ -538,7 +519,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1110,
+        "x": 910,
         "y": 300,
         "wires": [
             [
@@ -581,7 +562,7 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1530,
+        "x": 1330,
         "y": 340,
         "wires": []
     },
@@ -607,7 +588,7 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1530,
+        "x": 1330,
         "y": 380,
         "wires": []
     },
@@ -633,7 +614,7 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1530,
+        "x": 1330,
         "y": 420,
         "wires": []
     },
@@ -648,7 +629,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1340,
+        "x": 1140,
         "y": 340,
         "wires": [
             [
@@ -667,7 +648,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1340,
+        "x": 1140,
         "y": 380,
         "wires": [
             [
@@ -686,7 +667,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1340,
+        "x": 1140,
         "y": 420,
         "wires": [
             [
