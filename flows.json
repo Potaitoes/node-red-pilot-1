@@ -427,8 +427,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1160,
-        "y": 300,
+        "x": 1240,
+        "y": 240,
         "wires": []
     },
     {
@@ -436,7 +436,7 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "assign WashDigestion to topic",
-        "func": "var msg1 = {};\nmsg1.topic = msg.topic;\nglobal.set(\"Topic2\", String(msg1.topic));\n\nreturn msg;",
+        "func": "var msg1 = {};\nmsg1.topic = msg.topic;\nglobal.set(\"Topic_WashDigestion\", String(msg1.topic));\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -487,8 +487,8 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "x": 1130,
-        "y": 220,
+        "x": 1210,
+        "y": 160,
         "wires": [
             []
         ]
@@ -505,8 +505,8 @@
         "label": "pH:",
         "format": "{{msg.payload}}",
         "layout": "row-left",
-        "x": 1130,
-        "y": 260,
+        "x": 1210,
+        "y": 200,
         "wires": []
     },
     {
@@ -520,8 +520,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 910,
-        "y": 300,
+        "x": 990,
+        "y": 240,
         "wires": [
             [
                 "1f7c50c5d6e7d504",
@@ -564,8 +564,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1330,
-        "y": 340,
+        "x": 1410,
+        "y": 280,
         "wires": []
     },
     {
@@ -590,8 +590,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1330,
-        "y": 380,
+        "x": 1410,
+        "y": 320,
         "wires": []
     },
     {
@@ -616,8 +616,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1330,
-        "y": 420,
+        "x": 1410,
+        "y": 360,
         "wires": []
     },
     {
@@ -631,8 +631,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1140,
-        "y": 340,
+        "x": 1220,
+        "y": 280,
         "wires": [
             [
                 "de1f6b2b37e837cb"
@@ -650,8 +650,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1140,
-        "y": 380,
+        "x": 1220,
+        "y": 320,
         "wires": [
             [
                 "61d9cc63a960f161"
@@ -669,8 +669,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1140,
-        "y": 420,
+        "x": 1220,
+        "y": 360,
         "wires": [
             [
                 "43ea732ccb82d795"
@@ -689,8 +689,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1080,
-        "y": 520,
+        "x": 1160,
+        "y": 460,
         "wires": []
     },
     {
@@ -705,8 +705,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 860,
-        "y": 180,
+        "x": 680,
+        "y": 220,
         "wires": []
     },
     {
