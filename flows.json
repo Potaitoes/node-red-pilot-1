@@ -213,6 +213,7 @@
     {
         "id": "51a9be61043d2355",
         "type": "remote-config",
+        "d": true,
         "name": "Node-RED UI",
         "host": "localhost",
         "protocol": "http",
