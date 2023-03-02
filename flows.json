@@ -11,7 +11,7 @@
         "id": "41ec38ad59c0cf49",
         "type": "tab",
         "label": "Flow 2",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -228,8 +228,8 @@
         "z": "16c561d0bd2db4f4",
         "name": "Read data from PLC",
         "info": "",
-        "x": 210,
-        "y": 260,
+        "x": 130,
+        "y": 220,
         "wires": []
     },
     {
@@ -249,11 +249,10 @@
         "securitypolicy": "None",
         "folderName4PKI": "",
         "name": "",
-        "x": 720,
+        "x": 700,
         "y": 300,
         "wires": [
             [
-                "2cb4a5df8abfe88a",
                 "8bc0b01699c4d412"
             ]
         ]
@@ -279,45 +278,11 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 130,
-        "y": 340,
+        "x": 70,
+        "y": 300,
         "wires": [
             [
-                "a8283461ddd302fa",
                 "b3578a269a98ebf3"
-            ]
-        ]
-    },
-    {
-        "id": "2cb4a5df8abfe88a",
-        "type": "debug",
-        "z": "16c561d0bd2db4f4",
-        "name": "debug output from client",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 990,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "a8283461ddd302fa",
-        "type": "OpcUa-Item",
-        "z": "16c561d0bd2db4f4",
-        "item": "ns=4;s=TestBitTag",
-        "datatype": "Boolean",
-        "value": "",
-        "name": "",
-        "x": 300,
-        "y": 300,
-        "wires": [
-            [
-                "9a2b10859adf0839"
             ]
         ]
     },
@@ -327,8 +292,8 @@
         "z": "16c561d0bd2db4f4",
         "name": "Write Data to PLC",
         "info": "There is a limited number of clients you can use.\nYou can string commands together and push into a single client.",
-        "x": 150,
-        "y": 700,
+        "x": 110,
+        "y": 1080,
         "wires": []
     },
     {
@@ -348,8 +313,8 @@
         "securitypolicy": "None",
         "folderName4PKI": "",
         "name": "",
-        "x": 440,
-        "y": 760,
+        "x": 400,
+        "y": 1140,
         "wires": [
             [
                 "cbf391f08b4a70a7"
@@ -369,8 +334,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 600,
-        "y": 760,
+        "x": 560,
+        "y": 1140,
         "wires": []
     },
     {
@@ -398,8 +363,8 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 110,
-        "y": 760,
+        "x": 70,
+        "y": 1140,
         "wires": [
             [
                 "6bca2acab5cf3ecf"
@@ -414,8 +379,8 @@
         "datatype": "Boolean",
         "value": "",
         "name": "",
-        "x": 260,
-        "y": 760,
+        "x": 220,
+        "y": 1140,
         "wires": [
             [
                 "5fc5cf3c28ed8110"
@@ -423,31 +388,15 @@
         ]
     },
     {
-        "id": "45707b0dc25941b1",
-        "type": "ui_text",
-        "z": "16c561d0bd2db4f4",
-        "group": "701c917fb989f805",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "Switch Status",
-        "label": "Switch Status",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 1120,
-        "y": 380,
-        "wires": []
-    },
-    {
         "id": "b3578a269a98ebf3",
         "type": "OpcUa-Item",
         "z": "16c561d0bd2db4f4",
-        "item": "ns=4;s=TankData",
+        "item": "ns=4;s=WashDigestion",
         "datatype": "String",
         "value": "",
         "name": "",
-        "x": 300,
-        "y": 400,
+        "x": 240,
+        "y": 300,
         "wires": [
             [
                 "6883df45a9ecbd49"
@@ -476,8 +425,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1140,
-        "y": 580,
+        "x": 1360,
+        "y": 300,
         "wires": []
     },
     {
@@ -486,40 +435,16 @@
         "z": "16c561d0bd2db4f4",
         "name": "output splitter",
         "func": "var msg1 = {};\nvar msg2 = {};\n\nvar index;\nvar totalOutputs = 2\n\nconst returnArray = new Array(totalOutputs).fill(null);\nmsg1.topic = global.get(\"Topic1\");\nmsg2.topic = global.get(\"Topic2\");\n\nif (msg.topic == msg1.topic){\n    global.set(\"SwitchStatus\", msg.payload)\n    index = 0;\n}\n\nif (msg.topic == msg2.topic){\n    index = 1;\n}\n\nreturnArray[index] = msg;\n\nreturn returnArray;\n\n",
-        "outputs": 2,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 680,
-        "y": 460,
-        "wires": [
-            [
-                "45707b0dc25941b1",
-                "9b1c5fad325e14f5"
-            ],
-            [
-                "58b2a935cacd9715",
-                "81f1b85473dca332"
-            ]
-        ]
-    },
-    {
-        "id": "9a2b10859adf0839",
-        "type": "function",
-        "z": "16c561d0bd2db4f4",
-        "name": "assign SW1 to topic",
-        "func": "var msg1 = {};\nmsg1.topic = msg.topic;\nglobal.set(\"Topic1\", String(msg1.topic));\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 500,
+        "x": 900,
         "y": 300,
         "wires": [
             [
-                "ee3a6572681df942"
+                "81f1b85473dca332"
             ]
         ]
     },
@@ -527,106 +452,20 @@
         "id": "6883df45a9ecbd49",
         "type": "function",
         "z": "16c561d0bd2db4f4",
-        "name": "assign TankData to topic",
+        "name": "assign WashDigestion to topic",
         "func": "var msg1 = {};\nmsg1.topic = msg.topic;\nglobal.set(\"Topic2\", String(msg1.topic));\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 510,
-        "y": 340,
+        "x": 470,
+        "y": 300,
         "wires": [
             [
                 "ee3a6572681df942"
             ]
         ]
-    },
-    {
-        "id": "58b2a935cacd9715",
-        "type": "debug",
-        "z": "16c561d0bd2db4f4",
-        "name": "debug temp",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 670,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "9b1c5fad325e14f5",
-        "type": "debug",
-        "z": "16c561d0bd2db4f4",
-        "name": "debug switch",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 930,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "4d859a5388493dcf",
-        "type": "ui_gauge",
-        "z": "16c561d0bd2db4f4",
-        "name": "Temperature 2",
-        "group": "581cf3edde4d02e5",
-        "order": 2,
-        "width": "8",
-        "height": "5",
-        "gtype": "gage",
-        "title": "Temperature 2",
-        "label": "°C",
-        "format": "{{msg.payload}}",
-        "min": 0,
-        "max": "50",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 1140,
-        "y": 620,
-        "wires": []
-    },
-    {
-        "id": "0f00d8704e4166e2",
-        "type": "ui_gauge",
-        "z": "16c561d0bd2db4f4",
-        "name": "Temperature 3",
-        "group": "581cf3edde4d02e5",
-        "order": 2,
-        "width": "8",
-        "height": "5",
-        "gtype": "gage",
-        "title": "Temperature 3",
-        "label": "°C",
-        "format": "{{msg.payload}}",
-        "min": 0,
-        "max": "50",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 1140,
-        "y": 660,
-        "wires": []
     },
     {
         "id": "80b357c10add4706",
@@ -665,8 +504,8 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "x": 1130,
-        "y": 500,
+        "x": 1330,
+        "y": 220,
         "wires": [
             []
         ]
@@ -683,8 +522,8 @@
         "label": "pH:",
         "format": "{{msg.payload}}",
         "layout": "row-left",
-        "x": 1130,
-        "y": 540,
+        "x": 1330,
+        "y": 260,
         "wires": []
     },
     {
@@ -692,14 +531,14 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "TankData Splitter",
-        "func": "var t1_msg = {};\nvar t2_msg = {};\nvar t3_msg = {};\nvar pH_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar l3_msg = {};\n\nvar totalOutputs = 7;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\nt1_msg.payload = Math.round((msg.payload.temp1) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nt2_msg.payload = Math.round((msg.payload.temp2) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nt3_msg.payload = Math.round((msg.payload.temp3) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nl1_msg.payload = msg.payload.isTank1Full;\nl2_msg.payload = msg.payload.isTank2Full;\nl3_msg.payload = msg.payload.isTank3Full;\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = t1_msg;\nreturnArray[2] = t2_msg;\nreturnArray[3] = t3_msg;\nreturnArray[4] = l1_msg;\nreturnArray[5] = l2_msg;\nreturnArray[6] = l3_msg;\n\nreturn returnArray;",
-        "outputs": 7,
+        "func": "var pH_msg = {};\nvar temp_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar l3_msg = {};\n\nvar totalOutputs = 7;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\ntemp_msg.payload = Math.round((msg.payload.Temperature) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nl1_msg.payload = msg.payload.Level1_status;\nl2_msg.payload = msg.payload.Level2_status;\nl3_msg.payload = msg.payload.Level3_status;\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\nreturnArray[2] = l1_msg;\nreturnArray[3] = l2_msg;\nreturnArray[4] = l3_msg;\n\n\nreturn returnArray;",
+        "outputs": 5,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 890,
-        "y": 500,
+        "x": 1110,
+        "y": 300,
         "wires": [
             [
                 "1f7c50c5d6e7d504",
@@ -707,12 +546,6 @@
             ],
             [
                 "673d50fce5f0ce38"
-            ],
-            [
-                "4d859a5388493dcf"
-            ],
-            [
-                "0f00d8704e4166e2"
             ],
             [
                 "9d878bc63699d184"
@@ -747,8 +580,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1310,
-        "y": 720,
+        "x": 1530,
+        "y": 340,
         "wires": []
     },
     {
@@ -773,8 +606,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1310,
-        "y": 760,
+        "x": 1530,
+        "y": 380,
         "wires": []
     },
     {
@@ -799,8 +632,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1310,
-        "y": 800,
+        "x": 1530,
+        "y": 420,
         "wires": []
     },
     {
@@ -814,8 +647,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1120,
-        "y": 720,
+        "x": 1340,
+        "y": 340,
         "wires": [
             [
                 "de1f6b2b37e837cb"
@@ -833,8 +666,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1120,
-        "y": 760,
+        "x": 1340,
+        "y": 380,
         "wires": [
             [
                 "61d9cc63a960f161"
@@ -852,25 +685,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1120,
-        "y": 800,
+        "x": 1340,
+        "y": 420,
         "wires": [
             [
                 "43ea732ccb82d795"
             ]
-        ]
-    },
-    {
-        "id": "429d84bc44f2c781",
-        "type": "remote-access",
-        "z": "16c561d0bd2db4f4",
-        "confignode": "51a9be61043d2355",
-        "name": "",
-        "verbose": 0,
-        "x": 840,
-        "y": 860,
-        "wires": [
-            []
         ]
     },
     {
