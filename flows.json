@@ -242,7 +242,7 @@
         "wires": [
             [
                 "81f1b85473dca332",
-                "c9595cbfdc492c91"
+                "e00268bdbe39dfbb"
             ]
         ]
     },
@@ -414,8 +414,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1240,
-        "y": 240,
+        "x": 1360,
+        "y": 260,
         "wires": []
     },
     {
@@ -423,7 +423,7 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "assign WashDigestion to topic",
-        "func": "var msg1 = {};\nmsg1.topic = msg.topic;\nglobal.set(\"Topic_WashDigestion\", String(msg1.topic));\n\nreturn msg;",
+        "func": "var msg_WashDigestion = {};\nmsg_WashDigestion.topic = msg.topic;\n\n//Assigns a global variable identified by \"Topic_WashDigestion\" of value msg_WashDigestion.topic where the data type is converted to a string.\n//Don't know why it needs to be declared as a string type? Less memory assigned?\nglobal.set(\"Topic_WashDigestion\", String(msg_WashDigestion.topic)); \n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -474,8 +474,8 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "x": 1210,
-        "y": 160,
+        "x": 1330,
+        "y": 180,
         "wires": [
             []
         ]
@@ -492,8 +492,8 @@
         "label": "pH:",
         "format": "{{msg.payload}}",
         "layout": "row-left",
-        "x": 1210,
-        "y": 200,
+        "x": 1330,
+        "y": 220,
         "wires": []
     },
     {
@@ -507,8 +507,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 990,
-        "y": 240,
+        "x": 1110,
+        "y": 260,
         "wires": [
             [
                 "1f7c50c5d6e7d504",
@@ -551,8 +551,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1410,
-        "y": 280,
+        "x": 1530,
+        "y": 300,
         "wires": []
     },
     {
@@ -577,8 +577,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1410,
-        "y": 320,
+        "x": 1530,
+        "y": 340,
         "wires": []
     },
     {
@@ -603,8 +603,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1410,
-        "y": 360,
+        "x": 1530,
+        "y": 380,
         "wires": []
     },
     {
@@ -618,8 +618,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1220,
-        "y": 280,
+        "x": 1340,
+        "y": 300,
         "wires": [
             [
                 "de1f6b2b37e837cb"
@@ -637,8 +637,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1220,
-        "y": 320,
+        "x": 1340,
+        "y": 340,
         "wires": [
             [
                 "61d9cc63a960f161"
@@ -656,8 +656,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1220,
-        "y": 360,
+        "x": 1340,
+        "y": 380,
         "wires": [
             [
                 "43ea732ccb82d795"
@@ -669,15 +669,15 @@
         "type": "debug",
         "z": "16c561d0bd2db4f4",
         "name": "debug 3",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1160,
-        "y": 460,
+        "x": 1280,
+        "y": 480,
         "wires": []
     },
     {
@@ -692,9 +692,28 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 680,
-        "y": 220,
+        "x": 980,
+        "y": 420,
         "wires": []
+    },
+    {
+        "id": "e00268bdbe39dfbb",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "Splits Topics into respective Outputs",
+        "func": "var index;\nvar numOutputs = node.numberOfOutputs;\n\nconst returnArray = new Array(numOutputs).fill(null);\n\nreturnArray[0] = \"Topic_WashDigestion\"\n\nreturn returnArray;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 420,
+        "wires": [
+            [
+                "c9595cbfdc492c91"
+            ]
+        ]
     },
     {
         "id": "c0eaa1e3.932c2",
