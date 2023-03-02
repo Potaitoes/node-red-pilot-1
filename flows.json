@@ -701,7 +701,7 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "Splits Topics into respective Outputs",
-        "func": "var index;\nvar numOutputs = node.numberOfOutputs;\n\nconst returnArray = new Array(numOutputs).fill(null);\n\nreturnArray[0] = \"Topic_WashDigestion\"\n\nreturn returnArray;",
+        "func": "var index;\nvar numOutputs = node.numberOfOutputs;\n\nconst returnArray = new Array(numOutputs).fill(null);\n\nvar topic1 = global.get('Topic_WashDigestion');\n\nif (msg.topic == topic1){\n    index = 0;\n}\n\nreturnArray[index] = msg.topic;\n\nreturn returnArray;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
