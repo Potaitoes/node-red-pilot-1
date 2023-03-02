@@ -18,6 +18,7 @@
     {
         "id": "a053172554a6aedb",
         "type": "OpcUa-Endpoint",
+        "z": null,
         "endpoint": "opc.tcp://192.168.250.1:4840",
         "secpol": "None",
         "secmode": "None",
