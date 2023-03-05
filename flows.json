@@ -272,7 +272,8 @@
             [
                 "b3578a269a98ebf3",
                 "0b960201cdf08554",
-                "33c6fb9ca60141ee"
+                "33c6fb9ca60141ee",
+                "33870d5dbfab317a"
             ]
         ]
     },
@@ -282,8 +283,8 @@
         "z": "16c561d0bd2db4f4",
         "name": "Write Data to PLC",
         "info": "There is a limited number of clients you can use.\nYou can string commands together and push into a single client.",
-        "x": 110,
-        "y": 1080,
+        "x": 130,
+        "y": 1320,
         "wires": []
     },
     {
@@ -303,8 +304,8 @@
         "securitypolicy": "None",
         "folderName4PKI": "",
         "name": "",
-        "x": 400,
-        "y": 1140,
+        "x": 420,
+        "y": 1380,
         "wires": [
             [
                 "cbf391f08b4a70a7"
@@ -324,8 +325,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 560,
-        "y": 1140,
+        "x": 580,
+        "y": 1380,
         "wires": []
     },
     {
@@ -353,8 +354,8 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 70,
-        "y": 1140,
+        "x": 90,
+        "y": 1380,
         "wires": [
             [
                 "6bca2acab5cf3ecf"
@@ -369,8 +370,8 @@
         "datatype": "Boolean",
         "value": "",
         "name": "",
-        "x": 220,
-        "y": 1140,
+        "x": 240,
+        "y": 1380,
         "wires": [
             [
                 "5fc5cf3c28ed8110"
@@ -669,8 +670,8 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "Splits Topics into respective Outputs",
-        "func": "var index;\nvar numOutputs = node.numberOfOutputs;\n\nconst returnArray = new Array(numOutputs).fill(null);\n\nvar topic1 = global.get('Topic_WashDigestion');\nvar topic2 = global.get('Topic_Cementation');\nvar topic3 = global.get('Topic_Electrowinning');\n\nif (msg.topic == topic1){\n    index = 0;\n}\n\nif (msg.topic == topic2){\n    index = 1;\n}\n\nif (msg.topic == topic3){\n    index = 2;\n}\n\nreturnArray[index] = msg;\n\nreturn returnArray;",
-        "outputs": 3,
+        "func": "var index;\nvar numOutputs = node.numberOfOutputs;\n\nconst returnArray = new Array(numOutputs).fill(null);\n\nvar topic1 = global.get('Topic_WashDigestion');\nvar topic2 = global.get('Topic_Cementation');\nvar topic3 = global.get('Topic_Electrowinning');\nvar topic4 = global.get('Topic_OxPrecipitation');\n\nif (msg.topic == topic1){\n    index = 0;\n}\n\nif (msg.topic == topic2){\n    index = 1;\n}\n\nif (msg.topic == topic3){\n    index = 2;\n}\n\nif (msg.topic == topic4) {\n    index = 3;\n}\n\n\nreturnArray[index] = msg;\n\nreturn returnArray;",
+        "outputs": 4,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -686,6 +687,9 @@
             ],
             [
                 "673983f4813f6681"
+            ],
+            [
+                "52d5886ec4bbf007"
             ]
         ]
     },
@@ -1260,6 +1264,293 @@
         "wires": [
             [
                 "26aa30fd9a4b3a82"
+            ]
+        ]
+    },
+    {
+        "id": "33870d5dbfab317a",
+        "type": "OpcUa-Item",
+        "z": "16c561d0bd2db4f4",
+        "item": "ns=4;s=OxPrecipitation",
+        "datatype": "String",
+        "value": "",
+        "name": "",
+        "x": 240,
+        "y": 420,
+        "wires": [
+            [
+                "e4ea460878da2adb"
+            ]
+        ]
+    },
+    {
+        "id": "e4ea460878da2adb",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "assign Cementation to topic",
+        "func": "var msg_OxPrecipitation = {};\nmsg_OxPrecipitation.topic = msg.topic;\n\n//See node above for what goes on here.\nglobal.set(\"Topic_OxPrecipitation\", String(msg_OxPrecipitation.topic)); \n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 420,
+        "wires": [
+            [
+                "ee3a6572681df942"
+            ]
+        ]
+    },
+    {
+        "id": "52d5886ec4bbf007",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "TankData Splitter",
+        "func": "var pH_msg = {};\nvar temp_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar l3_msg = {};\n\nvar totalOutputs = 7;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\ntemp_msg.payload = Math.round((msg.payload.temperature) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nl1_msg.payload = msg.payload.level1_status;\nl2_msg.payload = msg.payload.level2_status;\nl3_msg.payload = msg.payload.level3_status;\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\nreturnArray[2] = l1_msg;\nreturnArray[3] = l2_msg;\nreturnArray[4] = l3_msg;\n\n\nreturn returnArray;",
+        "outputs": 5,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1470,
+        "y": 960,
+        "wires": [
+            [
+                "0362f989e57b35f6",
+                "daa274e0f092d927"
+            ],
+            [
+                "e21ea860dfc62c6e"
+            ],
+            [
+                "5ff86681246c807d"
+            ],
+            [
+                "308fb8bd451adec4"
+            ],
+            [
+                "e7eb9fcef55d8917"
+            ]
+        ]
+    },
+    {
+        "id": "e21ea860dfc62c6e",
+        "type": "ui_gauge",
+        "z": "16c561d0bd2db4f4",
+        "name": "Temperature 1",
+        "group": "581cf3edde4d02e5",
+        "order": 2,
+        "width": "8",
+        "height": "5",
+        "gtype": "gage",
+        "title": "Temperature 1",
+        "label": "°C",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1720,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "0362f989e57b35f6",
+        "type": "ui_chart",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "group": "3342ef65ea84e0bc",
+        "order": 2,
+        "width": "8",
+        "height": "4",
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "14",
+        "removeOlder": 1,
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#dd2727",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1690,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "daa274e0f092d927",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "3342ef65ea84e0bc",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "pH:",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 1690,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "aeed53db5d599888",
+        "type": "ui_gauge",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "group": "7b9307d1947a13f0",
+        "order": 2,
+        "width": "8",
+        "height": "5",
+        "gtype": "wave",
+        "title": "tank1Level",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "3",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1890,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "bcec611c506a573c",
+        "type": "ui_gauge",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "group": "7b9307d1947a13f0",
+        "order": 2,
+        "width": "8",
+        "height": "5",
+        "gtype": "wave",
+        "title": "tank2Level",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "3",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1890,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "5a8f47e0c1ef6f3c",
+        "type": "ui_gauge",
+        "z": "16c561d0bd2db4f4",
+        "name": "tank3Level",
+        "group": "7b9307d1947a13f0",
+        "order": 2,
+        "width": "8",
+        "height": "5",
+        "gtype": "wave",
+        "title": "Tank 3 Level",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "3",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1890,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "5ff86681246c807d",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "function 11",
+        "func": "var level;\n\nif (msg.payload == true){\n    level = 1;\n}\n\nmsg.payload = level;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1700,
+        "y": 1000,
+        "wires": [
+            [
+                "aeed53db5d599888"
+            ]
+        ]
+    },
+    {
+        "id": "308fb8bd451adec4",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "function 12",
+        "func": "var level;\n\nif (msg.payload == true){\n    level = 1;\n}\n\nmsg.payload = level;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1700,
+        "y": 1040,
+        "wires": [
+            [
+                "bcec611c506a573c"
+            ]
+        ]
+    },
+    {
+        "id": "e7eb9fcef55d8917",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "function 13",
+        "func": "var level;\n\nif (msg.payload == true){\n    level = 1;\n}\n\nmsg.payload = level;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1700,
+        "y": 1080,
+        "wires": [
+            [
+                "5a8f47e0c1ef6f3c"
             ]
         ]
     },
