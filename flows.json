@@ -578,13 +578,13 @@
                 "e2fa88ae572257fc"
             ],
             [
-                "673983f4813f6681"
+                "a3d6ef1090b37a6d"
             ],
             [
-                "52d5886ec4bbf007"
+                "151bafda4bc2a7be"
             ],
             [
-                "d20f98d3a88ccdb5"
+                "9181c831def27233"
             ]
         ]
     },
@@ -647,8 +647,12 @@
             [
                 "e6671fa9cbcaaae5"
             ],
-            [],
-            []
+            [
+                "e6671fa9cbcaaae5"
+            ],
+            [
+                "e6671fa9cbcaaae5"
+            ]
         ]
     },
     {
@@ -772,38 +776,6 @@
         ]
     },
     {
-        "id": "673983f4813f6681",
-        "type": "function",
-        "z": "16c561d0bd2db4f4",
-        "name": "TankData Splitter",
-        "func": "var pH_msg = {};\nvar temp_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar l3_msg = {};\n\nvar totalOutputs = 7;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\ntemp_msg.payload = Math.round((msg.payload.temperature) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nl1_msg.payload = msg.payload.level1_status;\nl2_msg.payload = msg.payload.level2_status;\nl3_msg.payload = msg.payload.level3_status;\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\nreturnArray[2] = l1_msg;\nreturnArray[3] = l2_msg;\nreturnArray[4] = l3_msg;\n\n\nreturn returnArray;",
-        "outputs": 5,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1470,
-        "y": 700,
-        "wires": [
-            [
-                "c4defabd3506a705",
-                "1b64da6bc3b25e64"
-            ],
-            [
-                "dc6e752b32552437"
-            ],
-            [
-                "41d8a25e2e9e409d"
-            ],
-            [
-                "debefeff9c08afa4"
-            ],
-            [
-                "3df1a7250c7b6825"
-            ]
-        ]
-    },
-    {
         "id": "dc6e752b32552437",
         "type": "ui_gauge",
         "z": "16c561d0bd2db4f4",
@@ -889,141 +861,6 @@
         "wires": []
     },
     {
-        "id": "13b0a95bd2fb1876",
-        "type": "ui_gauge",
-        "z": "16c561d0bd2db4f4",
-        "name": "",
-        "group": "7b9307d1947a13f0",
-        "order": 2,
-        "width": "8",
-        "height": "5",
-        "gtype": "wave",
-        "title": "tank1Level",
-        "label": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "3",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 1890,
-        "y": 740,
-        "wires": []
-    },
-    {
-        "id": "1e712aaf95a2f0d0",
-        "type": "ui_gauge",
-        "z": "16c561d0bd2db4f4",
-        "name": "",
-        "group": "7b9307d1947a13f0",
-        "order": 2,
-        "width": "8",
-        "height": "5",
-        "gtype": "wave",
-        "title": "tank2Level",
-        "label": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "3",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 1890,
-        "y": 780,
-        "wires": []
-    },
-    {
-        "id": "26aa30fd9a4b3a82",
-        "type": "ui_gauge",
-        "z": "16c561d0bd2db4f4",
-        "name": "tank3Level",
-        "group": "7b9307d1947a13f0",
-        "order": 2,
-        "width": "8",
-        "height": "5",
-        "gtype": "wave",
-        "title": "Tank 3 Level",
-        "label": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "3",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 1890,
-        "y": 820,
-        "wires": []
-    },
-    {
-        "id": "41d8a25e2e9e409d",
-        "type": "function",
-        "z": "16c561d0bd2db4f4",
-        "name": "function 8",
-        "func": "var level;\n\nif (msg.payload == true){\n    level = 1;\n}\n\nmsg.payload = level;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1700,
-        "y": 740,
-        "wires": [
-            [
-                "13b0a95bd2fb1876"
-            ]
-        ]
-    },
-    {
-        "id": "debefeff9c08afa4",
-        "type": "function",
-        "z": "16c561d0bd2db4f4",
-        "name": "function 9",
-        "func": "var level;\n\nif (msg.payload == true){\n    level = 1;\n}\n\nmsg.payload = level;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1700,
-        "y": 780,
-        "wires": [
-            [
-                "1e712aaf95a2f0d0"
-            ]
-        ]
-    },
-    {
-        "id": "3df1a7250c7b6825",
-        "type": "function",
-        "z": "16c561d0bd2db4f4",
-        "name": "function 10",
-        "func": "var level;\n\nif (msg.payload == true){\n    level = 1;\n}\n\nmsg.payload = level;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1700,
-        "y": 820,
-        "wires": [
-            [
-                "26aa30fd9a4b3a82"
-            ]
-        ]
-    },
-    {
         "id": "33870d5dbfab317a",
         "type": "OpcUa-Item",
         "z": "16c561d0bd2db4f4",
@@ -1055,38 +892,6 @@
         "wires": [
             [
                 "ee3a6572681df942"
-            ]
-        ]
-    },
-    {
-        "id": "52d5886ec4bbf007",
-        "type": "function",
-        "z": "16c561d0bd2db4f4",
-        "name": "TankData Splitter",
-        "func": "var pH_msg = {};\nvar temp_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar l3_msg = {};\n\nvar totalOutputs = 7;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\ntemp_msg.payload = Math.round((msg.payload.temperature) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nl1_msg.payload = msg.payload.level1_status;\nl2_msg.payload = msg.payload.level2_status;\nl3_msg.payload = msg.payload.level3_status;\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\nreturnArray[2] = l1_msg;\nreturnArray[3] = l2_msg;\nreturnArray[4] = l3_msg;\n\n\nreturn returnArray;",
-        "outputs": 5,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1470,
-        "y": 960,
-        "wires": [
-            [
-                "0362f989e57b35f6",
-                "daa274e0f092d927"
-            ],
-            [
-                "e21ea860dfc62c6e"
-            ],
-            [
-                "5ff86681246c807d"
-            ],
-            [
-                "308fb8bd451adec4"
-            ],
-            [
-                "e7eb9fcef55d8917"
             ]
         ]
     },
@@ -1176,141 +981,6 @@
         "wires": []
     },
     {
-        "id": "aeed53db5d599888",
-        "type": "ui_gauge",
-        "z": "16c561d0bd2db4f4",
-        "name": "",
-        "group": "7b9307d1947a13f0",
-        "order": 2,
-        "width": "8",
-        "height": "5",
-        "gtype": "wave",
-        "title": "tank1Level",
-        "label": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "3",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 1890,
-        "y": 1000,
-        "wires": []
-    },
-    {
-        "id": "bcec611c506a573c",
-        "type": "ui_gauge",
-        "z": "16c561d0bd2db4f4",
-        "name": "",
-        "group": "7b9307d1947a13f0",
-        "order": 2,
-        "width": "8",
-        "height": "5",
-        "gtype": "wave",
-        "title": "tank2Level",
-        "label": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "3",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 1890,
-        "y": 1040,
-        "wires": []
-    },
-    {
-        "id": "5a8f47e0c1ef6f3c",
-        "type": "ui_gauge",
-        "z": "16c561d0bd2db4f4",
-        "name": "tank3Level",
-        "group": "7b9307d1947a13f0",
-        "order": 2,
-        "width": "8",
-        "height": "5",
-        "gtype": "wave",
-        "title": "Tank 3 Level",
-        "label": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "3",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 1890,
-        "y": 1080,
-        "wires": []
-    },
-    {
-        "id": "5ff86681246c807d",
-        "type": "function",
-        "z": "16c561d0bd2db4f4",
-        "name": "function 11",
-        "func": "var level;\n\nif (msg.payload == true){\n    level = 1;\n}\n\nmsg.payload = level;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1700,
-        "y": 1000,
-        "wires": [
-            [
-                "aeed53db5d599888"
-            ]
-        ]
-    },
-    {
-        "id": "308fb8bd451adec4",
-        "type": "function",
-        "z": "16c561d0bd2db4f4",
-        "name": "function 12",
-        "func": "var level;\n\nif (msg.payload == true){\n    level = 1;\n}\n\nmsg.payload = level;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1700,
-        "y": 1040,
-        "wires": [
-            [
-                "bcec611c506a573c"
-            ]
-        ]
-    },
-    {
-        "id": "e7eb9fcef55d8917",
-        "type": "function",
-        "z": "16c561d0bd2db4f4",
-        "name": "function 13",
-        "func": "var level;\n\nif (msg.payload == true){\n    level = 1;\n}\n\nmsg.payload = level;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1700,
-        "y": 1080,
-        "wires": [
-            [
-                "5a8f47e0c1ef6f3c"
-            ]
-        ]
-    },
-    {
         "id": "4dfb0f8ea148f7d7",
         "type": "OpcUa-Item",
         "z": "16c561d0bd2db4f4",
@@ -1342,38 +1012,6 @@
         "wires": [
             [
                 "ee3a6572681df942"
-            ]
-        ]
-    },
-    {
-        "id": "d20f98d3a88ccdb5",
-        "type": "function",
-        "z": "16c561d0bd2db4f4",
-        "name": "TankData Splitter",
-        "func": "var pH_msg = {};\nvar temp_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar l3_msg = {};\n\nvar totalOutputs = 7;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\ntemp_msg.payload = Math.round((msg.payload.temperature) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nl1_msg.payload = msg.payload.level1_status;\nl2_msg.payload = msg.payload.level2_status;\nl3_msg.payload = msg.payload.level3_status;\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\nreturnArray[2] = l1_msg;\nreturnArray[3] = l2_msg;\nreturnArray[4] = l3_msg;\n\n\nreturn returnArray;",
-        "outputs": 5,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1470,
-        "y": 1220,
-        "wires": [
-            [
-                "4e61426d7b7a4494",
-                "0acdb8c3f4f7bdf1"
-            ],
-            [
-                "e6c922846459960d"
-            ],
-            [
-                "cadeec4f6ffad25b"
-            ],
-            [
-                "69b3618d9b688b50"
-            ],
-            [
-                "340522ebcdb0bba6"
             ]
         ]
     },
@@ -1463,141 +1101,6 @@
         "wires": []
     },
     {
-        "id": "15d8db16a2b08b85",
-        "type": "ui_gauge",
-        "z": "16c561d0bd2db4f4",
-        "name": "",
-        "group": "7b9307d1947a13f0",
-        "order": 2,
-        "width": "8",
-        "height": "5",
-        "gtype": "wave",
-        "title": "tank1Level",
-        "label": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "3",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 1890,
-        "y": 1260,
-        "wires": []
-    },
-    {
-        "id": "a0172e291ffdb614",
-        "type": "ui_gauge",
-        "z": "16c561d0bd2db4f4",
-        "name": "",
-        "group": "7b9307d1947a13f0",
-        "order": 2,
-        "width": "8",
-        "height": "5",
-        "gtype": "wave",
-        "title": "tank2Level",
-        "label": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "3",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 1890,
-        "y": 1300,
-        "wires": []
-    },
-    {
-        "id": "5e1be9e566bac5be",
-        "type": "ui_gauge",
-        "z": "16c561d0bd2db4f4",
-        "name": "tank3Level",
-        "group": "7b9307d1947a13f0",
-        "order": 2,
-        "width": "8",
-        "height": "5",
-        "gtype": "wave",
-        "title": "Tank 3 Level",
-        "label": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "3",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 1890,
-        "y": 1340,
-        "wires": []
-    },
-    {
-        "id": "cadeec4f6ffad25b",
-        "type": "function",
-        "z": "16c561d0bd2db4f4",
-        "name": "function 14",
-        "func": "var level;\n\nif (msg.payload == true){\n    level = 1;\n}\n\nmsg.payload = level;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1700,
-        "y": 1260,
-        "wires": [
-            [
-                "15d8db16a2b08b85"
-            ]
-        ]
-    },
-    {
-        "id": "69b3618d9b688b50",
-        "type": "function",
-        "z": "16c561d0bd2db4f4",
-        "name": "function 15",
-        "func": "var level;\n\nif (msg.payload == true){\n    level = 1;\n}\n\nmsg.payload = level;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1700,
-        "y": 1300,
-        "wires": [
-            [
-                "a0172e291ffdb614"
-            ]
-        ]
-    },
-    {
-        "id": "340522ebcdb0bba6",
-        "type": "function",
-        "z": "16c561d0bd2db4f4",
-        "name": "function 16",
-        "func": "var level;\n\nif (msg.payload == true){\n    level = 1;\n}\n\nmsg.payload = level;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1700,
-        "y": 1340,
-        "wires": [
-            [
-                "5e1be9e566bac5be"
-            ]
-        ]
-    },
-    {
         "id": "0e23fee8fd55db68",
         "type": "comment",
         "z": "16c561d0bd2db4f4",
@@ -1633,7 +1136,7 @@
         "z": "16c561d0bd2db4f4",
         "name": "Oxidation Precipitation",
         "info": "",
-        "x": 1500,
+        "x": 1480,
         "y": 880,
         "wires": []
     },
@@ -1697,7 +1200,7 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "levelReporter",
-        "func": "var WD_1 = global.get('WD1');\nvar WD_2 = global.get('WD2');\nvar WD_3 = global.get('WD3');\n\nif (WD_3 == true){\n    msg.payload = 3;\n} else if (WD_2 == true) {\n    msg.payload = 2;\n} else if (WD_1 == true) {\n    msg.payload = 1;\n} else {\n    msg.payload = 0;\n}\n\n\nreturn msg;",
+        "func": "var level1 = global.get('C1');\nvar level2 = global.get('C2');\nvar level3 = global.get('C3');\n\nif (level3 == true){\n    msg.payload = 3;\n} else if (level2 == true) {\n    msg.payload = 2;\n} else if (level1 == true) {\n    msg.payload = 1;\n} else {\n    msg.payload = 0;\n}\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1708,6 +1211,237 @@
         "wires": [
             [
                 "3480f2c9558d5432"
+            ]
+        ]
+    },
+    {
+        "id": "a3d6ef1090b37a6d",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "TankData Splitter",
+        "func": "var pH_msg = {};\nvar temp_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar l3_msg = {};\n\nvar totalOutputs = 7;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\ntemp_msg.payload = Math.round((msg.payload.temperature) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nl1_msg.payload = msg.payload.level1_status;\nglobal.set(\"EW1\", l1_msg.payload);\nl2_msg.payload = msg.payload.level2_status;\nglobal.set(\"EW2\", l2_msg.payload);\nl3_msg.payload = msg.payload.level3_status;\nglobal.set(\"EW3\", l3_msg.payload);\n\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\nreturnArray[2] = l1_msg;\nreturnArray[3] = l2_msg;\nreturnArray[4] = l3_msg;\n\n\nreturn returnArray;",
+        "outputs": 5,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1470,
+        "y": 700,
+        "wires": [
+            [
+                "c4defabd3506a705",
+                "1b64da6bc3b25e64"
+            ],
+            [
+                "dc6e752b32552437"
+            ],
+            [
+                "3d317cd75df892bf"
+            ],
+            [
+                "3d317cd75df892bf"
+            ],
+            [
+                "3d317cd75df892bf"
+            ]
+        ]
+    },
+    {
+        "id": "151bafda4bc2a7be",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "TankData Splitter",
+        "func": "var pH_msg = {};\nvar temp_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar l3_msg = {};\n\nvar totalOutputs = 7;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\ntemp_msg.payload = Math.round((msg.payload.temperature) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nl1_msg.payload = msg.payload.level1_status;\nglobal.set(\"O1\", l1_msg.payload);\nl2_msg.payload = msg.payload.level2_status;\nglobal.set(\"O2\", l2_msg.payload);\nl3_msg.payload = msg.payload.level3_status;\nglobal.set(\"O3\", l3_msg.payload);\n\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\nreturnArray[2] = l1_msg;\nreturnArray[3] = l2_msg;\nreturnArray[4] = l3_msg;\n\n\nreturn returnArray;",
+        "outputs": 5,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1470,
+        "y": 960,
+        "wires": [
+            [
+                "daa274e0f092d927",
+                "0362f989e57b35f6"
+            ],
+            [
+                "e21ea860dfc62c6e"
+            ],
+            [
+                "220daed9ec04b7a6"
+            ],
+            [
+                "220daed9ec04b7a6"
+            ],
+            [
+                "220daed9ec04b7a6"
+            ]
+        ]
+    },
+    {
+        "id": "9181c831def27233",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "TankData Splitter",
+        "func": "var pH_msg = {};\nvar temp_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar l3_msg = {};\n\nvar totalOutputs = 7;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\ntemp_msg.payload = Math.round((msg.payload.temperature) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nl1_msg.payload = msg.payload.level1_status;\nglobal.set(\"B1\", l1_msg.payload);\nl2_msg.payload = msg.payload.level2_status;\nglobal.set(\"B2\", l2_msg.payload);\nl3_msg.payload = msg.payload.level3_status;\nglobal.set(\"B3\", l3_msg.payload);\n\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\nreturnArray[2] = l1_msg;\nreturnArray[3] = l2_msg;\nreturnArray[4] = l3_msg;\n\n\nreturn returnArray;",
+        "outputs": 5,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1470,
+        "y": 1220,
+        "wires": [
+            [
+                "0acdb8c3f4f7bdf1",
+                "4e61426d7b7a4494"
+            ],
+            [
+                "e6c922846459960d"
+            ],
+            [
+                "b008863c8c5f1438"
+            ],
+            [
+                "b008863c8c5f1438"
+            ],
+            [
+                "b008863c8c5f1438"
+            ]
+        ]
+    },
+    {
+        "id": "2f3aabcc94b47677",
+        "type": "ui_gauge",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "group": "7b9307d1947a13f0",
+        "order": 2,
+        "width": "8",
+        "height": "5",
+        "gtype": "wave",
+        "title": "EW Level",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "3",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1880,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "b1fd7d57b2f1a360",
+        "type": "ui_gauge",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "group": "7b9307d1947a13f0",
+        "order": 2,
+        "width": "8",
+        "height": "5",
+        "gtype": "wave",
+        "title": "Oxidation Level",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "3",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1900,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "26ba799db6cc1c30",
+        "type": "ui_gauge",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "group": "7b9307d1947a13f0",
+        "order": 2,
+        "width": "8",
+        "height": "5",
+        "gtype": "wave",
+        "title": "cementationLevel",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "3",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1910,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "3d317cd75df892bf",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "levelReporter",
+        "func": "var level1 = global.get('EW1');\nvar level2 = global.get('EW2');\nvar level3 = global.get('EW3');\n\nif (level3 == true){\n    msg.payload = 3;\n} else if (level2 == true) {\n    msg.payload = 2;\n} else if (level1 == true) {\n    msg.payload = 1;\n} else {\n    msg.payload = 0;\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1710,
+        "y": 740,
+        "wires": [
+            [
+                "2f3aabcc94b47677"
+            ]
+        ]
+    },
+    {
+        "id": "220daed9ec04b7a6",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "levelReporter",
+        "func": "var level1 = global.get('O1');\nvar level2 = global.get('O2');\nvar level3 = global.get('O3');\n\nif (level3 == true){\n    msg.payload = 3;\n} else if (level2 == true) {\n    msg.payload = 2;\n} else if (level1 == true) {\n    msg.payload = 1;\n} else {\n    msg.payload = 0;\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1710,
+        "y": 1000,
+        "wires": [
+            [
+                "b1fd7d57b2f1a360"
+            ]
+        ]
+    },
+    {
+        "id": "b008863c8c5f1438",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "levelReporter",
+        "func": "var level1 = global.get('B1');\nvar level2 = global.get('B2');\nvar level3 = global.get('B3');\n\nif (level3 == true){\n    msg.payload = 3;\n} else if (level2 == true) {\n    msg.payload = 2;\n} else if (level1 == true) {\n    msg.payload = 1;\n} else {\n    msg.payload = 0;\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1710,
+        "y": 1260,
+        "wires": [
+            [
+                "26ba799db6cc1c30"
             ]
         ]
     },
