@@ -1372,7 +1372,7 @@
         "width": "8",
         "height": "5",
         "gtype": "wave",
-        "title": "cementationLevel",
+        "title": "Buffer",
         "label": "",
         "format": "{{value}}",
         "min": 0,
@@ -1384,7 +1384,7 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1910,
+        "x": 1870,
         "y": 1260,
         "wires": []
     },
