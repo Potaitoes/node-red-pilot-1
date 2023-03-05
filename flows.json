@@ -237,8 +237,8 @@
         "securitypolicy": "None",
         "folderName4PKI": "",
         "name": "",
-        "x": 780,
-        "y": 40,
+        "x": 760,
+        "y": 420,
         "wires": [
             [
                 "e00268bdbe39dfbb"
@@ -271,7 +271,8 @@
         "wires": [
             [
                 "b3578a269a98ebf3",
-                "0b960201cdf08554"
+                "0b960201cdf08554",
+                "33c6fb9ca60141ee"
             ]
         ]
     },
@@ -414,8 +415,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1360,
-        "y": 260,
+        "x": 1720,
+        "y": 140,
         "wires": []
     },
     {
@@ -474,8 +475,8 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "x": 1330,
-        "y": 180,
+        "x": 1690,
+        "y": 60,
         "wires": [
             []
         ]
@@ -492,8 +493,8 @@
         "label": "pH:",
         "format": "{{msg.payload}}",
         "layout": "row-left",
-        "x": 1330,
-        "y": 220,
+        "x": 1690,
+        "y": 100,
         "wires": []
     },
     {
@@ -507,8 +508,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1110,
-        "y": 260,
+        "x": 1470,
+        "y": 140,
         "wires": [
             [
                 "1f7c50c5d6e7d504",
@@ -550,8 +551,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1530,
-        "y": 300,
+        "x": 1890,
+        "y": 180,
         "wires": []
     },
     {
@@ -576,8 +577,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1530,
-        "y": 340,
+        "x": 1890,
+        "y": 220,
         "wires": []
     },
     {
@@ -602,8 +603,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1530,
-        "y": 380,
+        "x": 1890,
+        "y": 260,
         "wires": []
     },
     {
@@ -617,8 +618,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1340,
-        "y": 300,
+        "x": 1700,
+        "y": 180,
         "wires": [
             [
                 "de1f6b2b37e837cb"
@@ -636,8 +637,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1340,
-        "y": 340,
+        "x": 1700,
+        "y": 220,
         "wires": [
             [
                 "61d9cc63a960f161"
@@ -655,8 +656,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1340,
-        "y": 380,
+        "x": 1700,
+        "y": 260,
         "wires": [
             [
                 "43ea732ccb82d795"
@@ -668,20 +669,23 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "Splits Topics into respective Outputs",
-        "func": "var index;\nvar numOutputs = node.numberOfOutputs;\n\nconst returnArray = new Array(numOutputs).fill(null);\n\nvar topic1 = global.get('Topic_WashDigestion');\nvar topic2 = global.get('Topic_Cementation');\n\nif (msg.topic == topic1){\n    index = 0;\n}\n\nif (msg.topic == topic2){\n    index = 1;\n}\n\nreturnArray[index] = msg;\n\nreturn returnArray;",
-        "outputs": 2,
+        "func": "var index;\nvar numOutputs = node.numberOfOutputs;\n\nconst returnArray = new Array(numOutputs).fill(null);\n\nvar topic1 = global.get('Topic_WashDigestion');\nvar topic2 = global.get('Topic_Cementation');\nvar topic3 = global.get('Topic_Electrowinning');\n\nif (msg.topic == topic1){\n    index = 0;\n}\n\nif (msg.topic == topic2){\n    index = 1;\n}\n\nif (msg.topic == topic3){\n    index = 2;\n}\n\nreturnArray[index] = msg;\n\nreturn returnArray;",
+        "outputs": 3,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 850,
-        "y": 100,
+        "x": 1090,
+        "y": 420,
         "wires": [
             [
                 "81f1b85473dca332"
             ],
             [
                 "e2fa88ae572257fc"
+            ],
+            [
+                "673983f4813f6681"
             ]
         ]
     },
@@ -705,14 +709,14 @@
         "id": "afe589e21d33a821",
         "type": "function",
         "z": "16c561d0bd2db4f4",
-        "name": "assign WashDigestion to topic",
+        "name": "assign Cementation to topic",
         "func": "var msg_Cementation = {};\nmsg_Cementation.topic = msg.topic;\n\n//See node above for what goes on here.\nglobal.set(\"Topic_Cementation\", String(msg_Cementation.topic)); \n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 470,
+        "x": 460,
         "y": 340,
         "wires": [
             [
@@ -731,8 +735,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1110,
-        "y": 560,
+        "x": 1470,
+        "y": 420,
         "wires": [
             [
                 "7ede4545d9136513",
@@ -774,8 +778,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1360,
-        "y": 560,
+        "x": 1720,
+        "y": 420,
         "wires": []
     },
     {
@@ -815,8 +819,8 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "x": 1330,
-        "y": 480,
+        "x": 1690,
+        "y": 340,
         "wires": [
             []
         ]
@@ -833,8 +837,8 @@
         "label": "pH:",
         "format": "{{msg.payload}}",
         "layout": "row-left",
-        "x": 1330,
-        "y": 520,
+        "x": 1690,
+        "y": 380,
         "wires": []
     },
     {
@@ -859,8 +863,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1530,
-        "y": 600,
+        "x": 1890,
+        "y": 460,
         "wires": []
     },
     {
@@ -885,8 +889,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1530,
-        "y": 640,
+        "x": 1890,
+        "y": 500,
         "wires": []
     },
     {
@@ -911,8 +915,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1530,
-        "y": 680,
+        "x": 1890,
+        "y": 540,
         "wires": []
     },
     {
@@ -926,8 +930,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1340,
-        "y": 600,
+        "x": 1700,
+        "y": 460,
         "wires": [
             [
                 "ce9e16a22fb5a3e0"
@@ -945,8 +949,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1340,
-        "y": 640,
+        "x": 1700,
+        "y": 500,
         "wires": [
             [
                 "d441462b5480e905"
@@ -964,11 +968,298 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1340,
-        "y": 680,
+        "x": 1700,
+        "y": 540,
         "wires": [
             [
                 "d2b64edd4f3220d5"
+            ]
+        ]
+    },
+    {
+        "id": "33c6fb9ca60141ee",
+        "type": "OpcUa-Item",
+        "z": "16c561d0bd2db4f4",
+        "item": "ns=4;s=Electrowinning",
+        "datatype": "String",
+        "value": "",
+        "name": "",
+        "x": 240,
+        "y": 380,
+        "wires": [
+            [
+                "db94b881ae88641e"
+            ]
+        ]
+    },
+    {
+        "id": "db94b881ae88641e",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "assign Cementation to topic",
+        "func": "var msg_Electrowinning = {};\nmsg_Electrowinning.topic = msg.topic;\n\n//See node above for what goes on here.\nglobal.set(\"Topic_Electrowinning\", String(msg_Electrowinning.topic)); \n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 380,
+        "wires": [
+            [
+                "ee3a6572681df942"
+            ]
+        ]
+    },
+    {
+        "id": "673983f4813f6681",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "TankData Splitter",
+        "func": "var pH_msg = {};\nvar temp_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar l3_msg = {};\n\nvar totalOutputs = 7;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\ntemp_msg.payload = Math.round((msg.payload.temperature) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nl1_msg.payload = msg.payload.level1_status;\nl2_msg.payload = msg.payload.level2_status;\nl3_msg.payload = msg.payload.level3_status;\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\nreturnArray[2] = l1_msg;\nreturnArray[3] = l2_msg;\nreturnArray[4] = l3_msg;\n\n\nreturn returnArray;",
+        "outputs": 5,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1470,
+        "y": 700,
+        "wires": [
+            [
+                "c4defabd3506a705",
+                "1b64da6bc3b25e64"
+            ],
+            [
+                "dc6e752b32552437"
+            ],
+            [
+                "41d8a25e2e9e409d"
+            ],
+            [
+                "debefeff9c08afa4"
+            ],
+            [
+                "3df1a7250c7b6825"
+            ]
+        ]
+    },
+    {
+        "id": "dc6e752b32552437",
+        "type": "ui_gauge",
+        "z": "16c561d0bd2db4f4",
+        "name": "Temperature 1",
+        "group": "581cf3edde4d02e5",
+        "order": 2,
+        "width": "8",
+        "height": "5",
+        "gtype": "gage",
+        "title": "Temperature 1",
+        "label": "°C",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1720,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "c4defabd3506a705",
+        "type": "ui_chart",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "group": "3342ef65ea84e0bc",
+        "order": 2,
+        "width": "8",
+        "height": "4",
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "14",
+        "removeOlder": 1,
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#dd2727",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1690,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1b64da6bc3b25e64",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "3342ef65ea84e0bc",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "pH:",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 1690,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "13b0a95bd2fb1876",
+        "type": "ui_gauge",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "group": "7b9307d1947a13f0",
+        "order": 2,
+        "width": "8",
+        "height": "5",
+        "gtype": "wave",
+        "title": "tank1Level",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "3",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1890,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "1e712aaf95a2f0d0",
+        "type": "ui_gauge",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "group": "7b9307d1947a13f0",
+        "order": 2,
+        "width": "8",
+        "height": "5",
+        "gtype": "wave",
+        "title": "tank2Level",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "3",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1890,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "26aa30fd9a4b3a82",
+        "type": "ui_gauge",
+        "z": "16c561d0bd2db4f4",
+        "name": "tank3Level",
+        "group": "7b9307d1947a13f0",
+        "order": 2,
+        "width": "8",
+        "height": "5",
+        "gtype": "wave",
+        "title": "Tank 3 Level",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "3",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1890,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "41d8a25e2e9e409d",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "function 8",
+        "func": "var level;\n\nif (msg.payload == true){\n    level = 1;\n}\n\nmsg.payload = level;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1700,
+        "y": 740,
+        "wires": [
+            [
+                "13b0a95bd2fb1876"
+            ]
+        ]
+    },
+    {
+        "id": "debefeff9c08afa4",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "function 9",
+        "func": "var level;\n\nif (msg.payload == true){\n    level = 1;\n}\n\nmsg.payload = level;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1700,
+        "y": 780,
+        "wires": [
+            [
+                "1e712aaf95a2f0d0"
+            ]
+        ]
+    },
+    {
+        "id": "3df1a7250c7b6825",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "function 10",
+        "func": "var level;\n\nif (msg.payload == true){\n    level = 1;\n}\n\nmsg.payload = level;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1700,
+        "y": 820,
+        "wires": [
+            [
+                "26aa30fd9a4b3a82"
             ]
         ]
     },
