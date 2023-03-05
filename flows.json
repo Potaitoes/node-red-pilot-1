@@ -504,7 +504,7 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "TankData Splitter",
-        "func": "var pH_msg = {};\nvar temp_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar l3_msg = {};\n\nvar totalOutputs = 7;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\ntemp_msg.payload = Math.round((msg.payload.temperature) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nl1_msg.payload = msg.payload.level1_status;\nl2_msg.payload = msg.payload.level2_status;\nl3_msg.payload = msg.payload.level3_status;\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\nreturnArray[2] = l1_msg;\nreturnArray[3] = l2_msg;\nreturnArray[4] = l3_msg;\n\n\nreturn returnArray;",
+        "func": "var pH_msg = {};\nvar temp_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar l3_msg = {};\n\nvar totalOutputs = 7;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\nglobal.set(\"pH_WD\", msg.payload);\n\ntemp_msg.payload = Math.round((msg.payload.temperature) * 100) / 100;\nglobal.set(\"Temp_WD\", msg.payload);\n\nl1_msg.payload = msg.payload.level1_status;\nglobal.set(\"WD1\", msg.payload);\nl2_msg.payload = msg.payload.level2_status;\nglobal.set(\"WD2\", msg.payload);\nl3_msg.payload = msg.payload.level3_status;\nglobal.set(\"WD3\", msg.payload);\n\n\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\nreturnArray[2] = l1_msg;\nreturnArray[3] = l2_msg;\nreturnArray[4] = l3_msg;\n\n\nreturn returnArray;",
         "outputs": 5,
         "noerr": 0,
         "initialize": "",
@@ -521,14 +521,10 @@
                 "673d50fce5f0ce38"
             ],
             [
-                "9d878bc63699d184"
+                "95b336cfdb499b25"
             ],
-            [
-                "c23e91d4c818845a"
-            ],
-            [
-                "9640bcda8ccee4d2"
-            ]
+            [],
+            []
         ]
     },
     {
@@ -556,115 +552,6 @@
         "x": 1890,
         "y": 180,
         "wires": []
-    },
-    {
-        "id": "61d9cc63a960f161",
-        "type": "ui_gauge",
-        "z": "16c561d0bd2db4f4",
-        "name": "",
-        "group": "7b9307d1947a13f0",
-        "order": 2,
-        "width": "8",
-        "height": "5",
-        "gtype": "wave",
-        "title": "tank2Level",
-        "label": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "3",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 1890,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "43ea732ccb82d795",
-        "type": "ui_gauge",
-        "z": "16c561d0bd2db4f4",
-        "name": "tank3Level",
-        "group": "7b9307d1947a13f0",
-        "order": 2,
-        "width": "8",
-        "height": "5",
-        "gtype": "wave",
-        "title": "Tank 3 Level",
-        "label": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "3",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 1890,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "9d878bc63699d184",
-        "type": "function",
-        "z": "16c561d0bd2db4f4",
-        "name": "function 2",
-        "func": "var level;\n\nif (msg.payload == true){\n    level = 1;\n}\n\nmsg.payload = level;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1700,
-        "y": 180,
-        "wires": [
-            [
-                "de1f6b2b37e837cb"
-            ]
-        ]
-    },
-    {
-        "id": "c23e91d4c818845a",
-        "type": "function",
-        "z": "16c561d0bd2db4f4",
-        "name": "function 3",
-        "func": "var level;\n\nif (msg.payload == true){\n    level = 1;\n}\n\nmsg.payload = level;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1700,
-        "y": 220,
-        "wires": [
-            [
-                "61d9cc63a960f161"
-            ]
-        ]
-    },
-    {
-        "id": "9640bcda8ccee4d2",
-        "type": "function",
-        "z": "16c561d0bd2db4f4",
-        "name": "function 4",
-        "func": "var level;\n\nif (msg.payload == true){\n    level = 1;\n}\n\nmsg.payload = level;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1700,
-        "y": 260,
-        "wires": [
-            [
-                "43ea732ccb82d795"
-            ]
-        ]
     },
     {
         "id": "e00268bdbe39dfbb",
@@ -1842,6 +1729,75 @@
         "wires": [
             [
                 "5e1be9e566bac5be"
+            ]
+        ]
+    },
+    {
+        "id": "0e23fee8fd55db68",
+        "type": "comment",
+        "z": "16c561d0bd2db4f4",
+        "name": "Wash Digestion",
+        "info": "",
+        "x": 1480,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "c28f6bb3398809f9",
+        "type": "comment",
+        "z": "16c561d0bd2db4f4",
+        "name": "Cementation",
+        "info": "",
+        "x": 1470,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "c8b5ed30eaae03f6",
+        "type": "comment",
+        "z": "16c561d0bd2db4f4",
+        "name": "Electrowinning",
+        "info": "",
+        "x": 1480,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "98825de087caf9b5",
+        "type": "comment",
+        "z": "16c561d0bd2db4f4",
+        "name": "Oxidation Precipitation",
+        "info": "",
+        "x": 1500,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "c34cf7e4b85e61d6",
+        "type": "comment",
+        "z": "16c561d0bd2db4f4",
+        "name": "Buffer Tank",
+        "info": "",
+        "x": 1440,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "95b336cfdb499b25",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "levelReporter",
+        "func": "var WD_1 = global.get('WD1');\nvar WD_2 = global.get('WD2');\nvar WD_3 = global.get('WD3');\n\nif (WD_1 == \"true\"){\n    msg.payload = 0\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1710,
+        "y": 180,
+        "wires": [
+            [
+                "de1f6b2b37e837cb"
             ]
         ]
     },
