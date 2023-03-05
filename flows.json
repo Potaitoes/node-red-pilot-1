@@ -1788,7 +1788,7 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "levelReporter",
-        "func": "var WD_1 = global.get('WD1');\nvar WD_2 = global.get('WD2');\nvar WD_3 = global.get('WD3');\n\nif (WD_1 == true){\n    msg.payload = 2\n}\n\n\nreturn msg;",
+        "func": "var WD_1 = global.get('WD1');\nvar WD_2 = global.get('WD2');\nvar WD_3 = global.get('WD3');\n\nif (WD_3 == true){\n    msg.payload = 3;\n} else if (WD_2 == true) {\n    msg.payload = 2;\n} else if (WD_1 == true) {\n    msg.payload == 1;\n} else {\n    msg.payload = 0;\n}\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
