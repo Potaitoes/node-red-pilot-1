@@ -177,6 +177,7 @@
         "type": "ui_tab",
         "name": "WashLeeching",
         "icon": "dashboard",
+        "order": 3,
         "disabled": false,
         "hidden": false
     },
@@ -185,6 +186,7 @@
         "type": "ui_tab",
         "name": "Electrowinning",
         "icon": "dashboard",
+        "order": 7,
         "disabled": false,
         "hidden": false
     },
@@ -193,6 +195,7 @@
         "type": "ui_tab",
         "name": "Oxidation",
         "icon": "dashboard",
+        "order": 4,
         "disabled": false,
         "hidden": false
     },
@@ -201,6 +204,7 @@
         "type": "ui_tab",
         "name": "Buffer",
         "icon": "dashboard",
+        "order": 6,
         "disabled": false,
         "hidden": false
     },
@@ -227,7 +231,7 @@
         "type": "ui_tab",
         "name": "Cementation",
         "icon": "dashboard",
-        "order": 7,
+        "order": 5,
         "disabled": false,
         "hidden": false
     },
