@@ -144,16 +144,6 @@
         "collapse": false
     },
     {
-        "id": "581cf3edde4d02e5",
-        "type": "ui_group",
-        "name": "Temperature Readouts",
-        "tab": "8183cda1929e83aa",
-        "order": 2,
-        "disp": true,
-        "width": "24",
-        "collapse": false
-    },
-    {
         "id": "3342ef65ea84e0bc",
         "type": "ui_group",
         "name": "pH ReadOuts",
