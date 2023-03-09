@@ -147,7 +147,7 @@
         "id": "3342ef65ea84e0bc",
         "type": "ui_group",
         "name": "WashLeeching",
-        "tab": "8183cda1929e83aa",
+        "tab": "4c7e5a991ed75d8e",
         "order": 3,
         "disp": true,
         "width": "24",
@@ -197,6 +197,14 @@
         "name": "RTSP",
         "icon": "dashboard",
         "order": 13,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "4c7e5a991ed75d8e",
+        "type": "ui_tab",
+        "name": "WashLeeching",
+        "icon": "dashboard",
         "disabled": false,
         "hidden": false
     },
