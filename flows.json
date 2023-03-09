@@ -136,7 +136,7 @@
     {
         "id": "7b9307d1947a13f0",
         "type": "ui_group",
-        "name": "Tank Levels",
+        "name": "WashLeeching",
         "tab": "8183cda1929e83aa",
         "order": 1,
         "disp": true,
@@ -146,7 +146,7 @@
     {
         "id": "3342ef65ea84e0bc",
         "type": "ui_group",
-        "name": "pH ReadOuts",
+        "name": "WashLeeching",
         "tab": "8183cda1929e83aa",
         "order": 3,
         "disp": true,
