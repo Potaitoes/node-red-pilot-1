@@ -396,32 +396,6 @@
         ]
     },
     {
-        "id": "673d50fce5f0ce38",
-        "type": "ui_gauge",
-        "z": "16c561d0bd2db4f4",
-        "name": "Temperature 1",
-        "group": "581cf3edde4d02e5",
-        "order": 2,
-        "width": "8",
-        "height": "5",
-        "gtype": "gage",
-        "title": "Temperature 1",
-        "label": "°C",
-        "format": "{{msg.payload}}",
-        "min": 0,
-        "max": "50",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 1720,
-        "y": 140,
-        "wires": []
-    },
-    {
         "id": "6883df45a9ecbd49",
         "type": "function",
         "z": "16c561d0bd2db4f4",
@@ -518,7 +492,7 @@
                 "80b357c10add4706"
             ],
             [
-                "673d50fce5f0ce38"
+                "1ec4f6d30b9ae0fd"
             ],
             [
                 "95b336cfdb499b25"
@@ -750,32 +724,6 @@
         ]
     },
     {
-        "id": "dc6e752b32552437",
-        "type": "ui_gauge",
-        "z": "16c561d0bd2db4f4",
-        "name": "Temperature 1",
-        "group": "581cf3edde4d02e5",
-        "order": 2,
-        "width": "8",
-        "height": "5",
-        "gtype": "gage",
-        "title": "Temperature 1",
-        "label": "°C",
-        "format": "{{msg.payload}}",
-        "min": 0,
-        "max": "50",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 1720,
-        "y": 700,
-        "wires": []
-    },
-    {
         "id": "c4defabd3506a705",
         "type": "ui_chart",
         "z": "16c561d0bd2db4f4",
@@ -870,32 +818,6 @@
         ]
     },
     {
-        "id": "e21ea860dfc62c6e",
-        "type": "ui_gauge",
-        "z": "16c561d0bd2db4f4",
-        "name": "Temperature 1",
-        "group": "581cf3edde4d02e5",
-        "order": 2,
-        "width": "8",
-        "height": "5",
-        "gtype": "gage",
-        "title": "Temperature 1",
-        "label": "°C",
-        "format": "{{msg.payload}}",
-        "min": 0,
-        "max": "50",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 1720,
-        "y": 960,
-        "wires": []
-    },
-    {
         "id": "0362f989e57b35f6",
         "type": "ui_chart",
         "z": "16c561d0bd2db4f4",
@@ -988,32 +910,6 @@
                 "ee3a6572681df942"
             ]
         ]
-    },
-    {
-        "id": "e6c922846459960d",
-        "type": "ui_gauge",
-        "z": "16c561d0bd2db4f4",
-        "name": "Temperature 1",
-        "group": "581cf3edde4d02e5",
-        "order": 2,
-        "width": "8",
-        "height": "5",
-        "gtype": "gage",
-        "title": "Temperature 1",
-        "label": "°C",
-        "format": "{{msg.payload}}",
-        "min": 0,
-        "max": "50",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 1720,
-        "y": 1220,
-        "wires": []
     },
     {
         "id": "4e61426d7b7a4494",
@@ -1207,7 +1103,7 @@
                 "1b64da6bc3b25e64"
             ],
             [
-                "dc6e752b32552437"
+                "3d63a9e19229a6e2"
             ],
             [
                 "3d317cd75df892bf"
@@ -1239,7 +1135,7 @@
                 "0362f989e57b35f6"
             ],
             [
-                "e21ea860dfc62c6e"
+                "4185f9e46ff1786f"
             ],
             [
                 "220daed9ec04b7a6"
@@ -1271,7 +1167,7 @@
                 "4e61426d7b7a4494"
             ],
             [
-                "e6c922846459960d"
+                "9c8ccb1b4f14e4c6"
             ],
             [
                 "b008863c8c5f1438"
@@ -1456,8 +1352,180 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "x": 1710,
+        "x": 1690,
         "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1ec4f6d30b9ae0fd",
+        "type": "ui_chart",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "group": "7b9307d1947a13f0",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "10000",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1690,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3d63a9e19229a6e2",
+        "type": "ui_chart",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "group": "7b9307d1947a13f0",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "10000",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1690,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4185f9e46ff1786f",
+        "type": "ui_chart",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "group": "7b9307d1947a13f0",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "10000",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1690,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9c8ccb1b4f14e4c6",
+        "type": "ui_chart",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "group": "7b9307d1947a13f0",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "10000",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1690,
+        "y": 1220,
         "wires": [
             []
         ]
