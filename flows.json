@@ -642,7 +642,7 @@
                 "92dec648efba38d7"
             ],
             [
-                "34efc6094c52112f"
+                "78480f23928b4b2f"
             ],
             [
                 "e6671fa9cbcaaae5"
@@ -654,32 +654,6 @@
                 "e6671fa9cbcaaae5"
             ]
         ]
-    },
-    {
-        "id": "34efc6094c52112f",
-        "type": "ui_gauge",
-        "z": "16c561d0bd2db4f4",
-        "name": "Temperature 1",
-        "group": "581cf3edde4d02e5",
-        "order": 2,
-        "width": "8",
-        "height": "5",
-        "gtype": "gage",
-        "title": "Temperature 1",
-        "label": "°C",
-        "format": "{{msg.payload}}",
-        "min": 0,
-        "max": "50",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 1720,
-        "y": 420,
-        "wires": []
     },
     {
         "id": "7ede4545d9136513",
@@ -1443,6 +1417,49 @@
             [
                 "26ba799db6cc1c30"
             ]
+        ]
+    },
+    {
+        "id": "78480f23928b4b2f",
+        "type": "ui_chart",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "group": "7b9307d1947a13f0",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "10000",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1710,
+        "y": 420,
+        "wires": [
+            []
         ]
     },
     {
