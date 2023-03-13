@@ -168,7 +168,7 @@
         "type": "ui_tab",
         "name": "Controls",
         "icon": "dashboard",
-        "order": 2,
+        "order": 3,
         "disabled": false,
         "hidden": false
     },
@@ -177,7 +177,7 @@
         "type": "ui_tab",
         "name": "WashLeeching",
         "icon": "dashboard",
-        "order": 3,
+        "order": 4,
         "disabled": false,
         "hidden": false
     },
@@ -186,7 +186,7 @@
         "type": "ui_tab",
         "name": "Electrowinning",
         "icon": "dashboard",
-        "order": 7,
+        "order": 8,
         "disabled": false,
         "hidden": false
     },
@@ -195,7 +195,7 @@
         "type": "ui_tab",
         "name": "Oxidation",
         "icon": "dashboard",
-        "order": 4,
+        "order": 5,
         "disabled": false,
         "hidden": false
     },
@@ -204,7 +204,7 @@
         "type": "ui_tab",
         "name": "Buffer",
         "icon": "dashboard",
-        "order": 6,
+        "order": 7,
         "disabled": false,
         "hidden": false
     },
@@ -233,7 +233,7 @@
         "type": "ui_tab",
         "name": "Cementation",
         "icon": "dashboard",
-        "order": 5,
+        "order": 6,
         "disabled": false,
         "hidden": false
     },
@@ -271,6 +271,7 @@
         "type": "ui_tab",
         "name": "Full System Overview",
         "icon": "dashboard",
+        "order": 2,
         "disabled": false,
         "hidden": false
     },
