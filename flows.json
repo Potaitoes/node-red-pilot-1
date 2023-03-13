@@ -307,8 +307,7 @@
         "wires": [
             [
                 "e00268bdbe39dfbb",
-                "151bafda4bc2a7be",
-                "09e33d1a8a762591"
+                "151bafda4bc2a7be"
             ]
         ]
     },
@@ -968,7 +967,7 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "assign BufferTank to topic",
-        "func": "var msg_OxPrecipitation = {};\nmsg_OxPrecipitation.topic = msg.topic;\n\n//See node above for what goes on here.\nglobal.set(\"Topic_OxPrecipitation\", String(msg_OxPrecipitation.topic)); \n\n\nreturn msg;",
+        "func": "var msg_BufferTank = {};\nmsg_BufferTank.topic = msg.topic;\n\n//See node above for what goes on here.\nglobal.set(\"Topic_BufferTank\", String(msg_BufferTank.topic)); \n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1816,22 +1815,6 @@
         "statusType": "auto",
         "x": 1520,
         "y": 220,
-        "wires": []
-    },
-    {
-        "id": "09e33d1a8a762591",
-        "type": "debug",
-        "z": "16c561d0bd2db4f4",
-        "name": "debug 4",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 840,
-        "y": 600,
         "wires": []
     },
     {
