@@ -919,7 +919,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "x": 1710,
-        "y": 880,
+        "y": 840,
         "wires": [
             []
         ]
@@ -937,7 +937,7 @@
         "format": "{{msg.payload}}",
         "layout": "row-left",
         "x": 1720,
-        "y": 920,
+        "y": 880,
         "wires": []
     },
     {
@@ -1187,8 +1187,8 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "TankData Splitter",
-        "func": "var pH_msg = {};\nvar temp_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar l3_msg = {};\n\nvar totalOutputs = 7;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\ntemp_msg.payload = Math.round((msg.payload.temperature) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nl1_msg.payload = msg.payload.level1_status;\nglobal.set(\"O1\", l1_msg.payload);\nl2_msg.payload = msg.payload.level2_status;\nglobal.set(\"O2\", l2_msg.payload);\nl3_msg.payload = msg.payload.level3_status;\nglobal.set(\"O3\", l3_msg.payload);\n\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\nreturnArray[2] = l1_msg;\nreturnArray[3] = l2_msg;\nreturnArray[4] = l3_msg;\n\n\nreturn returnArray;",
-        "outputs": 5,
+        "func": "var pH_msg = {};\nvar temp_msg = {};\nvar orp_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar l3_msg = {};\n\nvar totalOutputs = 7;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\nglobal.set(\"OpH\", pH_msg.payload);\n\ntemp_msg.payload = Math.round((msg.payload.temperature) * 100) / 100;\nglobal.set(\"OTemp\", temp_msg.payload);\n\norp_msg.payload = Math.round((msg.payload.orp) * 100) / 100;\nglobal.set(\"OORP\", orp_msg.payload);\n\n\nl1_msg.payload = msg.payload.level1_status;\nglobal.set(\"O1\", l1_msg.payload);\nl2_msg.payload = msg.payload.level2_status;\nglobal.set(\"O2\", l2_msg.payload);\nl3_msg.payload = msg.payload.level3_status;\nglobal.set(\"O3\", l3_msg.payload);\n\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\nreturnArray[2] = orp_msg;\nreturnArray[3] = l1_msg;\nreturnArray[4] = l2_msg;\nreturnArray[5] = l3_msg;\n\n\nreturn returnArray;",
+        "outputs": 6,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -1202,6 +1202,10 @@
             ],
             [
                 "4185f9e46ff1786f"
+            ],
+            [
+                "2ac889004a7404b4",
+                "8ad1b25066a5fb1c"
             ],
             [
                 "220daed9ec04b7a6"
@@ -1219,8 +1223,8 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "TankData Splitter",
-        "func": "var pH_msg = {};\nvar temp_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar l3_msg = {};\n\nvar totalOutputs = 7;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\ntemp_msg.payload = Math.round((msg.payload.temperature) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nl1_msg.payload = msg.payload.level1_status;\nglobal.set(\"B1\", l1_msg.payload);\nl2_msg.payload = msg.payload.level2_status;\nglobal.set(\"B2\", l2_msg.payload);\nl3_msg.payload = msg.payload.level3_status;\nglobal.set(\"B3\", l3_msg.payload);\n\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\nreturnArray[2] = l1_msg;\nreturnArray[3] = l2_msg;\nreturnArray[4] = l3_msg;\n\n\nreturn returnArray;",
-        "outputs": 5,
+        "func": "var pH_msg = {};\nvar temp_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar l3_msg = {};\n\nvar totalOutputs = 7;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\ntemp_msg.payload = Math.round((msg.payload.temperature) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nl1_msg.payload = msg.payload.level1_status;\nglobal.set(\"B1\", l1_msg.payload);\nl2_msg.payload = msg.payload.level2_status;\nglobal.set(\"B2\", l2_msg.payload);\nl3_msg.payload = msg.payload.level3_status;\nglobal.set(\"B3\", l3_msg.payload);\nl4_msg.payload = msg.payload.level4_status;\nglobal.set(\"B4\", l4_msg.payload);\n\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\nreturnArray[2] = l1_msg;\nreturnArray[3] = l2_msg;\nreturnArray[4] = l3_msg;\nreturnArray[5] = l4_msg;\n\n\nreturn returnArray;",
+        "outputs": 6,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -1234,6 +1238,9 @@
             ],
             [
                 "b2bc174192814681"
+            ],
+            [
+                "b008863c8c5f1438"
             ],
             [
                 "b008863c8c5f1438"
@@ -1295,7 +1302,7 @@
         "seg1": "",
         "seg2": "",
         "x": 1900,
-        "y": 1000,
+        "y": 1040,
         "wires": []
     },
     {
@@ -1330,7 +1337,7 @@
         "finalize": "",
         "libs": [],
         "x": 1710,
-        "y": 1000,
+        "y": 1040,
         "wires": [
             [
                 "b1fd7d57b2f1a360",
@@ -1525,7 +1532,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "x": 1740,
-        "y": 960,
+        "y": 920,
         "wires": [
             []
         ]
@@ -1728,6 +1735,65 @@
         "x": 2310,
         "y": 600,
         "wires": []
+    },
+    {
+        "id": "2ac889004a7404b4",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "3342ef65ea84e0bc",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Oxidation Reduction Potential:",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 1770,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "8ad1b25066a5fb1c",
+        "type": "ui_chart",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "group": "3342ef65ea84e0bc",
+        "order": 3,
+        "width": "8",
+        "height": "4",
+        "label": "Oxidation Reduction Potential",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "14",
+        "removeOlder": 1,
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#dd2727",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1770,
+        "y": 960,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "c0eaa1e3.932c2",
