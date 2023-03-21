@@ -43,8 +43,8 @@
             "name": "theme-light",
             "lightTheme": {
                 "default": "#0094CE",
-                "baseColor": "#0094CE",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "baseColor": "#00cc00",
+                "baseFont": "Arial Black,Arial Black,Gadget,sans-serif",
                 "edited": true,
                 "reset": false
             },
@@ -63,11 +63,11 @@
             "themeState": {
                 "base-color": {
                     "default": "#0094CE",
-                    "value": "#0094CE",
-                    "edited": false
+                    "value": "#00cc00",
+                    "edited": true
                 },
                 "page-titlebar-backgroundColor": {
-                    "value": "#0094CE",
+                    "value": "#00cc00",
                     "edited": false
                 },
                 "page-backgroundColor": {
@@ -79,7 +79,7 @@
                     "edited": false
                 },
                 "group-textColor": {
-                    "value": "#1bbfff",
+                    "value": "#1aff1a",
                     "edited": false
                 },
                 "group-borderColor": {
@@ -95,7 +95,7 @@
                     "edited": false
                 },
                 "widget-backgroundColor": {
-                    "value": "#0094ce",
+                    "value": "#00cc00",
                     "edited": false
                 },
                 "widget-borderColor": {
@@ -103,7 +103,7 @@
                     "edited": false
                 },
                 "base-font": {
-                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                    "value": "Arial Black,Arial Black,Gadget,sans-serif"
                 }
             },
             "angularTheme": {
@@ -904,8 +904,8 @@
         "name": "",
         "group": "3342ef65ea84e0bc",
         "order": 3,
-        "width": "12",
-        "height": "8",
+        "width": 12,
+        "height": 8,
         "label": "Oxidation pH",
         "chartType": "line",
         "legend": "false",
@@ -1302,8 +1302,8 @@
         "name": "",
         "group": "3342ef65ea84e0bc",
         "order": 1,
-        "width": "12",
-        "height": "8",
+        "width": 12,
+        "height": 8,
         "gtype": "wave",
         "title": "Oxidation Level",
         "label": "",
@@ -1517,8 +1517,8 @@
         "name": "",
         "group": "6bf19a83f26ccc65",
         "order": 1,
-        "width": "12",
-        "height": "8",
+        "width": 12,
+        "height": 8,
         "label": "Oxidation Temperature",
         "chartType": "line",
         "legend": "false",
@@ -1758,8 +1758,8 @@
         "z": "16c561d0bd2db4f4",
         "group": "6bf19a83f26ccc65",
         "order": 2,
-        "width": "0",
-        "height": "0",
+        "width": 0,
+        "height": 0,
         "name": "",
         "label": "Oxidation Reduction Potential:",
         "format": "{{msg.payload}}",
@@ -1775,8 +1775,8 @@
         "name": "",
         "group": "6bf19a83f26ccc65",
         "order": 3,
-        "width": "12",
-        "height": "8",
+        "width": 12,
+        "height": 8,
         "label": "Oxidation Reduction Potential",
         "chartType": "line",
         "legend": "false",
