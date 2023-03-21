@@ -146,7 +146,7 @@
     {
         "id": "3342ef65ea84e0bc",
         "type": "ui_group",
-        "name": "Oxidation",
+        "name": "OxidationRight",
         "tab": "613ee8f0c2ded6bc",
         "order": 3,
         "disp": true,
@@ -274,6 +274,26 @@
         "order": 2,
         "disabled": false,
         "hidden": false
+    },
+    {
+        "id": "6bf19a83f26ccc65",
+        "type": "ui_group",
+        "name": "OxidationLeft",
+        "tab": "613ee8f0c2ded6bc",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "bbb9403f288483b3",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "3342ef65ea84e0bc",
+        "order": 2,
+        "width": 1,
+        "height": 1
     },
     {
         "id": "80ae0189e474ec6e",
@@ -894,8 +914,8 @@
         "name": "",
         "group": "3342ef65ea84e0bc",
         "order": 2,
-        "width": "8",
-        "height": "4",
+        "width": "12",
+        "height": "8",
         "label": "Oxidation pH",
         "chartType": "line",
         "legend": "false",
@@ -1292,7 +1312,7 @@
         "name": "",
         "group": "3342ef65ea84e0bc",
         "order": 6,
-        "width": "5",
+        "width": "12",
         "height": "5",
         "gtype": "wave",
         "title": "Oxidation Level",
