@@ -287,6 +287,16 @@
         "collapse": false
     },
     {
+        "id": "c0a1200658ba18e9",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "3342ef65ea84e0bc",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
         "id": "80ae0189e474ec6e",
         "type": "comment",
         "z": "16c561d0bd2db4f4",
@@ -905,7 +915,7 @@
         "z": "16c561d0bd2db4f4",
         "name": "",
         "group": "3342ef65ea84e0bc",
-        "order": 3,
+        "order": 4,
         "width": 12,
         "height": 8,
         "label": "Oxidation pH",
@@ -947,7 +957,7 @@
         "type": "ui_text",
         "z": "16c561d0bd2db4f4",
         "group": "3342ef65ea84e0bc",
-        "order": 2,
+        "order": 3,
         "width": 0,
         "height": 0,
         "name": "",
@@ -1305,7 +1315,7 @@
         "z": "16c561d0bd2db4f4",
         "name": "",
         "group": "3342ef65ea84e0bc",
-        "order": 1,
+        "order": 2,
         "width": 12,
         "height": 8,
         "gtype": "wave",
