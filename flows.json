@@ -595,7 +595,7 @@
         "label": "",
         "format": "{{value}}",
         "min": 0,
-        "max": "3",
+        "max": "470",
         "colors": [
             "#00b500",
             "#e6e600",
@@ -1135,7 +1135,7 @@
         "label": "",
         "format": "{{value}}",
         "min": 0,
-        "max": "3",
+        "max": "470",
         "colors": [
             "#00b500",
             "#e6e600",
@@ -1284,7 +1284,7 @@
         "label": "",
         "format": "{{value}}",
         "min": 0,
-        "max": "3",
+        "max": "600",
         "colors": [
             "#00b500",
             "#e6e600",
@@ -1310,7 +1310,7 @@
         "label": "",
         "format": "{{value}}",
         "min": 0,
-        "max": "3",
+        "max": "470",
         "colors": [
             "#00b500",
             "#e6e600",
@@ -1611,7 +1611,7 @@
         "label": "",
         "format": "{{value}}",
         "min": 0,
-        "max": "4",
+        "max": "1900",
         "colors": [
             "#00b500",
             "#e6e600",
