@@ -1347,7 +1347,7 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "levelReporter",
-        "func": "var level1 = global.get('O1');\nvar level2 = global.get('O2');\nvar level3 = global.get('O3');\n\nif (level3 == true) {\n    msg.payload = context.global.MaxStandard;\n} else if (level2 == true) {\n    msg.payload = context.global.MidStandard;\n} else if (level1 == true) {\n    msg.payload = context.global.MinStandard;\n} else {\n    msg.payload = 0;\n}\n\n\nreturn msg;",
+        "func": "var level1 = global.get('O1');\nvar level2 = global.get('O2');\nvar level3 = global.get('O3');\n\nif (level3 == true) {\n    msg.payload = 400;\n} else if (level2 == true) {\n    msg.payload = 200;\n} else if (level1 == true) {\n    msg.payload = 100;\n} else {\n    msg.payload = 0;\n}\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
