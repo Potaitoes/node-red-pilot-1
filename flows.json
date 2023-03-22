@@ -924,7 +924,7 @@
         "useOneColor": false,
         "useUTC": false,
         "colors": [
-            "#b31e5f",
+            "#ff64ff",
             "#aec7e8",
             "#ff7f0e",
             "#2ca02c",
@@ -1539,7 +1539,7 @@
         "useOneColor": false,
         "useUTC": false,
         "colors": [
-            "#1f77b4",
+            "#ff64ff",
             "#aec7e8",
             "#ff7f0e",
             "#2ca02c",
@@ -1797,7 +1797,7 @@
         "useOneColor": false,
         "useUTC": false,
         "colors": [
-            "#1f77b4",
+            "#ff64ff",
             "#aec7e8",
             "#ff7f0e",
             "#2ca02c",
