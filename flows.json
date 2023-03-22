@@ -1220,7 +1220,8 @@
                 "0362f989e57b35f6"
             ],
             [
-                "4185f9e46ff1786f"
+                "4185f9e46ff1786f",
+                "6614e3ca06715f22"
             ],
             [
                 "2ac889004a7404b4",
@@ -1308,7 +1309,7 @@
         "width": 12,
         "height": 8,
         "gtype": "wave",
-        "title": "Oxidation Level",
+        "title": "Fluid Level",
         "label": "L",
         "format": "{{value}}",
         "min": 0,
@@ -1320,7 +1321,7 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1900,
+        "x": 1890,
         "y": 1040,
         "wires": []
     },
@@ -1861,6 +1862,22 @@
         "statusType": "auto",
         "x": 1900,
         "y": 100,
+        "wires": []
+    },
+    {
+        "id": "6614e3ca06715f22",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "6bf19a83f26ccc65",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Temperature",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1930,
+        "y": 920,
         "wires": []
     },
     {
