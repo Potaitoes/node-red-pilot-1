@@ -345,7 +345,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "0.1",
+        "repeat": "1",
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
