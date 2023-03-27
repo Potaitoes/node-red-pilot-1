@@ -11,7 +11,7 @@
         "id": "41ec38ad59c0cf49",
         "type": "tab",
         "label": "Flow 2",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -40,11 +40,11 @@
         "id": "10584f864ba3765e",
         "type": "ui_base",
         "theme": {
-            "name": "theme-light",
+            "name": "theme-custom",
             "lightTheme": {
                 "default": "#0094CE",
-                "baseColor": "#0094CE",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "baseColor": "#00b050",
+                "baseFont": "Arial Black,Arial Black,Gadget,sans-serif",
                 "edited": true,
                 "reset": false
             },
@@ -58,52 +58,53 @@
                 "name": "Untitled Theme 1",
                 "default": "#4B7930",
                 "baseColor": "#4B7930",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                "baseFont": "Arial Black,Arial Black,Gadget,sans-serif",
+                "reset": false
             },
             "themeState": {
                 "base-color": {
-                    "default": "#0094CE",
-                    "value": "#0094CE",
-                    "edited": false
+                    "default": "#4B7930",
+                    "value": "#4B7930",
+                    "edited": true
                 },
                 "page-titlebar-backgroundColor": {
-                    "value": "#0094CE",
+                    "value": "#4B7930",
                     "edited": false
                 },
                 "page-backgroundColor": {
-                    "value": "#fafafa",
-                    "edited": false
-                },
-                "page-sidebar-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-textColor": {
-                    "value": "#1bbfff",
-                    "edited": false
-                },
-                "group-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "widget-textColor": {
                     "value": "#111111",
                     "edited": false
                 },
-                "widget-backgroundColor": {
-                    "value": "#0094ce",
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
                     "edited": false
                 },
+                "group-textColor": {
+                    "value": "#6db046",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#307478",
+                    "edited": true
+                },
                 "widget-borderColor": {
-                    "value": "#ffffff",
+                    "value": "#333333",
                     "edited": false
                 },
                 "base-font": {
-                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                    "value": "Arial Black,Arial Black,Gadget,sans-serif"
                 }
             },
             "angularTheme": {
@@ -115,7 +116,7 @@
             }
         },
         "site": {
-            "name": "Node-RED Dashboard",
+            "name": "ZinSCADA",
             "hideToolbar": "false",
             "allowSwipe": "false",
             "lockMenu": "false",
@@ -136,19 +137,9 @@
     {
         "id": "7b9307d1947a13f0",
         "type": "ui_group",
-        "name": "Tank Levels",
-        "tab": "8183cda1929e83aa",
+        "name": "chart",
+        "tab": "21385dd97135be68",
         "order": 1,
-        "disp": true,
-        "width": "24",
-        "collapse": false
-    },
-    {
-        "id": "581cf3edde4d02e5",
-        "type": "ui_group",
-        "name": "Temperature Readouts",
-        "tab": "8183cda1929e83aa",
-        "order": 2,
         "disp": true,
         "width": "24",
         "collapse": false
@@ -156,11 +147,11 @@
     {
         "id": "3342ef65ea84e0bc",
         "type": "ui_group",
-        "name": "pH ReadOuts",
-        "tab": "8183cda1929e83aa",
+        "name": "OxidationRight",
+        "tab": "613ee8f0c2ded6bc",
         "order": 3,
         "disp": true,
-        "width": "24",
+        "width": "12",
         "collapse": false
     },
     {
@@ -178,15 +169,90 @@
         "type": "ui_tab",
         "name": "Controls",
         "icon": "dashboard",
-        "order": 2,
+        "order": 3,
         "disabled": false,
         "hidden": false
+    },
+    {
+        "id": "4c7e5a991ed75d8e",
+        "type": "ui_tab",
+        "name": "WashLeeching",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "359d48deb1e9e787",
+        "type": "ui_tab",
+        "name": "Electrowinning",
+        "icon": "dashboard",
+        "order": 8,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "613ee8f0c2ded6bc",
+        "type": "ui_tab",
+        "name": "Oxidation",
+        "icon": "dashboard",
+        "order": 5,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "21385dd97135be68",
+        "type": "ui_tab",
+        "name": "Buffer",
+        "icon": "dashboard",
+        "order": 7,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "210d2df426365d31",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "359d48deb1e9e787",
+        "order": 1,
+        "disp": true,
+        "width": "8",
+        "collapse": false
+    },
+    {
+        "id": "bd9c1836cb534d4b",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "4c7e5a991ed75d8e",
+        "order": 1,
+        "disp": true,
+        "width": "8",
+        "collapse": false
+    },
+    {
+        "id": "3c117daf5c2d4197",
+        "type": "ui_tab",
+        "name": "Cementation",
+        "icon": "dashboard",
+        "order": 6,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c28d2984b3e2326d",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "3c117daf5c2d4197",
+        "order": 1,
+        "disp": true,
+        "width": "8",
+        "collapse": false
     },
     {
         "id": "e16e06ca.f38438",
         "type": "ui_group",
         "name": "Frame Statistics",
-        "tab": "7af2d9c8.0a9148",
+        "tab": "",
         "order": 2,
         "disp": true,
         "width": "6"
@@ -194,21 +260,41 @@
     {
         "id": "675036dd.603328",
         "type": "ui_group",
-        "name": "Frame Grab",
-        "tab": "7af2d9c8.0a9148",
+        "name": "Levels Aligned",
+        "tab": "0d272965d5394e35",
         "order": 1,
         "disp": true,
-        "width": "8",
+        "width": "25",
         "collapse": false
     },
     {
-        "id": "7af2d9c8.0a9148",
+        "id": "0d272965d5394e35",
         "type": "ui_tab",
-        "name": "RTSP",
+        "name": "Full System Overview",
         "icon": "dashboard",
-        "order": 13,
+        "order": 2,
         "disabled": false,
         "hidden": false
+    },
+    {
+        "id": "6bf19a83f26ccc65",
+        "type": "ui_group",
+        "name": "OxidationLeft",
+        "tab": "613ee8f0c2ded6bc",
+        "order": 2,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "c0a1200658ba18e9",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "3342ef65ea84e0bc",
+        "order": 1,
+        "width": 1,
+        "height": 1
     },
     {
         "id": "80ae0189e474ec6e",
@@ -216,8 +302,8 @@
         "z": "16c561d0bd2db4f4",
         "name": "Read data from PLC",
         "info": "",
-        "x": 210,
-        "y": 260,
+        "x": 130,
+        "y": 220,
         "wires": []
     },
     {
@@ -237,12 +323,11 @@
         "securitypolicy": "None",
         "folderName4PKI": "",
         "name": "",
-        "x": 720,
-        "y": 300,
+        "x": 760,
+        "y": 420,
         "wires": [
             [
-                "2cb4a5df8abfe88a",
-                "8bc0b01699c4d412"
+                "e00268bdbe39dfbb"
             ]
         ]
     },
@@ -260,52 +345,23 @@
                 "vt": "str"
             }
         ],
-        "repeat": "0.1",
+        "repeat": "1",
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 130,
-        "y": 340,
-        "wires": [
-            [
-                "a8283461ddd302fa",
-                "b3578a269a98ebf3"
-            ]
-        ]
-    },
-    {
-        "id": "2cb4a5df8abfe88a",
-        "type": "debug",
-        "z": "16c561d0bd2db4f4",
-        "name": "debug output from client",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 990,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "a8283461ddd302fa",
-        "type": "OpcUa-Item",
-        "z": "16c561d0bd2db4f4",
-        "item": "ns=4;s=TestBitTag",
-        "datatype": "Boolean",
-        "value": "",
-        "name": "",
-        "x": 300,
+        "x": 70,
         "y": 300,
         "wires": [
             [
-                "9a2b10859adf0839"
+                "b3578a269a98ebf3",
+                "0b960201cdf08554",
+                "33c6fb9ca60141ee",
+                "33870d5dbfab317a",
+                "4dfb0f8ea148f7d7",
+                "2c99f31183a32dd4"
             ]
         ]
     },
@@ -315,8 +371,8 @@
         "z": "16c561d0bd2db4f4",
         "name": "Write Data to PLC",
         "info": "There is a limited number of clients you can use.\nYou can string commands together and push into a single client.",
-        "x": 150,
-        "y": 700,
+        "x": 130,
+        "y": 1320,
         "wires": []
     },
     {
@@ -336,8 +392,8 @@
         "securitypolicy": "None",
         "folderName4PKI": "",
         "name": "",
-        "x": 440,
-        "y": 760,
+        "x": 420,
+        "y": 1380,
         "wires": [
             [
                 "cbf391f08b4a70a7"
@@ -357,8 +413,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 600,
-        "y": 760,
+        "x": 580,
+        "y": 1380,
         "wires": []
     },
     {
@@ -386,8 +442,8 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 110,
-        "y": 760,
+        "x": 90,
+        "y": 1380,
         "wires": [
             [
                 "6bca2acab5cf3ecf"
@@ -402,8 +458,8 @@
         "datatype": "Boolean",
         "value": "",
         "name": "",
-        "x": 260,
-        "y": 760,
+        "x": 240,
+        "y": 1380,
         "wires": [
             [
                 "5fc5cf3c28ed8110"
@@ -411,31 +467,15 @@
         ]
     },
     {
-        "id": "45707b0dc25941b1",
-        "type": "ui_text",
-        "z": "16c561d0bd2db4f4",
-        "group": "701c917fb989f805",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "Switch Status",
-        "label": "Switch Status",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 1120,
-        "y": 380,
-        "wires": []
-    },
-    {
         "id": "b3578a269a98ebf3",
         "type": "OpcUa-Item",
         "z": "16c561d0bd2db4f4",
-        "item": "ns=4;s=TankData",
+        "item": "ns=4;s=WashDigestion",
         "datatype": "String",
         "value": "",
         "name": "",
-        "x": 300,
-        "y": 400,
+        "x": 240,
+        "y": 300,
         "wires": [
             [
                 "6883df45a9ecbd49"
@@ -443,67 +483,17 @@
         ]
     },
     {
-        "id": "673d50fce5f0ce38",
-        "type": "ui_gauge",
-        "z": "16c561d0bd2db4f4",
-        "name": "Temperature 1",
-        "group": "581cf3edde4d02e5",
-        "order": 2,
-        "width": "8",
-        "height": "5",
-        "gtype": "gage",
-        "title": "Temperature 1",
-        "label": "°C",
-        "format": "{{msg.payload}}",
-        "min": 0,
-        "max": "50",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 1140,
-        "y": 580,
-        "wires": []
-    },
-    {
-        "id": "8bc0b01699c4d412",
+        "id": "6883df45a9ecbd49",
         "type": "function",
         "z": "16c561d0bd2db4f4",
-        "name": "output splitter",
-        "func": "var msg1 = {};\nvar msg2 = {};\n\nvar index;\nvar totalOutputs = 2\n\nconst returnArray = new Array(totalOutputs).fill(null);\nmsg1.topic = global.get(\"Topic1\");\nmsg2.topic = global.get(\"Topic2\");\n\nif (msg.topic == msg1.topic){\n    global.set(\"SwitchStatus\", msg.payload)\n    index = 0;\n}\n\nif (msg.topic == msg2.topic){\n    index = 1;\n}\n\nreturnArray[index] = msg;\n\nreturn returnArray;\n\n",
-        "outputs": 2,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 680,
-        "y": 460,
-        "wires": [
-            [
-                "45707b0dc25941b1",
-                "9b1c5fad325e14f5"
-            ],
-            [
-                "58b2a935cacd9715",
-                "81f1b85473dca332"
-            ]
-        ]
-    },
-    {
-        "id": "9a2b10859adf0839",
-        "type": "function",
-        "z": "16c561d0bd2db4f4",
-        "name": "assign SW1 to topic",
-        "func": "var msg1 = {};\nmsg1.topic = msg.topic;\nglobal.set(\"Topic1\", String(msg1.topic));\n\nreturn msg;",
+        "name": "assign WashDigestion to topic",
+        "func": "var msg_WashDigestion = {};\nmsg_WashDigestion.topic = msg.topic;\n\n//Assigns a global variable identified by \"Topic_WashDigestion\" of value msg_WashDigestion.topic where the data type is converted to a string.\n//Don't know why it needs to be declared as a string type? Less memory assigned?\nglobal.set(\"Topic_WashDigestion\", String(msg_WashDigestion.topic)); \n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 500,
+        "x": 470,
         "y": 300,
         "wires": [
             [
@@ -512,120 +502,15 @@
         ]
     },
     {
-        "id": "6883df45a9ecbd49",
-        "type": "function",
-        "z": "16c561d0bd2db4f4",
-        "name": "assign TankData to topic",
-        "func": "var msg1 = {};\nmsg1.topic = msg.topic;\nglobal.set(\"Topic2\", String(msg1.topic));\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 510,
-        "y": 340,
-        "wires": [
-            [
-                "ee3a6572681df942"
-            ]
-        ]
-    },
-    {
-        "id": "58b2a935cacd9715",
-        "type": "debug",
-        "z": "16c561d0bd2db4f4",
-        "name": "debug temp",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 670,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "9b1c5fad325e14f5",
-        "type": "debug",
-        "z": "16c561d0bd2db4f4",
-        "name": "debug switch",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 930,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "4d859a5388493dcf",
-        "type": "ui_gauge",
-        "z": "16c561d0bd2db4f4",
-        "name": "Temperature 2",
-        "group": "581cf3edde4d02e5",
-        "order": 2,
-        "width": "8",
-        "height": "5",
-        "gtype": "gage",
-        "title": "Temperature 2",
-        "label": "°C",
-        "format": "{{msg.payload}}",
-        "min": 0,
-        "max": "50",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 1140,
-        "y": 620,
-        "wires": []
-    },
-    {
-        "id": "0f00d8704e4166e2",
-        "type": "ui_gauge",
-        "z": "16c561d0bd2db4f4",
-        "name": "Temperature 3",
-        "group": "581cf3edde4d02e5",
-        "order": 2,
-        "width": "8",
-        "height": "5",
-        "gtype": "gage",
-        "title": "Temperature 3",
-        "label": "°C",
-        "format": "{{msg.payload}}",
-        "min": 0,
-        "max": "50",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 1140,
-        "y": 660,
-        "wires": []
-    },
-    {
         "id": "80b357c10add4706",
         "type": "ui_chart",
         "z": "16c561d0bd2db4f4",
-        "name": "",
-        "group": "3342ef65ea84e0bc",
+        "name": "washpHChart",
+        "group": "bd9c1836cb534d4b",
         "order": 2,
         "width": "8",
         "height": "4",
-        "label": "",
+        "label": "Wash pH",
         "chartType": "line",
         "legend": "false",
         "xformat": "HH:mm:ss",
@@ -653,8 +538,8 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "x": 1130,
-        "y": 500,
+        "x": 1720,
+        "y": 60,
         "wires": [
             []
         ]
@@ -663,16 +548,16 @@
         "id": "1f7c50c5d6e7d504",
         "type": "ui_text",
         "z": "16c561d0bd2db4f4",
-        "group": "3342ef65ea84e0bc",
+        "group": "bd9c1836cb534d4b",
         "order": 1,
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "pH:",
+        "label": "Wash pH:",
         "format": "{{msg.payload}}",
         "layout": "row-left",
-        "x": 1130,
-        "y": 540,
+        "x": 1700,
+        "y": 100,
         "wires": []
     },
     {
@@ -680,36 +565,30 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "TankData Splitter",
-        "func": "var t1_msg = {};\nvar t2_msg = {};\nvar t3_msg = {};\nvar pH_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar l3_msg = {};\n\nvar totalOutputs = 7;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\nt1_msg.payload = Math.round((msg.payload.temp1) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nt2_msg.payload = Math.round((msg.payload.temp2) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nt3_msg.payload = Math.round((msg.payload.temp3) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nl1_msg.payload = msg.payload.isTank1Full;\nl2_msg.payload = msg.payload.isTank2Full;\nl3_msg.payload = msg.payload.isTank3Full;\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = t1_msg;\nreturnArray[2] = t2_msg;\nreturnArray[3] = t3_msg;\nreturnArray[4] = l1_msg;\nreturnArray[5] = l2_msg;\nreturnArray[6] = l3_msg;\n\nreturn returnArray;",
-        "outputs": 7,
+        "func": "var pH_msg = {};\nvar temp_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar l3_msg = {};\n\nvar totalOutputs = 7;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\nglobal.set(\"pH_WD\", msg.payload);\n\ntemp_msg.payload = Math.round((msg.payload.temperature) * 100) / 100;\nglobal.set(\"Temp_WD\", msg.payload);\n\nl1_msg.payload = msg.payload.level1_status;\nglobal.set(\"WD1\", l1_msg.payload);\nl2_msg.payload = msg.payload.level2_status;\nglobal.set(\"WD2\", l2_msg.payload);\nl3_msg.payload = msg.payload.level3_status;\nglobal.set(\"WD3\", l3_msg.payload);\n\n\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\nreturnArray[2] = l1_msg;\nreturnArray[3] = l2_msg;\nreturnArray[4] = l3_msg;\n\n\nreturn returnArray;",
+        "outputs": 5,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 890,
-        "y": 500,
+        "x": 1470,
+        "y": 140,
         "wires": [
             [
                 "1f7c50c5d6e7d504",
                 "80b357c10add4706"
             ],
             [
-                "673d50fce5f0ce38"
+                "1ec4f6d30b9ae0fd"
             ],
             [
-                "4d859a5388493dcf"
+                "95b336cfdb499b25"
             ],
             [
-                "0f00d8704e4166e2"
+                "95b336cfdb499b25"
             ],
             [
-                "9d878bc63699d184"
-            ],
-            [
-                "c23e91d4c818845a"
-            ],
-            [
-                "9640bcda8ccee4d2"
+                "95b336cfdb499b25"
             ]
         ]
     },
@@ -718,16 +597,16 @@
         "type": "ui_gauge",
         "z": "16c561d0bd2db4f4",
         "name": "",
-        "group": "7b9307d1947a13f0",
-        "order": 2,
-        "width": "8",
-        "height": "5",
+        "group": "bd9c1836cb534d4b",
+        "order": 3,
+        "width": "0",
+        "height": "0",
         "gtype": "wave",
-        "title": "tank1Level",
+        "title": "Wash Level",
         "label": "",
         "format": "{{value}}",
         "min": 0,
-        "max": "3",
+        "max": "470",
         "colors": [
             "#00b500",
             "#e6e600",
@@ -735,51 +614,540 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1310,
-        "y": 720,
+        "x": 1890,
+        "y": 180,
         "wires": []
     },
     {
-        "id": "61d9cc63a960f161",
-        "type": "ui_gauge",
+        "id": "e00268bdbe39dfbb",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "Splits Topics into respective Outputs",
+        "func": "var index;\nvar numOutputs = node.numberOfOutputs;\n\nconst returnArray = new Array(numOutputs).fill(null);\n\nvar topic1 = global.get('Topic_WashDigestion');\nvar topic2 = global.get('Topic_Cementation');\nvar topic3 = global.get('Topic_Electrowinning');\nvar topic4 = global.get('Topic_OxPrecipitation');\nvar topic5 = global.get('Topic_BufferTank');\n\nif (msg.topic == topic1){\n    index = 0;\n}\n\nif (msg.topic == topic2){\n    index = 1;\n}\n\nif (msg.topic == topic3){\n    index = 2;\n}\n\nif (msg.topic == topic4) {\n    index = 3;\n}\n\nif (msg.topic == topic5) {\n    index = 4;\n}\n\nreturnArray[index] = msg;\n\nreturn returnArray;",
+        "outputs": 5,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 420,
+        "wires": [
+            [
+                "81f1b85473dca332",
+                "42c9914bc1b52849"
+            ],
+            [
+                "e2fa88ae572257fc",
+                "42c9914bc1b52849"
+            ],
+            [
+                "a3d6ef1090b37a6d",
+                "42c9914bc1b52849"
+            ],
+            [
+                "42c9914bc1b52849",
+                "151bafda4bc2a7be"
+            ],
+            [
+                "9181c831def27233",
+                "42c9914bc1b52849"
+            ]
+        ]
+    },
+    {
+        "id": "0b960201cdf08554",
+        "type": "OpcUa-Item",
+        "z": "16c561d0bd2db4f4",
+        "item": "ns=4;s=Cementation",
+        "datatype": "String",
+        "value": "",
+        "name": "",
+        "x": 240,
+        "y": 340,
+        "wires": [
+            [
+                "afe589e21d33a821"
+            ]
+        ]
+    },
+    {
+        "id": "afe589e21d33a821",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "assign Cementation to topic",
+        "func": "var msg_Cementation = {};\nmsg_Cementation.topic = msg.topic;\n\n//See node above for what goes on here.\nglobal.set(\"Topic_Cementation\", String(msg_Cementation.topic)); \n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 340,
+        "wires": [
+            [
+                "ee3a6572681df942"
+            ]
+        ]
+    },
+    {
+        "id": "e2fa88ae572257fc",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "TankData Splitter",
+        "func": "var pH_msg = {};\nvar temp_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar l3_msg = {};\n\nvar totalOutputs = 7;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\ntemp_msg.payload = Math.round((msg.payload.temperature) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nl1_msg.payload = msg.payload.level1_status;\nglobal.set(\"C1\", l1_msg.payload);\nl2_msg.payload = msg.payload.level2_status;\nglobal.set(\"C2\", l2_msg.payload);\nl3_msg.payload = msg.payload.level3_status;\nglobal.set(\"C3\", l3_msg.payload);\n\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\nreturnArray[2] = l1_msg;\nreturnArray[3] = l2_msg;\nreturnArray[4] = l3_msg;\n\n\nreturn returnArray;",
+        "outputs": 5,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1470,
+        "y": 420,
+        "wires": [
+            [
+                "7ede4545d9136513",
+                "92dec648efba38d7"
+            ],
+            [
+                "78480f23928b4b2f"
+            ],
+            [
+                "e6671fa9cbcaaae5"
+            ],
+            [
+                "e6671fa9cbcaaae5"
+            ],
+            [
+                "e6671fa9cbcaaae5"
+            ]
+        ]
+    },
+    {
+        "id": "7ede4545d9136513",
+        "type": "ui_chart",
+        "z": "16c561d0bd2db4f4",
+        "name": "cementationpHChart",
+        "group": "c28d2984b3e2326d",
+        "order": 2,
+        "width": "8",
+        "height": "4",
+        "label": "Cementation pH",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "14",
+        "removeOlder": 1,
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#dd2727",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1740,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "92dec648efba38d7",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "c28d2984b3e2326d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Cementation pH:",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 1730,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "33c6fb9ca60141ee",
+        "type": "OpcUa-Item",
+        "z": "16c561d0bd2db4f4",
+        "item": "ns=4;s=Electrowinning",
+        "datatype": "String",
+        "value": "",
+        "name": "",
+        "x": 240,
+        "y": 380,
+        "wires": [
+            [
+                "db94b881ae88641e"
+            ]
+        ]
+    },
+    {
+        "id": "db94b881ae88641e",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "assign Electrowinning to topic",
+        "func": "var msg_Electrowinning = {};\nmsg_Electrowinning.topic = msg.topic;\n\n//See node above for what goes on here.\nglobal.set(\"Topic_Electrowinning\", String(msg_Electrowinning.topic)); \n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 380,
+        "wires": [
+            [
+                "ee3a6572681df942"
+            ]
+        ]
+    },
+    {
+        "id": "c4defabd3506a705",
+        "type": "ui_chart",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "group": "210d2df426365d31",
+        "order": 2,
+        "width": "8",
+        "height": "4",
+        "label": "Electrowinning pH",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "14",
+        "removeOlder": 1,
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#dd2727",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1730,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1b64da6bc3b25e64",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "210d2df426365d31",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Electrowinning pH",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 1730,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "33870d5dbfab317a",
+        "type": "OpcUa-Item",
+        "z": "16c561d0bd2db4f4",
+        "item": "ns=4;s=OxPrecipitation",
+        "datatype": "String",
+        "value": "",
+        "name": "",
+        "x": 240,
+        "y": 420,
+        "wires": [
+            [
+                "e4ea460878da2adb"
+            ]
+        ]
+    },
+    {
+        "id": "e4ea460878da2adb",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "assign OxPrecipitation to topic",
+        "func": "var msg_OxPrecipitation = {};\nmsg_OxPrecipitation.topic = msg.topic;\n\n//See node above for what goes on here.\nglobal.set(\"Topic_OxPrecipitation\", String(msg_OxPrecipitation.topic)); \n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 420,
+        "wires": [
+            [
+                "ee3a6572681df942"
+            ]
+        ]
+    },
+    {
+        "id": "0362f989e57b35f6",
+        "type": "ui_chart",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "group": "3342ef65ea84e0bc",
+        "order": 4,
+        "width": 12,
+        "height": 8,
+        "label": "Oxidation pH",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "14",
+        "removeOlder": 1,
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ff64ff",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#dd2727",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1710,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "daa274e0f092d927",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "3342ef65ea84e0bc",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Oxidation pH:",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 1720,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "4dfb0f8ea148f7d7",
+        "type": "OpcUa-Item",
+        "z": "16c561d0bd2db4f4",
+        "item": "ns=4;s=BufferTank",
+        "datatype": "String",
+        "value": "",
+        "name": "",
+        "x": 240,
+        "y": 460,
+        "wires": [
+            [
+                "d97589088e7526f6"
+            ]
+        ]
+    },
+    {
+        "id": "d97589088e7526f6",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "assign BufferTank to topic",
+        "func": "var msg_BufferTank = {};\nmsg_BufferTank.topic = msg.topic;\n\n//See node above for what goes on here.\nglobal.set(\"Topic_BufferTank\", String(msg_BufferTank.topic)); \n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 460,
+        "wires": [
+            [
+                "ee3a6572681df942"
+            ]
+        ]
+    },
+    {
+        "id": "4e61426d7b7a4494",
+        "type": "ui_chart",
         "z": "16c561d0bd2db4f4",
         "name": "",
         "group": "7b9307d1947a13f0",
         "order": 2,
         "width": "8",
-        "height": "5",
-        "gtype": "wave",
-        "title": "tank2Level",
-        "label": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "3",
+        "height": "4",
+        "label": "Buffer pH",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "14",
+        "removeOlder": 1,
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
         "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#dd2727",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
         ],
-        "seg1": "",
-        "seg2": "",
-        "x": 1310,
-        "y": 760,
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1700,
+        "y": 1140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0acdb8c3f4f7bdf1",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "7b9307d1947a13f0",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Buffer pH:",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 1700,
+        "y": 1180,
         "wires": []
     },
     {
-        "id": "43ea732ccb82d795",
+        "id": "0e23fee8fd55db68",
+        "type": "comment",
+        "z": "16c561d0bd2db4f4",
+        "name": "Wash Digestion",
+        "info": "",
+        "x": 1480,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "c28f6bb3398809f9",
+        "type": "comment",
+        "z": "16c561d0bd2db4f4",
+        "name": "Cementation",
+        "info": "",
+        "x": 1470,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "c8b5ed30eaae03f6",
+        "type": "comment",
+        "z": "16c561d0bd2db4f4",
+        "name": "Electrowinning",
+        "info": "",
+        "x": 1480,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "98825de087caf9b5",
+        "type": "comment",
+        "z": "16c561d0bd2db4f4",
+        "name": "Oxidation Precipitation",
+        "info": "",
+        "x": 1480,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "c34cf7e4b85e61d6",
+        "type": "comment",
+        "z": "16c561d0bd2db4f4",
+        "name": "Buffer Tank",
+        "info": "",
+        "x": 1440,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "95b336cfdb499b25",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "levelReporter",
+        "func": "var level1 = global.get('WD1');\nvar level2 = global.get('WD2');\nvar level3 = global.get('WD3');\n\nif (level3 == true){\n    msg.payload = context.global.MaxStandard;\n} else if (level2 == true) {\n    msg.payload = context.global.MidStandard;\n} else if (level1 == true) {\n    msg.payload = context.global.MinStandard;\n} else {\n    msg.payload = 0;\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1710,
+        "y": 180,
+        "wires": [
+            [
+                "de1f6b2b37e837cb",
+                "7c8336bfba79e633",
+                "365a73f8ac09af66"
+            ]
+        ]
+    },
+    {
+        "id": "3480f2c9558d5432",
         "type": "ui_gauge",
         "z": "16c561d0bd2db4f4",
-        "name": "tank3Level",
-        "group": "7b9307d1947a13f0",
-        "order": 2,
-        "width": "8",
-        "height": "5",
+        "name": "",
+        "group": "c28d2984b3e2326d",
+        "order": 4,
+        "width": "0",
+        "height": "0",
         "gtype": "wave",
-        "title": "Tank 3 Level",
+        "title": "Cementation Level",
         "label": "",
         "format": "{{value}}",
         "min": 0,
-        "max": "3",
+        "max": "470",
         "colors": [
             "#00b500",
             "#e6e600",
@@ -787,66 +1155,740 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1310,
-        "y": 800,
+        "x": 1910,
+        "y": 460,
         "wires": []
     },
     {
-        "id": "9d878bc63699d184",
+        "id": "e6671fa9cbcaaae5",
         "type": "function",
         "z": "16c561d0bd2db4f4",
-        "name": "function 2",
-        "func": "var level;\n\nif (msg.payload == true){\n    level = 1;\n}\n\nmsg.payload = level;\n\nreturn msg;",
+        "name": "levelReporter",
+        "func": "var level1 = global.get('C1');\nvar level2 = global.get('C2');\nvar level3 = global.get('C3');\n\nif (level3 == true) {\n    msg.payload = context.global.MaxStandard;\n} else if (level2 == true) {\n    msg.payload = context.global.MidStandard;\n} else if (level1 == true) {\n    msg.payload = context.global.MinStandard;\n} else {\n    msg.payload = 0;\n}\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1120,
-        "y": 720,
+        "x": 1710,
+        "y": 460,
         "wires": [
             [
-                "de1f6b2b37e837cb"
+                "3480f2c9558d5432",
+                "74915e51dd4c772c"
             ]
         ]
     },
     {
-        "id": "c23e91d4c818845a",
+        "id": "a3d6ef1090b37a6d",
         "type": "function",
         "z": "16c561d0bd2db4f4",
-        "name": "function 3",
-        "func": "var level;\n\nif (msg.payload == true){\n    level = 1;\n}\n\nmsg.payload = level;\n\nreturn msg;",
-        "outputs": 1,
+        "name": "TankData Splitter",
+        "func": "var pH_msg = {};\nvar temp_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar l3_msg = {};\n\nvar totalOutputs = 7;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\ntemp_msg.payload = Math.round((msg.payload.temperature) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nl1_msg.payload = msg.payload.level1_status;\nglobal.set(\"EW1\", l1_msg.payload);\nl2_msg.payload = msg.payload.level2_status;\nglobal.set(\"EW2\", l2_msg.payload);\nl3_msg.payload = msg.payload.level3_status;\nglobal.set(\"EW3\", l3_msg.payload);\n\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\nreturnArray[2] = l1_msg;\nreturnArray[3] = l2_msg;\nreturnArray[4] = l3_msg;\n\n\nreturn returnArray;",
+        "outputs": 5,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1120,
-        "y": 760,
+        "x": 1470,
+        "y": 700,
         "wires": [
             [
-                "61d9cc63a960f161"
+                "c4defabd3506a705",
+                "1b64da6bc3b25e64"
+            ],
+            [
+                "3d63a9e19229a6e2"
+            ],
+            [
+                "3d317cd75df892bf"
+            ],
+            [
+                "3d317cd75df892bf"
+            ],
+            [
+                "3d317cd75df892bf"
             ]
         ]
     },
     {
-        "id": "9640bcda8ccee4d2",
+        "id": "151bafda4bc2a7be",
         "type": "function",
         "z": "16c561d0bd2db4f4",
-        "name": "function 4",
-        "func": "var level;\n\nif (msg.payload == true){\n    level = 1;\n}\n\nmsg.payload = level;\n\nreturn msg;",
+        "name": "TankData Splitter",
+        "func": "\nvar pH_msg = {};\nvar temp_msg = {};\nvar orp_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar l3_msg = {};\n\nvar totalOutputs = 7;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\nglobal.set(\"OpH\", pH_msg.payload);\n\ntemp_msg.payload = Math.round((msg.payload.temperature) * 100) / 100;\nglobal.set(\"OTemp\", temp_msg.payload);\n\norp_msg.payload = Math.round((msg.payload.ORP) * 100) / 100;\nglobal.set(\"OORP\", orp_msg.payload);\n\n\nl1_msg.payload = msg.payload.level1_status;\nglobal.set(\"O1\", l1_msg.payload);\nl2_msg.payload = msg.payload.level2_status;\nglobal.set(\"O2\", l2_msg.payload);\nl3_msg.payload = msg.payload.level3_status;\nglobal.set(\"O3\", l3_msg.payload);\n\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\nreturnArray[2] = orp_msg;\nreturnArray[3] = l1_msg;\nreturnArray[4] = l2_msg;\nreturnArray[5] = l3_msg;\n\nreturn returnArray;\n\n\n",
+        "outputs": 6,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1470,
+        "y": 960,
+        "wires": [
+            [
+                "daa274e0f092d927",
+                "0362f989e57b35f6"
+            ],
+            [
+                "4185f9e46ff1786f",
+                "6614e3ca06715f22"
+            ],
+            [
+                "2ac889004a7404b4",
+                "8ad1b25066a5fb1c"
+            ],
+            [
+                "220daed9ec04b7a6"
+            ],
+            [
+                "220daed9ec04b7a6"
+            ],
+            [
+                "220daed9ec04b7a6"
+            ]
+        ]
+    },
+    {
+        "id": "9181c831def27233",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "TankData Splitter",
+        "func": "var pH_msg = {};\nvar temp_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar l3_msg = {};\nvar l4_msg = {};\n\nvar totalOutputs = 7;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\ntemp_msg.payload = Math.round((msg.payload.temperature) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nl1_msg.payload = msg.payload.level1_status;\nglobal.set(\"B1\", l1_msg.payload);\nl2_msg.payload = msg.payload.level2_status;\nglobal.set(\"B2\", l2_msg.payload);\nl3_msg.payload = msg.payload.level3_status;\nglobal.set(\"B3\", l3_msg.payload);\nl4_msg.payload = msg.payload.level4_status;\nglobal.set(\"B4\", l4_msg.payload);\n\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\nreturnArray[2] = l1_msg;\nreturnArray[3] = l2_msg;\nreturnArray[4] = l3_msg;\nreturnArray[5] = l4_msg;\n\n\nreturn returnArray;",
+        "outputs": 6,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1470,
+        "y": 1220,
+        "wires": [
+            [
+                "0acdb8c3f4f7bdf1",
+                "4e61426d7b7a4494"
+            ],
+            [
+                "b2bc174192814681"
+            ],
+            [
+                "b008863c8c5f1438"
+            ],
+            [
+                "b008863c8c5f1438"
+            ],
+            [
+                "b008863c8c5f1438"
+            ],
+            [
+                "b008863c8c5f1438"
+            ]
+        ]
+    },
+    {
+        "id": "2f3aabcc94b47677",
+        "type": "ui_gauge",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "group": "210d2df426365d31",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "gtype": "wave",
+        "title": "Electrowinning Level",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "600",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1920,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "b1fd7d57b2f1a360",
+        "type": "ui_gauge",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "group": "3342ef65ea84e0bc",
+        "order": 2,
+        "width": 12,
+        "height": 8,
+        "gtype": "wave",
+        "title": "Fluid Level",
+        "label": "L",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "470",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1890,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "3d317cd75df892bf",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "levelReporter",
+        "func": "var level1 = global.get('EW1');\nvar level2 = global.get('EW2');\nvar level3 = global.get('EW3');\n\nif (level3 == true){\n    msg.payload = null;\n} else if (level2 == true) {\n    msg.payload = 1000;\n} else if (level1 == true) {\n    msg.payload = 50;\n} else {\n    msg.payload = 0;\n}\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1120,
-        "y": 800,
+        "x": 1710,
+        "y": 740,
         "wires": [
             [
-                "43ea732ccb82d795"
+                "2f3aabcc94b47677",
+                "8e48dc620b57c571"
             ]
         ]
+    },
+    {
+        "id": "220daed9ec04b7a6",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "levelReporter",
+        "func": "var level1 = global.get('O1');\nvar level2 = global.get('O2');\nvar level3 = global.get('O3');\n\nif (level3 == true) {\n    msg.payload = context.global.MaxStandard;\n} else if (level2 == true) {\n    msg.payload = context.global.MidStandard;\n} else if (level1 == true) {\n    msg.payload = context.global.MinStandard;\n} else {\n    msg.payload = 0;\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1710,
+        "y": 1040,
+        "wires": [
+            [
+                "b1fd7d57b2f1a360",
+                "6746f81fd66c6671"
+            ]
+        ]
+    },
+    {
+        "id": "b008863c8c5f1438",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "levelReporter",
+        "func": "var level1 = global.get('B1');\nvar level2 = global.get('B2');\nvar level3 = global.get('B3');\nvar level4 = global.get('B4');\n\nif (level4 == true){\n    msg.payload = context.global.MaxBuffer;\n} else if (level3 == true){\n    msg.payload == context.global.UpperMidBuffer\n} else if (level2 == true) {\n    msg.payload = context.global.LowerMidBuffer;\n} else if (level1 == true) {\n    msg.payload = context.global.MinBuffer;\n} else {\n    msg.payload = 0;\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1710,
+        "y": 1260,
+        "wires": [
+            [
+                "26ba799db6cc1c30",
+                "ef99fd3af607e092"
+            ]
+        ]
+    },
+    {
+        "id": "78480f23928b4b2f",
+        "type": "ui_chart",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "group": "c28d2984b3e2326d",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Cementation Temperature",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "10000",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1750,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1ec4f6d30b9ae0fd",
+        "type": "ui_chart",
+        "z": "16c561d0bd2db4f4",
+        "name": "washTemp",
+        "group": "bd9c1836cb534d4b",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "Wash Temperature",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "10000",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1710,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3d63a9e19229a6e2",
+        "type": "ui_chart",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "group": "210d2df426365d31",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Electrowinning Temperature",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "10000",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1760,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4185f9e46ff1786f",
+        "type": "ui_chart",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "group": "6bf19a83f26ccc65",
+        "order": 2,
+        "width": 12,
+        "height": 8,
+        "label": "Oxidation Temperature",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "10000",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ff64ff",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1740,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b2bc174192814681",
+        "type": "ui_chart",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "group": "7b9307d1947a13f0",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Buffer Temperature",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1730,
+        "y": 1220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "26ba799db6cc1c30",
+        "type": "ui_gauge",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "group": "7b9307d1947a13f0",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "gtype": "wave",
+        "title": "Buffer Level",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1900",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1890,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "7c8336bfba79e633",
+        "type": "ui_gauge",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "group": "675036dd.603328",
+        "order": 5,
+        "width": "5",
+        "height": "5",
+        "gtype": "wave",
+        "title": "Washing",
+        "label": "L",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "470",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 2320,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "6746f81fd66c6671",
+        "type": "ui_gauge",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "group": "675036dd.603328",
+        "order": 6,
+        "width": "5",
+        "height": "5",
+        "gtype": "wave",
+        "title": "Oxidation",
+        "label": "L",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "470",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 2320,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "74915e51dd4c772c",
+        "type": "ui_gauge",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "group": "675036dd.603328",
+        "order": 7,
+        "width": "5",
+        "height": "5",
+        "gtype": "wave",
+        "title": "Cementation",
+        "label": "L",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "470",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 2330,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "ef99fd3af607e092",
+        "type": "ui_gauge",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "group": "675036dd.603328",
+        "order": 8,
+        "width": "5",
+        "height": "5",
+        "gtype": "wave",
+        "title": "Buffer",
+        "label": "L",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1900",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 2310,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "8e48dc620b57c571",
+        "type": "ui_gauge",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "group": "675036dd.603328",
+        "order": 9,
+        "width": "5",
+        "height": "5",
+        "gtype": "wave",
+        "title": "EW Bath",
+        "label": "L",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "600",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 2320,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "2ac889004a7404b4",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "6bf19a83f26ccc65",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Oxidation Reduction Potential:",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 1770,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "8ad1b25066a5fb1c",
+        "type": "ui_chart",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "group": "6bf19a83f26ccc65",
+        "order": 4,
+        "width": 12,
+        "height": 8,
+        "label": "Oxidation Reduction Potential",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-1000",
+        "ymax": "1000",
+        "removeOlder": 1,
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ff64ff",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#dd2727",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1770,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "42c9914bc1b52849",
+        "type": "debug",
+        "z": "16c561d0bd2db4f4",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1440,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "2c99f31183a32dd4",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "Define some Globals",
+        "func": "context.global.MinStandard = 55;\ncontext.global.MidStandard = 200;\ncontext.global.MaxStandard = 400;\n\ncontext.global.MinBuffer = 200;\ncontext.global.LowerMidBuffer = 600;\ncontext.global.UpperMidBuffer = 1200;\ncontext.global.MaxBuffer = 1800;\n\nreturn null;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "365a73f8ac09af66",
+        "type": "debug",
+        "z": "16c561d0bd2db4f4",
+        "name": "debug 4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1900,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "6614e3ca06715f22",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "6bf19a83f26ccc65",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "Temperature",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 1930,
+        "y": 920,
+        "wires": []
     },
     {
         "id": "c0eaa1e3.932c2",
