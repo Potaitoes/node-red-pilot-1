@@ -72,36 +72,36 @@
                     "edited": false
                 },
                 "page-backgroundColor": {
-                    "value": "#111111",
-                    "edited": false
+                    "value": "#ffffff",
+                    "edited": true
                 },
                 "page-sidebar-backgroundColor": {
-                    "value": "#333333",
-                    "edited": false
+                    "value": "#ffd1d1",
+                    "edited": true
                 },
                 "group-textColor": {
-                    "value": "#6db046",
-                    "edited": false
+                    "value": "#ffffff",
+                    "edited": true
                 },
                 "group-borderColor": {
                     "value": "#555555",
                     "edited": false
                 },
                 "group-backgroundColor": {
-                    "value": "#333333",
-                    "edited": false
+                    "value": "#ffffff",
+                    "edited": true
                 },
                 "widget-textColor": {
-                    "value": "#eeeeee",
-                    "edited": false
+                    "value": "#ffffff",
+                    "edited": true
                 },
                 "widget-backgroundColor": {
                     "value": "#307478",
                     "edited": true
                 },
                 "widget-borderColor": {
-                    "value": "#333333",
-                    "edited": false
+                    "value": "#ffffff",
+                    "edited": true
                 },
                 "base-font": {
                     "value": "Arial Black,Arial Black,Gadget,sans-serif"
@@ -295,6 +295,16 @@
         "order": 1,
         "width": 1,
         "height": 1
+    },
+    {
+        "id": "d8c242e5bc91f51d",
+        "type": "ui_group",
+        "name": "bigNumbers",
+        "tab": "4c7e5a991ed75d8e",
+        "order": 2,
+        "disp": true,
+        "width": "16",
+        "collapse": true
     },
     {
         "id": "80ae0189e474ec6e",
@@ -508,7 +518,7 @@
         "z": "16c561d0bd2db4f4",
         "name": "washpHChart",
         "group": "bd9c1836cb534d4b",
-        "order": 2,
+        "order": 1,
         "width": "8",
         "height": "4",
         "label": "Wash pH",
@@ -549,15 +559,15 @@
         "id": "1f7c50c5d6e7d504",
         "type": "ui_text",
         "z": "16c561d0bd2db4f4",
-        "group": "bd9c1836cb534d4b",
-        "order": 1,
+        "group": "d8c242e5bc91f51d",
+        "order": 2,
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Wash pH:",
+        "label": "pH",
         "format": "{{msg.payload}}",
         "layout": "row-left",
-        "x": 1700,
+        "x": 1690,
         "y": 60,
         "wires": []
     },
@@ -601,7 +611,7 @@
         "z": "16c561d0bd2db4f4",
         "name": "",
         "group": "bd9c1836cb534d4b",
-        "order": 3,
+        "order": 2,
         "width": "0",
         "height": "0",
         "gtype": "wave",
@@ -1447,7 +1457,7 @@
         "z": "16c561d0bd2db4f4",
         "name": "washTemp",
         "group": "bd9c1836cb534d4b",
-        "order": 4,
+        "order": 3,
         "width": 0,
         "height": 0,
         "label": "Wash Temperature",
@@ -1929,15 +1939,15 @@
         "id": "57df3ce529d2796a",
         "type": "ui_text",
         "z": "16c561d0bd2db4f4",
-        "group": "bd9c1836cb534d4b",
-        "order": 5,
+        "group": "d8c242e5bc91f51d",
+        "order": 1,
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "washTempReadout",
+        "label": "Temperature",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 1950,
+        "x": 1930,
         "y": 80,
         "wires": []
     },
