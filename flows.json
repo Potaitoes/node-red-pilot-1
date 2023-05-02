@@ -302,9 +302,9 @@
         "name": "bigNumbers",
         "tab": "4c7e5a991ed75d8e",
         "order": 2,
-        "disp": true,
+        "disp": false,
         "width": "16",
-        "collapse": true
+        "collapse": false
     },
     {
         "id": "80ae0189e474ec6e",
@@ -564,10 +564,10 @@
         "width": "8",
         "height": "8",
         "name": "",
-        "label": "pH",
-        "format": "<font size = 60>{{msg.payload}}",
+        "label": "<font size = 60> pH",
+        "format": "<font size = 100>{{msg.payload}}",
         "layout": "col-center",
-        "x": 1690,
+        "x": 1730,
         "y": 60,
         "wires": []
     },
@@ -1944,10 +1944,10 @@
         "width": "8",
         "height": "8",
         "name": "",
-        "label": "Temperature",
-        "format": "<font size = 60>{{msg.payload}}",
+        "label": "<font size = 60>Temperature",
+        "format": "<font size = 100>{{msg.payload}}",
         "layout": "col-center",
-        "x": 1710,
+        "x": 1760,
         "y": 100,
         "wires": []
     },
