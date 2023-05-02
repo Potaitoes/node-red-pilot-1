@@ -1943,7 +1943,7 @@
         "order": 2,
         "width": 0,
         "height": 0,
-        "format": "<style>\n\n  .nr-dashboard-text p.value{\n  font-size:150px !important\n  }\n  //.nr-dashboard-text p.label{\n  //  font-size:60px\n  //  }\n\n  \n</style",
+        "format": "<style>\n\n  .nr-dashboard-text p.value{\n  font-size:150px !important\n  }\n  .nr-dashboard-text p.label{\n    font-size:60px\n    }\n\n  \n</style",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
