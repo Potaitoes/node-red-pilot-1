@@ -1960,7 +1960,7 @@
         "order": 2,
         "width": 0,
         "height": 0,
-        "format": "<style>\n    #WashLeeching_bigNumbers_cards {\n    font-size: 50px !important;\n    }\n</style",
+        "format": "<style>\n    #WashLeeching_bigNumbers_cards {\n    font-size: 1000px !important;\n    }\n</style",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
