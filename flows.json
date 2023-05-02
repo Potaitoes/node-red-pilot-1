@@ -1945,7 +1945,7 @@
         "height": "8",
         "name": "",
         "label": "Temperature",
-        "format": "{{msg.payload}}",
+        "format": "<font size = 30>{{msg.payload}}",
         "layout": "row-spread",
         "x": 1710,
         "y": 100,
