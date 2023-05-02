@@ -565,8 +565,8 @@
         "height": "8",
         "name": "",
         "label": "pH",
-        "format": "{{msg.payload}}",
-        "layout": "row-left",
+        "format": "<font size = 60>{{msg.payload}}",
+        "layout": "col-center",
         "x": 1690,
         "y": 60,
         "wires": []
@@ -1945,8 +1945,8 @@
         "height": "8",
         "name": "",
         "label": "Temperature",
-        "format": "<font size = 30>{{msg.payload}}",
-        "layout": "row-spread",
+        "format": "<font size = 60>{{msg.payload}}",
+        "layout": "col-center",
         "x": 1710,
         "y": 100,
         "wires": []
