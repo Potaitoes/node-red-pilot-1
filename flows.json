@@ -1944,10 +1944,10 @@
         "width": "16",
         "height": "8",
         "name": "",
-        "label": "<font size = 60>Temperature",
-        "format": "<font size = 100>{{msg.payload}} °C",
+        "label": "Temperature",
+        "format": "{{msg.payload}} °C",
         "layout": "col-center",
-        "x": 1760,
+        "x": 1710,
         "y": 100,
         "wires": []
     },
