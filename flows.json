@@ -1952,6 +1952,26 @@
         "wires": []
     },
     {
+        "id": "1a93b0fe1f01e0ab",
+        "type": "ui_template",
+        "z": "16c561d0bd2db4f4",
+        "group": "e16e06ca.f38438",
+        "name": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n    .nr-dashboard-text{\n    fonts-size = 14;\n    }\n</style",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1440,
+        "y": 1380,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "c0eaa1e3.932c2",
         "type": "inject",
         "z": "41ec38ad59c0cf49",
