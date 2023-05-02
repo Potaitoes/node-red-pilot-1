@@ -540,7 +540,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "x": 1720,
-        "y": 60,
+        "y": 20,
         "wires": [
             []
         ]
@@ -558,7 +558,7 @@
         "format": "{{msg.payload}}",
         "layout": "row-left",
         "x": 1700,
-        "y": 100,
+        "y": 60,
         "wires": []
     },
     {
@@ -581,7 +581,8 @@
             ],
             [
                 "1ec4f6d30b9ae0fd",
-                "65b9c5b7f41a31f0"
+                "65b9c5b7f41a31f0",
+                "57df3ce529d2796a"
             ],
             [
                 "95b336cfdb499b25"
@@ -1872,8 +1873,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1900,
-        "y": 100,
+        "x": 2080,
+        "y": 220,
         "wires": []
     },
     {
@@ -1922,6 +1923,22 @@
         "layout": "row-spread",
         "x": 1710,
         "y": 220,
+        "wires": []
+    },
+    {
+        "id": "57df3ce529d2796a",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "bd9c1836cb534d4b",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "washTempReadout",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1950,
+        "y": 80,
         "wires": []
     },
     {
