@@ -303,7 +303,7 @@
         "tab": "4c7e5a991ed75d8e",
         "order": 2,
         "disp": false,
-        "width": "16",
+        "width": "24",
         "collapse": false
     },
     {
@@ -561,7 +561,7 @@
         "z": "16c561d0bd2db4f4",
         "group": "d8c242e5bc91f51d",
         "order": 2,
-        "width": "16",
+        "width": "24",
         "height": "8",
         "name": "",
         "label": "pH",
@@ -1924,7 +1924,7 @@
         "z": "16c561d0bd2db4f4",
         "group": "d8c242e5bc91f51d",
         "order": 1,
-        "width": "16",
+        "width": "24",
         "height": "8",
         "name": "",
         "label": "Temperature",
