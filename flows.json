@@ -1664,7 +1664,7 @@
         "label": "L",
         "format": "{{value}}",
         "min": 0,
-        "max": "470",
+        "max": "3",
         "colors": [
             "#00b500",
             "#e6e600",
@@ -1690,7 +1690,7 @@
         "label": "L",
         "format": "{{value}}",
         "min": 0,
-        "max": "470",
+        "max": "3",
         "colors": [
             "#00b500",
             "#e6e600",
@@ -1716,7 +1716,7 @@
         "label": "L",
         "format": "{{value}}",
         "min": 0,
-        "max": "470",
+        "max": "3",
         "colors": [
             "#00b500",
             "#e6e600",
@@ -1768,7 +1768,7 @@
         "label": "L",
         "format": "{{value}}",
         "min": 0,
-        "max": "600",
+        "max": "2",
         "colors": [
             "#00b500",
             "#e6e600",
@@ -1860,7 +1860,7 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "Define some Globals",
-        "func": "context.global.MinStandard = 55;\ncontext.global.MidStandard = 200;\ncontext.global.MaxStandard = 400;\n\ncontext.global.MinBuffer = 200;\ncontext.global.LowerMidBuffer = 600;\ncontext.global.UpperMidBuffer = 1200;\ncontext.global.MaxBuffer = 1800;\n\nreturn null;",
+        "func": "context.global.MinStandard = 1;\ncontext.global.MidStandard = 2;\ncontext.global.MaxStandard = 3;\n\ncontext.global.MinBuffer = 1;\ncontext.global.LowerMidBuffer = 2;\ncontext.global.UpperMidBuffer = 3;\ncontext.global.MaxBuffer = 4;\n\nreturn null;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
