@@ -279,11 +279,11 @@
     {
         "id": "6bf19a83f26ccc65",
         "type": "ui_group",
-        "name": "OxidationLeft",
+        "name": "OxidationBig",
         "tab": "613ee8f0c2ded6bc",
         "order": 2,
-        "disp": true,
-        "width": "12",
+        "disp": false,
+        "width": "24",
         "collapse": false
     },
     {
@@ -642,7 +642,7 @@
         "finalize": "",
         "libs": [],
         "x": 1090,
-        "y": 420,
+        "y": 440,
         "wires": [
             [
                 "81f1b85473dca332",
@@ -1894,8 +1894,8 @@
         "z": "16c561d0bd2db4f4",
         "group": "6bf19a83f26ccc65",
         "order": 1,
-        "width": "0",
-        "height": "0",
+        "width": "14",
+        "height": "14",
         "name": "",
         "label": "Temperature",
         "format": "{{msg.payload}}",
@@ -1981,11 +1981,32 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
         "x": 1940,
         "y": 120,
         "wires": []
+    },
+    {
+        "id": "9a1e3db47e122efc",
+        "type": "ui_template",
+        "z": "16c561d0bd2db4f4",
+        "group": "3342ef65ea84e0bc",
+        "name": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n  .nr-dashboard-text p.value {\n    font-size: 250px !important\n  }\n\n  .nr-dashboard-text p.label {\n    font-size: 60px\n  }\n\n  </style",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1440,
+        "y": 1420,
+        "wires": [
+            []
+        ]
     }
 ]
