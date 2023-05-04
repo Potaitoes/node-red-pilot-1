@@ -2584,14 +2584,14 @@
         "type": "template",
         "z": "16c561d0bd2db4f4",
         "name": "",
-        "field": "ui",
+        "field": "ui_control",
         "fieldType": "msg",
-        "format": "handlebars",
+        "format": "json",
         "syntax": "mustache",
-        "template": "<style>\n    .nr-dashboard-gauge .nv-bar { fill: red; }\n</style>",
-        "output": "str",
-        "x": 1820,
-        "y": 1400,
+        "template": "{\n    \"options\":{\n        \"waveColor\":\"#008000\"\n    }\n}",
+        "output": "json",
+        "x": 1720,
+        "y": 1360,
         "wires": [
             [
                 "26ba799db6cc1c30"
