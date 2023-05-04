@@ -2687,6 +2687,26 @@
         ]
     },
     {
+        "id": "1d0146fc7c02aae8",
+        "type": "ui_template",
+        "z": "16c561d0bd2db4f4",
+        "group": "7b9307d1947a13f0",
+        "name": "",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n    .nr-dashboard-gauge text {\n        fill: red;\n    }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1820,
+        "y": 1500,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "917b8d1e3d71db60",
         "type": "change",
         "z": "3776abced5de3e33",
