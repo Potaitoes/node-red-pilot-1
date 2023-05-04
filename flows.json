@@ -2695,7 +2695,7 @@
         "order": 6,
         "width": 0,
         "height": 0,
-        "format": "<style>\n    .nr-dashboard-gauge text {\n        fill: red !important;\n    }\n</style>",
+        "format": "<style>\n    .nr-dashboard-gauge .nv-bar {\n        fill: red !important;\n    }\n</style>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
