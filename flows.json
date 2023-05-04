@@ -2588,7 +2588,7 @@
         "order": 7,
         "width": 0,
         "height": 0,
-        "format": "<style>\n    circle .style{\n    fill: rgb(48, 116, 120) !important;\n    }\n</style>",
+        "format": "<style>\n    ui-card-panel{\n    fill: rgb(48, 116, 120) !important;\n    }\n</style>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
