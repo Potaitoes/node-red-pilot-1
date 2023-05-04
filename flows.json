@@ -1575,8 +1575,8 @@
         "name": "",
         "group": "2761df262ae914fd",
         "order": 1,
-        "width": 12,
-        "height": 8,
+        "width": "6",
+        "height": "6",
         "gtype": "wave",
         "title": "Fluid Level",
         "label": "",
@@ -1651,7 +1651,7 @@
             [
                 "26ba799db6cc1c30",
                 "ef99fd3af607e092",
-                "a0f0317c65a7248a"
+                "d123112594400287"
             ]
         ]
     },
@@ -2144,23 +2144,6 @@
         ]
     },
     {
-        "id": "a0f0317c65a7248a",
-        "type": "debug",
-        "z": "16c561d0bd2db4f4",
-        "name": "debug 6",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1880,
-        "y": 1320,
-        "wires": []
-    },
-    {
         "id": "efc671b13c9a47af",
         "type": "debug",
         "z": "16c561d0bd2db4f4",
@@ -2265,6 +2248,65 @@
         "templateScope": "local",
         "x": 1440,
         "y": 1500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "273b978e2151e142",
+        "type": "ui_ui_control",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "events": "all",
+        "x": 1860,
+        "y": 1300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d123112594400287",
+        "type": "change",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1700,
+        "y": 1300,
+        "wires": [
+            [
+                "273b978e2151e142"
+            ]
+        ]
+    },
+    {
+        "id": "9aad36a961671514",
+        "type": "ui_template",
+        "z": "16c561d0bd2db4f4",
+        "group": "7b9307d1947a13f0",
+        "name": "",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "format": ".nr-dashboard-theme .ui-card-panel[group-name=\"Left\"] gauge {\n    background-color: #FF0000 !important;\n}",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1940,
+        "y": 1400,
         "wires": [
             []
         ]
