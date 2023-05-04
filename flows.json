@@ -1482,7 +1482,7 @@
         "order": 3,
         "width": 0,
         "height": 0,
-        "label": "Wash Temperature",
+        "label": "Temperature",
         "chartType": "line",
         "legend": "false",
         "xformat": "HH:mm",
