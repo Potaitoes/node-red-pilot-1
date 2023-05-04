@@ -1726,7 +1726,8 @@
                 "26ba799db6cc1c30",
                 "ef99fd3af607e092",
                 "09122bf4c77c8dc8",
-                "2dfa535debed3c9d"
+                "2dfa535debed3c9d",
+                "1d0146fc7c02aae8"
             ]
         ]
     },
@@ -2695,63 +2696,15 @@
         "order": 6,
         "width": 0,
         "height": 0,
-        "format": "<style>\n    .nr-dashboard-gauge circle {\n        fill: red !important;\n    }\n</style>",
+        "format": "<style ng-if=\"msg.payload > 2\">\n    .nr-dashboard-gauge circle {\n        fill: red !important;\n    }\n</style>\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1830,
-        "y": 1500,
+        "x": 1770,
+        "y": 1580,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "b2ec61a65b0fdc62",
-        "type": "template",
-        "z": "16c561d0bd2db4f4",
-        "name": "",
-        "field": "ui_control",
-        "fieldType": "msg",
-        "format": "json",
-        "syntax": "mustache",
-        "template": "{\n    \"tab\": \"T-04\",\n    \"group\": \"Left\",\n    \"control\": {\n        \"type\": \"template\",\n        \"style\": \"gauge-colour\",\n        \"value\": false\n    }\n}",
-        "output": "json",
-        "x": 1660,
-        "y": 1500,
-        "wires": [
-            [
-                "1d0146fc7c02aae8"
-            ]
-        ]
-    },
-    {
-        "id": "ae0433597b786446",
-        "type": "inject",
-        "z": "16c561d0bd2db4f4",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "5",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1490,
-        "y": 1600,
-        "wires": [
-            [
-                "b2ec61a65b0fdc62"
-            ]
         ]
     },
     {
@@ -2972,5 +2925,65 @@
                 "027c4571b7afc0e2"
             ]
         ]
+    },
+    {
+        "id": "d2f22a32.4e30e",
+        "type": "template",
+        "z": "3776abced5de3e33",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<div>\n{{#if payload.active}}\n  <p>The widget is active.</p>\n{{else}}\n  <p>The widget is inactive.</p>\n{{/if}}\n</div>",
+        "output": "str",
+        "x": 580,
+        "y": 420,
+        "wires": [
+            [
+                "f76bfb83.94de5"
+            ]
+        ]
+    },
+    {
+        "id": "e0e04a03.cbeea",
+        "type": "inject",
+        "z": "3776abced5de3e33",
+        "name": "",
+        "props": [
+            {
+                "p": "payload.active",
+                "v": "true",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 360,
+        "y": 420,
+        "wires": [
+            [
+                "d2f22a32.4e30e"
+            ]
+        ]
+    },
+    {
+        "id": "f76bfb83.94de5",
+        "type": "debug",
+        "z": "3776abced5de3e33",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 420,
+        "wires": []
     }
 ]
