@@ -57,19 +57,19 @@
             "customTheme": {
                 "name": "Untitled Theme 1",
                 "default": "#4B7930",
-                "baseColor": "#4B7930",
+                "baseColor": "#1bb24d",
                 "baseFont": "Arial Black,Arial Black,Gadget,sans-serif",
                 "reset": false
             },
             "themeState": {
                 "base-color": {
                     "default": "#4B7930",
-                    "value": "#4B7930",
+                    "value": "#1bb24d",
                     "edited": true
                 },
                 "page-titlebar-backgroundColor": {
-                    "value": "#4B7930",
-                    "edited": false
+                    "value": "#1eb250",
+                    "edited": true
                 },
                 "page-backgroundColor": {
                     "value": "#ffffff",
