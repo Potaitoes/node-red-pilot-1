@@ -1262,7 +1262,7 @@
         "z": "16c561d0bd2db4f4",
         "name": "",
         "group": "7b9307d1947a13f0",
-        "order": 2,
+        "order": 1,
         "width": "8",
         "height": "4",
         "label": "Buffer pH",
@@ -1303,15 +1303,15 @@
         "id": "0acdb8c3f4f7bdf1",
         "type": "ui_text",
         "z": "16c561d0bd2db4f4",
-        "group": "7b9307d1947a13f0",
+        "group": "69e0a1bd71cfcb0a",
         "order": 1,
-        "width": 0,
-        "height": 0,
+        "width": "16",
+        "height": "10",
         "name": "",
-        "label": "Buffer pH:",
+        "label": "pH",
         "format": "{{msg.payload}}",
         "layout": "row-left",
-        "x": 1700,
+        "x": 1690,
         "y": 1180,
         "wires": []
     },
@@ -1521,7 +1521,8 @@
                 "4e61426d7b7a4494"
             ],
             [
-                "b2bc174192814681"
+                "b2bc174192814681",
+                "ea7c783cf3a1fcb5"
             ],
             [
                 "b008863c8c5f1438"
@@ -1828,7 +1829,7 @@
         "z": "16c561d0bd2db4f4",
         "name": "",
         "group": "7b9307d1947a13f0",
-        "order": 3,
+        "order": 2,
         "width": 0,
         "height": 0,
         "label": "Buffer Temperature",
@@ -1871,7 +1872,7 @@
         "z": "16c561d0bd2db4f4",
         "name": "",
         "group": "7b9307d1947a13f0",
-        "order": 4,
+        "order": 3,
         "width": "0",
         "height": "0",
         "gtype": "wave",
@@ -2285,5 +2286,21 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "ea7c783cf3a1fcb5",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "69e0a1bd71cfcb0a",
+        "order": 1,
+        "width": "16",
+        "height": "10",
+        "name": "",
+        "label": "Temperature",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 2090,
+        "y": 1180,
+        "wires": []
     }
 ]
