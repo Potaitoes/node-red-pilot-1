@@ -137,11 +137,11 @@
     {
         "id": "7b9307d1947a13f0",
         "type": "ui_group",
-        "name": "chart",
+        "name": "Left",
         "tab": "21385dd97135be68",
         "order": 1,
         "disp": true,
-        "width": "24",
+        "width": "12",
         "collapse": false
     },
     {
@@ -535,6 +535,16 @@
         "order": 11,
         "width": 4,
         "height": 1
+    },
+    {
+        "id": "69e0a1bd71cfcb0a",
+        "type": "ui_group",
+        "name": "Right",
+        "tab": "21385dd97135be68",
+        "order": 2,
+        "disp": true,
+        "width": "16",
+        "collapse": false
     },
     {
         "id": "80ae0189e474ec6e",
