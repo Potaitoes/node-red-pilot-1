@@ -2715,7 +2715,7 @@
         "fieldType": "msg",
         "format": "json",
         "syntax": "mustache",
-        "template": "{\n    \"tab\": \"<T-04>\",\n    \"group\": \"<Left>\",\n    \"control\": {\n        \"type\": \"template\",\n        \"style\": \"<gauge-colour>\",\n        \"value\": false\n    }\n}",
+        "template": "{\n    \"tab\": \"T-04\",\n    \"group\": \"Left\",\n    \"control\": {\n        \"type\": \"template\",\n        \"style\": \"gauge-colour\",\n        \"value\": false\n    }\n}",
         "output": "json",
         "x": 1660,
         "y": 1500,
