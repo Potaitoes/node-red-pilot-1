@@ -2260,7 +2260,7 @@
         "order": 6,
         "width": 0,
         "height": 0,
-        "format": "<style>\n    .nr-dashboard-gauge {\n        fill: rgb(255,0,0) !important\n    }\n</style>",
+        "format": "<style>\n    .nr-dashboard-theme .ui-card-panel[group-name=\"Left\"] gauge {\n    background-color: #F0F000 !important;\n    }\n</style>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
