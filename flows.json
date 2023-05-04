@@ -8,10 +8,10 @@
         "env": []
     },
     {
-        "id": "41ec38ad59c0cf49",
+        "id": "3776abced5de3e33",
         "type": "tab",
-        "label": "Flow 2",
-        "disabled": true,
+        "label": "Style",
+        "disabled": false,
         "info": "",
         "env": []
     },
@@ -2267,6 +2267,26 @@
         "templateScope": "local",
         "x": 1740,
         "y": 1420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ad74f83ac843c59a",
+        "type": "ui_template",
+        "z": "3776abced5de3e33",
+        "group": "7b9307d1947a13f0",
+        "name": "",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n    circle {\n    fill: rgb(48, 116, 120);\n    }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 620,
+        "y": 140,
         "wires": [
             []
         ]
