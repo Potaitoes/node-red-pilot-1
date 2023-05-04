@@ -337,6 +337,16 @@
         "collapse": false
     },
     {
+        "id": "a9c6155c056a8633",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "bd9c1836cb534d4b",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
         "id": "80ae0189e474ec6e",
         "type": "comment",
         "z": "16c561d0bd2db4f4",
@@ -548,7 +558,7 @@
         "z": "16c561d0bd2db4f4",
         "name": "washpHChart",
         "group": "bd9c1836cb534d4b",
-        "order": 1,
+        "order": 2,
         "width": "12",
         "height": "6",
         "label": "pH",
@@ -1489,7 +1499,7 @@
         "z": "16c561d0bd2db4f4",
         "name": "washTemp",
         "group": "bd9c1836cb534d4b",
-        "order": 2,
+        "order": 3,
         "width": "12",
         "height": "6",
         "label": "Temperature",
