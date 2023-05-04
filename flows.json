@@ -8,9 +8,9 @@
         "env": []
     },
     {
-        "id": "41ec38ad59c0cf49",
+        "id": "3776abced5de3e33",
         "type": "tab",
-        "label": "Flow 2",
+        "label": "Style",
         "disabled": true,
         "info": "",
         "env": []
@@ -18,7 +18,7 @@
     {
         "id": "a053172554a6aedb",
         "type": "OpcUa-Endpoint",
-        "endpoint": "opc.tcp://192.168.250.1:4840",
+        "endpoint": "opc.tcp://192.168.50.61:4840",
         "secpol": "None",
         "secmode": "None",
         "none": false,
@@ -57,51 +57,51 @@
             "customTheme": {
                 "name": "Untitled Theme 1",
                 "default": "#4B7930",
-                "baseColor": "#4B7930",
+                "baseColor": "#1bb24d",
                 "baseFont": "Arial Black,Arial Black,Gadget,sans-serif",
                 "reset": false
             },
             "themeState": {
                 "base-color": {
                     "default": "#4B7930",
-                    "value": "#4B7930",
+                    "value": "#1bb24d",
                     "edited": true
                 },
                 "page-titlebar-backgroundColor": {
-                    "value": "#4B7930",
-                    "edited": false
+                    "value": "#1eb250",
+                    "edited": true
                 },
                 "page-backgroundColor": {
-                    "value": "#111111",
-                    "edited": false
+                    "value": "#ffffff",
+                    "edited": true
                 },
                 "page-sidebar-backgroundColor": {
-                    "value": "#333333",
-                    "edited": false
+                    "value": "#ffffff",
+                    "edited": true
                 },
                 "group-textColor": {
-                    "value": "#6db046",
-                    "edited": false
+                    "value": "#000000",
+                    "edited": true
                 },
                 "group-borderColor": {
-                    "value": "#555555",
-                    "edited": false
+                    "value": "#ffffff",
+                    "edited": true
                 },
                 "group-backgroundColor": {
-                    "value": "#333333",
-                    "edited": false
+                    "value": "#ffffff",
+                    "edited": true
                 },
                 "widget-textColor": {
-                    "value": "#eeeeee",
-                    "edited": false
+                    "value": "#000000",
+                    "edited": true
                 },
                 "widget-backgroundColor": {
                     "value": "#307478",
                     "edited": true
                 },
                 "widget-borderColor": {
-                    "value": "#333333",
-                    "edited": false
+                    "value": "#ffffff",
+                    "edited": true
                 },
                 "base-font": {
                     "value": "Arial Black,Arial Black,Gadget,sans-serif"
@@ -137,20 +137,20 @@
     {
         "id": "7b9307d1947a13f0",
         "type": "ui_group",
-        "name": "chart",
+        "name": "Left",
         "tab": "21385dd97135be68",
         "order": 1,
-        "disp": true,
-        "width": "24",
+        "disp": false,
+        "width": "12",
         "collapse": false
     },
     {
         "id": "3342ef65ea84e0bc",
         "type": "ui_group",
-        "name": "OxidationRight",
+        "name": "OxidationLeft",
         "tab": "613ee8f0c2ded6bc",
-        "order": 3,
-        "disp": true,
+        "order": 1,
+        "disp": false,
         "width": "12",
         "collapse": false
     },
@@ -176,7 +176,7 @@
     {
         "id": "4c7e5a991ed75d8e",
         "type": "ui_tab",
-        "name": "WashLeeching",
+        "name": "T-01",
         "icon": "dashboard",
         "order": 4,
         "disabled": false,
@@ -194,7 +194,7 @@
     {
         "id": "613ee8f0c2ded6bc",
         "type": "ui_tab",
-        "name": "Oxidation",
+        "name": "T-02",
         "icon": "dashboard",
         "order": 5,
         "disabled": false,
@@ -203,7 +203,7 @@
     {
         "id": "21385dd97135be68",
         "type": "ui_tab",
-        "name": "Buffer",
+        "name": "T-04",
         "icon": "dashboard",
         "order": 7,
         "disabled": false,
@@ -222,17 +222,17 @@
     {
         "id": "bd9c1836cb534d4b",
         "type": "ui_group",
-        "name": "Group 1",
+        "name": "Left",
         "tab": "4c7e5a991ed75d8e",
         "order": 1,
-        "disp": true,
-        "width": "8",
+        "disp": false,
+        "width": "12",
         "collapse": false
     },
     {
         "id": "3c117daf5c2d4197",
         "type": "ui_tab",
-        "name": "Cementation",
+        "name": "T-03",
         "icon": "dashboard",
         "order": 6,
         "disabled": false,
@@ -241,11 +241,11 @@
     {
         "id": "c28d2984b3e2326d",
         "type": "ui_group",
-        "name": "Group 1",
+        "name": "Left",
         "tab": "3c117daf5c2d4197",
         "order": 1,
-        "disp": true,
-        "width": "8",
+        "disp": false,
+        "width": "12",
         "collapse": false
     },
     {
@@ -279,21 +279,321 @@
     {
         "id": "6bf19a83f26ccc65",
         "type": "ui_group",
-        "name": "OxidationLeft",
+        "name": "OxidationBig",
         "tab": "613ee8f0c2ded6bc",
-        "order": 2,
-        "disp": true,
-        "width": "12",
+        "order": 3,
+        "disp": false,
+        "width": "16",
         "collapse": false
     },
     {
-        "id": "c0a1200658ba18e9",
+        "id": "d8c242e5bc91f51d",
+        "type": "ui_group",
+        "name": "bigNumbers",
+        "tab": "4c7e5a991ed75d8e",
+        "order": 3,
+        "disp": false,
+        "width": "16",
+        "collapse": false
+    },
+    {
+        "id": "2761df262ae914fd",
+        "type": "ui_group",
+        "name": "level",
+        "tab": "613ee8f0c2ded6bc",
+        "order": 2,
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "16892f788a374c51",
+        "type": "ui_group",
+        "name": "Right",
+        "tab": "3c117daf5c2d4197",
+        "order": 3,
+        "disp": false,
+        "width": 18,
+        "collapse": false
+    },
+    {
+        "id": "b40d373fab9895a7",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
-        "group": "3342ef65ea84e0bc",
+        "group": "bd9c1836cb534d4b",
         "order": 1,
-        "width": 1,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "1c4bf9a4b1ff548f",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "bd9c1836cb534d4b",
+        "order": 3,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "14cc0db610304407",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "bd9c1836cb534d4b",
+        "order": 4,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "c4b03b5ed976b1db",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "bd9c1836cb534d4b",
+        "order": 5,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "7bb30239d1a6c84c",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "bd9c1836cb534d4b",
+        "order": 6,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "1c9626b6b2804632",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "bd9c1836cb534d4b",
+        "order": 7,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "d81e7d32f4e00952",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "bd9c1836cb534d4b",
+        "order": 8,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "07cdb4d8a82be5f2",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "bd9c1836cb534d4b",
+        "order": 9,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "ebf534e242dd52ef",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "bd9c1836cb534d4b",
+        "order": 10,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "c863a437350da7c5",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "bd9c1836cb534d4b",
+        "order": 11,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "127122a4c106f7f6",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "bd9c1836cb534d4b",
+        "order": 12,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "8b85d85e48bfb0ea",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "bd9c1836cb534d4b",
+        "order": 13,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "c773e86855a1055c",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "c28d2984b3e2326d",
+        "order": 1,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "a41db5f70cf5b1af",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "c28d2984b3e2326d",
+        "order": 3,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "2bfbeb5acb03694f",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "c28d2984b3e2326d",
+        "order": 4,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "bcc1296ab7a4e7cf",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "c28d2984b3e2326d",
+        "order": 5,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "3078a33693dd7724",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "c28d2984b3e2326d",
+        "order": 6,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "e45054d15ea5a217",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "c28d2984b3e2326d",
+        "order": 7,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "657a8aa5ea915259",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "c28d2984b3e2326d",
+        "order": 8,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "9359d414a5b5e576",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "c28d2984b3e2326d",
+        "order": 9,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "110d32044568d88f",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "c28d2984b3e2326d",
+        "order": 10,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "7520e734f33101c4",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "c28d2984b3e2326d",
+        "order": 11,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "69e0a1bd71cfcb0a",
+        "type": "ui_group",
+        "name": "Right",
+        "tab": "21385dd97135be68",
+        "order": 2,
+        "disp": false,
+        "width": "16",
+        "collapse": false
+    },
+    {
+        "id": "ff08fc517876e7eb",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "7b9307d1947a13f0",
+        "order": 1,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "dbc4a6f20d5d8939",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "7b9307d1947a13f0",
+        "order": 2,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "351cb51639f7256e",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "7b9307d1947a13f0",
+        "order": 3,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "7130f194858d8663",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "7b9307d1947a13f0",
+        "order": 4,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "00a2c88583f56754",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "7b9307d1947a13f0",
+        "order": 5,
+        "width": 12,
         "height": 1
     },
     {
@@ -327,7 +627,8 @@
         "y": 420,
         "wires": [
             [
-                "e00268bdbe39dfbb"
+                "e00268bdbe39dfbb",
+                "fc205d3812a2e7d6"
             ]
         ]
     },
@@ -348,7 +649,7 @@
         "repeat": "1",
         "crontab": "",
         "once": true,
-        "onceDelay": 0.1,
+        "onceDelay": "0.5",
         "topic": "",
         "payload": "",
         "payloadType": "date",
@@ -507,10 +808,10 @@
         "z": "16c561d0bd2db4f4",
         "name": "washpHChart",
         "group": "bd9c1836cb534d4b",
-        "order": 2,
-        "width": "8",
-        "height": "4",
-        "label": "Wash pH",
+        "order": 14,
+        "width": 12,
+        "height": 6,
+        "label": "pH",
         "chartType": "line",
         "legend": "false",
         "xformat": "HH:mm:ss",
@@ -519,14 +820,14 @@
         "dot": false,
         "ymin": "0",
         "ymax": "14",
-        "removeOlder": 1,
-        "removeOlderPoints": "1000",
+        "removeOlder": "24",
+        "removeOlderPoints": "100000",
         "removeOlderUnit": "3600",
         "cutout": 0,
         "useOneColor": false,
         "useUTC": false,
         "colors": [
-            "#1f77b4",
+            "#ff00bb",
             "#aec7e8",
             "#ff7f0e",
             "#2ca02c",
@@ -539,7 +840,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "x": 1720,
-        "y": 60,
+        "y": 20,
         "wires": [
             []
         ]
@@ -548,16 +849,16 @@
         "id": "1f7c50c5d6e7d504",
         "type": "ui_text",
         "z": "16c561d0bd2db4f4",
-        "group": "bd9c1836cb534d4b",
+        "group": "d8c242e5bc91f51d",
         "order": 1,
-        "width": 0,
-        "height": 0,
+        "width": 16,
+        "height": 8,
         "name": "",
-        "label": "Wash pH:",
+        "label": "pH",
         "format": "{{msg.payload}}",
-        "layout": "row-left",
-        "x": 1700,
-        "y": 100,
+        "layout": "col-center",
+        "x": 1690,
+        "y": 60,
         "wires": []
     },
     {
@@ -579,7 +880,8 @@
                 "80b357c10add4706"
             ],
             [
-                "1ec4f6d30b9ae0fd"
+                "1ec4f6d30b9ae0fd",
+                "57df3ce529d2796a"
             ],
             [
                 "95b336cfdb499b25"
@@ -598,15 +900,15 @@
         "z": "16c561d0bd2db4f4",
         "name": "",
         "group": "bd9c1836cb534d4b",
-        "order": 3,
-        "width": "0",
-        "height": "0",
+        "order": 2,
+        "width": 6,
+        "height": 6,
         "gtype": "wave",
-        "title": "Wash Level",
+        "title": "Level",
         "label": "",
         "format": "{{value}}",
         "min": 0,
-        "max": "470",
+        "max": "3",
         "colors": [
             "#00b500",
             "#e6e600",
@@ -614,7 +916,7 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1890,
+        "x": 1870,
         "y": 180,
         "wires": []
     },
@@ -630,7 +932,7 @@
         "finalize": "",
         "libs": [],
         "x": 1090,
-        "y": 420,
+        "y": 440,
         "wires": [
             [
                 "81f1b85473dca332",
@@ -708,7 +1010,8 @@
                 "92dec648efba38d7"
             ],
             [
-                "78480f23928b4b2f"
+                "78480f23928b4b2f",
+                "3da4f074540fa337"
             ],
             [
                 "e6671fa9cbcaaae5"
@@ -727,9 +1030,9 @@
         "z": "16c561d0bd2db4f4",
         "name": "cementationpHChart",
         "group": "c28d2984b3e2326d",
-        "order": 2,
-        "width": "8",
-        "height": "4",
+        "order": 12,
+        "width": 12,
+        "height": 6,
         "label": "Cementation pH",
         "chartType": "line",
         "legend": "false",
@@ -768,15 +1071,15 @@
         "id": "92dec648efba38d7",
         "type": "ui_text",
         "z": "16c561d0bd2db4f4",
-        "group": "c28d2984b3e2326d",
+        "group": "16892f788a374c51",
         "order": 1,
-        "width": 0,
-        "height": 0,
+        "width": 18,
+        "height": 7,
         "name": "",
-        "label": "Cementation pH:",
+        "label": "pH",
         "format": "{{msg.payload}}",
-        "layout": "row-left",
-        "x": 1730,
+        "layout": "col-center",
+        "x": 1690,
         "y": 380,
         "wires": []
     },
@@ -917,7 +1220,7 @@
         "group": "3342ef65ea84e0bc",
         "order": 4,
         "width": 12,
-        "height": 8,
+        "height": "6",
         "label": "Oxidation pH",
         "chartType": "line",
         "legend": "false",
@@ -927,8 +1230,8 @@
         "dot": false,
         "ymin": "0",
         "ymax": "14",
-        "removeOlder": 1,
-        "removeOlderPoints": "1000",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
         "removeOlderUnit": "3600",
         "cutout": 0,
         "useOneColor": false,
@@ -956,15 +1259,15 @@
         "id": "daa274e0f092d927",
         "type": "ui_text",
         "z": "16c561d0bd2db4f4",
-        "group": "3342ef65ea84e0bc",
-        "order": 3,
-        "width": 0,
-        "height": 0,
+        "group": "6bf19a83f26ccc65",
+        "order": 2,
+        "width": "16",
+        "height": "6",
         "name": "",
-        "label": "Oxidation pH:",
+        "label": "pH",
         "format": "{{msg.payload}}",
-        "layout": "row-left",
-        "x": 1720,
+        "layout": "col-center",
+        "x": 1690,
         "y": 880,
         "wires": []
     },
@@ -1004,61 +1307,18 @@
         ]
     },
     {
-        "id": "4e61426d7b7a4494",
-        "type": "ui_chart",
-        "z": "16c561d0bd2db4f4",
-        "name": "",
-        "group": "7b9307d1947a13f0",
-        "order": 2,
-        "width": "8",
-        "height": "4",
-        "label": "Buffer pH",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "0",
-        "ymax": "14",
-        "removeOlder": 1,
-        "removeOlderPoints": "1000",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#dd2727",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "x": 1700,
-        "y": 1140,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "0acdb8c3f4f7bdf1",
         "type": "ui_text",
         "z": "16c561d0bd2db4f4",
-        "group": "7b9307d1947a13f0",
+        "group": "69e0a1bd71cfcb0a",
         "order": 1,
-        "width": 0,
-        "height": 0,
+        "width": 16,
+        "height": 10,
         "name": "",
-        "label": "Buffer pH:",
+        "label": "pH",
         "format": "{{msg.payload}}",
-        "layout": "row-left",
-        "x": 1700,
+        "layout": "col-center",
+        "x": 1690,
         "y": 1180,
         "wires": []
     },
@@ -1129,7 +1389,7 @@
             [
                 "de1f6b2b37e837cb",
                 "7c8336bfba79e633",
-                "365a73f8ac09af66"
+                "efc671b13c9a47af"
             ]
         ]
     },
@@ -1139,15 +1399,15 @@
         "z": "16c561d0bd2db4f4",
         "name": "",
         "group": "c28d2984b3e2326d",
-        "order": 4,
-        "width": "0",
-        "height": "0",
+        "order": 2,
+        "width": 5,
+        "height": 5,
         "gtype": "wave",
         "title": "Cementation Level",
         "label": "",
         "format": "{{value}}",
         "min": 0,
-        "max": "470",
+        "max": "3",
         "colors": [
             "#00b500",
             "#e6e600",
@@ -1263,11 +1523,10 @@
         "y": 1220,
         "wires": [
             [
-                "0acdb8c3f4f7bdf1",
-                "4e61426d7b7a4494"
+                "0acdb8c3f4f7bdf1"
             ],
             [
-                "b2bc174192814681"
+                "ea7c783cf3a1fcb5"
             ],
             [
                 "b008863c8c5f1438"
@@ -1297,7 +1556,7 @@
         "label": "",
         "format": "{{value}}",
         "min": 0,
-        "max": "600",
+        "max": "2",
         "colors": [
             "#00b500",
             "#e6e600",
@@ -1314,16 +1573,16 @@
         "type": "ui_gauge",
         "z": "16c561d0bd2db4f4",
         "name": "",
-        "group": "3342ef65ea84e0bc",
-        "order": 2,
-        "width": 12,
-        "height": 8,
+        "group": "2761df262ae914fd",
+        "order": 1,
+        "width": "6",
+        "height": "6",
         "gtype": "wave",
         "title": "Fluid Level",
-        "label": "L",
+        "label": "",
         "format": "{{value}}",
         "min": 0,
-        "max": "470",
+        "max": "3",
         "colors": [
             "#00b500",
             "#e6e600",
@@ -1380,7 +1639,7 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "levelReporter",
-        "func": "var level1 = global.get('B1');\nvar level2 = global.get('B2');\nvar level3 = global.get('B3');\nvar level4 = global.get('B4');\n\nif (level4 == true){\n    msg.payload = context.global.MaxBuffer;\n} else if (level3 == true){\n    msg.payload == context.global.UpperMidBuffer\n} else if (level2 == true) {\n    msg.payload = context.global.LowerMidBuffer;\n} else if (level1 == true) {\n    msg.payload = context.global.MinBuffer;\n} else {\n    msg.payload = 0;\n}\n\n\nreturn msg;",
+        "func": "var level1 = global.get('B1');\nvar level2 = global.get('B2');\nvar level3 = global.get('B3');\nvar level4 = global.get('B4');\n\n\nif (level4 == true){\n    msg.payload == 4;\n}\nelse if (level3 == true){\n    msg.payload = context.global.UpperMidBuffer;\n}\nelse if (level2 == true){\n    msg.payload = context.global.LowerMidBuffer;\n}\nelse if (level1 == true){\n    msg.payload = context.global.MinBuffer;\n} else {\n    msg.payload = 0;\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1401,7 +1660,7 @@
         "z": "16c561d0bd2db4f4",
         "name": "",
         "group": "c28d2984b3e2326d",
-        "order": 3,
+        "order": 13,
         "width": 0,
         "height": 0,
         "label": "Cementation Temperature",
@@ -1444,10 +1703,10 @@
         "z": "16c561d0bd2db4f4",
         "name": "washTemp",
         "group": "bd9c1836cb534d4b",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "label": "Wash Temperature",
+        "order": 15,
+        "width": 12,
+        "height": 6,
+        "label": "Temperature",
         "chartType": "line",
         "legend": "false",
         "xformat": "HH:mm",
@@ -1456,8 +1715,8 @@
         "dot": false,
         "ymin": "0",
         "ymax": "100",
-        "removeOlder": 1,
-        "removeOlderPoints": "10000",
+        "removeOlder": "24",
+        "removeOlderPoints": "100000",
         "removeOlderUnit": "3600",
         "cutout": 0,
         "useOneColor": false,
@@ -1529,10 +1788,10 @@
         "type": "ui_chart",
         "z": "16c561d0bd2db4f4",
         "name": "",
-        "group": "6bf19a83f26ccc65",
-        "order": 2,
+        "group": "3342ef65ea84e0bc",
+        "order": 1,
         "width": 12,
-        "height": 8,
+        "height": "6",
         "label": "Oxidation Temperature",
         "chartType": "line",
         "legend": "false",
@@ -1541,9 +1800,9 @@
         "nodata": "",
         "dot": false,
         "ymin": "0",
-        "ymax": "100",
-        "removeOlder": 1,
-        "removeOlderPoints": "10000",
+        "ymax": "80",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
         "removeOlderUnit": "3600",
         "cutout": 0,
         "useOneColor": false,
@@ -1568,63 +1827,20 @@
         ]
     },
     {
-        "id": "b2bc174192814681",
-        "type": "ui_chart",
-        "z": "16c561d0bd2db4f4",
-        "name": "",
-        "group": "7b9307d1947a13f0",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "label": "Buffer Temperature",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "x": 1730,
-        "y": 1220,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "26ba799db6cc1c30",
         "type": "ui_gauge",
         "z": "16c561d0bd2db4f4",
         "name": "",
         "group": "7b9307d1947a13f0",
-        "order": 4,
-        "width": "0",
-        "height": "0",
+        "order": 6,
+        "width": 0,
+        "height": 0,
         "gtype": "wave",
         "title": "Buffer Level",
         "label": "",
         "format": "{{value}}",
         "min": 0,
-        "max": "1900",
+        "max": "4",
         "colors": [
             "#00b500",
             "#e6e600",
@@ -1646,11 +1862,11 @@
         "width": "5",
         "height": "5",
         "gtype": "wave",
-        "title": "Washing",
-        "label": "L",
+        "title": "T-01",
+        "label": "",
         "format": "{{value}}",
         "min": 0,
-        "max": "470",
+        "max": "3",
         "colors": [
             "#00b500",
             "#e6e600",
@@ -1658,7 +1874,7 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 2320,
+        "x": 2310,
         "y": 440,
         "wires": []
     },
@@ -1672,11 +1888,11 @@
         "width": "5",
         "height": "5",
         "gtype": "wave",
-        "title": "Oxidation",
-        "label": "L",
+        "title": "T-02",
+        "label": "",
         "format": "{{value}}",
         "min": 0,
-        "max": "470",
+        "max": "3",
         "colors": [
             "#00b500",
             "#e6e600",
@@ -1684,7 +1900,7 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 2320,
+        "x": 2310,
         "y": 480,
         "wires": []
     },
@@ -1698,11 +1914,11 @@
         "width": "5",
         "height": "5",
         "gtype": "wave",
-        "title": "Cementation",
-        "label": "L",
+        "title": "T-03",
+        "label": "",
         "format": "{{value}}",
         "min": 0,
-        "max": "470",
+        "max": "3",
         "colors": [
             "#00b500",
             "#e6e600",
@@ -1710,7 +1926,7 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 2330,
+        "x": 2310,
         "y": 520,
         "wires": []
     },
@@ -1724,11 +1940,11 @@
         "width": "5",
         "height": "5",
         "gtype": "wave",
-        "title": "Buffer",
-        "label": "L",
+        "title": "T-04",
+        "label": "",
         "format": "{{value}}",
         "min": 0,
-        "max": "1900",
+        "max": "4",
         "colors": [
             "#00b500",
             "#e6e600",
@@ -1750,11 +1966,11 @@
         "width": "5",
         "height": "5",
         "gtype": "wave",
-        "title": "EW Bath",
-        "label": "L",
+        "title": "EW",
+        "label": "",
         "format": "{{value}}",
         "min": 0,
-        "max": "600",
+        "max": "2",
         "colors": [
             "#00b500",
             "#e6e600",
@@ -1762,7 +1978,7 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 2320,
+        "x": 2310,
         "y": 600,
         "wires": []
     },
@@ -1772,13 +1988,13 @@
         "z": "16c561d0bd2db4f4",
         "group": "6bf19a83f26ccc65",
         "order": 3,
-        "width": 0,
-        "height": 0,
+        "width": "16",
+        "height": "6",
         "name": "",
-        "label": "Oxidation Reduction Potential:",
+        "label": "ORP",
         "format": "{{msg.payload}}",
-        "layout": "row-left",
-        "x": 1770,
+        "layout": "col-center",
+        "x": 1690,
         "y": 1000,
         "wires": []
     },
@@ -1787,10 +2003,10 @@
         "type": "ui_chart",
         "z": "16c561d0bd2db4f4",
         "name": "",
-        "group": "6bf19a83f26ccc65",
-        "order": 4,
+        "group": "3342ef65ea84e0bc",
+        "order": 5,
         "width": 12,
-        "height": 8,
+        "height": "6",
         "label": "Oxidation Reduction Potential",
         "chartType": "line",
         "legend": "false",
@@ -1801,7 +2017,7 @@
         "ymin": "-1000",
         "ymax": "1000",
         "removeOlder": 1,
-        "removeOlderPoints": "1000",
+        "removeOlderPoints": "",
         "removeOlderUnit": "3600",
         "cutout": 0,
         "useOneColor": false,
@@ -1846,7 +2062,7 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "Define some Globals",
-        "func": "context.global.MinStandard = 55;\ncontext.global.MidStandard = 200;\ncontext.global.MaxStandard = 400;\n\ncontext.global.MinBuffer = 200;\ncontext.global.LowerMidBuffer = 600;\ncontext.global.UpperMidBuffer = 1200;\ncontext.global.MaxBuffer = 1800;\n\nreturn null;",
+        "func": "context.global.MinStandard = 1;\ncontext.global.MidStandard = 2;\ncontext.global.MaxStandard = 3;\n\ncontext.global.MinBuffer = 1;\ncontext.global.LowerMidBuffer = 2;\ncontext.global.UpperMidBuffer = 3;\ncontext.global.MaxBuffer = 4;\n\nreturn null;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1859,10 +2075,26 @@
         ]
     },
     {
-        "id": "365a73f8ac09af66",
+        "id": "6614e3ca06715f22",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "6bf19a83f26ccc65",
+        "order": 1,
+        "width": "16",
+        "height": "6",
+        "name": "",
+        "label": "Temperature",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 1930,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "fc205d3812a2e7d6",
         "type": "debug",
         "z": "16c561d0bd2db4f4",
-        "name": "debug 4",
+        "name": "debug 5",
         "active": false,
         "tosidebar": true,
         "console": false,
@@ -1870,433 +2102,193 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1900,
+        "x": 900,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "57df3ce529d2796a",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "d8c242e5bc91f51d",
+        "order": 2,
+        "width": 16,
+        "height": 10,
+        "name": "",
+        "label": "Temperature",
+        "format": "{{msg.payload}} °C",
+        "layout": "col-center",
+        "x": 1710,
         "y": 100,
         "wires": []
     },
     {
-        "id": "6614e3ca06715f22",
+        "id": "1a93b0fe1f01e0ab",
+        "type": "ui_template",
+        "z": "16c561d0bd2db4f4",
+        "group": "d8c242e5bc91f51d",
+        "name": "",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n\n  .nr-dashboard-text p.value{\n  font-size:160px !important\n  }\n  .nr-dashboard-text p.label{\n    font-size:60px\n    }\n\n  \n</style",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1440,
+        "y": 1380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "efc671b13c9a47af",
+        "type": "debug",
+        "z": "16c561d0bd2db4f4",
+        "name": "debug 7",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1940,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "9a1e3db47e122efc",
+        "type": "ui_template",
+        "z": "16c561d0bd2db4f4",
+        "group": "3342ef65ea84e0bc",
+        "name": "",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n  .nr-dashboard-text p.value {\n    font-size: 150px !important\n  }\n\n  .nr-dashboard-text p.label {\n    font-size: 60px\n  }\n\n  </style",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1440,
+        "y": 1420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3da4f074540fa337",
         "type": "ui_text",
         "z": "16c561d0bd2db4f4",
-        "group": "6bf19a83f26ccc65",
-        "order": 1,
-        "width": "0",
-        "height": "0",
+        "group": "16892f788a374c51",
+        "order": 2,
+        "width": 18,
+        "height": 7,
         "name": "",
         "label": "Temperature",
         "format": "{{msg.payload}}",
-        "layout": "row-left",
-        "x": 1930,
-        "y": 920,
+        "layout": "col-center",
+        "x": 1970,
+        "y": 400,
         "wires": []
     },
     {
-        "id": "c0eaa1e3.932c2",
-        "type": "inject",
-        "z": "41ec38ad59c0cf49",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "2",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 110,
-        "y": 180,
-        "wires": [
-            [
-                "ed28c584.34a4a8"
-            ]
-        ]
-    },
-    {
-        "id": "31b99d4b.895742",
-        "type": "exec",
-        "z": "41ec38ad59c0cf49",
-        "command": "ffmpeg -y -i rtsp://admin:zinc23@192.168.1.67:554/ch01/1 -vframes 1 -f image2pipe -vcodec png -",
-        "addpay": false,
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "Grab a frame->stdout",
-        "x": 546.4999923706055,
-        "y": 138.25,
-        "wires": [
-            [
-                "2d96cf3d.0dffe"
-            ],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "2f7c77bd.2eeae8",
-        "type": "function",
-        "z": "41ec38ad59c0cf49",
-        "name": "Statistics",
-        "func": "var now = new Date();\nvar stat = context.get(\"stat\");\nif (stat===undefined) {\n    // Initialize the object in case NR restart\n    stat = { \"count\": 0, \"success\": 0, \"rate\": 0.0, \"last\": now};\n}\nif (msg.topic===\"reset\") {\n    // Reset message was received: reset statistics\n    stat = { \"count\": 0, \"success\": 0, \"rate\": 0.0, \"last\": now};\n} else {\n    // Update statistics\n    stat.count++;\n    if (msg.payload.code===0) {\n        stat.success++;\n    }    \n    stat.rate=stat.success/stat.count;\n    stat.last=now;\n}\n\n// Create formatted time\nvar yyyy = now.getFullYear();\nvar mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\nvar dd  = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\nvar hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\nvar mmm  = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\nvar ss  = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\n\nmsg.formattedtime = dd + \".\" + mm + \".\" + yyyy + \" \" + hh + \":\" + mmm + \":\" + ss;\nmsg.success = stat.success;\nmsg.rate = Math.floor(stat.rate*100);\n\nnode.status({fill:\"blue\",shape:\"ring\",text:\"Frames: \"+msg.success+\" | \"+msg.rate+\"% | Last update: \"+dd + \".\" + mm + \".\" + yyyy + \" \" + hh + \":\" + mmm + \":\" + ss});\n\n\n// Saving data in the context\ncontext.set(\"stat\",stat);\n\nreturn msg;\n\n\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 727.9999847412109,
-        "y": 330.25,
-        "wires": [
-            [
-                "122d531a.410bcd",
-                "47913bc9.420b84",
-                "5f987014.e8cba"
-            ]
-        ]
-    },
-    {
-        "id": "b1f8f75e.c82c88",
-        "type": "inject",
-        "z": "41ec38ad59c0cf49",
-        "name": "Reset stat",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": "",
-        "topic": "reset",
-        "payload": "",
-        "payloadType": "date",
-        "x": 120,
-        "y": 320,
-        "wires": [
-            [
-                "99bfd7f8.6e8f78"
-            ]
-        ]
-    },
-    {
-        "id": "122d531a.410bcd",
-        "type": "ui_text",
-        "z": "41ec38ad59c0cf49",
-        "group": "e16e06ca.f38438",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "Last time",
-        "label": "Last grab",
-        "format": "{{msg.formattedtime}}",
-        "layout": "row-spread",
-        "x": 929.0000686645508,
-        "y": 250.64999198913574,
-        "wires": []
-    },
-    {
-        "id": "47913bc9.420b84",
-        "type": "ui_text",
-        "z": "41ec38ad59c0cf49",
-        "group": "e16e06ca.f38438",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "Frame count",
-        "label": "Frames grabbed",
-        "format": "{{msg.success}}",
-        "layout": "row-spread",
-        "x": 938.899974822998,
-        "y": 286.4499807357788,
-        "wires": []
-    },
-    {
-        "id": "5f987014.e8cba",
-        "type": "ui_text",
-        "z": "41ec38ad59c0cf49",
-        "group": "e16e06ca.f38438",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "Success rate",
-        "label": "Success rate",
-        "format": "{{msg.rate}} %",
-        "layout": "row-spread",
-        "x": 939.8999481201172,
-        "y": 324.4499740600586,
-        "wires": []
-    },
-    {
-        "id": "3bccc648.4f364a",
-        "type": "ui_button",
-        "z": "41ec38ad59c0cf49",
-        "name": "Refresh",
-        "group": "675036dd.603328",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Refresh image",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "",
-        "topicType": "str",
-        "x": 120,
-        "y": 380,
-        "wires": [
-            [
-                "459f7922.af9ee8"
-            ]
-        ]
-    },
-    {
-        "id": "14f4f2e2.2bf82d",
-        "type": "comment",
-        "z": "41ec38ad59c0cf49",
-        "name": "Frame grabber",
-        "info": "This section of the flow is responsible for \ngrabbing a single out of the RTSP feed of the IP\nCamera. It uses avconv to do that which is part\nof the libav-tools for raspberry pi.\n\nThe trigger can be an inject, or a UI button.\nThe statistic node keeps a track of the number of\ngrabbed frames and the success rate (when the\nvideo conversion/grabbing was successful). The \nStatistic node also has a reset input which can \nbe used to periodically reset the stats (e.g.\ndaily, weekly).\n\nI directed the second output of the Exec node to\na file, as the output of the avconv is usually \nquite long and if there are errors you don't\nsee the entire output in the debug window, so in\nthat case just open to output and see what the issue\nis.",
-        "x": 108.62501525878906,
-        "y": 84.00000762939453,
-        "wires": []
-    },
-    {
-        "id": "ed28c584.34a4a8",
-        "type": "change",
-        "z": "41ec38ad59c0cf49",
-        "name": "Set filename",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "C:\\\\Users\\\\Samon\\\\node-red-static\\\\grab.jpg",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 298,
-        "y": 193,
-        "wires": [
-            [
-                "9ce138d8.f118c8",
-                "31b99d4b.895742"
-            ]
-        ]
-    },
-    {
-        "id": "6eba2f2f.5e0f",
-        "type": "template",
-        "z": "41ec38ad59c0cf49",
-        "name": "",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "<img width=\"320px\" height=\"200px\" src=\"data:image/jpg;base64,{{{payload}}}\">",
-        "output": "str",
-        "x": 739.9999961853027,
-        "y": 197.25000190734863,
-        "wires": [
-            [
-                "dd3172bd.6a821"
-            ]
-        ]
-    },
-    {
-        "id": "dd3172bd.6a821",
+        "id": "dbdedcaedd8e2dbf",
         "type": "ui_template",
-        "z": "41ec38ad59c0cf49",
-        "group": "675036dd.603328",
+        "z": "16c561d0bd2db4f4",
+        "group": "16892f788a374c51",
         "name": "",
-        "order": 1,
-        "width": "6",
-        "height": "5",
-        "format": "<div ng-bind-html=\"msg.payload\"></div>",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n  .nr-dashboard-text p.value {\n    font-size: 150px !important\n  }\n\n  .nr-dashboard-text p.label {\n    font-size: 60px\n  }\n\n  </style",
         "storeOutMessages": true,
         "fwdInMessages": true,
-        "resendOnRefresh": false,
+        "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 926,
-        "y": 210.75000095367432,
+        "x": 1440,
+        "y": 1460,
         "wires": [
             []
         ]
     },
     {
-        "id": "2d96cf3d.0dffe",
-        "type": "base64",
-        "z": "41ec38ad59c0cf49",
-        "name": "",
-        "action": "str",
-        "property": "payload",
-        "x": 760,
-        "y": 120,
-        "wires": [
-            [
-                "6eba2f2f.5e0f"
-            ]
-        ]
-    },
-    {
-        "id": "9ce138d8.f118c8",
-        "type": "exec",
-        "z": "41ec38ad59c0cf49",
-        "command": "ffmpeg -y -i rtsp://admin:zinc23@192.168.1.67:554/ch01/1 -vframes 1 -qscale:v 2",
-        "addpay": "payload",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "Grab a frame -> jpg",
-        "x": 537.9999847412109,
-        "y": 255.25,
-        "wires": [
-            [],
-            [],
-            [
-                "2f7c77bd.2eeae8"
-            ]
-        ]
-    },
-    {
-        "id": "a5e46029.81ba4",
-        "type": "watch",
-        "z": "41ec38ad59c0cf49",
-        "name": "",
-        "files": "C:\\\\Users\\\\Samon\\\\node-red-static\\\\grab.jpg",
-        "recursive": "",
-        "x": 670,
-        "y": 440,
-        "wires": [
-            [
-                "7081ec93.98cfa4"
-            ]
-        ]
-    },
-    {
-        "id": "7081ec93.98cfa4",
+        "id": "ea7c783cf3a1fcb5",
         "type": "ui_text",
-        "z": "41ec38ad59c0cf49",
-        "group": "675036dd.603328",
+        "z": "16c561d0bd2db4f4",
+        "group": "69e0a1bd71cfcb0a",
         "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "File Size",
-        "label": "grab.jpg",
-        "format": "{{msg.size}} kb",
-        "layout": "row-spread",
-        "x": 940,
-        "y": 440,
+        "width": 16,
+        "height": 10,
+        "name": "",
+        "label": "Temperature",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 2090,
+        "y": 1180,
         "wires": []
     },
     {
-        "id": "459f7922.af9ee8",
-        "type": "function",
-        "z": "41ec38ad59c0cf49",
-        "name": "Frame grab",
-        "func": "var now = new Date();\n// Create formatted time\nvar yyyy = now.getFullYear();\nvar mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\nvar dd  = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\nvar hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\nvar mmm  = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\nvar ss  = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\n\n// Last update: \"+dd + \".\" + mm + \".\" + yyyy + \" \" + hh + \":\" + mmm + \":\" + ss});\n\n// file path with / at the end\nvar path = \"C:\\\\Users\\\\Samon\\\\node-red-static\\\\\";                     // This is the path\nvar filename = \"frame_\"+yyyy+mm+dd+\"-\"+hh+mm+ss+\".jpg\";     // file name\nmsg.payload = path + filename;                              // pass the full path to payload for the exec node to add to the end of the command\nmsg.file = filename;                                        // To be used later to store the information in the DB\nmsg.path = path;                                            // Same as above\nmsg.wwwpath = \"/\";                                          // Same as above\nmsg.topic = \"store\";                                        // Flag to store this image in the DB\nmsg.type = \"timelapse\";                                     // Image type e.g. Front camera, etc.\nmsg.epoch = now.getTime();                                  // Current timestamp\nmsg.formatteddate = dd + \".\" + mm + \".\" + yyyy + \" \" + hh + \":\" + mmm + \":\" + ss;   // Formatted timestamp to be used later\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 290,
-        "y": 380,
-        "wires": [
-            [
-                "9ce138d8.f118c8",
-                "54d35cc4.46d474"
-            ]
-        ]
-    },
-    {
-        "id": "54d35cc4.46d474",
-        "type": "ui_text_input",
-        "z": "41ec38ad59c0cf49",
+        "id": "3e6fbfaecd60a699",
+        "type": "ui_template",
+        "z": "16c561d0bd2db4f4",
+        "group": "69e0a1bd71cfcb0a",
         "name": "",
-        "label": "Snapshot",
-        "tooltip": "",
-        "group": "675036dd.603328",
-        "order": 4,
+        "order": 3,
         "width": 0,
         "height": 0,
-        "passthru": true,
-        "mode": "text",
-        "delay": 300,
-        "topic": "",
-        "topicType": "str",
-        "x": 930,
-        "y": 400,
+        "format": "<style>\n  .nr-dashboard-text p.value {\n    font-size: 150px !important\n  }\n\n  .nr-dashboard-text p.label {\n    font-size: 60px\n  }\n\n  </style",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1440,
+        "y": 1500,
         "wires": [
             []
         ]
     },
     {
-        "id": "31689e41.17fd82",
-        "type": "ui_button",
-        "z": "41ec38ad59c0cf49",
-        "name": "Reset",
-        "group": "e16e06ca.f38438",
-        "order": 4,
+        "id": "723c44317ec6ad59",
+        "type": "ui_template",
+        "z": "16c561d0bd2db4f4",
+        "group": "7b9307d1947a13f0",
+        "name": "",
+        "order": 6,
         "width": 0,
         "height": 0,
-        "passthru": false,
-        "label": "Reset",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "",
-        "topicType": "str",
-        "x": 110,
-        "y": 280,
+        "format": "<style>\n    .nr-dashboard-theme .ui-card-panel[group-name=\"Left\"] gauge {\n    background-color: #F0F000 !important;\n    fill: rgb(255,0,0) !important;\n    }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1740,
+        "y": 1420,
         "wires": [
-            [
-                "99bfd7f8.6e8f78"
-            ]
+            []
         ]
     },
     {
-        "id": "99bfd7f8.6e8f78",
-        "type": "function",
-        "z": "41ec38ad59c0cf49",
-        "name": "Reset",
-        "func": "msg.topic = 'reset';\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 490,
-        "y": 340,
+        "id": "ad74f83ac843c59a",
+        "type": "ui_template",
+        "z": "3776abced5de3e33",
+        "group": "7b9307d1947a13f0",
+        "name": "",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n    circle {\n    fill: rgb(48, 116, 120);\n    }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 620,
+        "y": 140,
         "wires": [
-            [
-                "2f7c77bd.2eeae8"
-            ]
+            []
         ]
     }
 ]
