@@ -287,16 +287,6 @@
         "collapse": false
     },
     {
-        "id": "c0a1200658ba18e9",
-        "type": "ui_spacer",
-        "z": "16c561d0bd2db4f4",
-        "name": "spacer",
-        "group": "3342ef65ea84e0bc",
-        "order": 2,
-        "width": 1,
-        "height": 1
-    },
-    {
         "id": "d8c242e5bc91f51d",
         "type": "ui_group",
         "name": "bigNumbers",
@@ -939,7 +929,7 @@
         "group": "3342ef65ea84e0bc",
         "order": 4,
         "width": 12,
-        "height": 8,
+        "height": "6",
         "label": "Oxidation pH",
         "chartType": "line",
         "legend": "false",
@@ -1556,7 +1546,7 @@
         "group": "3342ef65ea84e0bc",
         "order": 1,
         "width": 12,
-        "height": 8,
+        "height": "6",
         "label": "Oxidation Temperature",
         "chartType": "line",
         "legend": "false",
@@ -1814,7 +1804,7 @@
         "group": "3342ef65ea84e0bc",
         "order": 5,
         "width": 12,
-        "height": 8,
+        "height": "6",
         "label": "Oxidation Reduction Potential",
         "chartType": "line",
         "legend": "false",
