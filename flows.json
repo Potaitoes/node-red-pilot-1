@@ -437,7 +437,7 @@
         "height": 1
     },
     {
-        "id": "b883de19f40fcd4c",
+        "id": "c773e86855a1055c",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -447,7 +447,7 @@
         "height": 1
     },
     {
-        "id": "6a4239d8f48349ac",
+        "id": "a41db5f70cf5b1af",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -457,7 +457,7 @@
         "height": 1
     },
     {
-        "id": "bde94e0a3f0104c4",
+        "id": "2bfbeb5acb03694f",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -467,7 +467,7 @@
         "height": 1
     },
     {
-        "id": "b0c20926834b6343",
+        "id": "bcc1296ab7a4e7cf",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -477,7 +477,7 @@
         "height": 1
     },
     {
-        "id": "ed8cce86d1a34591",
+        "id": "3078a33693dd7724",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -487,7 +487,7 @@
         "height": 1
     },
     {
-        "id": "3226460913a6789b",
+        "id": "e45054d15ea5a217",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -497,7 +497,7 @@
         "height": 1
     },
     {
-        "id": "02fe98e92d261869",
+        "id": "657a8aa5ea915259",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -507,7 +507,7 @@
         "height": 1
     },
     {
-        "id": "74b9e740631296ac",
+        "id": "9359d414a5b5e576",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -517,7 +517,7 @@
         "height": 1
     },
     {
-        "id": "b5bda9e3aa3a24c2",
+        "id": "110d32044568d88f",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -527,7 +527,7 @@
         "height": 1
     },
     {
-        "id": "2fc915085d6aec2c",
+        "id": "7520e734f33101c4",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -1018,7 +1018,7 @@
         "name": "",
         "label": "pH",
         "format": "{{msg.payload}}",
-        "layout": "row-left",
+        "layout": "col-center",
         "x": 1690,
         "y": 380,
         "wires": []
