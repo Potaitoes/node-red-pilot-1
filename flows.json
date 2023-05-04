@@ -2715,12 +2715,14 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "{\n    \"tab\": \"<T-04>\",\n    \"group\": \"<Left>\",\n    \"control\": {\n        \"type\": \"template\",\n        \"style\": \"<gauge-colour>\",\n        \"value\": true\n    }\n}",
+        "template": "{\n    \"tab\": \"<T-04>\",\n    \"group\": \"<Left>\",\n    \"control\": {\n        \"type\": \"template\",\n        \"style\": \"<gauge-colour>\",\n        \"value\": false\n    }\n}",
         "output": "str",
         "x": 1660,
         "y": 1500,
         "wires": [
-            []
+            [
+                "1d0146fc7c02aae8"
+            ]
         ]
     },
     {
