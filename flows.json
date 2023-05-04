@@ -1912,7 +1912,7 @@
         "width": 0,
         "height": 0,
         "gtype": "wave",
-        "title": "Buffer Level",
+        "title": "<color=red>Buffer Level",
         "label": "",
         "format": "{{value}}",
         "min": 0,
@@ -1924,7 +1924,7 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1890,
+        "x": 2050,
         "y": 1260,
         "wires": []
     },
@@ -2618,8 +2618,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2060,
-        "y": 1440,
+        "x": 1860,
+        "y": 1360,
         "wires": [
             [
                 "26ba799db6cc1c30"
@@ -2648,8 +2648,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1870,
-        "y": 1480,
+        "x": 1670,
+        "y": 1400,
         "wires": [
             [
                 "bb9fd59da9756056"
@@ -2678,8 +2678,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2060,
-        "y": 1480,
+        "x": 1860,
+        "y": 1400,
         "wires": [
             [
                 "26ba799db6cc1c30"
