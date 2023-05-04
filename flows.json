@@ -84,8 +84,8 @@
                     "edited": true
                 },
                 "group-borderColor": {
-                    "value": "#555555",
-                    "edited": false
+                    "value": "#ffffff",
+                    "edited": true
                 },
                 "group-backgroundColor": {
                     "value": "#ffffff",
