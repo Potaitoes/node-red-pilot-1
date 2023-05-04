@@ -337,46 +337,6 @@
         "collapse": false
     },
     {
-        "id": "bd977854fc3af320",
-        "type": "ui_spacer",
-        "z": "16c561d0bd2db4f4",
-        "name": "spacer",
-        "group": "bd9c1836cb534d4b",
-        "order": 2,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "4ece040de7e755c1",
-        "type": "ui_spacer",
-        "z": "16c561d0bd2db4f4",
-        "name": "spacer",
-        "group": "bd9c1836cb534d4b",
-        "order": 5,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "3671be7567734850",
-        "type": "ui_spacer",
-        "z": "16c561d0bd2db4f4",
-        "name": "spacer",
-        "group": "bd9c1836cb534d4b",
-        "order": 6,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "1fb3df297ae9ecef",
-        "type": "ui_spacer",
-        "z": "16c561d0bd2db4f4",
-        "name": "spacer",
-        "group": "bd9c1836cb534d4b",
-        "order": 3,
-        "width": 1,
-        "height": 1
-    },
-    {
         "id": "80ae0189e474ec6e",
         "type": "comment",
         "z": "16c561d0bd2db4f4",
