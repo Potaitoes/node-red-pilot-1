@@ -2696,7 +2696,7 @@
         "order": 6,
         "width": 0,
         "height": 0,
-        "format": "<style ng-if=\"msg.payload > 3\">\n    .nr-dashboard-gauge circle {\n        fill: red !important;\n    }\n</style>\n",
+        "format": "<style ng-if=\"msg.payload > 2\">\n    .nr-dashboard-gauge circle {\n        fill: red !important;\n    }\n</style>\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
