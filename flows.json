@@ -11,7 +11,7 @@
         "id": "3776abced5de3e33",
         "type": "tab",
         "label": "Style",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
