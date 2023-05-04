@@ -2580,23 +2580,22 @@
         "wires": []
     },
     {
-        "id": "ad74f83ac843c59a",
-        "type": "ui_template",
-        "z": "3776abced5de3e33",
-        "group": "7b9307d1947a13f0",
+        "id": "51f2aeef47c7c737",
+        "type": "template",
+        "z": "16c561d0bd2db4f4",
         "name": "",
-        "order": 7,
-        "width": 0,
-        "height": 0,
-        "format": "<style>\n    .nr-dashboard-gauge circle{\n        fill: red;\n    }\n</style>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "x": 620,
-        "y": 140,
+        "field": "ui",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<style>\n    .nr-dashboard-gauge .nv-bar { fill: red; }\n</style>",
+        "output": "str",
+        "x": 1820,
+        "y": 1400,
         "wires": [
-            []
+            [
+                "26ba799db6cc1c30"
+            ]
         ]
     }
 ]
