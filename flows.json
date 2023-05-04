@@ -638,6 +638,25 @@
         "collapse": false
     },
     {
+        "id": "0df4552f9d69039d",
+        "type": "ui_group",
+        "name": "DEFAULT",
+        "tab": "f3a8a67ff0904e39",
+        "order": 1,
+        "disp": false,
+        "width": "44",
+        "collapse": false
+    },
+    {
+        "id": "f3a8a67ff0904e39",
+        "type": "ui_tab",
+        "name": "HOME",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
         "id": "80ae0189e474ec6e",
         "type": "comment",
         "z": "16c561d0bd2db4f4",
@@ -1706,7 +1725,8 @@
             [
                 "26ba799db6cc1c30",
                 "ef99fd3af607e092",
-                "09122bf4c77c8dc8"
+                "09122bf4c77c8dc8",
+                "2dfa535debed3c9d"
             ]
         ]
     },
@@ -2580,21 +2600,308 @@
         "wires": []
     },
     {
-        "id": "51f2aeef47c7c737",
-        "type": "template",
+        "id": "bb9fd59da9756056",
+        "type": "change",
         "z": "16c561d0bd2db4f4",
         "name": "",
-        "field": "ui_control",
-        "fieldType": "msg",
-        "format": "json",
-        "syntax": "mustache",
-        "template": "{\n    \"options\":{\n        \"waveColor\":\"#008000\"\n    }\n}",
-        "output": "json",
-        "x": 1720,
-        "y": 1360,
+        "rules": [
+            {
+                "t": "set",
+                "p": "fcolor",
+                "pt": "msg",
+                "to": "blue",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2060,
+        "y": 1440,
         "wires": [
             [
                 "26ba799db6cc1c30"
+            ]
+        ]
+    },
+    {
+        "id": "2dfa535debed3c9d",
+        "type": "switch",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "3",
+                "vt": "num"
+            },
+            {
+                "t": "gte",
+                "v": "3",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1870,
+        "y": 1480,
+        "wires": [
+            [
+                "bb9fd59da9756056"
+            ],
+            [
+                "93f5f00fe63fad19"
+            ]
+        ]
+    },
+    {
+        "id": "93f5f00fe63fad19",
+        "type": "change",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "fcolor",
+                "pt": "msg",
+                "to": "red",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2060,
+        "y": 1480,
+        "wires": [
+            [
+                "26ba799db6cc1c30"
+            ]
+        ]
+    },
+    {
+        "id": "917b8d1e3d71db60",
+        "type": "change",
+        "z": "3776abced5de3e33",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "fcolor",
+                "pt": "msg",
+                "to": "red",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 180,
+        "wires": [
+            [
+                "027c4571b7afc0e2"
+            ]
+        ]
+    },
+    {
+        "id": "39af0df5fe1c06a2",
+        "type": "switch",
+        "z": "3776abced5de3e33",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "gt",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 490,
+        "y": 220,
+        "wires": [
+            [
+                "917b8d1e3d71db60"
+            ],
+            [
+                "2385c18f0f324c76"
+            ],
+            [
+                "a75de53149517996"
+            ]
+        ]
+    },
+    {
+        "id": "027c4571b7afc0e2",
+        "type": "ui_text",
+        "z": "3776abced5de3e33",
+        "group": "0df4552f9d69039d",
+        "order": 7,
+        "width": 9,
+        "height": 6,
+        "name": "",
+        "label": "Value",
+        "format": "<font face='arial'><font size=6><font color={{fcolor}}>{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 870,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "c4dcf81b6c43aebd",
+        "type": "ui_button",
+        "z": "3776abced5de3e33",
+        "name": "",
+        "group": "0df4552f9d69039d",
+        "order": 8,
+        "width": 3,
+        "height": 2,
+        "passthru": false,
+        "label": "Zero",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "fa-heartbeat",
+        "payload": "0",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 310,
+        "y": 220,
+        "wires": [
+            [
+                "39af0df5fe1c06a2"
+            ]
+        ]
+    },
+    {
+        "id": "cf35e882013e04b0",
+        "type": "ui_button",
+        "z": "3776abced5de3e33",
+        "name": "",
+        "group": "0df4552f9d69039d",
+        "order": 9,
+        "width": 3,
+        "height": 2,
+        "passthru": false,
+        "label": "+10",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "10",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 310,
+        "y": 260,
+        "wires": [
+            [
+                "39af0df5fe1c06a2"
+            ]
+        ]
+    },
+    {
+        "id": "2ff6f57ce6bbc73f",
+        "type": "ui_button",
+        "z": "3776abced5de3e33",
+        "name": "",
+        "group": "0df4552f9d69039d",
+        "order": 4,
+        "width": 3,
+        "height": 2,
+        "passthru": false,
+        "label": "-10",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "-10",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 310,
+        "y": 180,
+        "wires": [
+            [
+                "39af0df5fe1c06a2"
+            ]
+        ]
+    },
+    {
+        "id": "2385c18f0f324c76",
+        "type": "change",
+        "z": "3776abced5de3e33",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "fcolor",
+                "pt": "msg",
+                "to": "yellow",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 220,
+        "wires": [
+            [
+                "027c4571b7afc0e2"
+            ]
+        ]
+    },
+    {
+        "id": "a75de53149517996",
+        "type": "change",
+        "z": "3776abced5de3e33",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "fcolor",
+                "pt": "msg",
+                "to": "green",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 260,
+        "wires": [
+            [
+                "027c4571b7afc0e2"
             ]
         ]
     }
