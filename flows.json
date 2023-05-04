@@ -241,11 +241,11 @@
     {
         "id": "c28d2984b3e2326d",
         "type": "ui_group",
-        "name": "Group 1",
+        "name": "Left",
         "tab": "3c117daf5c2d4197",
         "order": 1,
-        "disp": true,
-        "width": "8",
+        "disp": false,
+        "width": "12",
         "collapse": false
     },
     {
@@ -304,6 +304,16 @@
         "order": 2,
         "disp": false,
         "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "16892f788a374c51",
+        "type": "ui_group",
+        "name": "Right",
+        "tab": "3c117daf5c2d4197",
+        "order": 2,
+        "disp": true,
+        "width": "16",
         "collapse": false
     },
     {
@@ -720,7 +730,8 @@
                 "92dec648efba38d7"
             ],
             [
-                "78480f23928b4b2f"
+                "78480f23928b4b2f",
+                "3da4f074540fa337"
             ],
             [
                 "e6671fa9cbcaaae5"
@@ -739,7 +750,7 @@
         "z": "16c561d0bd2db4f4",
         "name": "cementationpHChart",
         "group": "c28d2984b3e2326d",
-        "order": 2,
+        "order": 1,
         "width": "8",
         "height": "4",
         "label": "Cementation pH",
@@ -780,15 +791,15 @@
         "id": "92dec648efba38d7",
         "type": "ui_text",
         "z": "16c561d0bd2db4f4",
-        "group": "c28d2984b3e2326d",
+        "group": "16892f788a374c51",
         "order": 1,
-        "width": 0,
-        "height": 0,
+        "width": "16",
+        "height": "5",
         "name": "",
-        "label": "Cementation pH:",
+        "label": "pH",
         "format": "{{msg.payload}}",
         "layout": "row-left",
-        "x": 1730,
+        "x": 1690,
         "y": 380,
         "wires": []
     },
@@ -1152,7 +1163,7 @@
         "z": "16c561d0bd2db4f4",
         "name": "",
         "group": "c28d2984b3e2326d",
-        "order": 4,
+        "order": 3,
         "width": "0",
         "height": "0",
         "gtype": "wave",
@@ -1415,7 +1426,7 @@
         "z": "16c561d0bd2db4f4",
         "name": "",
         "group": "c28d2984b3e2326d",
-        "order": 3,
+        "order": 2,
         "width": 0,
         "height": 0,
         "label": "Cementation Temperature",
@@ -2008,5 +2019,21 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "3da4f074540fa337",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "16892f788a374c51",
+        "order": 1,
+        "width": "16",
+        "height": "5",
+        "name": "",
+        "label": "Temperature",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 1970,
+        "y": 400,
+        "wires": []
     }
 ]
