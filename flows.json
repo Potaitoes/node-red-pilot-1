@@ -1389,7 +1389,6 @@
             [
                 "de1f6b2b37e837cb",
                 "7c8336bfba79e633",
-                "365a73f8ac09af66",
                 "efc671b13c9a47af"
             ]
         ]
@@ -1640,7 +1639,7 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "levelReporter",
-        "func": "var level1 = global.get('B1');\nvar level2 = global.get('B2');\nvar level3 = global.get('B3');\nvar level4 = global.get('B4');\n\n\nif (level4 == true){\n    msg.payload = context.global.MaxBuffer;\n} else if (level3 == true){\n    msg.payload == context.global.UpperMidBuffer;\n} else if (level2 == true) {\n    msg.payload = context.global.LowerMidBuffer;\n} else if (level1 == true) {\n    msg.payload = context.global.MinBuffer;\n} else {\n    msg.payload = 0;\n}\n\n\nreturn msg;",
+        "func": "var level1 = global.get('B1');\nvar level2 = global.get('B2');\nvar level3 = global.get('B3');\nvar level4 = global.get('B4');\n\n\nif (level4 == true){\n    // msg.payload = context.global.MaxBuffer;\n} else if (level3 == true){\n    msg.payload == context.global.MaxStandard;\n} else if (level2 == true) {\n    msg.payload = context.global.MidStandard;\n} else if (level1 == true) {\n    msg.payload = context.global.MinStandard;\n} else {\n    msg.payload = 0;\n}\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -2077,22 +2076,6 @@
         ]
     },
     {
-        "id": "365a73f8ac09af66",
-        "type": "debug",
-        "z": "16c561d0bd2db4f4",
-        "name": "debug 4",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2080,
-        "y": 220,
-        "wires": []
-    },
-    {
         "id": "6614e3ca06715f22",
         "type": "ui_text",
         "z": "16c561d0bd2db4f4",
@@ -2165,11 +2148,12 @@
         "type": "debug",
         "z": "16c561d0bd2db4f4",
         "name": "debug 6",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
         "x": 1880,
@@ -2181,7 +2165,7 @@
         "type": "debug",
         "z": "16c561d0bd2db4f4",
         "name": "debug 7",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
