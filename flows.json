@@ -2300,7 +2300,7 @@
         "order": 6,
         "width": 0,
         "height": 0,
-        "format": ".nr-dashboard-theme .ui-card-panel[group-name=\"Left\"] gauge {\n    background-color: #FF0000 !important;\n}",
+        "format": "<style>\n\n.nr-dashboard-theme .ui-card-panel[group-name=\"Left\"] gauge {\n    background-color: #FF0000 !important;\n}\n\n</style>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
