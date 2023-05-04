@@ -2588,7 +2588,7 @@
         "order": 7,
         "width": 0,
         "height": 0,
-        "format": "<style>\n    .nr-dashboard-gauge{\n        fill: red;\n    }\n</style>",
+        "format": "<style>\n    .nr-dashboard-gauge #circle{\n        fill: red;\n    }\n</style>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
