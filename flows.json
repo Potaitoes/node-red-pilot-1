@@ -203,7 +203,7 @@
     {
         "id": "21385dd97135be68",
         "type": "ui_tab",
-        "name": "Buffer",
+        "name": "T-04",
         "icon": "dashboard",
         "order": 7,
         "disabled": false,
@@ -232,7 +232,7 @@
     {
         "id": "3c117daf5c2d4197",
         "type": "ui_tab",
-        "name": "Cementation",
+        "name": "T-03",
         "icon": "dashboard",
         "order": 6,
         "disabled": false,
