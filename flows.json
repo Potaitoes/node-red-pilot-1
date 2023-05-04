@@ -1310,7 +1310,7 @@
         "name": "",
         "label": "pH",
         "format": "{{msg.payload}}",
-        "layout": "row-left",
+        "layout": "col-center",
         "x": 1690,
         "y": 1180,
         "wires": []
@@ -2298,7 +2298,7 @@
         "name": "",
         "label": "Temperature",
         "format": "{{msg.payload}}",
-        "layout": "row-spread",
+        "layout": "col-center",
         "x": 2090,
         "y": 1180,
         "wires": []
