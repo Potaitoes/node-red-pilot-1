@@ -140,7 +140,7 @@
         "name": "Left",
         "tab": "21385dd97135be68",
         "order": 1,
-        "disp": true,
+        "disp": false,
         "width": "12",
         "collapse": false
     },
@@ -542,7 +542,7 @@
         "name": "Right",
         "tab": "21385dd97135be68",
         "order": 2,
-        "disp": true,
+        "disp": false,
         "width": "16",
         "collapse": false
     },
