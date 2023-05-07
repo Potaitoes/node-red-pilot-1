@@ -714,7 +714,8 @@
                 "33c6fb9ca60141ee",
                 "33870d5dbfab317a",
                 "4dfb0f8ea148f7d7",
-                "2c99f31183a32dd4"
+                "2c99f31183a32dd4",
+                "30e0ea179017e68a"
             ]
         ]
     },
@@ -2610,5 +2611,46 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "30e0ea179017e68a",
+        "type": "moment",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "topic": "",
+        "input": "",
+        "inputType": "date",
+        "inTz": "Pacific/Auckland",
+        "adjAmount": 0,
+        "adjType": "days",
+        "adjDir": "add",
+        "format": "",
+        "locale": "en-US",
+        "output": "payload",
+        "outputType": "msg",
+        "outTz": "Pacific/Auckland",
+        "x": 220,
+        "y": 660,
+        "wires": [
+            [
+                "331a0af8d16181a2"
+            ]
+        ]
+    },
+    {
+        "id": "331a0af8d16181a2",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "62c20c4f6996557d",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "x": 490,
+        "y": 660,
+        "wires": []
     }
 ]
