@@ -208,7 +208,7 @@
         "tab": "359d48deb1e9e787",
         "order": 1,
         "disp": true,
-        "width": "8",
+        "width": "12",
         "collapse": false
     },
     {
@@ -647,6 +647,26 @@
         "order": 2,
         "disabled": false,
         "hidden": false
+    },
+    {
+        "id": "65407f4518d0816a",
+        "type": "ui_group",
+        "name": "Group 2",
+        "tab": "359d48deb1e9e787",
+        "order": 2,
+        "disp": true,
+        "width": "16",
+        "collapse": false
+    },
+    {
+        "id": "65e17623ed1efebb",
+        "type": "ui_group",
+        "name": "Group 3",
+        "tab": "359d48deb1e9e787",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
     },
     {
         "id": "80ae0189e474ec6e",
