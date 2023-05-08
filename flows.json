@@ -204,7 +204,7 @@
     {
         "id": "210d2df426365d31",
         "type": "ui_group",
-        "name": "Group 1",
+        "name": "Left",
         "tab": "359d48deb1e9e787",
         "order": 1,
         "disp": true,
@@ -651,9 +651,9 @@
     {
         "id": "65407f4518d0816a",
         "type": "ui_group",
-        "name": "Group 2",
+        "name": "Right",
         "tab": "359d48deb1e9e787",
-        "order": 2,
+        "order": 3,
         "disp": true,
         "width": "16",
         "collapse": false
@@ -661,9 +661,9 @@
     {
         "id": "65e17623ed1efebb",
         "type": "ui_group",
-        "name": "Group 3",
+        "name": "Middle",
         "tab": "359d48deb1e9e787",
-        "order": 3,
+        "order": 2,
         "disp": true,
         "width": "6",
         "collapse": false
@@ -1202,8 +1202,8 @@
         "name": "",
         "group": "210d2df426365d31",
         "order": 2,
-        "width": "8",
-        "height": "4",
+        "width": "12",
+        "height": "6",
         "label": "Electrowinning pH",
         "chartType": "line",
         "legend": "false",
@@ -1242,14 +1242,14 @@
         "id": "1b64da6bc3b25e64",
         "type": "ui_text",
         "z": "16c561d0bd2db4f4",
-        "group": "210d2df426365d31",
+        "group": "65407f4518d0816a",
         "order": 1,
-        "width": 0,
-        "height": 0,
+        "width": "16",
+        "height": "6",
         "name": "",
         "label": "Electrowinning pH",
         "format": "{{msg.payload}}",
-        "layout": "row-left",
+        "layout": "col-center",
         "x": 1730,
         "y": 660,
         "wires": []
@@ -1327,7 +1327,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "x": 1710,
-        "y": 840,
+        "y": 960,
         "wires": [
             []
         ]
@@ -1345,7 +1345,7 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "x": 1690,
-        "y": 880,
+        "y": 1000,
         "wires": []
     },
     {
@@ -1396,7 +1396,7 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "x": 1690,
-        "y": 1180,
+        "y": 1300,
         "wires": []
     },
     {
@@ -1436,7 +1436,7 @@
         "name": "Oxidation Precipitation",
         "info": "",
         "x": 1480,
-        "y": 880,
+        "y": 1000,
         "wires": []
     },
     {
@@ -1446,7 +1446,7 @@
         "name": "Buffer Tank",
         "info": "",
         "x": 1440,
-        "y": 1140,
+        "y": 1260,
         "wires": []
     },
     {
@@ -1523,8 +1523,8 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "TankData Splitter",
-        "func": "var pH_msg = {};\nvar temp_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar l3_msg = {};\n\nvar totalOutputs = 7;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\ntemp_msg.payload = Math.round((msg.payload.temperature) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nl1_msg.payload = msg.payload.level1_status;\nglobal.set(\"EW1\", l1_msg.payload);\nl2_msg.payload = msg.payload.level2_status;\nglobal.set(\"EW2\", l2_msg.payload);\nl3_msg.payload = msg.payload.level3_status;\nglobal.set(\"EW3\", l3_msg.payload);\n\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\nreturnArray[2] = l1_msg;\nreturnArray[3] = l2_msg;\nreturnArray[4] = l3_msg;\n\n\nreturn returnArray;",
-        "outputs": 5,
+        "func": "var pH_msg = {};\nvar temp_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar current_msg = {};\nvar voltage_msg = {};\n\nvar totalOutputs = 6;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\ntemp_msg.payload = Math.round((msg.payload.temperature) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nl1_msg.payload = msg.payload.level1_status;\nglobal.set(\"EW1\", l1_msg.payload);\n\nl2_msg.payload = msg.payload.level2_status;\nglobal.set(\"EW2\", l2_msg.payload);\n\nvoltage_msg.payload = msg.payload.Voltage;\nglobal.set(\"EW_Voltage\", voltage_msg.payload);\ncurrent_msg.payload = msg.payload.Current;\nglobal.set(\"EW_Current\", current_msg.payload);\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\nreturnArray[2] = l1_msg;\nreturnArray[3] = l2_msg;\nreturnArray[4] = voltage_msg;\nreturnArray[5] = current_msg;\n\n\nreturn returnArray;",
+        "outputs": 6,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -1548,7 +1548,10 @@
                 "3d317cd75df892bf"
             ],
             [
-                "3d317cd75df892bf"
+                "862f2406ad1b4d26"
+            ],
+            [
+                "af480a633f3a45b1"
             ]
         ]
     },
@@ -1564,7 +1567,7 @@
         "finalize": "",
         "libs": [],
         "x": 1470,
-        "y": 960,
+        "y": 1080,
         "wires": [
             [
                 "daa274e0f092d927",
@@ -1604,7 +1607,7 @@
         "finalize": "",
         "libs": [],
         "x": 1470,
-        "y": 1220,
+        "y": 1340,
         "wires": [
             [
                 "0acdb8c3f4f7bdf1"
@@ -1632,10 +1635,10 @@
         "type": "ui_gauge",
         "z": "16c561d0bd2db4f4",
         "name": "",
-        "group": "210d2df426365d31",
+        "group": "65e17623ed1efebb",
         "order": 4,
-        "width": "0",
-        "height": "0",
+        "width": "6",
+        "height": "6",
         "gtype": "wave",
         "title": "Electrowinning Level",
         "label": "",
@@ -1676,7 +1679,7 @@
         "seg1": "",
         "seg2": "",
         "x": 1890,
-        "y": 1040,
+        "y": 1160,
         "wires": []
     },
     {
@@ -1684,7 +1687,7 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "levelReporter",
-        "func": "var level1 = global.get('EW1');\nvar level2 = global.get('EW2');\nvar level3 = global.get('EW3');\n\nif (level3 == true){\n    msg.payload = null;\n} else if (level2 == true) {\n    msg.payload = 1000;\n} else if (level1 == true) {\n    msg.payload = 50;\n} else {\n    msg.payload = 0;\n}\n\n\nreturn msg;",
+        "func": "var level1 = global.get('EW1');\nvar level2 = global.get('EW2');\n\nif (level2 == true) {\n    msg.payload = 1000;\n} else if (level1 == true) {\n    msg.payload = 50;\n} else {\n    msg.payload = 0;\n}\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1712,7 +1715,7 @@
         "finalize": "",
         "libs": [],
         "x": 1710,
-        "y": 1040,
+        "y": 1160,
         "wires": [
             [
                 "b1fd7d57b2f1a360",
@@ -1733,7 +1736,7 @@
         "finalize": "",
         "libs": [],
         "x": 1710,
-        "y": 1260,
+        "y": 1380,
         "wires": [
             [
                 "26ba799db6cc1c30",
@@ -1836,8 +1839,8 @@
         "name": "",
         "group": "210d2df426365d31",
         "order": 3,
-        "width": 0,
-        "height": 0,
+        "width": "12",
+        "height": "6",
         "label": "Electrowinning Temperature",
         "chartType": "line",
         "legend": "false",
@@ -1910,7 +1913,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "x": 1740,
-        "y": 920,
+        "y": 1040,
         "wires": [
             []
         ]
@@ -1938,7 +1941,7 @@
         "seg1": "",
         "seg2": "",
         "x": 2010,
-        "y": 1260,
+        "y": 1380,
         "wires": []
     },
     {
@@ -2084,7 +2087,7 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "x": 1690,
-        "y": 1000,
+        "y": 1120,
         "wires": []
     },
     {
@@ -2125,7 +2128,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "x": 1770,
-        "y": 960,
+        "y": 1080,
         "wires": [
             []
         ]
@@ -2176,7 +2179,7 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "x": 1930,
-        "y": 920,
+        "y": 1040,
         "wires": []
     },
     {
@@ -2225,8 +2228,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1440,
-        "y": 1380,
+        "x": 1000,
+        "y": 500,
         "wires": [
             []
         ]
@@ -2262,8 +2265,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1440,
-        "y": 1420,
+        "x": 1000,
+        "y": 540,
         "wires": [
             []
         ]
@@ -2298,8 +2301,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1440,
-        "y": 1460,
+        "x": 1000,
+        "y": 580,
         "wires": [
             []
         ]
@@ -2317,7 +2320,7 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "x": 2090,
-        "y": 1180,
+        "y": 1300,
         "wires": []
     },
     {
@@ -2334,8 +2337,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1440,
-        "y": 1500,
+        "x": 1000,
+        "y": 620,
         "wires": [
             []
         ]
@@ -2627,7 +2630,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "x": 1850,
-        "y": 1340,
+        "y": 1460,
         "wires": [
             []
         ]
@@ -2653,7 +2656,10 @@
         "y": 660,
         "wires": [
             [
-                "331a0af8d16181a2"
+                "331a0af8d16181a2",
+                "4a0cfc5454d8c7ce",
+                "28e4103468ad0e51",
+                "b01b177cc799a618"
             ]
         ]
     },
@@ -2671,6 +2677,106 @@
         "layout": "row-center",
         "x": 490,
         "y": 660,
+        "wires": []
+    },
+    {
+        "id": "862f2406ad1b4d26",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "65407f4518d0816a",
+        "order": 1,
+        "width": "16",
+        "height": "5",
+        "name": "",
+        "label": "Voltage",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 1700,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "af480a633f3a45b1",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "65407f4518d0816a",
+        "order": 2,
+        "width": "16",
+        "height": "5",
+        "name": "",
+        "label": "Current",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 1700,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "543a0b29dd77ea79",
+        "type": "ui_template",
+        "z": "16c561d0bd2db4f4",
+        "group": "65407f4518d0816a",
+        "name": "",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n  .nr-dashboard-text p.value {\n    font-size: 150px !important\n  }\n\n  .nr-dashboard-text p.label {\n    font-size: 60px\n  }\n\n  </style",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1000,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4a0cfc5454d8c7ce",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "2761df262ae914fd",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "<font size = 100>{{msg.payload}}",
+        "layout": "row-center",
+        "x": 490,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "28e4103468ad0e51",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "65e17623ed1efebb",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "<font size = 100>{{msg.payload}}",
+        "layout": "row-center",
+        "x": 490,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "b01b177cc799a618",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "69e0a1bd71cfcb0a",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "<font size = 100>{{msg.payload}}",
+        "layout": "row-center",
+        "x": 490,
+        "y": 780,
         "wires": []
     }
 ]
