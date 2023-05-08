@@ -669,16 +669,6 @@
         "collapse": false
     },
     {
-        "id": "2b4aa9fbe665bc3a",
-        "type": "ui_spacer",
-        "z": "16c561d0bd2db4f4",
-        "name": "spacer",
-        "group": "65e17623ed1efebb",
-        "order": 2,
-        "width": 6,
-        "height": 1
-    },
-    {
         "id": "80ae0189e474ec6e",
         "type": "comment",
         "z": "16c561d0bd2db4f4",
@@ -1647,7 +1637,7 @@
         "z": "16c561d0bd2db4f4",
         "name": "",
         "group": "65e17623ed1efebb",
-        "order": 1,
+        "order": 2,
         "width": 6,
         "height": 6,
         "gtype": "wave",
@@ -2763,13 +2753,13 @@
         "type": "ui_text",
         "z": "16c561d0bd2db4f4",
         "group": "65e17623ed1efebb",
-        "order": 3,
+        "order": 1,
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "",
+        "label": "Time",
         "format": "<font size = 100>{{msg.payload}}",
-        "layout": "row-center",
+        "layout": "col-center",
         "x": 490,
         "y": 740,
         "wires": []
