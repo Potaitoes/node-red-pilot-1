@@ -2647,7 +2647,7 @@
         "height": 0,
         "name": "",
         "label": "",
-        "format": "{{msg.payload}}",
+        "format": "<font size = 100>{{msg.payload}}",
         "layout": "row-center",
         "x": 490,
         "y": 660,
