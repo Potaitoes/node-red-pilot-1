@@ -669,6 +669,16 @@
         "collapse": false
     },
     {
+        "id": "a01708fbdcc2a76b",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "65e17623ed1efebb",
+        "order": 2,
+        "width": 6,
+        "height": 1
+    },
+    {
         "id": "80ae0189e474ec6e",
         "type": "comment",
         "z": "16c561d0bd2db4f4",
@@ -1637,7 +1647,7 @@
         "z": "16c561d0bd2db4f4",
         "name": "",
         "group": "65e17623ed1efebb",
-        "order": 2,
+        "order": 3,
         "width": 6,
         "height": 6,
         "gtype": "wave",
