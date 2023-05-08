@@ -207,7 +207,7 @@
         "name": "Left",
         "tab": "359d48deb1e9e787",
         "order": 1,
-        "disp": true,
+        "disp": false,
         "width": "12",
         "collapse": false
     },
@@ -654,7 +654,7 @@
         "name": "Right",
         "tab": "359d48deb1e9e787",
         "order": 3,
-        "disp": true,
+        "disp": false,
         "width": "16",
         "collapse": false
     },
@@ -664,7 +664,7 @@
         "name": "Middle",
         "tab": "359d48deb1e9e787",
         "order": 2,
-        "disp": true,
+        "disp": false,
         "width": "6",
         "collapse": false
     },
