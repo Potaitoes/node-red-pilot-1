@@ -2646,8 +2646,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1850,
-        "y": 1460,
+        "x": 2010,
+        "y": 1420,
         "wires": [
             []
         ]
