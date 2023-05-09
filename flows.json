@@ -1533,8 +1533,8 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "TankData Splitter",
-        "func": "var pH_msg = {};\nvar temp_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar current_msg = {};\nvar voltage_msg = {};\n\nvar totalOutputs = 6;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\ntemp_msg.payload = Math.round((msg.payload.temperature) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nl1_msg.payload = msg.payload.level1_status;\nglobal.set(\"EW1\", l1_msg.payload);\n\nl2_msg.payload = msg.payload.level2_status;\nglobal.set(\"EW2\", l2_msg.payload);\n\nvoltage_msg.payload = Math.round((msg.payload.voltage) * 10) /10;\nglobal.set(\"EW_Voltage\", voltage_msg.payload);\ncurrent_msg.payload = Math.round((msg.payload.current));\nglobal.set(\"EW_Current\", current_msg.payload);\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\nreturnArray[2] = l1_msg;\nreturnArray[3] = l2_msg;\nreturnArray[4] = voltage_msg;\nreturnArray[5] = current_msg;\n\n\nreturn returnArray;",
-        "outputs": 6,
+        "func": "var pH_msg = {};\nvar temp_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar current_msg = {};\nvar voltage_msg = {};\nvar chlorine_msg = {};\nvar hydrogen_msg = {};\n\nvar totalOutputs = 8;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\ntemp_msg.payload = Math.round((msg.payload.temperature) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nl1_msg.payload = msg.payload.level1_status;\nglobal.set(\"EW1\", l1_msg.payload);\n\nl2_msg.payload = msg.payload.level2_status;\nglobal.set(\"EW2\", l2_msg.payload);\n\nvoltage_msg.payload = Math.round((msg.payload.voltage) * 10) /10;\nglobal.set(\"EW_Voltage\", voltage_msg.payload);\n\ncurrent_msg.payload = Math.round((msg.payload.current));\nglobal.set(\"EW_Current\", current_msg.payload);\n\nchlorine_msg.payload = Math.round((msg.payload.chlorine));\nglobal.set(\"Chlorine_Level\", chlorine_msg.payload);\n\nhydrogen_msg.payload = Math.round((msg.payload.hydrogen));\nglobal.set(\"Hydrogen_Level\", hydrogen_msg.payload)\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\nreturnArray[2] = l1_msg;\nreturnArray[3] = l2_msg;\nreturnArray[4] = voltage_msg;\nreturnArray[5] = current_msg;\nreturnArray[6] = chlorine_msg;\nreturnArray[7] = hydrogen_msg;\n\n\nreturn returnArray;",
+        "outputs": 8,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -1563,6 +1563,12 @@
             [
                 "af480a633f3a45b1",
                 "9d9a7e0ad578b3c8"
+            ],
+            [
+                "d2a02b1215e264b1"
+            ],
+            [
+                "a5c486c46fc9530d"
             ]
         ]
     },
@@ -2832,5 +2838,37 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "d2a02b1215e264b1",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "65407f4518d0816a",
+        "order": 3,
+        "width": 16,
+        "height": 5,
+        "name": "",
+        "label": "Chlorine",
+        "format": "{{msg.payload}} A",
+        "layout": "col-center",
+        "x": 1500,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "a5c486c46fc9530d",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "65407f4518d0816a",
+        "order": 3,
+        "width": 16,
+        "height": 5,
+        "name": "",
+        "label": "Hydrogen",
+        "format": "{{msg.payload}} A",
+        "layout": "col-center",
+        "x": 1500,
+        "y": 860,
+        "wires": []
     }
 ]
