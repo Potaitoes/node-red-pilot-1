@@ -1120,7 +1120,7 @@
         "order": 12,
         "width": 12,
         "height": 6,
-        "label": "Cementation pH",
+        "label": "pH",
         "chartType": "line",
         "legend": "false",
         "xformat": "HH:mm:ss",
@@ -1214,7 +1214,7 @@
         "order": 1,
         "width": 12,
         "height": 6,
-        "label": "Electrowinning pH",
+        "label": "pH",
         "chartType": "line",
         "legend": "false",
         "xformat": "HH:mm:ss",
@@ -1242,7 +1242,7 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "x": 1730,
+        "x": 1690,
         "y": 620,
         "wires": [
             []
@@ -1308,7 +1308,7 @@
         "order": 4,
         "width": 12,
         "height": "6",
-        "label": "Oxidation pH",
+        "label": "pH",
         "chartType": "line",
         "legend": "false",
         "xformat": "HH:mm:ss",
@@ -1336,7 +1336,7 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "x": 1710,
+        "x": 1690,
         "y": 960,
         "wires": [
             []
@@ -1657,7 +1657,7 @@
         "width": 6,
         "height": 6,
         "gtype": "wave",
-        "title": "Electrowinning Level",
+        "title": "Level",
         "label": "",
         "format": "{{value}}",
         "min": 0,
@@ -1669,7 +1669,7 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1920,
+        "x": 1870,
         "y": 740,
         "wires": []
     },
@@ -1759,7 +1759,8 @@
                 "26ba799db6cc1c30",
                 "ef99fd3af607e092",
                 "09122bf4c77c8dc8",
-                "1d0146fc7c02aae8"
+                "1d0146fc7c02aae8",
+                "bcfd1d57bbf1cf7f"
             ]
         ]
     },
@@ -1772,7 +1773,7 @@
         "order": 13,
         "width": 0,
         "height": 0,
-        "label": "Cementation Temperature",
+        "label": "Temperature",
         "chartType": "line",
         "legend": "false",
         "xformat": "HH:mm",
@@ -1800,7 +1801,7 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "x": 1750,
+        "x": 1710,
         "y": 420,
         "wires": [
             []
@@ -1858,7 +1859,7 @@
         "order": 3,
         "width": 12,
         "height": 6,
-        "label": "Electrowinning Temperature",
+        "label": "Temperature",
         "chartType": "line",
         "legend": "false",
         "xformat": "HH:mm",
@@ -1886,7 +1887,7 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "x": 1760,
+        "x": 1710,
         "y": 700,
         "wires": [
             []
@@ -1901,7 +1902,7 @@
         "order": 1,
         "width": 12,
         "height": "6",
-        "label": "Oxidation Temperature",
+        "label": "Temperature",
         "chartType": "line",
         "legend": "false",
         "xformat": "HH:mm",
@@ -1929,7 +1930,7 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "x": 1740,
+        "x": 1710,
         "y": 1040,
         "wires": [
             []
@@ -2870,5 +2871,25 @@
         "x": 1500,
         "y": 860,
         "wires": []
+    },
+    {
+        "id": "bcfd1d57bbf1cf7f",
+        "type": "ui_template",
+        "z": "16c561d0bd2db4f4",
+        "group": "675036dd.603328",
+        "name": "gauge-colour",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "format": "<style ng-if=\"msg.payload > 2\">\n    .nr-dashboard-gauge circle {\n        fill: red !important;\n    }\n</style>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 2010,
+        "y": 1460,
+        "wires": [
+            []
+        ]
     }
 ]
