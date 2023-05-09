@@ -1567,9 +1567,7 @@
             [
                 "d2a02b1215e264b1"
             ],
-            [
-                "a5c486c46fc9530d"
-            ]
+            []
         ]
     },
     {
@@ -2854,22 +2852,6 @@
         "layout": "col-center",
         "x": 1500,
         "y": 820,
-        "wires": []
-    },
-    {
-        "id": "a5c486c46fc9530d",
-        "type": "ui_text",
-        "z": "16c561d0bd2db4f4",
-        "group": "65e17623ed1efebb",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Hydrogen",
-        "format": "{{msg.payload}} ppm?",
-        "layout": "col-center",
-        "x": 1500,
-        "y": 860,
         "wires": []
     },
     {
