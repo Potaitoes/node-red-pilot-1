@@ -1016,7 +1016,7 @@
         "securitypolicy": "None",
         "folderName4PKI": "",
         "name": "",
-        "x": 420,
+        "x": 620,
         "y": 1380,
         "wires": [
             [
@@ -1037,7 +1037,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 580,
+        "x": 800,
         "y": 1380,
         "wires": []
     },
@@ -1046,7 +1046,7 @@
         "type": "ui_switch",
         "z": "16c561d0bd2db4f4",
         "name": "",
-        "label": "switch",
+        "label": "Diaphragm Circulation",
         "tooltip": "",
         "group": "701c917fb989f805",
         "order": 0,
@@ -1066,7 +1066,7 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 90,
+        "x": 140,
         "y": 1380,
         "wires": [
             [
@@ -1078,11 +1078,11 @@
         "id": "6bca2acab5cf3ecf",
         "type": "OpcUa-Item",
         "z": "16c561d0bd2db4f4",
-        "item": "ns=4;s=TestBitTag",
+        "item": "ns=4;s=EW_DIAPHRAGM_ENABLE",
         "datatype": "Boolean",
         "value": "",
         "name": "",
-        "x": 240,
+        "x": 400,
         "y": 1380,
         "wires": [
             [
