@@ -2918,5 +2918,25 @@
         "x": 1750,
         "y": 680,
         "wires": []
+    },
+    {
+        "id": "06a450c1c5c5357a",
+        "type": "ui_template",
+        "z": "16c561d0bd2db4f4",
+        "group": "210d2df426365d31",
+        "name": "",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n  .nr-dashboard-text p.value {\n    font-size: 150px !important\n  }\n\n  .nr-dashboard-text p.label {\n    font-size: 40px\n  }\n\n  </style",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 620,
+        "y": 660,
+        "wires": [
+            []
+        ]
     }
 ]
