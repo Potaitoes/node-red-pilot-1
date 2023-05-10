@@ -1762,7 +1762,9 @@
             [
                 "d2a02b1215e264b1"
             ],
-            []
+            [
+                "3b6b93546ea249da"
+            ]
         ]
     },
     {
@@ -3018,5 +3020,21 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "3b6b93546ea249da",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "210d2df426365d31",
+        "order": 31,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Hydrogen",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 1500,
+        "y": 860,
+        "wires": []
     }
 ]
