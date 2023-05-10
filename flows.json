@@ -2740,7 +2740,7 @@
         "group": "210d2df426365d31",
         "order": 1,
         "width": "10",
-        "height": "5",
+        "height": "6",
         "name": "",
         "label": "Temperature",
         "format": "{{msg.payload}}°C",
