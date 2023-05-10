@@ -2744,7 +2744,7 @@
         "name": "",
         "label": "T-05 Temperature",
         "format": "{{msg.payload}}°C",
-        "layout": "row-spread",
+        "layout": "col-center",
         "x": 1770,
         "y": 680,
         "wires": []
