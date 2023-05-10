@@ -1260,8 +1260,8 @@
         "label": "pH",
         "format": "{{msg.payload}}",
         "layout": "col-center",
-        "x": 1690,
-        "y": 660,
+        "x": 1830,
+        "y": 620,
         "wires": []
     },
     {
@@ -1543,12 +1543,9 @@
         "y": 700,
         "wires": [
             [
-                "c4defabd3506a705",
-                "1b64da6bc3b25e64",
                 "5d78acd681771170"
             ],
             [
-                "3d63a9e19229a6e2",
                 "d425031359758514"
             ],
             [
@@ -1561,8 +1558,7 @@
                 "862f2406ad1b4d26"
             ],
             [
-                "af480a633f3a45b1",
-                "9d9a7e0ad578b3c8"
+                "af480a633f3a45b1"
             ],
             [
                 "d2a02b1215e264b1"
@@ -1885,8 +1881,8 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "x": 1710,
-        "y": 700,
+        "x": 1810,
+        "y": 660,
         "wires": [
             []
         ]
@@ -2873,5 +2869,20 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "5755dc993505a909",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1490,
+        "y": 860,
+        "wires": []
     }
 ]
