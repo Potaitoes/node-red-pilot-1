@@ -2845,7 +2845,7 @@
         "height": 4,
         "name": "",
         "label": "",
-        "format": "<font size = 100>{{msg.payload}}",
+        "format": "{{msg.payload}}",
         "layout": "col-center",
         "x": 490,
         "y": 740,
@@ -2934,7 +2934,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "x": 620,
-        "y": 660,
+        "y": 740,
         "wires": [
             []
         ]
