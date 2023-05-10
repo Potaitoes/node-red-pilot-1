@@ -208,7 +208,7 @@
         "tab": "359d48deb1e9e787",
         "order": 1,
         "disp": false,
-        "width": 10,
+        "width": "12",
         "collapse": false
     },
     {
@@ -656,16 +656,6 @@
         "order": 3,
         "disp": false,
         "width": "16",
-        "collapse": false
-    },
-    {
-        "id": "65e17623ed1efebb",
-        "type": "ui_group",
-        "name": "Middle",
-        "tab": "359d48deb1e9e787",
-        "order": 2,
-        "disp": false,
-        "width": "6",
         "collapse": false
     },
     {
