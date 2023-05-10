@@ -1206,49 +1206,6 @@
         ]
     },
     {
-        "id": "c4defabd3506a705",
-        "type": "ui_chart",
-        "z": "16c561d0bd2db4f4",
-        "name": "",
-        "group": "210d2df426365d31",
-        "order": 1,
-        "width": 12,
-        "height": 6,
-        "label": "pH",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "0",
-        "ymax": "14",
-        "removeOlder": 1,
-        "removeOlderPoints": "1000",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#dd2727",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "x": 1690,
-        "y": 620,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "1b64da6bc3b25e64",
         "type": "ui_text",
         "z": "16c561d0bd2db4f4",
@@ -1260,8 +1217,8 @@
         "label": "pH",
         "format": "{{msg.payload}}",
         "layout": "col-center",
-        "x": 1830,
-        "y": 620,
+        "x": 1730,
+        "y": 640,
         "wires": []
     },
     {
@@ -1543,10 +1500,12 @@
         "y": 700,
         "wires": [
             [
-                "5d78acd681771170"
+                "5d78acd681771170",
+                "1b64da6bc3b25e64"
             ],
             [
-                "d425031359758514"
+                "d425031359758514",
+                "85f3688223d6cb05"
             ],
             [
                 "3d317cd75df892bf"
@@ -1840,49 +1799,6 @@
         "useDifferentColor": false,
         "x": 1710,
         "y": 140,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "3d63a9e19229a6e2",
-        "type": "ui_chart",
-        "z": "16c561d0bd2db4f4",
-        "name": "",
-        "group": "210d2df426365d31",
-        "order": 3,
-        "width": 12,
-        "height": 6,
-        "label": "Temperature",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "0",
-        "ymax": "100",
-        "removeOlder": 1,
-        "removeOlderPoints": "10000",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "x": 1810,
-        "y": 660,
         "wires": [
             []
         ]
@@ -2792,49 +2708,6 @@
         "wires": []
     },
     {
-        "id": "9d9a7e0ad578b3c8",
-        "type": "ui_chart",
-        "z": "16c561d0bd2db4f4",
-        "name": "",
-        "group": "210d2df426365d31",
-        "order": 2,
-        "width": 12,
-        "height": 6,
-        "label": "Current",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "0",
-        "ymax": "1000",
-        "removeOlder": "24",
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "x": 1700,
-        "y": 860,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "d2a02b1215e264b1",
         "type": "ui_text",
         "z": "16c561d0bd2db4f4",
@@ -2871,18 +2744,19 @@
         ]
     },
     {
-        "id": "5755dc993505a909",
+        "id": "85f3688223d6cb05",
         "type": "ui_text",
         "z": "16c561d0bd2db4f4",
-        "order": 0,
+        "group": "65407f4518d0816a",
+        "order": 1,
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "text",
-        "format": "{{msg.payload}}",
+        "label": "T-05 Temperature",
+        "format": "{{msg.payload}}°C",
         "layout": "row-spread",
-        "x": 1490,
-        "y": 860,
+        "x": 1770,
+        "y": 680,
         "wires": []
     }
 ]
