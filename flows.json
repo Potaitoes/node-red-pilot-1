@@ -208,7 +208,7 @@
         "tab": "359d48deb1e9e787",
         "order": 1,
         "disp": false,
-        "width": "12",
+        "width": 10,
         "collapse": false
     },
     {
@@ -667,16 +667,6 @@
         "disp": false,
         "width": "6",
         "collapse": false
-    },
-    {
-        "id": "d46f33ecd8e383f0",
-        "type": "ui_spacer",
-        "z": "16c561d0bd2db4f4",
-        "name": "spacer",
-        "group": "65e17623ed1efebb",
-        "order": 3,
-        "width": 6,
-        "height": 1
     },
     {
         "id": "80ae0189e474ec6e",
