@@ -2742,10 +2742,10 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "T-05 Temperature",
+        "label": "Temperature",
         "format": "{{msg.payload}}°C",
         "layout": "col-center",
-        "x": 1770,
+        "x": 1750,
         "y": 680,
         "wires": []
     }
