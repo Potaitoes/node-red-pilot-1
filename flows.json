@@ -3027,11 +3027,11 @@
         "order": 4,
         "width": 16,
         "height": 5,
-        "name": "",
+        "name": "ChlorineTag",
         "label": "Chlorine",
         "format": "{{msg.payload}} ppm",
         "layout": "col-center",
-        "x": 1500,
+        "x": 1510,
         "y": 820,
         "wires": []
     },
