@@ -3195,7 +3195,7 @@
         "order": 6,
         "width": 20,
         "height": 1,
-        "format": "<style>\n  md-switch {\n    scale: 400% !important\n  }\n\n  p.label {\n    font-size: 100px !important\n  }\n\n</style",
+        "format": "<style>\n  md-switch {\n    scale: 600% !important\n  }\n\n  p.label {\n    font-size: 100px !important\n  }\n\n</style",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
