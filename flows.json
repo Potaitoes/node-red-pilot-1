@@ -1156,7 +1156,7 @@
         "type": "ui_switch",
         "z": "16c561d0bd2db4f4",
         "name": "",
-        "label": "Diaphragm Circulation",
+        "label": "EW Circulation",
         "tooltip": "",
         "group": "701c917fb989f805",
         "order": 3,
@@ -1176,7 +1176,7 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 140,
+        "x": 120,
         "y": 1380,
         "wires": [
             [
