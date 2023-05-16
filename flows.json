@@ -999,6 +999,36 @@
         "height": 1
     },
     {
+        "id": "37adf7d2601a1065",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "701c917fb989f805",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "8508223d1b66f5ea",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "701c917fb989f805",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "07a7764ed04ea107",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "701c917fb989f805",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
         "id": "80ae0189e474ec6e",
         "type": "comment",
         "z": "16c561d0bd2db4f4",
