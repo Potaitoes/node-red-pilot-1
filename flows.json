@@ -3194,7 +3194,7 @@
         "id": "65ed57481b45630b",
         "type": "OpcUa-Item",
         "z": "16c561d0bd2db4f4",
-        "item": "ns=4;s=FAST_LOGGING",
+        "item": "ns=4;s=FAST_LOG",
         "datatype": "Boolean",
         "value": "",
         "name": "",
