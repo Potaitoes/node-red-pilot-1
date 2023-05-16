@@ -989,7 +989,17 @@
         "height": 1
     },
     {
-        "id": "97ef6678be1d351f",
+        "id": "8dd759795faf5d0b",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "701c917fb989f805",
+        "order": 1,
+        "width": 20,
+        "height": 1
+    },
+    {
+        "id": "47ae9888999c1a5b",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -999,22 +1009,32 @@
         "height": 1
     },
     {
-        "id": "49dc13e4d9e29231",
-        "type": "ui_spacer",
-        "z": "16c561d0bd2db4f4",
-        "name": "spacer",
-        "group": "701c917fb989f805",
-        "order": 3,
-        "width": 20,
-        "height": 1
-    },
-    {
-        "id": "7c6d751a3924b14f",
+        "id": "3e73cc4a01e89146",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
         "group": "701c917fb989f805",
         "order": 4,
+        "width": 20,
+        "height": 1
+    },
+    {
+        "id": "57a5043f0f339ff7",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "701c917fb989f805",
+        "order": 5,
+        "width": 20,
+        "height": 1
+    },
+    {
+        "id": "c03f5b8c74ec6a50",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "701c917fb989f805",
+        "order": 6,
         "width": 20,
         "height": 1
     },
@@ -1149,7 +1169,7 @@
         "label": "EW Circulation",
         "tooltip": "",
         "group": "701c917fb989f805",
-        "order": 5,
+        "order": 7,
         "width": 20,
         "height": 4,
         "passthru": true,
@@ -3145,7 +3165,7 @@
         "label": "FAST LOGGING",
         "tooltip": "",
         "group": "701c917fb989f805",
-        "order": 1,
+        "order": 3,
         "width": 20,
         "height": 4,
         "passthru": true,
@@ -3192,7 +3212,7 @@
         "z": "16c561d0bd2db4f4",
         "group": "701c917fb989f805",
         "name": "",
-        "order": 6,
+        "order": 8,
         "width": 20,
         "height": 1,
         "format": "<style>\n  md-switch {\n    scale: 600% !important\n  }\n\n  p.label {\n    font-size: 100px !important\n  }\n\n</style",
