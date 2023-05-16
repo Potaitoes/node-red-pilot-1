@@ -1118,7 +1118,7 @@
         "name": "",
         "label": "Diaphragm Circulation",
         "tooltip": "",
-        "group": "210d2df426365d31",
+        "group": "701c917fb989f805",
         "order": 1,
         "width": 6,
         "height": 1,
@@ -3106,5 +3106,54 @@
         "x": 1500,
         "y": 860,
         "wires": []
+    },
+    {
+        "id": "cd682105b51a0c4b",
+        "type": "ui_switch",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "label": "FAST LOGGING",
+        "tooltip": "",
+        "group": "701c917fb989f805",
+        "order": 0,
+        "width": "6",
+        "height": "4",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "x": 130,
+        "y": 1420,
+        "wires": [
+            [
+                "65ed57481b45630b"
+            ]
+        ]
+    },
+    {
+        "id": "65ed57481b45630b",
+        "type": "OpcUa-Item",
+        "z": "16c561d0bd2db4f4",
+        "item": "ns=4;s=FAST_LOGGING",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "",
+        "x": 400,
+        "y": 1420,
+        "wires": [
+            [
+                "5fc5cf3c28ed8110"
+            ]
+        ]
     }
 ]
