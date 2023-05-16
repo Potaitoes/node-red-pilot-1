@@ -3165,7 +3165,7 @@
         "order": 8,
         "width": 0,
         "height": 0,
-        "format": "<style>\n  md-switch {\n    scale: 200% !important\n  }\n\n</style",
+        "format": "<style>\n  md-switch {\n    scale: 200% !important\n  }\n\n  p.value {\n    font-size: 150px !important\n  }\n\n</style",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
