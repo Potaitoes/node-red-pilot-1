@@ -668,7 +668,17 @@
         "collapse": false
     },
     {
-        "id": "756b8666c8c6116e",
+        "id": "fd80dbcddca9b554",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "210d2df426365d31",
+        "order": 2,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "b3baf9d4e3bd65c0",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -678,37 +688,37 @@
         "height": 1
     },
     {
-        "id": "630e2a5931e171ae",
-        "type": "ui_spacer",
-        "z": "16c561d0bd2db4f4",
-        "name": "spacer",
-        "group": "210d2df426365d31",
-        "order": 4,
-        "width": 6,
-        "height": 1
-    },
-    {
-        "id": "ba10ae79d9602823",
+        "id": "6fcf9dafa96c874e",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
         "group": "210d2df426365d31",
         "order": 5,
-        "width": 6,
+        "width": 4,
         "height": 1
     },
     {
-        "id": "5aecd8ad755aec62",
+        "id": "b7627f3822513c22",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
         "group": "210d2df426365d31",
         "order": 6,
-        "width": 6,
+        "width": 4,
         "height": 1
     },
     {
-        "id": "a3f8293606c778d8",
+        "id": "b0bbad69311e8707",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "210d2df426365d31",
+        "order": 7,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "6054d1a24e98d511",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -718,7 +728,7 @@
         "height": 1
     },
     {
-        "id": "8f4efa98ad12510f",
+        "id": "166608dccd78fbee",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -728,7 +738,7 @@
         "height": 1
     },
     {
-        "id": "db0a27e375aae30c",
+        "id": "4dc92e9e239a21e9",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -738,37 +748,7 @@
         "height": 1
     },
     {
-        "id": "44bd9c1b510017ad",
-        "type": "ui_spacer",
-        "z": "16c561d0bd2db4f4",
-        "name": "spacer",
-        "group": "210d2df426365d31",
-        "order": 11,
-        "width": 4,
-        "height": 1
-    },
-    {
-        "id": "328e30188c4aa7d0",
-        "type": "ui_spacer",
-        "z": "16c561d0bd2db4f4",
-        "name": "spacer",
-        "group": "210d2df426365d31",
-        "order": 12,
-        "width": 4,
-        "height": 1
-    },
-    {
-        "id": "2174835388822969",
-        "type": "ui_spacer",
-        "z": "16c561d0bd2db4f4",
-        "name": "spacer",
-        "group": "210d2df426365d31",
-        "order": 13,
-        "width": 4,
-        "height": 1
-    },
-    {
-        "id": "bfebb8c8576ed01e",
+        "id": "b779769479b90cc9",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -1689,7 +1669,7 @@
         "z": "16c561d0bd2db4f4",
         "name": "",
         "group": "210d2df426365d31",
-        "order": 14,
+        "order": 11,
         "width": 12,
         "height": 8,
         "gtype": "wave",
@@ -2763,9 +2743,9 @@
         "type": "ui_text",
         "z": "16c561d0bd2db4f4",
         "group": "210d2df426365d31",
-        "order": 2,
+        "order": 1,
         "width": 6,
-        "height": 4,
+        "height": 2,
         "name": "",
         "label": "",
         "format": "{{msg.payload}}",
@@ -2831,7 +2811,7 @@
         "type": "ui_text",
         "z": "16c561d0bd2db4f4",
         "group": "210d2df426365d31",
-        "order": 7,
+        "order": 4,
         "width": 8,
         "height": 6,
         "name": "",
@@ -2841,26 +2821,6 @@
         "x": 1750,
         "y": 680,
         "wires": []
-    },
-    {
-        "id": "06a450c1c5c5357a",
-        "type": "ui_template",
-        "z": "16c561d0bd2db4f4",
-        "group": "210d2df426365d31",
-        "name": "",
-        "order": 1,
-        "width": "8",
-        "height": 1,
-        "format": "<style>\n  .nr-dashboard-text p.value {\n    font-size: 10px !important\n  }\n\n  .nr-dashboard-text p.label {\n    font-size: 10px\n  }\n\n  </style",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "x": 620,
-        "y": 740,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "3b6b93546ea249da",
