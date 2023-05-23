@@ -3191,25 +3191,5 @@
                 "5fc5cf3c28ed8110"
             ]
         ]
-    },
-    {
-        "id": "2512981da15db400",
-        "type": "ui_template",
-        "z": "16c561d0bd2db4f4",
-        "group": "e48f7d12aa97556a",
-        "name": "",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "format": "<style>\n  .nr-dashboard-text p.value {\n    font-size: 50px !important\n  }\n\n  .nr-dashboard-text p.label {\n    font-size: 40px\n  }\n\n</style",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "x": 1000,
-        "y": 700,
-        "wires": [
-            []
-        ]
     }
 ]
