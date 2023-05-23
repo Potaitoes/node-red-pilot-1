@@ -583,10 +583,10 @@
         "id": "62c20c4f6996557d",
         "type": "ui_group",
         "name": "T-01",
-        "tab": "8183cda1929e83aa",
+        "tab": "4c7e5a991ed75d8e",
         "order": 1,
         "disp": true,
-        "width": 6,
+        "width": "6",
         "collapse": false
     },
     {
@@ -3224,6 +3224,251 @@
         "y": 1320,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "74db610522949130",
+        "type": "ui_switch",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "label": "Running",
+        "tooltip": "",
+        "group": "62c20c4f6996557d",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "x": 120,
+        "y": 1460,
+        "wires": [
+            [
+                "bf4cbfcb156c7c41"
+            ]
+        ]
+    },
+    {
+        "id": "3a30ba2893f3a494",
+        "type": "ui_switch",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "label": "Running",
+        "tooltip": "",
+        "group": "2761df262ae914fd",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "x": 120,
+        "y": 1500,
+        "wires": [
+            [
+                "c232b9d99bf9d0fe"
+            ]
+        ]
+    },
+    {
+        "id": "9445133b8c752847",
+        "type": "ui_switch",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "label": "Running",
+        "tooltip": "",
+        "group": "c28d2984b3e2326d",
+        "order": 13,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "x": 120,
+        "y": 1540,
+        "wires": [
+            [
+                "96d17c0d4187757a"
+            ]
+        ]
+    },
+    {
+        "id": "25feac56f032765e",
+        "type": "ui_switch",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "label": "Running",
+        "tooltip": "",
+        "group": "7b9307d1947a13f0",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "x": 120,
+        "y": 1580,
+        "wires": [
+            [
+                "e75dbb222d125592"
+            ]
+        ]
+    },
+    {
+        "id": "dfa547a2d532c202",
+        "type": "ui_switch",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "label": "Running",
+        "tooltip": "",
+        "group": "210d2df426365d31",
+        "order": 38,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "x": 120,
+        "y": 1620,
+        "wires": [
+            [
+                "737bd174d273954a"
+            ]
+        ]
+    },
+    {
+        "id": "bf4cbfcb156c7c41",
+        "type": "OpcUa-Item",
+        "z": "16c561d0bd2db4f4",
+        "item": "ns=4;s=wash_uptime",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "",
+        "x": 400,
+        "y": 1460,
+        "wires": [
+            [
+                "5fc5cf3c28ed8110"
+            ]
+        ]
+    },
+    {
+        "id": "c232b9d99bf9d0fe",
+        "type": "OpcUa-Item",
+        "z": "16c561d0bd2db4f4",
+        "item": "ns=4;s=ox_uptime",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "",
+        "x": 400,
+        "y": 1500,
+        "wires": [
+            [
+                "5fc5cf3c28ed8110"
+            ]
+        ]
+    },
+    {
+        "id": "96d17c0d4187757a",
+        "type": "OpcUa-Item",
+        "z": "16c561d0bd2db4f4",
+        "item": "ns=4;s=cem_uptime",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "",
+        "x": 400,
+        "y": 1540,
+        "wires": [
+            [
+                "5fc5cf3c28ed8110"
+            ]
+        ]
+    },
+    {
+        "id": "e75dbb222d125592",
+        "type": "OpcUa-Item",
+        "z": "16c561d0bd2db4f4",
+        "item": "ns=4;s=buffer_uptime",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "",
+        "x": 400,
+        "y": 1580,
+        "wires": [
+            [
+                "5fc5cf3c28ed8110"
+            ]
+        ]
+    },
+    {
+        "id": "737bd174d273954a",
+        "type": "OpcUa-Item",
+        "z": "16c561d0bd2db4f4",
+        "item": "ns=4;s=ew_uptime",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "",
+        "x": 400,
+        "y": 1620,
+        "wires": [
+            [
+                "5fc5cf3c28ed8110"
+            ]
         ]
     }
 ]
