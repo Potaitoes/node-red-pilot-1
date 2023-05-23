@@ -1008,7 +1008,7 @@
         "width": 6
     },
     {
-        "id": "623728882fb02eaa",
+        "id": "0bc47b990c72d2e8",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -1690,22 +1690,6 @@
         ]
     },
     {
-        "id": "0acdb8c3f4f7bdf1",
-        "type": "ui_text",
-        "z": "16c561d0bd2db4f4",
-        "group": "69e0a1bd71cfcb0a",
-        "order": 1,
-        "width": 16,
-        "height": 10,
-        "name": "",
-        "label": "pH",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "x": 1690,
-        "y": 1300,
-        "wires": []
-    },
-    {
         "id": "0e23fee8fd55db68",
         "type": "comment",
         "z": "16c561d0bd2db4f4",
@@ -1920,9 +1904,7 @@
         "x": 1470,
         "y": 1340,
         "wires": [
-            [
-                "0acdb8c3f4f7bdf1"
-            ],
+            [],
             [
                 "ea7c783cf3a1fcb5",
                 "b3607d20bdcabec1"
@@ -2581,15 +2563,15 @@
         "type": "ui_text",
         "z": "16c561d0bd2db4f4",
         "group": "69e0a1bd71cfcb0a",
-        "order": 2,
+        "order": 1,
         "width": 16,
         "height": 10,
         "name": "",
         "label": "Temperature",
         "format": "{{msg.payload}}",
         "layout": "col-center",
-        "x": 2090,
-        "y": 1300,
+        "x": 2010,
+        "y": 1320,
         "wires": []
     },
     {
@@ -2598,7 +2580,7 @@
         "z": "16c561d0bd2db4f4",
         "group": "69e0a1bd71cfcb0a",
         "name": "",
-        "order": 3,
+        "order": 2,
         "width": 0,
         "height": 0,
         "format": "<style>\n  .nr-dashboard-text p.value {\n    font-size: 150px !important\n  }\n\n  .nr-dashboard-text p.label {\n    font-size: 60px\n  }\n\n  </style",
