@@ -2181,7 +2181,7 @@
         "height": "6",
         "name": "",
         "label": "ORP",
-        "format": "{{msg.payload}} ORP",
+        "format": "{{msg.payload}}",
         "layout": "col-center",
         "x": 1690,
         "y": 1120,
