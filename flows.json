@@ -2849,7 +2849,7 @@
         "group": "210d2df426365d31",
         "name": "",
         "order": 1,
-        "width": 12,
+        "width": "8",
         "height": 1,
         "format": "<style>\n  .nr-dashboard-text p.value {\n    font-size: 10px !important\n  }\n\n  .nr-dashboard-text p.label {\n    font-size: 10px\n  }\n\n  </style",
         "storeOutMessages": true,
