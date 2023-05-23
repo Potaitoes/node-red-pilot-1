@@ -1008,6 +1008,16 @@
         "width": 6
     },
     {
+        "id": "623728882fb02eaa",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "7b9307d1947a13f0",
+        "order": 2,
+        "width": 12,
+        "height": 1
+    },
+    {
         "id": "80ae0189e474ec6e",
         "type": "comment",
         "z": "16c561d0bd2db4f4",
@@ -2183,7 +2193,7 @@
         "z": "16c561d0bd2db4f4",
         "name": "",
         "group": "7b9307d1947a13f0",
-        "order": 2,
+        "order": 3,
         "width": 0,
         "height": 0,
         "gtype": "wave",
@@ -2880,7 +2890,7 @@
         "z": "16c561d0bd2db4f4",
         "group": "7b9307d1947a13f0",
         "name": "gauge-colour",
-        "order": 3,
+        "order": 4,
         "width": 0,
         "height": 0,
         "format": "<style ng-if=\"msg.payload > 2\">\n    .nr-dashboard-gauge circle {\n        fill: red !important;\n    }\n</style>\n",
