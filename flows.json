@@ -1024,7 +1024,7 @@
         "name": "Process Running",
         "tab": "8fcb15dc6d9b8602",
         "order": 2,
-        "disp": true,
+        "disp": false,
         "width": "12",
         "collapse": false
     },
