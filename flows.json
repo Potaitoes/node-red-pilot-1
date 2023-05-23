@@ -668,7 +668,7 @@
         "collapse": false
     },
     {
-        "id": "f6c9660fe6043b16",
+        "id": "756b8666c8c6116e",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -678,7 +678,7 @@
         "height": 1
     },
     {
-        "id": "0b27fd18c19588c3",
+        "id": "630e2a5931e171ae",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -688,7 +688,7 @@
         "height": 1
     },
     {
-        "id": "bbf2f1a55af9ddfb",
+        "id": "ba10ae79d9602823",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -698,7 +698,7 @@
         "height": 1
     },
     {
-        "id": "aa24af701947abd4",
+        "id": "5aecd8ad755aec62",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -708,7 +708,7 @@
         "height": 1
     },
     {
-        "id": "4ef41bda8cb0e9a7",
+        "id": "a3f8293606c778d8",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -718,7 +718,7 @@
         "height": 1
     },
     {
-        "id": "f41846298a11b921",
+        "id": "8f4efa98ad12510f",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -728,7 +728,7 @@
         "height": 1
     },
     {
-        "id": "26a722e074d02a31",
+        "id": "db0a27e375aae30c",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -738,7 +738,7 @@
         "height": 1
     },
     {
-        "id": "7f3b1f33fd1227a6",
+        "id": "44bd9c1b510017ad",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -748,7 +748,7 @@
         "height": 1
     },
     {
-        "id": "47a509b608d2e9a4",
+        "id": "328e30188c4aa7d0",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -758,7 +758,7 @@
         "height": 1
     },
     {
-        "id": "f3b8c3943518d20e",
+        "id": "2174835388822969",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -768,7 +768,7 @@
         "height": 1
     },
     {
-        "id": "7a8c1f0131d24f61",
+        "id": "bfebb8c8576ed01e",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -2849,8 +2849,8 @@
         "group": "210d2df426365d31",
         "name": "",
         "order": 1,
-        "width": 0,
-        "height": 0,
+        "width": 12,
+        "height": 1,
         "format": "<style>\n  .nr-dashboard-text p.value {\n    font-size: 10px !important\n  }\n\n  .nr-dashboard-text p.label {\n    font-size: 10px\n  }\n\n  </style",
         "storeOutMessages": true,
         "fwdInMessages": true,
