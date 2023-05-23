@@ -274,7 +274,7 @@
         "type": "ui_group",
         "name": "bigNumbers",
         "tab": "4c7e5a991ed75d8e",
-        "order": 3,
+        "order": 2,
         "disp": false,
         "width": "16",
         "collapse": false
@@ -527,16 +527,6 @@
         "order": 2,
         "disp": false,
         "width": "16",
-        "collapse": false
-    },
-    {
-        "id": "62c20c4f6996557d",
-        "type": "ui_group",
-        "name": "T-01",
-        "tab": "4c7e5a991ed75d8e",
-        "order": 1,
-        "disp": true,
-        "width": "6",
         "collapse": false
     },
     {
@@ -906,6 +896,36 @@
         "order": 3,
         "width": 11,
         "height": 1
+    },
+    {
+        "id": "eee48f50b691adc3",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "3342ef65ea84e0bc",
+        "order": 1,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "1cb2b19606260551",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "3342ef65ea84e0bc",
+        "order": 4,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "62c20c4f6996557d",
+        "type": "ui_group",
+        "name": "T-01",
+        "tab": "8183cda1929e83aa",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
     },
     {
         "id": "80ae0189e474ec6e",
@@ -1978,7 +1998,7 @@
         "z": "16c561d0bd2db4f4",
         "name": "",
         "group": "3342ef65ea84e0bc",
-        "order": 1,
+        "order": 2,
         "width": 12,
         "height": 6,
         "label": "Temperature",
@@ -2193,7 +2213,7 @@
         "z": "16c561d0bd2db4f4",
         "name": "",
         "group": "3342ef65ea84e0bc",
-        "order": 3,
+        "order": 5,
         "width": 12,
         "height": 6,
         "label": "Oxidation Reduction Potential",
@@ -2354,7 +2374,7 @@
         "z": "16c561d0bd2db4f4",
         "group": "3342ef65ea84e0bc",
         "name": "",
-        "order": 2,
+        "order": 3,
         "width": 0,
         "height": 0,
         "format": "<style>\n  .nr-dashboard-text p.value {\n    font-size: 150px !important\n  }\n\n  .nr-dashboard-text p.label {\n    font-size: 60px\n  }\n\n  </style",
