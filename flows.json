@@ -663,7 +663,7 @@
         "name": "Middle",
         "tab": "359d48deb1e9e787",
         "order": 2,
-        "disp": true,
+        "disp": false,
         "width": "6",
         "collapse": false
     },
