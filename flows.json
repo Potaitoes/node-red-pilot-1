@@ -908,6 +908,56 @@
         "height": 1
     },
     {
+        "id": "63e7176d383c32ac",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "2761df262ae914fd",
+        "order": 3,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "ae73f8b80a2ea0b2",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "2761df262ae914fd",
+        "order": 4,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "64826f621ef05b7a",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "2761df262ae914fd",
+        "order": 5,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "a40d13f40806e449",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "2761df262ae914fd",
+        "order": 6,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "75425e230997d3de",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "2761df262ae914fd",
+        "order": 7,
+        "width": 2,
+        "height": 1
+    },
+    {
         "id": "80ae0189e474ec6e",
         "type": "comment",
         "z": "16c561d0bd2db4f4",
@@ -1802,8 +1852,8 @@
         "name": "",
         "group": "2761df262ae914fd",
         "order": 2,
-        "width": 8,
-        "height": 7,
+        "width": 6,
+        "height": 5,
         "gtype": "wave",
         "title": "Fluid Level",
         "label": "",
