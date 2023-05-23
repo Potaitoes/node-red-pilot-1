@@ -1486,49 +1486,6 @@
         ]
     },
     {
-        "id": "0362f989e57b35f6",
-        "type": "ui_chart",
-        "z": "16c561d0bd2db4f4",
-        "name": "",
-        "group": "3342ef65ea84e0bc",
-        "order": 4,
-        "width": 12,
-        "height": "6",
-        "label": "pH",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "0",
-        "ymax": "14",
-        "removeOlder": "24",
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#ff64ff",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#dd2727",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "x": 1690,
-        "y": 960,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "daa274e0f092d927",
         "type": "ui_text",
         "z": "16c561d0bd2db4f4",
@@ -1756,7 +1713,6 @@
         "wires": [
             [
                 "daa274e0f092d927",
-                "0362f989e57b35f6",
                 "96884266cb49a524"
             ],
             [
@@ -2225,7 +2181,7 @@
         "height": "6",
         "name": "",
         "label": "ORP",
-        "format": "{{msg.payload}}",
+        "format": "{{msg.payload}} ORP",
         "layout": "col-center",
         "x": 1690,
         "y": 1120,
