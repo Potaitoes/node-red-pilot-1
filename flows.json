@@ -2776,7 +2776,8 @@
                 "331a0af8d16181a2",
                 "4a0cfc5454d8c7ce",
                 "28e4103468ad0e51",
-                "b01b177cc799a618"
+                "b01b177cc799a618",
+                "06bbf2891e9c9e3e"
             ]
         ]
     },
@@ -2793,7 +2794,7 @@
         "format": "<font size = 100>{{msg.payload}}",
         "layout": "row-center",
         "x": 490,
-        "y": 660,
+        "y": 600,
         "wires": []
     },
     {
@@ -3277,5 +3278,21 @@
                 "5fc5cf3c28ed8110"
             ]
         ]
+    },
+    {
+        "id": "06bbf2891e9c9e3e",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "bd9c1836cb534d4b",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "<font size = 50>{{msg.payload}}",
+        "layout": "row-center",
+        "x": 490,
+        "y": 640,
+        "wires": []
     }
 ]
