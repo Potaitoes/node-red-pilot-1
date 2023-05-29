@@ -813,8 +813,9 @@
         "name": "Group 3",
         "tab": "4c7e5a991ed75d8e",
         "order": 2,
-        "disp": true,
-        "width": 6
+        "disp": false,
+        "width": "6",
+        "collapse": false
     },
     {
         "id": "4a655848d8138f2f",
