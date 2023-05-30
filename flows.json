@@ -143,7 +143,7 @@
         "tab": "613ee8f0c2ded6bc",
         "order": 1,
         "disp": false,
-        "width": "12",
+        "width": 14,
         "collapse": false
     },
     {
@@ -286,7 +286,7 @@
         "tab": "613ee8f0c2ded6bc",
         "order": 2,
         "disp": false,
-        "width": 6,
+        "width": 8,
         "collapse": false
     },
     {
@@ -453,20 +453,11 @@
         "id": "0df4552f9d69039d",
         "type": "ui_group",
         "name": "DEFAULT",
-        "tab": "f3a8a67ff0904e39",
+        "tab": "",
         "order": 1,
         "disp": false,
         "width": "44",
         "collapse": false
-    },
-    {
-        "id": "f3a8a67ff0904e39",
-        "type": "ui_tab",
-        "name": "HOME",
-        "icon": "dashboard",
-        "order": 2,
-        "disabled": false,
-        "hidden": false
     },
     {
         "id": "65407f4518d0816a",
@@ -778,26 +769,6 @@
         "height": 1
     },
     {
-        "id": "eee48f50b691adc3",
-        "type": "ui_spacer",
-        "z": "16c561d0bd2db4f4",
-        "name": "spacer",
-        "group": "3342ef65ea84e0bc",
-        "order": 1,
-        "width": 12,
-        "height": 1
-    },
-    {
-        "id": "1cb2b19606260551",
-        "type": "ui_spacer",
-        "z": "16c561d0bd2db4f4",
-        "name": "spacer",
-        "group": "3342ef65ea84e0bc",
-        "order": 4,
-        "width": 12,
-        "height": 1
-    },
-    {
         "id": "62c20c4f6996557d",
         "type": "ui_group",
         "name": "T-01",
@@ -865,6 +836,16 @@
         "group": "c1689411a872d20e",
         "order": 3,
         "width": 6,
+        "height": 1
+    },
+    {
+        "id": "0afe24e583ce67ef",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "3342ef65ea84e0bc",
+        "order": 1,
+        "width": 14,
         "height": 1
     },
     {
@@ -1762,8 +1743,8 @@
         "name": "",
         "group": "2761df262ae914fd",
         "order": 2,
-        "width": 6,
-        "height": 5,
+        "width": 8,
+        "height": 7,
         "gtype": "wave",
         "title": "Fluid Level",
         "label": "",
@@ -1939,8 +1920,8 @@
         "name": "",
         "group": "3342ef65ea84e0bc",
         "order": 2,
-        "width": 12,
-        "height": 6,
+        "width": 14,
+        "height": 7,
         "label": "Temperature",
         "chartType": "line",
         "legend": "false",
@@ -2153,9 +2134,9 @@
         "z": "16c561d0bd2db4f4",
         "name": "",
         "group": "3342ef65ea84e0bc",
-        "order": 5,
-        "width": 12,
-        "height": 6,
+        "order": 4,
+        "width": 14,
+        "height": 7,
         "label": "Oxidation Reduction Potential",
         "chartType": "line",
         "legend": "false",
@@ -2795,7 +2776,7 @@
         "z": "16c561d0bd2db4f4",
         "group": "2761df262ae914fd",
         "order": 1,
-        "width": 6,
+        "width": 8,
         "height": 3,
         "name": "",
         "label": "",
