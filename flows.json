@@ -839,12 +839,32 @@
         "height": 1
     },
     {
-        "id": "0afe24e583ce67ef",
+        "id": "14ee2c673dbc7ac3",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
         "group": "3342ef65ea84e0bc",
         "order": 1,
+        "width": 14,
+        "height": 1
+    },
+    {
+        "id": "47d7d53797e40f16",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "3342ef65ea84e0bc",
+        "order": 4,
+        "width": 14,
+        "height": 1
+    },
+    {
+        "id": "e8d9eda47cabc703",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "3342ef65ea84e0bc",
+        "order": 5,
         "width": 14,
         "height": 1
     },
@@ -2134,7 +2154,7 @@
         "z": "16c561d0bd2db4f4",
         "name": "",
         "group": "3342ef65ea84e0bc",
-        "order": 4,
+        "order": 6,
         "width": 14,
         "height": 7,
         "label": "Oxidation Reduction Potential",
