@@ -1806,7 +1806,7 @@
         "width": 8,
         "height": 7,
         "gtype": "wave",
-        "title": "Fluid Level",
+        "title": "",
         "label": "",
         "format": "{{value}}",
         "min": 0,
@@ -1818,7 +1818,7 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1890,
+        "x": 1870,
         "y": 1160,
         "wires": []
     },
