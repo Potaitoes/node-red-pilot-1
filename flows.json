@@ -300,106 +300,6 @@
         "collapse": false
     },
     {
-        "id": "c773e86855a1055c",
-        "type": "ui_spacer",
-        "z": "16c561d0bd2db4f4",
-        "name": "spacer",
-        "group": "c28d2984b3e2326d",
-        "order": 1,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "a41db5f70cf5b1af",
-        "type": "ui_spacer",
-        "z": "16c561d0bd2db4f4",
-        "name": "spacer",
-        "group": "c28d2984b3e2326d",
-        "order": 3,
-        "width": 4,
-        "height": 1
-    },
-    {
-        "id": "2bfbeb5acb03694f",
-        "type": "ui_spacer",
-        "z": "16c561d0bd2db4f4",
-        "name": "spacer",
-        "group": "c28d2984b3e2326d",
-        "order": 4,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "bcc1296ab7a4e7cf",
-        "type": "ui_spacer",
-        "z": "16c561d0bd2db4f4",
-        "name": "spacer",
-        "group": "c28d2984b3e2326d",
-        "order": 5,
-        "width": 4,
-        "height": 1
-    },
-    {
-        "id": "3078a33693dd7724",
-        "type": "ui_spacer",
-        "z": "16c561d0bd2db4f4",
-        "name": "spacer",
-        "group": "c28d2984b3e2326d",
-        "order": 6,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "e45054d15ea5a217",
-        "type": "ui_spacer",
-        "z": "16c561d0bd2db4f4",
-        "name": "spacer",
-        "group": "c28d2984b3e2326d",
-        "order": 7,
-        "width": 4,
-        "height": 1
-    },
-    {
-        "id": "657a8aa5ea915259",
-        "type": "ui_spacer",
-        "z": "16c561d0bd2db4f4",
-        "name": "spacer",
-        "group": "c28d2984b3e2326d",
-        "order": 8,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "9359d414a5b5e576",
-        "type": "ui_spacer",
-        "z": "16c561d0bd2db4f4",
-        "name": "spacer",
-        "group": "c28d2984b3e2326d",
-        "order": 9,
-        "width": 4,
-        "height": 1
-    },
-    {
-        "id": "110d32044568d88f",
-        "type": "ui_spacer",
-        "z": "16c561d0bd2db4f4",
-        "name": "spacer",
-        "group": "c28d2984b3e2326d",
-        "order": 10,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "7520e734f33101c4",
-        "type": "ui_spacer",
-        "z": "16c561d0bd2db4f4",
-        "name": "spacer",
-        "group": "c28d2984b3e2326d",
-        "order": 11,
-        "width": 4,
-        "height": 1
-    },
-    {
         "id": "69e0a1bd71cfcb0a",
         "type": "ui_group",
         "name": "Right",
@@ -999,6 +899,206 @@
         "height": 1
     },
     {
+        "id": "295f8dd20805b219",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "c28d2984b3e2326d",
+        "order": 1,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "0c7cac589da7b185",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "c28d2984b3e2326d",
+        "order": 2,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "916b47d882945bce",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "c28d2984b3e2326d",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "021ef58c31a16fec",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "c28d2984b3e2326d",
+        "order": 5,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "7f0fee9a6493b211",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "c28d2984b3e2326d",
+        "order": 6,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "f81a2df0ba6ae197",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "c28d2984b3e2326d",
+        "order": 7,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "3ebca74563c78244",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "c28d2984b3e2326d",
+        "order": 8,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "45a641660d9bf468",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "c28d2984b3e2326d",
+        "order": 9,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "74f4cc1c6b1f0af1",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "c28d2984b3e2326d",
+        "order": 10,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "fb0c665797d56993",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "c28d2984b3e2326d",
+        "order": 11,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "50a0476a17835765",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "c28d2984b3e2326d",
+        "order": 12,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "8c560e7b650bc70b",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "c28d2984b3e2326d",
+        "order": 13,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "20c570b495284a39",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "c28d2984b3e2326d",
+        "order": 14,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "e45675f5cd6781ef",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "c28d2984b3e2326d",
+        "order": 15,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "13a57b31eb447b5a",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "c28d2984b3e2326d",
+        "order": 16,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "b0dedf05b5b6201d",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "c28d2984b3e2326d",
+        "order": 17,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "34b4e4d638008650",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "c28d2984b3e2326d",
+        "order": 18,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "c06dcd91def75879",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "c28d2984b3e2326d",
+        "order": 19,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "44be4090135a6a57",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "c28d2984b3e2326d",
+        "order": 20,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "979c343198e357b0",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "c28d2984b3e2326d",
+        "order": 21,
+        "width": 1,
+        "height": 1
+    },
+    {
         "id": "80ae0189e474ec6e",
         "type": "comment",
         "z": "16c561d0bd2db4f4",
@@ -1411,12 +1511,10 @@
         "y": 420,
         "wires": [
             [
-                "7ede4545d9136513",
                 "92dec648efba38d7",
                 "8444784c8dbbeb96"
             ],
             [
-                "78480f23928b4b2f",
                 "3da4f074540fa337",
                 "e2812b64d88f68c9"
             ],
@@ -1429,49 +1527,6 @@
             [
                 "e6671fa9cbcaaae5"
             ]
-        ]
-    },
-    {
-        "id": "7ede4545d9136513",
-        "type": "ui_chart",
-        "z": "16c561d0bd2db4f4",
-        "name": "cementationpHChart",
-        "group": "c28d2984b3e2326d",
-        "order": 12,
-        "width": 12,
-        "height": 6,
-        "label": "pH",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "0",
-        "ymax": "14",
-        "removeOlder": 1,
-        "removeOlderPoints": "1000",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#dd2727",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "x": 1740,
-        "y": 340,
-        "wires": [
-            []
         ]
     },
     {
@@ -1705,9 +1760,9 @@
         "z": "16c561d0bd2db4f4",
         "name": "",
         "group": "c28d2984b3e2326d",
-        "order": 2,
-        "width": 5,
-        "height": 5,
+        "order": 4,
+        "width": 10,
+        "height": 9,
         "gtype": "wave",
         "title": "Cementation Level",
         "label": "",
@@ -1975,49 +2030,6 @@
                 "1d0146fc7c02aae8",
                 "bcfd1d57bbf1cf7f"
             ]
-        ]
-    },
-    {
-        "id": "78480f23928b4b2f",
-        "type": "ui_chart",
-        "z": "16c561d0bd2db4f4",
-        "name": "",
-        "group": "c28d2984b3e2326d",
-        "order": 13,
-        "width": 0,
-        "height": 0,
-        "label": "Temperature",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "0",
-        "ymax": "100",
-        "removeOlder": 1,
-        "removeOlderPoints": "10000",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "x": 1710,
-        "y": 420,
-        "wires": [
-            []
         ]
     },
     {
@@ -2471,8 +2483,8 @@
         "label": "Temperature",
         "format": "{{msg.payload}}",
         "layout": "col-center",
-        "x": 1970,
-        "y": 400,
+        "x": 1730,
+        "y": 460,
         "wires": []
     },
     {
