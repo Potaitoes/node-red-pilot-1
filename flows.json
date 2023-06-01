@@ -4154,5 +4154,25 @@
         "x": 490,
         "y": 840,
         "wires": []
+    },
+    {
+        "id": "8fe3a03331468e76",
+        "type": "ui_template",
+        "z": "16c561d0bd2db4f4",
+        "group": "c28d2984b3e2326d",
+        "name": "",
+        "order": 13,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n  .nr-dashboard-text p.value {\n    font-size: 150px !important\n  }\n\n  .nr-dashboard-text p.label {\n    font-size: 60px\n  }\n\n  </style",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1000,
+        "y": 720,
+        "wires": [
+            []
+        ]
     }
 ]
