@@ -12465,8 +12465,8 @@
         "height": 0,
         "name": "",
         "label": "",
-        "format": "<font size = 100>{{msg.payload}}",
-        "layout": "row-center",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
         "x": 490,
         "y": 780,
         "wires": []
