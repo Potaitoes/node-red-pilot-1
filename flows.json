@@ -12453,7 +12453,7 @@
         "height": 2,
         "name": "",
         "label": "",
-        "format": "<font size = 100>{{msg.payload}}",
+        "format": "{{msg.payload}}",
         "layout": "row-center",
         "x": 490,
         "y": 700,
