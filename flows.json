@@ -10314,7 +10314,7 @@
         "name": "Left",
         "tab": "03b240a63333d7e8",
         "order": 1,
-        "disp": true,
+        "disp": false,
         "width": "12",
         "collapse": false
     },
@@ -10334,7 +10334,7 @@
         "name": "Right",
         "tab": "03b240a63333d7e8",
         "order": 2,
-        "disp": true,
+        "disp": false,
         "width": "12",
         "collapse": false
     },
