@@ -222,19 +222,10 @@
         "collapse": false
     },
     {
-        "id": "3c117daf5c2d4197",
-        "type": "ui_tab",
-        "name": "T-03",
-        "icon": "dashboard",
-        "order": 6,
-        "disabled": false,
-        "hidden": false
-    },
-    {
         "id": "c28d2984b3e2326d",
         "type": "ui_group",
         "name": "Left",
-        "tab": "3c117daf5c2d4197",
+        "tab": "",
         "order": 1,
         "disp": false,
         "width": "12",
@@ -293,7 +284,7 @@
         "id": "16892f788a374c51",
         "type": "ui_group",
         "name": "Right",
-        "tab": "3c117daf5c2d4197",
+        "tab": "",
         "order": 3,
         "disp": false,
         "width": 18,
