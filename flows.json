@@ -10300,6 +10300,45 @@
         "height": 1
     },
     {
+        "id": "03b240a63333d7e8",
+        "type": "ui_tab",
+        "name": "T-03",
+        "icon": "dashboard",
+        "order": 6,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "8c961b69c1e99929",
+        "type": "ui_group",
+        "name": "Left",
+        "tab": "03b240a63333d7e8",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "c2e3a6be0ab8afea",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "8c961b69c1e99929",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "5f3136f8b2944906",
+        "type": "ui_group",
+        "name": "Right",
+        "tab": "03b240a63333d7e8",
+        "order": 2,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
         "id": "80ae0189e474ec6e",
         "type": "comment",
         "z": "16c561d0bd2db4f4",
