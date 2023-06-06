@@ -400,16 +400,6 @@
         "width": 6
     },
     {
-        "id": "0bc47b990c72d2e8",
-        "type": "ui_spacer",
-        "z": "16c561d0bd2db4f4",
-        "name": "spacer",
-        "group": "7b9307d1947a13f0",
-        "order": 2,
-        "width": 12,
-        "height": 1
-    },
-    {
         "id": "e48f7d12aa97556a",
         "type": "ui_group",
         "name": "Middle",
@@ -10609,6 +10599,36 @@
         "height": 1
     },
     {
+        "id": "f17f53f099b3e0cc",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "7b9307d1947a13f0",
+        "order": 1,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "d0757c4b78576573",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "7b9307d1947a13f0",
+        "order": 3,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "8837435bf55940e8",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "7b9307d1947a13f0",
+        "order": 5,
+        "width": 12,
+        "height": 1
+    },
+    {
         "id": "80ae0189e474ec6e",
         "type": "comment",
         "z": "16c561d0bd2db4f4",
@@ -11634,7 +11654,7 @@
         "z": "16c561d0bd2db4f4",
         "name": "",
         "group": "7b9307d1947a13f0",
-        "order": 3,
+        "order": 4,
         "width": 0,
         "height": 0,
         "gtype": "wave",
@@ -12311,7 +12331,7 @@
         "z": "16c561d0bd2db4f4",
         "group": "7b9307d1947a13f0",
         "name": "gauge-colour",
-        "order": 4,
+        "order": 6,
         "width": 0,
         "height": 0,
         "format": "<style ng-if=\"msg.payload > 2\">\n    .nr-dashboard-gauge circle {\n        fill: red !important;\n    }\n</style>\n",
@@ -12460,7 +12480,7 @@
         "type": "ui_text",
         "z": "16c561d0bd2db4f4",
         "group": "7b9307d1947a13f0",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
         "name": "",
