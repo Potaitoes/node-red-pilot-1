@@ -11814,8 +11814,8 @@
         "label": "Temperature",
         "format": "{{msg.payload}}",
         "layout": "col-center",
-        "x": 1730,
-        "y": 460,
+        "x": 1710,
+        "y": 500,
         "wires": []
     },
     {
