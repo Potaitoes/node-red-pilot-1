@@ -143,7 +143,7 @@
         "tab": "613ee8f0c2ded6bc",
         "order": 1,
         "disp": false,
-        "width": 11,
+        "width": "13",
         "collapse": false
     },
     {
@@ -10260,36 +10260,6 @@
         "height": 1
     },
     {
-        "id": "e48c783e8ac84ffa",
-        "type": "ui_spacer",
-        "z": "16c561d0bd2db4f4",
-        "name": "spacer",
-        "group": "3342ef65ea84e0bc",
-        "order": 2,
-        "width": 11,
-        "height": 1
-    },
-    {
-        "id": "e8cb48bab82decdf",
-        "type": "ui_spacer",
-        "z": "16c561d0bd2db4f4",
-        "name": "spacer",
-        "group": "3342ef65ea84e0bc",
-        "order": 3,
-        "width": 11,
-        "height": 1
-    },
-    {
-        "id": "ea011fbb66c00116",
-        "type": "ui_spacer",
-        "z": "16c561d0bd2db4f4",
-        "name": "spacer",
-        "group": "2761df262ae914fd",
-        "order": 3,
-        "width": 9,
-        "height": 1
-    },
-    {
         "id": "03b240a63333d7e8",
         "type": "ui_tab",
         "name": "T-03",
@@ -10626,6 +10596,176 @@
         "group": "7b9307d1947a13f0",
         "order": 5,
         "width": 12,
+        "height": 1
+    },
+    {
+        "id": "28592581c97ee5af",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "3342ef65ea84e0bc",
+        "order": 1,
+        "width": 13,
+        "height": 1
+    },
+    {
+        "id": "f7166fd15f36f937",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "3342ef65ea84e0bc",
+        "order": 3,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "eafc178109329f7a",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "3342ef65ea84e0bc",
+        "order": 4,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "adfbcde6f81b905e",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "3342ef65ea84e0bc",
+        "order": 5,
+        "width": 13,
+        "height": 1
+    },
+    {
+        "id": "aed06d1b040edaff",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "3342ef65ea84e0bc",
+        "order": 7,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "014660d11b9d3278",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "3342ef65ea84e0bc",
+        "order": 8,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "cfeb64641b912da4",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "3342ef65ea84e0bc",
+        "order": 9,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "1e6fcfbfae7c0f53",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "3342ef65ea84e0bc",
+        "order": 10,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "415d58fdfc720a2b",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "3342ef65ea84e0bc",
+        "order": 11,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "de26238703369a9d",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "3342ef65ea84e0bc",
+        "order": 12,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "bb3c468fdc07cf99",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "3342ef65ea84e0bc",
+        "order": 14,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "c8a6fcbba7d8768b",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "3342ef65ea84e0bc",
+        "order": 15,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "b39f4d1e86623e3f",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "3342ef65ea84e0bc",
+        "order": 16,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "1ed3ee4c1ad6af46",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "3342ef65ea84e0bc",
+        "order": 17,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "de376bb1609408ac",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "3342ef65ea84e0bc",
+        "order": 18,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "f3b76c057a451491",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "3342ef65ea84e0bc",
+        "order": 19,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "629259cd2a4df385",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "2761df262ae914fd",
+        "order": 2,
+        "width": 9,
         "height": 1
     },
     {
@@ -11477,7 +11617,7 @@
         "z": "16c561d0bd2db4f4",
         "name": "",
         "group": "2761df262ae914fd",
-        "order": 4,
+        "order": 3,
         "width": 9,
         "height": 8,
         "gtype": "wave",
@@ -11611,7 +11751,7 @@
         "z": "16c561d0bd2db4f4",
         "name": "",
         "group": "3342ef65ea84e0bc",
-        "order": 1,
+        "order": 6,
         "width": 11,
         "height": 6,
         "label": "Temperature",
@@ -11826,7 +11966,7 @@
         "z": "16c561d0bd2db4f4",
         "name": "",
         "group": "3342ef65ea84e0bc",
-        "order": 4,
+        "order": 13,
         "width": 11,
         "height": 6,
         "label": "Oxidation Reduction Potential",
@@ -12449,7 +12589,7 @@
         "z": "16c561d0bd2db4f4",
         "group": "3342ef65ea84e0bc",
         "order": 2,
-        "width": "11",
+        "width": 11,
         "height": 2,
         "name": "",
         "label": "",
