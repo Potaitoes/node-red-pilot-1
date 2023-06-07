@@ -161,7 +161,7 @@
         "type": "ui_tab",
         "name": "T-05",
         "icon": "dashboard",
-        "order": 11,
+        "order": 10,
         "disabled": false,
         "hidden": false
     },
@@ -170,7 +170,7 @@
         "type": "ui_tab",
         "name": "T-02",
         "icon": "dashboard",
-        "order": 5,
+        "order": 4,
         "disabled": false,
         "hidden": false
     },
@@ -179,7 +179,7 @@
         "type": "ui_tab",
         "name": "T-04",
         "icon": "dashboard",
-        "order": 9,
+        "order": 8,
         "disabled": false,
         "hidden": false
     },
@@ -218,7 +218,7 @@
         "type": "ui_tab",
         "name": "Full System Overview",
         "icon": "dashboard",
-        "order": 13,
+        "order": 12,
         "disabled": false,
         "hidden": false
     },
@@ -10137,7 +10137,7 @@
         "type": "ui_tab",
         "name": "T-03",
         "icon": "dashboard",
-        "order": 7,
+        "order": 6,
         "disabled": false,
         "hidden": false
     },
@@ -10976,7 +10976,7 @@
         "type": "ui_tab",
         "name": "Furnace",
         "icon": "dashboard",
-        "order": 15,
+        "order": 14,
         "disabled": false,
         "hidden": false
     },
