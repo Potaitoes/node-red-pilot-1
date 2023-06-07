@@ -24,7 +24,7 @@
         "type": "ui_tab",
         "name": "phonefriendly",
         "icon": "dashboard",
-        "order": 1,
+        "order": 10,
         "disabled": false,
         "hidden": false
     },
@@ -161,7 +161,7 @@
         "type": "ui_tab",
         "name": "Controls",
         "icon": "dashboard",
-        "order": 3,
+        "order": 11,
         "disabled": false,
         "hidden": false
     },
@@ -170,7 +170,7 @@
         "type": "ui_tab",
         "name": "T-01",
         "icon": "dashboard",
-        "order": 4,
+        "order": 12,
         "disabled": false,
         "hidden": false
     },
@@ -179,7 +179,7 @@
         "type": "ui_tab",
         "name": "T-05",
         "icon": "dashboard",
-        "order": 8,
+        "order": 13,
         "disabled": false,
         "hidden": false
     },
@@ -188,7 +188,7 @@
         "type": "ui_tab",
         "name": "T-02",
         "icon": "dashboard",
-        "order": 5,
+        "order": 14,
         "disabled": false,
         "hidden": false
     },
@@ -197,7 +197,7 @@
         "type": "ui_tab",
         "name": "T-04",
         "icon": "dashboard",
-        "order": 7,
+        "order": 15,
         "disabled": false,
         "hidden": false
     },
@@ -236,7 +236,7 @@
         "type": "ui_tab",
         "name": "Full System Overview",
         "icon": "dashboard",
-        "order": 2,
+        "order": 16,
         "disabled": false,
         "hidden": false
     },
@@ -10155,7 +10155,7 @@
         "type": "ui_tab",
         "name": "T-03",
         "icon": "dashboard",
-        "order": 6,
+        "order": 17,
         "disabled": false,
         "hidden": false
     },
@@ -10988,6 +10988,15 @@
         "order": 2,
         "width": 16,
         "height": 1
+    },
+    {
+        "id": "234f07a00da93fe1",
+        "type": "ui_tab",
+        "name": "Furnace",
+        "icon": "dashboard",
+        "order": 9,
+        "disabled": false,
+        "hidden": false
     },
     {
         "id": "80ae0189e474ec6e",
