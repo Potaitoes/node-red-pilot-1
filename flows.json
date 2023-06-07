@@ -351,16 +351,6 @@
         "height": 1
     },
     {
-        "id": "3f30079557491598",
-        "type": "ui_spacer",
-        "z": "16c561d0bd2db4f4",
-        "name": "spacer",
-        "group": "780b1b970d0dd2b9",
-        "order": 1,
-        "width": 1,
-        "height": 1
-    },
-    {
         "id": "e48f7d12aa97556a",
         "type": "ui_group",
         "name": "Middle",
