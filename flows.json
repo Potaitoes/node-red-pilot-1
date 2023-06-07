@@ -11077,7 +11077,7 @@
         "name": "Write Data to PLC",
         "info": "There is a limited number of clients you can use.\nYou can string commands together and push into a single client.",
         "x": 350,
-        "y": 1360,
+        "y": 1340,
         "wires": []
     },
     {
