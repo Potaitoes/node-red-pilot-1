@@ -157,15 +157,6 @@
         "hidden": false
     },
     {
-        "id": "4c7e5a991ed75d8e",
-        "type": "ui_tab",
-        "name": "T-01",
-        "icon": "dashboard",
-        "order": 16,
-        "disabled": false,
-        "hidden": false
-    },
-    {
         "id": "359d48deb1e9e787",
         "type": "ui_tab",
         "name": "T-05",
@@ -206,7 +197,7 @@
         "id": "bd9c1836cb534d4b",
         "type": "ui_group",
         "name": "Left",
-        "tab": "4c7e5a991ed75d8e",
+        "tab": "",
         "order": 1,
         "disp": false,
         "width": 14,
@@ -245,7 +236,7 @@
         "id": "d8c242e5bc91f51d",
         "type": "ui_group",
         "name": "bigNumbers",
-        "tab": "4c7e5a991ed75d8e",
+        "tab": "",
         "order": 3,
         "disp": false,
         "width": 15,
