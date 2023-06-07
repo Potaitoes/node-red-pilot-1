@@ -11992,10 +11992,12 @@
                 "8a8cce0ef88af7ce"
             ],
             [
-                "d2a02b1215e264b1"
+                "d2a02b1215e264b1",
+                "d2beb2b9bf3862f2"
             ],
             [
-                "3b6b93546ea249da"
+                "3b6b93546ea249da",
+                "84040477ac300bf9"
             ]
         ]
     },
@@ -13585,5 +13587,37 @@
                 "dfa547a2d532c202"
             ]
         ]
+    },
+    {
+        "id": "d2beb2b9bf3862f2",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "48c91039c2bb5fe0",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "T-05 Chlorine",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 2640,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "84040477ac300bf9",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "48c91039c2bb5fe0",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "T-05 Hydrogen",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 2640,
+        "y": 1120,
+        "wires": []
     }
 ]
