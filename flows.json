@@ -152,7 +152,7 @@
         "type": "ui_tab",
         "name": "Controls",
         "icon": "dashboard",
-        "order": 9,
+        "order": 10,
         "disabled": false,
         "hidden": false
     },
@@ -161,7 +161,7 @@
         "type": "ui_tab",
         "name": "T-01",
         "icon": "dashboard",
-        "order": 10,
+        "order": 11,
         "disabled": false,
         "hidden": false
     },
@@ -170,7 +170,7 @@
         "type": "ui_tab",
         "name": "T-05",
         "icon": "dashboard",
-        "order": 11,
+        "order": 12,
         "disabled": false,
         "hidden": false
     },
@@ -179,7 +179,7 @@
         "type": "ui_tab",
         "name": "T-02",
         "icon": "dashboard",
-        "order": 12,
+        "order": 4,
         "disabled": false,
         "hidden": false
     },
