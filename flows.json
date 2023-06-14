@@ -11319,7 +11319,8 @@
                 "33870d5dbfab317a",
                 "4dfb0f8ea148f7d7",
                 "2c99f31183a32dd4",
-                "30e0ea179017e68a"
+                "30e0ea179017e68a",
+                "22e9b509bfaf2e1e"
             ]
         ]
     },
@@ -12546,7 +12547,7 @@
         "type": "debug",
         "z": "16c561d0bd2db4f4",
         "name": "debug 5",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -13639,6 +13640,41 @@
         "y": 900,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "22e9b509bfaf2e1e",
+        "type": "OpcUa-Item",
+        "z": "16c561d0bd2db4f4",
+        "item": "ns=4;s=Furnace1",
+        "datatype": "String",
+        "value": "",
+        "name": "",
+        "x": 240,
+        "y": 500,
+        "wires": [
+            [
+                "2f9bbc4f83cab30a"
+            ]
+        ]
+    },
+    {
+        "id": "2f9bbc4f83cab30a",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "assign BufferTank to topic",
+        "func": "var msg_Furnace1 = {};\nmsg_Furnace1.topic = msg.topic;\n\n//See node above for what goes on here.\nglobal.set(\"Topic_Furnace1\", String(msg_Furnace1.topic)); \n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 500,
+        "wires": [
+            [
+                "ee3a6572681df942"
+            ]
         ]
     }
 ]
