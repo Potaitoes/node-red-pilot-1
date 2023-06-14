@@ -13630,7 +13630,7 @@
         "order": 6,
         "width": 0,
         "height": 0,
-        "format": "<style ng-if=\"msg.payload > 0.5\">\n//body.nr-dashboard-theme {\n  //  background-color: red !important\n    //}\n\n//ui-card-panel#T-05_Middle{\n//background-color: red !important/\n//}\n\nmd-card.nr-dashboard-text.layout-column.layout-align-center-center.nr-dashboard-widget-Hydrogen___LEL_.visible{\ncolor: red !important;\nbackground-color: red !important;\n}\n\n</style>\n",
+        "format": "<style ng-if=\"msg.payload > 0.5\">\n//body.nr-dashboard-theme {\n  //  background-color: red !important\n    //}\n\n//ui-card-panel#T-05_Middle{\n//background-color: red !important/\n//}\n\nmd-card.nr-dashboard-text.layout-column.layout-align-center-center.nr-dashboard-widget-Hydrogen___LEL_.visible{\n//\nbackground-color: red !important;\n}\n\n</style>\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
