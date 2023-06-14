@@ -13630,7 +13630,7 @@
         "order": 6,
         "width": 0,
         "height": 0,
-        "format": "<style ng-if=\"msg.payload > 0.5\">\n    .nr-dashboard-text p.label{\n        fill: red !important;\n    }\n</style>\n",
+        "format": "<style ng-if=\"msg.payload > 0.5\">\n    .nr-dashboard-text p.label{\n        color: red !important;\n    }\n</style>\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
