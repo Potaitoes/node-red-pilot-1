@@ -11249,8 +11249,9 @@
         "name": "Group 1",
         "tab": "234f07a00da93fe1",
         "order": 1,
-        "disp": true,
-        "width": 6
+        "disp": false,
+        "width": "16",
+        "collapse": false
     },
     {
         "id": "80ae0189e474ec6e",
@@ -11585,8 +11586,8 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "Splits Topics into respective Outputs",
-        "func": "var index;\nvar numOutputs = node.numberOfOutputs;\n\nconst returnArray = new Array(numOutputs).fill(null);\n\nvar topic1 = global.get('Topic_WashDigestion');\nvar topic2 = global.get('Topic_Cementation');\nvar topic3 = global.get('Topic_Electrowinning');\nvar topic4 = global.get('Topic_OxPrecipitation');\nvar topic5 = global.get('Topic_BufferTank');\n\nif (msg.topic == topic1){\n    index = 0;\n}\n\nif (msg.topic == topic2){\n    index = 1;\n}\n\nif (msg.topic == topic3){\n    index = 2;\n}\n\nif (msg.topic == topic4) {\n    index = 3;\n}\n\nif (msg.topic == topic5) {\n    index = 4;\n}\n\nreturnArray[index] = msg;\n\nreturn returnArray;",
-        "outputs": 5,
+        "func": "var index;\nvar numOutputs = node.numberOfOutputs;\n\nconst returnArray = new Array(numOutputs).fill(null);\n\nvar topic1 = global.get('Topic_WashDigestion');\nvar topic2 = global.get('Topic_Cementation');\nvar topic3 = global.get('Topic_Electrowinning');\nvar topic4 = global.get('Topic_OxPrecipitation');\nvar topic5 = global.get('Topic_BufferTank');\nvar topic6 = global.get('Topic_Furnace1');\n\nif (msg.topic == topic1){\n    index = 0;\n}\n\nif (msg.topic == topic2){\n    index = 1;\n}\n\nif (msg.topic == topic3){\n    index = 2;\n}\n\nif (msg.topic == topic4) {\n    index = 3;\n}\n\nif (msg.topic == topic5) {\n    index = 4;\n}\n\nif (msg.topic == topic6) {\n    index = 5;\n} \n\nreturnArray[index] = msg;\n\nreturn returnArray;",
+        "outputs": 6,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -11613,6 +11614,9 @@
             [
                 "9181c831def27233",
                 "42c9914bc1b52849"
+            ],
+            [
+                "89817f77ebc53a9e"
             ]
         ]
     },
@@ -12547,7 +12551,7 @@
         "type": "debug",
         "z": "16c561d0bd2db4f4",
         "name": "debug 5",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -13676,5 +13680,135 @@
                 "ee3a6572681df942"
             ]
         ]
+    },
+    {
+        "id": "89817f77ebc53a9e",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "TankData Splitter",
+        "func": "var T1_msg = {};\nvar T2_msg = {};\nvar T3_msg = {};\nvar T4_msg = {};\nvar T5_msg = {};\nvar T6_msg = {};\n\nvar totalOutputs = 6;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\nT2_msg.payload = Math.round((msg.payload.T1) * 100) / 100;\nglobal.set(\"T1\", msg.payload);\nT2_msg.payload = Math.round((msg.payload.T2) * 100) / 100;\nglobal.set(\"T2\", msg.payload);\nT2_msg.payload = Math.round((msg.payload.T1) * 100) / 100;\nglobal.set(\"T1\", msg.payload);\nT2_msg.payload = Math.round((msg.payload.T2) * 100) / 100;\nglobal.set(\"T2\", msg.payload);\n\n\nreturnArray[0] = T1_msg;\nreturnArray[1] = T2_msg;\nreturnArray[2] = T3_msg;\nreturnArray[3] = T4_msg;\nreturnArray[4] = T5_msg;\nreturnArray[5] = T6_msg;\n\n\nreturn returnArray;",
+        "outputs": 6,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1470,
+        "y": 1580,
+        "wires": [
+            [
+                "1c9f1aa835f65b89"
+            ],
+            [
+                "835875867d015346"
+            ],
+            [
+                "cd868b109fd3c141"
+            ],
+            [
+                "4008cffca63eac7c"
+            ],
+            [
+                "23a225691796575b"
+            ],
+            [
+                "86c569f0c7898cbf"
+            ]
+        ]
+    },
+    {
+        "id": "1c9f1aa835f65b89",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "8c91fd541c551379",
+        "order": 3,
+        "width": 16,
+        "height": 10,
+        "name": "",
+        "label": "T1",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 1710,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "835875867d015346",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "8c91fd541c551379",
+        "order": 3,
+        "width": 16,
+        "height": 10,
+        "name": "",
+        "label": "T2",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 1710,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "cd868b109fd3c141",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "8c91fd541c551379",
+        "order": 3,
+        "width": 16,
+        "height": 10,
+        "name": "",
+        "label": "T3",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 1710,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "4008cffca63eac7c",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "8c91fd541c551379",
+        "order": 3,
+        "width": 16,
+        "height": 10,
+        "name": "",
+        "label": "T4",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 1710,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "23a225691796575b",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "8c91fd541c551379",
+        "order": 3,
+        "width": 16,
+        "height": 10,
+        "name": "",
+        "label": "T5",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 1710,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "86c569f0c7898cbf",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "8c91fd541c551379",
+        "order": 3,
+        "width": 16,
+        "height": 10,
+        "name": "",
+        "label": "T6",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 1710,
+        "y": 1740,
+        "wires": []
     }
 ]
