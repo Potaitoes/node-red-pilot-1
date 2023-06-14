@@ -13184,7 +13184,7 @@
         "label": "Hydrogen (%LEL)",
         "format": "{{msg.payload}}",
         "layout": "col-center",
-        "x": 1530,
+        "x": 1510,
         "y": 860,
         "wires": []
     },
@@ -13630,7 +13630,7 @@
         "order": 6,
         "width": 0,
         "height": 0,
-        "format": "<style ng-if=\"msg.payload > 0.5\">\n    p. label {\n        fill: red !important;\n    }\n</style>\n",
+        "format": "<style ng-if=\"msg.payload > 0.5\">\n    .nr-dashboard-text p.label{\n        fill: red !important;\n    }\n</style>\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
