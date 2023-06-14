@@ -11997,7 +11997,8 @@
             ],
             [
                 "3b6b93546ea249da",
-                "84040477ac300bf9"
+                "84040477ac300bf9",
+                "5b79bbbd9a40ebb4"
             ]
         ]
     },
@@ -13619,5 +13620,25 @@
         "x": 2640,
         "y": 1120,
         "wires": []
+    },
+    {
+        "id": "5b79bbbd9a40ebb4",
+        "type": "ui_template",
+        "z": "16c561d0bd2db4f4",
+        "group": "7b9307d1947a13f0",
+        "name": "gauge-colour",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "format": "<style ng-if=\"msg.payload > 0.5\">\n    p. label {\n        fill: red !important;\n    }\n</style>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1510,
+        "y": 900,
+        "wires": [
+            []
+        ]
     }
 ]
