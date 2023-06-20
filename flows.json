@@ -12297,7 +12297,7 @@
         "dot": false,
         "ymin": "0",
         "ymax": "80",
-        "removeOlder": "4",
+        "removeOlder": "2",
         "removeOlderPoints": "",
         "removeOlderUnit": "3600",
         "cutout": 0,
