@@ -12038,7 +12038,8 @@
             ],
             [
                 "d2a02b1215e264b1",
-                "d2beb2b9bf3862f2"
+                "d2beb2b9bf3862f2",
+                "08d94730b0f12957"
             ],
             [
                 "3b6b93546ea249da",
@@ -13177,7 +13178,7 @@
         "label": "Chlorine (ppm)",
         "format": "{{msg.payload}}",
         "layout": "col-center",
-        "x": 1510,
+        "x": 1490,
         "y": 820,
         "wires": []
     },
@@ -13867,6 +13868,26 @@
         "templateScope": "local",
         "x": 1000,
         "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "08d94730b0f12957",
+        "type": "ui_template",
+        "z": "16c561d0bd2db4f4",
+        "group": "210d2df426365d31",
+        "name": "gauge-colour",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "format": "<style ng-if=\"msg.payload > 10\">\n\nmd-card.nr-dashboard-text.layout-column.layout-align-center-center.nr-dashboard-widget-Hydrogen___ppm_.visible{\n//\nbackground-color: red !important;\ncolor: red !important;\n}\n\nmd-content._md.flex{\nbackground-color: red !important;\ncolor: red !important;\n}\n\n</style>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1510,
+        "y": 940,
         "wires": [
             []
         ]
