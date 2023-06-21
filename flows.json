@@ -13881,7 +13881,7 @@
         "order": 6,
         "width": 0,
         "height": 0,
-        "format": "<style ng-if=\"msg.payload > 10\">\n\nmd-card.nr-dashboard-text.layout-column.layout-align-center-center.nr-dashboard-widget-Hydrogen___ppm_.visible{\n//\nbackground-color: red !important;\ncolor: red !important;\n}\n\nmd-content._md.flex{\nbackground-color: red !important;\ncolor: red !important;\n}\n\n</style>\n",
+        "format": "<style ng-if=\"msg.payload > 10\">\n\nmd-card.nr-dashboard-text.layout-column.layout-align-center-center.nr-dashboard-widget-Chlorine__ppm_.visible{\n//\nbackground-color: red !important;\ncolor: red !important;\n}\n\nmd-content._md.flex{\nbackground-color: red !important;\ncolor: red !important;\n}\n\n</style>\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
