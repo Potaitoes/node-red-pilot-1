@@ -12301,7 +12301,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1440,
-        "y": 260,
+        "y": 240,
         "wires": []
     },
     {
@@ -13687,7 +13687,7 @@
         "height": 0,
         "name": "",
         "label": "Acid Volume",
-        "format": "{{msg.payload}} m3/h",
+        "format": "{msg.payload} m3/h",
         "layout": "row-spread",
         "x": 1850,
         "y": 240,
@@ -13704,8 +13704,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1640,
-        "y": 260,
+        "x": 1680,
+        "y": 240,
         "wires": [
             [
                 "7bf409057b33725d"
