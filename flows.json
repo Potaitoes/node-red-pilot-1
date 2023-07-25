@@ -13610,7 +13610,7 @@
         "id": "8035db407b11b478",
         "type": "OpcUa-Item",
         "z": "16c561d0bd2db4f4",
-        "item": "ns=4;s=Furnace1",
+        "item": "ns=4;s=cumulative_flow",
         "datatype": "String",
         "value": "",
         "name": "",
@@ -13689,7 +13689,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1880,
-        "y": 300,
+        "y": 320,
         "wires": []
     }
 ]
