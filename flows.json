@@ -11501,49 +11501,6 @@
         ]
     },
     {
-        "id": "80b357c10add4706",
-        "type": "ui_chart",
-        "z": "16c561d0bd2db4f4",
-        "name": "washpHChart",
-        "group": "941863dc0f83f5fd",
-        "order": 4,
-        "width": 13,
-        "height": 6,
-        "label": "pH",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "0",
-        "ymax": "14",
-        "removeOlder": "24",
-        "removeOlderPoints": "1000",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#ff00bb",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#dd2727",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "x": 1720,
-        "y": 20,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "1f7c50c5d6e7d504",
         "type": "ui_text",
         "z": "16c561d0bd2db4f4",
@@ -11575,11 +11532,9 @@
         "wires": [
             [
                 "1f7c50c5d6e7d504",
-                "80b357c10add4706",
                 "132b402c8caac166"
             ],
             [
-                "1ec4f6d30b9ae0fd",
                 "57df3ce529d2796a",
                 "3eea528f7ef82eab"
             ],
@@ -12235,49 +12190,6 @@
                 "1d0146fc7c02aae8",
                 "bcfd1d57bbf1cf7f"
             ]
-        ]
-    },
-    {
-        "id": "1ec4f6d30b9ae0fd",
-        "type": "ui_chart",
-        "z": "16c561d0bd2db4f4",
-        "name": "washTemp",
-        "group": "941863dc0f83f5fd",
-        "order": 12,
-        "width": 13,
-        "height": 6,
-        "label": "Temperature",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "0",
-        "ymax": "100",
-        "removeOlder": "24",
-        "removeOlderPoints": "1000",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "x": 1710,
-        "y": 140,
-        "wires": [
-            []
         ]
     },
     {
