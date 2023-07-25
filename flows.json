@@ -11447,7 +11447,8 @@
                 "89817f77ebc53a9e"
             ],
             [
-                "961ed563f7274b66"
+                "961ed563f7274b66",
+                "9a9221755928bf3f"
             ]
         ]
     },
@@ -13669,10 +13670,26 @@
         "height": 0,
         "name": "",
         "label": "Acid Volume",
-        "format": "{{msg.payload}}",
+        "format": "{{msg.payload}} m3/h",
         "layout": "row-spread",
         "x": 1690,
         "y": 260,
+        "wires": []
+    },
+    {
+        "id": "9a9221755928bf3f",
+        "type": "debug",
+        "z": "16c561d0bd2db4f4",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1880,
+        "y": 300,
         "wires": []
     }
 ]
