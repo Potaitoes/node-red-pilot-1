@@ -13688,7 +13688,7 @@
         "width": 0,
         "height": 0,
         "name": "cumulative flow",
-        "label": "Cum Flow",
+        "label": "Acid Volume",
         "format": "{{msg.payload}} m3/h",
         "layout": "row-spread",
         "x": 1860,
