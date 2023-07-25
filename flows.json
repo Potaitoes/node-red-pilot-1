@@ -13668,7 +13668,7 @@
         "label": "Acid Volume",
         "format": "{{msg.payload}} m3/h",
         "layout": "row-spread",
-        "x": 1850,
+        "x": 1890,
         "y": 240,
         "wires": []
     },
