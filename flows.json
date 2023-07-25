@@ -13790,7 +13790,7 @@
         "height": 2,
         "name": "Acid Volume",
         "label": "",
-        "format": "{{msg.payload}} m3/h",
+        "format": "{{msg.payload}} m3",
         "layout": "row-spread",
         "x": 1690,
         "y": 260,
