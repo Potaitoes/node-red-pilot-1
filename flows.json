@@ -11361,22 +11361,6 @@
         ]
     },
     {
-        "id": "1f7c50c5d6e7d504",
-        "type": "ui_text",
-        "z": "16c561d0bd2db4f4",
-        "group": "485fc22d5a0ba791",
-        "order": 6,
-        "width": 15,
-        "height": 6,
-        "name": "",
-        "label": "pH",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "x": 1690,
-        "y": 60,
-        "wires": []
-    },
-    {
         "id": "81f1b85473dca332",
         "type": "function",
         "z": "16c561d0bd2db4f4",
@@ -11391,12 +11375,12 @@
         "y": 140,
         "wires": [
             [
-                "1f7c50c5d6e7d504",
-                "132b402c8caac166"
+                "132b402c8caac166",
+                "1f7c50c5d6e7d504"
             ],
             [
-                "57df3ce529d2796a",
-                "3eea528f7ef82eab"
+                "3eea528f7ef82eab",
+                "57df3ce529d2796a"
             ],
             [
                 "95b336cfdb499b25"
@@ -12346,22 +12330,6 @@
         "statusType": "auto",
         "x": 1060,
         "y": 1000,
-        "wires": []
-    },
-    {
-        "id": "57df3ce529d2796a",
-        "type": "ui_text",
-        "z": "16c561d0bd2db4f4",
-        "group": "485fc22d5a0ba791",
-        "order": 8,
-        "width": 15,
-        "height": 6,
-        "name": "",
-        "label": "Temperature",
-        "format": "{{msg.payload}} °C",
-        "layout": "col-center",
-        "x": 1710,
-        "y": 100,
         "wires": []
     },
     {
@@ -13636,5 +13604,37 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "1f7c50c5d6e7d504",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "485fc22d5a0ba791",
+        "order": 6,
+        "width": 15,
+        "height": 6,
+        "name": "pH",
+        "label": "",
+        "format": "{{msg.payload}} pH",
+        "layout": "col-center",
+        "x": 1690,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "57df3ce529d2796a",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "485fc22d5a0ba791",
+        "order": 8,
+        "width": 15,
+        "height": 6,
+        "name": "Temperature T-01",
+        "label": "",
+        "format": "{{msg.payload}} °C",
+        "layout": "col-center",
+        "x": 1730,
+        "y": 100,
+        "wires": []
     }
 ]
