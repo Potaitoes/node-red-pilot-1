@@ -11104,7 +11104,7 @@
         "height": 1
     },
     {
-        "id": "9cb2a3dfac8a4315",
+        "id": "236c0ecf8dfa9b1a",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -11114,7 +11114,7 @@
         "height": 1
     },
     {
-        "id": "aa1c6bffaa97bec3",
+        "id": "129c9ee1aa9e0da0",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -11124,7 +11124,7 @@
         "height": 1
     },
     {
-        "id": "e2c563a1f81d22eb",
+        "id": "d5b8c6042f064ee5",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -11134,7 +11134,7 @@
         "height": 1
     },
     {
-        "id": "6a4315dcf8f6e602",
+        "id": "7cf0ac3ea773ba3d",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -11144,12 +11144,32 @@
         "height": 1
     },
     {
-        "id": "1db0935cc8640629",
+        "id": "8ddcd36f7af5a824",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
         "group": "485fc22d5a0ba791",
         "order": 7,
+        "width": 15,
+        "height": 1
+    },
+    {
+        "id": "25c525bcb96f8f81",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "485fc22d5a0ba791",
+        "order": 9,
+        "width": 15,
+        "height": 1
+    },
+    {
+        "id": "3211dd00100e0292",
+        "type": "ui_spacer",
+        "z": "16c561d0bd2db4f4",
+        "name": "spacer",
+        "group": "485fc22d5a0ba791",
+        "order": 11,
         "width": 15,
         "height": 1
     },
@@ -11429,11 +11449,10 @@
                 "42c9914bc1b52849"
             ],
             [
-                "89817f77ebc53a9e",
-                "fc205d3812a2e7d6"
+                "89817f77ebc53a9e"
             ],
             [
-                "4b7d0164a71e8e22"
+                "7bf409057b33725d"
             ]
         ]
     },
@@ -12321,28 +12340,12 @@
         "wires": []
     },
     {
-        "id": "fc205d3812a2e7d6",
-        "type": "debug",
-        "z": "16c561d0bd2db4f4",
-        "name": "debug 5",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1060,
-        "y": 1000,
-        "wires": []
-    },
-    {
         "id": "1a93b0fe1f01e0ab",
         "type": "ui_template",
         "z": "16c561d0bd2db4f4",
         "group": "485fc22d5a0ba791",
         "name": "",
-        "order": 9,
+        "order": 12,
         "width": 0,
         "height": 0,
         "format": "<style>\n\n  .nr-dashboard-text p.value{\n  font-size:160px !important\n  }\n  .nr-dashboard-text p.label{\n    font-size:60px\n    }\n\n  \n</style",
@@ -13677,20 +13680,19 @@
         ]
     },
     {
-        "id": "4b7d0164a71e8e22",
-        "type": "debug",
+        "id": "7bf409057b33725d",
+        "type": "ui_text",
         "z": "16c561d0bd2db4f4",
-        "name": "debug 8",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1480,
-        "y": 500,
+        "group": "485fc22d5a0ba791",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "name": "cumulative flow",
+        "label": "Cum Flow",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1720,
+        "y": 240,
         "wires": []
     }
 ]
