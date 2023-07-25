@@ -11240,8 +11240,7 @@
                 "4dfb0f8ea148f7d7",
                 "2c99f31183a32dd4",
                 "30e0ea179017e68a",
-                "22e9b509bfaf2e1e",
-                "ebf9de953f34488d"
+                "22e9b509bfaf2e1e"
             ]
         ]
     },
@@ -11735,7 +11734,6 @@
         "wires": [
             [
                 "7c8336bfba79e633",
-                "efc671b13c9a47af",
                 "4b906f640be8cc1c"
             ]
         ]
@@ -12334,23 +12332,6 @@
         "wires": [
             []
         ]
-    },
-    {
-        "id": "efc671b13c9a47af",
-        "type": "debug",
-        "z": "16c561d0bd2db4f4",
-        "name": "debug 7",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1940,
-        "y": 120,
-        "wires": []
     },
     {
         "id": "9a1e3db47e122efc",
@@ -13619,38 +13600,5 @@
         "x": 1730,
         "y": 100,
         "wires": []
-    },
-    {
-        "id": "ebf9de953f34488d",
-        "type": "OpcUa-Item",
-        "z": "16c561d0bd2db4f4",
-        "item": "ns=4;s=cumulative_flow",
-        "datatype": "String",
-        "value": "",
-        "name": "",
-        "x": 240,
-        "y": 540,
-        "wires": [
-            [
-                "c07bea77a234a3d3"
-            ]
-        ]
-    },
-    {
-        "id": "c07bea77a234a3d3",
-        "type": "function",
-        "z": "16c561d0bd2db4f4",
-        "name": "assign BufferTank to topic",
-        "func": "var msg_Flow_Meter = {};\nmsg_Flow_Meter.topic = msg.topic;\n\n//See node above for what goes on here.\nglobal.set(\"Topic_Flow_Meter\", String(msg_Flow_Meter.topic)); \n\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 450,
-        "y": 540,
-        "wires": [
-            []
-        ]
     }
 ]
