@@ -11220,7 +11220,8 @@
                 "4dfb0f8ea148f7d7",
                 "2c99f31183a32dd4",
                 "30e0ea179017e68a",
-                "22e9b509bfaf2e1e"
+                "22e9b509bfaf2e1e",
+                "ebf9de953f34488d"
             ]
         ]
     },
@@ -11398,8 +11399,8 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "Splits Topics into respective Outputs",
-        "func": "var index;\nvar numOutputs = node.numberOfOutputs;\n\nconst returnArray = new Array(numOutputs).fill(null);\n\nvar topic1 = global.get('Topic_WashDigestion');\nvar topic2 = global.get('Topic_Cementation');\nvar topic3 = global.get('Topic_Electrowinning');\nvar topic4 = global.get('Topic_OxPrecipitation');\nvar topic5 = global.get('Topic_BufferTank');\nvar topic6 = global.get('Topic_Furnace1');\n\nif (msg.topic == topic1){\n    index = 0;\n}\n\nif (msg.topic == topic2){\n    index = 1;\n}\n\nif (msg.topic == topic3){\n    index = 2;\n}\n\nif (msg.topic == topic4) {\n    index = 3;\n}\n\nif (msg.topic == topic5) {\n    index = 4;\n}\n\nif (msg.topic == topic6) {\n    index = 5;\n} \n\nreturnArray[index] = msg;\n\nreturn returnArray;",
-        "outputs": 6,
+        "func": "var index;\nvar numOutputs = node.numberOfOutputs;\n\nconst returnArray = new Array(numOutputs).fill(null);\n\nvar topic1 = global.get('Topic_WashDigestion');\nvar topic2 = global.get('Topic_Cementation');\nvar topic3 = global.get('Topic_Electrowinning');\nvar topic4 = global.get('Topic_OxPrecipitation');\nvar topic5 = global.get('Topic_BufferTank');\nvar topic6 = global.get('Topic_Furnace1');\nvar topic7 = global.get('Topic_Flow_Meter');\n\n\nif (msg.topic == topic1){\n    index = 0;\n}\n\nif (msg.topic == topic2){\n    index = 1;\n}\n\nif (msg.topic == topic3){\n    index = 2;\n}\n\nif (msg.topic == topic4) {\n    index = 3;\n}\n\nif (msg.topic == topic5) {\n    index = 4;\n}\n\nif (msg.topic == topic6) {\n    index = 5;\n} \n\nif (msg.topic == topic7) {\n    index = 6;\n} \n\nreturnArray[index] = msg;\n\nreturn returnArray;",
+        "outputs": 7,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -11430,6 +11431,9 @@
             [
                 "89817f77ebc53a9e",
                 "fc205d3812a2e7d6"
+            ],
+            [
+                "4b7d0164a71e8e22"
             ]
         ]
     },
@@ -12294,8 +12298,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 260,
-        "y": 560,
+        "x": 220,
+        "y": 600,
         "wires": [
             []
         ]
@@ -13635,6 +13639,58 @@
         "layout": "col-center",
         "x": 1730,
         "y": 100,
+        "wires": []
+    },
+    {
+        "id": "ebf9de953f34488d",
+        "type": "OpcUa-Item",
+        "z": "16c561d0bd2db4f4",
+        "item": "ns=4;s=cumulative_flow",
+        "datatype": "String",
+        "value": "",
+        "name": "",
+        "x": 240,
+        "y": 540,
+        "wires": [
+            [
+                "c07bea77a234a3d3"
+            ]
+        ]
+    },
+    {
+        "id": "c07bea77a234a3d3",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "assign BufferTank to topic",
+        "func": "var msg_Flow_Meter = {};\nmsg_Flow_Meter.topic = msg.topic;\n\n//See node above for what goes on here.\nglobal.set(\"Topic_Flow_Meter\", String(msg_Flow_Meter.topic)); \n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 540,
+        "wires": [
+            [
+                "ee3a6572681df942"
+            ]
+        ]
+    },
+    {
+        "id": "4b7d0164a71e8e22",
+        "type": "debug",
+        "z": "16c561d0bd2db4f4",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1480,
+        "y": 500,
         "wires": []
     }
 ]
