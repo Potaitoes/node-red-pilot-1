@@ -13700,14 +13700,14 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "ROUND to 2 dp",
-        "func": "msg.payload = Math.round((0.999));\n\nreturn msg;",
+        "func": "var rounded_msg = {};\n\nrounded_msg.payload = Math.round(0.999);\n\nreturn rounded_msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1660,
-        "y": 240,
+        "x": 1640,
+        "y": 260,
         "wires": [
             [
                 "7bf409057b33725d"
