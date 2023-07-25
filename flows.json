@@ -11419,7 +11419,7 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "Splits Topics into respective Outputs",
-        "func": "var index;\nvar numOutputs = node.numberOfOutputs;\n\nconst returnArray = new Array(numOutputs).fill(null);\n\nvar topic1 = global.get('Topic_WashDigestion');\nvar topic2 = global.get('Topic_Cementation');\nvar topic3 = global.get('Topic_Electrowinning');\nvar topic4 = global.get('Topic_OxPrecipitation');\nvar topic5 = global.get('Topic_BufferTank');\nvar topic6 = global.get('Topic_Furnace1');\nvar topic7 = global.get('Topic_Flow_Meter');\n\n\nif (msg.topic == topic1){\n    index = 0;\n}\n\nif (msg.topic == topic2){\n    index = 1;\n}\n\nif (msg.topic == topic3){\n    index = 2;\n}\n\nif (msg.topic == topic4) {\n    index = 3;\n}\n\nif (msg.topic == topic5) {\n    index = 4;\n}\n\nif (msg.topic == topic6) {\n    index = 5;\n} \n\nif (msg.topic == topic7) {\n    index = 6;\n} \n\nreturnArray[index] = msg;\n\nreturn returnArray;",
+        "func": "var index;\nvar numOutputs = node.numberOfOutputs;\n\nconst returnArray = new Array(numOutputs).fill(null);\n\nvar topic1 = global.get('Topic_WashDigestion');\nvar topic2 = global.get('Topic_Cementation');\nvar topic3 = global.get('Topic_Electrowinning');\nvar topic4 = global.get('Topic_OxPrecipitation');\nvar topic5 = global.get('Topic_BufferTank');\nvar topic6 = global.get('Topic_Furnace1');\nvar topic7 = global.get('Topic_Flow_Meter');\n\n\n\nif (msg.topic == topic1){\n    index = 0;\n}\n\nif (msg.topic == topic2){\n    index = 1;\n}\n\nif (msg.topic == topic3){\n    index = 2;\n}\n\nif (msg.topic == topic4) {\n    index = 3;\n}\n\nif (msg.topic == topic5) {\n    index = 4;\n}\n\nif (msg.topic == topic6) {\n    index = 5;\n} \n\nif (msg.topic == topic7) {\n    index = 6;\n} \n\n\nreturn returnArray;",
         "outputs": 7,
         "noerr": 0,
         "initialize": "",
@@ -11452,7 +11452,7 @@
                 "89817f77ebc53a9e"
             ],
             [
-                "7bf409057b33725d"
+                "143c1fd1c785ce75"
             ]
         ]
     },
@@ -13691,8 +13691,27 @@
         "label": "Cum Flow",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 1720,
+        "x": 1860,
         "y": 240,
         "wires": []
+    },
+    {
+        "id": "143c1fd1c785ce75",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "ROUND to 2 dp",
+        "func": "\n\nmsg.payload = Math.round((msg.payload) * 1000) / 1000;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1660,
+        "y": 240,
+        "wires": [
+            [
+                "7bf409057b33725d"
+            ]
+        ]
     }
 ]
