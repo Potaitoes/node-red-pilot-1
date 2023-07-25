@@ -11104,7 +11104,7 @@
         "height": 1
     },
     {
-        "id": "236c0ecf8dfa9b1a",
+        "id": "9b71879088136e77",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -11114,7 +11114,7 @@
         "height": 1
     },
     {
-        "id": "129c9ee1aa9e0da0",
+        "id": "e57ec6129e206a29",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -11124,7 +11124,7 @@
         "height": 1
     },
     {
-        "id": "d5b8c6042f064ee5",
+        "id": "0e48a43c3bfa713d",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -11134,7 +11134,7 @@
         "height": 1
     },
     {
-        "id": "7cf0ac3ea773ba3d",
+        "id": "cc28f96beefcbf3e",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -11144,7 +11144,7 @@
         "height": 1
     },
     {
-        "id": "8ddcd36f7af5a824",
+        "id": "4b498e84ecac517e",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -11154,7 +11154,7 @@
         "height": 1
     },
     {
-        "id": "25c525bcb96f8f81",
+        "id": "4ca39abadb8e6647",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -11164,7 +11164,7 @@
         "height": 1
     },
     {
-        "id": "3211dd00100e0292",
+        "id": "e889536906a6a305",
         "type": "ui_spacer",
         "z": "16c561d0bd2db4f4",
         "name": "spacer",
@@ -13665,9 +13665,9 @@
         "type": "ui_text",
         "z": "16c561d0bd2db4f4",
         "group": "485fc22d5a0ba791",
-        "order": 11,
-        "width": 0,
-        "height": 0,
+        "order": 10,
+        "width": "15",
+        "height": "2",
         "name": "",
         "label": "Acid Volume",
         "format": "{{msg.payload}} m3/h",
@@ -13681,7 +13681,7 @@
         "type": "debug",
         "z": "16c561d0bd2db4f4",
         "name": "debug 3",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
