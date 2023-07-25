@@ -13700,7 +13700,7 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "ROUND to 2 dp",
-        "func": "\n\nmsg.payload = Math.round((msg.payload) * 10) / 10;\nreturn msg;",
+        "func": "\n\nmsg.payload = Math.round((msg.payload));\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
