@@ -13689,7 +13689,7 @@
         "height": 0,
         "name": "cumulative flow",
         "label": "Cum Flow",
-        "format": "{{msg.payload}}",
+        "format": "{{msg.payload}} m3/h",
         "layout": "row-spread",
         "x": 1860,
         "y": 240,
