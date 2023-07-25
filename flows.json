@@ -11444,13 +11444,9 @@
                 "9181c831def27233"
             ],
             [
-                "89817f77ebc53a9e",
-                "d9701cd45b4c488f"
+                "89817f77ebc53a9e"
             ],
-            [
-                "143c1fd1c785ce75",
-                "d9701cd45b4c488f"
-            ]
+            []
         ]
     },
     {
@@ -12345,7 +12341,7 @@
         "type": "debug",
         "z": "16c561d0bd2db4f4",
         "name": "debug 7",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -13659,73 +13655,5 @@
                 "ee3a6572681df942"
             ]
         ]
-    },
-    {
-        "id": "7bf409057b33725d",
-        "type": "ui_text",
-        "z": "16c561d0bd2db4f4",
-        "group": "485fc22d5a0ba791",
-        "order": 10,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Acid Volume",
-        "format": "{{msg.payload}} m3/h",
-        "layout": "row-spread",
-        "x": 1890,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "143c1fd1c785ce75",
-        "type": "function",
-        "z": "16c561d0bd2db4f4",
-        "name": "ROUND to 2 dp",
-        "func": "var rounded_msg = {};\n\nrounded_msg.payload = Math.round(msg.payload);\n\nreturn rounded_msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1680,
-        "y": 240,
-        "wires": [
-            [
-                "7bf409057b33725d",
-                "c15601d29133daa9"
-            ]
-        ]
-    },
-    {
-        "id": "c15601d29133daa9",
-        "type": "debug",
-        "z": "16c561d0bd2db4f4",
-        "name": "debug 8",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1860,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "d9701cd45b4c488f",
-        "type": "debug",
-        "z": "16c561d0bd2db4f4",
-        "name": "debug 9",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1460,
-        "y": 520,
-        "wires": []
     }
 ]
