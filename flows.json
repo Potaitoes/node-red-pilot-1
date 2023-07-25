@@ -13685,11 +13685,11 @@
         "order": 10,
         "width": 0,
         "height": 0,
-        "name": "cumulative flow",
+        "name": "",
         "label": "Acid Volume",
         "format": "{{msg.payload}} m3/h",
         "layout": "row-spread",
-        "x": 1860,
+        "x": 1850,
         "y": 240,
         "wires": []
     },
