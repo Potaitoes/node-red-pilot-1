@@ -11240,7 +11240,8 @@
                 "4dfb0f8ea148f7d7",
                 "2c99f31183a32dd4",
                 "30e0ea179017e68a",
-                "22e9b509bfaf2e1e"
+                "22e9b509bfaf2e1e",
+                "8035db407b11b478"
             ]
         ]
     },
@@ -11418,8 +11419,8 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "Splits Topics into respective Outputs",
-        "func": "var index;\nvar numOutputs = node.numberOfOutputs;\n\nconst returnArray = new Array(numOutputs).fill(null);\n\nvar topic1 = global.get('Topic_WashDigestion');\nvar topic2 = global.get('Topic_Cementation');\nvar topic3 = global.get('Topic_Electrowinning');\nvar topic4 = global.get('Topic_OxPrecipitation');\nvar topic5 = global.get('Topic_BufferTank');\nvar topic6 = global.get('Topic_Furnace1');\n\n\n\nif (msg.topic == topic1){\n    index = 0;\n    returnArray[0] = 1\n}\n\nif (msg.topic == topic2){\n    index = 1;\n}\n\nif (msg.topic == topic3){\n    index = 2;\n}\n\nif (msg.topic == topic4) {\n    index = 3;\n}\n\nif (msg.topic == topic5) {\n    index = 4;\n}\n\nif (msg.topic == topic6) {\n    index = 5;\n} \n\nreturnArray[index] = msg\nreturn returnArray;",
-        "outputs": 6,
+        "func": "var index;\nvar numOutputs = node.numberOfOutputs;\n\nconst returnArray = new Array(numOutputs).fill(null);\n\nvar topic1 = global.get('Topic_WashDigestion');\nvar topic2 = global.get('Topic_Cementation');\nvar topic3 = global.get('Topic_Electrowinning');\nvar topic4 = global.get('Topic_OxPrecipitation');\nvar topic5 = global.get('Topic_BufferTank');\nvar topic6 = global.get('Topic_Furnace1');\nvar topic7 = global.get('Topic_Flow_Meter');\n\n\nif (msg.topic == topic1){\n    index = 0;\n    returnArray[0] = 1\n}\n\nif (msg.topic == topic2){\n    index = 1;\n}\n\nif (msg.topic == topic3){\n    index = 2;\n}\n\nif (msg.topic == topic4) {\n    index = 3;\n}\n\nif (msg.topic == topic5) {\n    index = 4;\n}\n\nif (msg.topic == topic6) {\n    index = 5;\n} \n\nif (msg.topic == topic7) {\n    index = 6;\n} \n\nreturnArray[index] = msg\nreturn returnArray;",
+        "outputs": 7,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -11428,8 +11429,7 @@
         "y": 380,
         "wires": [
             [
-                "81f1b85473dca332",
-                "2e0308c465c25dba"
+                "81f1b85473dca332"
             ],
             [
                 "e2fa88ae572257fc"
@@ -11445,6 +11445,9 @@
             ],
             [
                 "89817f77ebc53a9e"
+            ],
+            [
+                "961ed563f7274b66"
             ]
         ]
     },
@@ -13603,19 +13606,73 @@
         "wires": []
     },
     {
-        "id": "2e0308c465c25dba",
-        "type": "debug",
+        "id": "8035db407b11b478",
+        "type": "OpcUa-Item",
         "z": "16c561d0bd2db4f4",
-        "name": "debug 3",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1160,
-        "y": 240,
+        "item": "ns=4;s=Furnace1",
+        "datatype": "String",
+        "value": "",
+        "name": "",
+        "x": 240,
+        "y": 540,
+        "wires": [
+            [
+                "b521c6669869f32e"
+            ]
+        ]
+    },
+    {
+        "id": "b521c6669869f32e",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "assign BufferTank to topic",
+        "func": "var msg_Flow_Meter = {};\nmsg_Flow_Meter.topic = msg.topic;\n\n//See node above for what goes on here.\nglobal.set(\"Topic_Flow_Meter\", String(msg_Flow_Meter.topic)); \n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 540,
+        "wires": [
+            [
+                "ee3a6572681df942"
+            ]
+        ]
+    },
+    {
+        "id": "961ed563f7274b66",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "function 1",
+        "func": "msg.payload = Math.round((msg.payload) * 1000) / 1000;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1500,
+        "y": 260,
+        "wires": [
+            [
+                "a7fb5ae464f0ddad"
+            ]
+        ]
+    },
+    {
+        "id": "a7fb5ae464f0ddad",
+        "type": "ui_text",
+        "z": "16c561d0bd2db4f4",
+        "group": "485fc22d5a0ba791",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Acid Volume",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1690,
+        "y": 260,
         "wires": []
     }
 ]
