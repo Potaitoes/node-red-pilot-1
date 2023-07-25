@@ -11520,32 +11520,6 @@
         ]
     },
     {
-        "id": "de1f6b2b37e837cb",
-        "type": "ui_gauge",
-        "z": "16c561d0bd2db4f4",
-        "name": "",
-        "group": "941863dc0f83f5fd",
-        "order": 6,
-        "width": 7,
-        "height": 5,
-        "gtype": "wave",
-        "title": "",
-        "label": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "3",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 1930,
-        "y": 180,
-        "wires": []
-    },
-    {
         "id": "e00268bdbe39dfbb",
         "type": "function",
         "z": "16c561d0bd2db4f4",
@@ -11871,7 +11845,6 @@
         "y": 180,
         "wires": [
             [
-                "de1f6b2b37e837cb",
                 "7c8336bfba79e633",
                 "efc671b13c9a47af",
                 "4b906f640be8cc1c"
