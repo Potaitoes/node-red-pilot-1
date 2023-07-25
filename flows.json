@@ -10996,7 +10996,7 @@
         "tab": "1b6ec810edf1f944",
         "order": 3,
         "disp": false,
-        "width": 18,
+        "width": "26",
         "collapse": false
     },
     {
@@ -13786,7 +13786,7 @@
         "z": "16c561d0bd2db4f4",
         "group": "485fc22d5a0ba791",
         "order": 22,
-        "width": 18,
+        "width": "26",
         "height": 2,
         "name": "",
         "label": "Acid Volume",
