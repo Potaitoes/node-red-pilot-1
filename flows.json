@@ -13815,7 +13815,7 @@
         "id": "b2c98fb44e137d19",
         "type": "OpcUa-Item",
         "z": "16c561d0bd2db4f4",
-        "item": "ns=4;s=BUTTON_STATES",
+        "item": "ns=4;s=NodeREDButtonStates",
         "datatype": "String",
         "value": "",
         "name": "Button States",
