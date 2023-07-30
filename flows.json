@@ -8,6 +8,14 @@
         "env": []
     },
     {
+        "id": "ef49e8ecff966292",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "a053172554a6aedb",
         "type": "OpcUa-Endpoint",
         "endpoint": "opc.tcp://192.168.50.61:4840",
@@ -11294,6 +11302,31 @@
         "height": 1
     },
     {
+        "id": "712b53e5.990dfc",
+        "type": "mqtt-broker",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "NodeRedSQLClient",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "15",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "df8c0b88.91b0a8",
+        "type": "MSSQL-CN",
+        "name": "Dev",
+        "server": "localhost",
+        "encyption": false,
+        "database": "Dev"
+    },
+    {
         "id": "80ae0189e474ec6e",
         "type": "comment",
         "z": "16c561d0bd2db4f4",
@@ -11324,7 +11357,8 @@
         "y": 420,
         "wires": [
             [
-                "e00268bdbe39dfbb"
+                "e00268bdbe39dfbb",
+                "9603d40ae5245d92"
             ]
         ]
     },
@@ -11361,7 +11395,8 @@
                 "2c99f31183a32dd4",
                 "30e0ea179017e68a",
                 "22e9b509bfaf2e1e",
-                "8035db407b11b478"
+                "8035db407b11b478",
+                "b2c98fb44e137d19"
             ]
         ]
     },
@@ -11442,8 +11477,8 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 360,
-        "y": 1420,
+        "x": 400,
+        "y": 1400,
         "wires": [
             [
                 "6bca2acab5cf3ecf"
@@ -11567,8 +11602,7 @@
                 "89817f77ebc53a9e"
             ],
             [
-                "961ed563f7274b66",
-                "9a9221755928bf3f"
+                "961ed563f7274b66"
             ]
         ]
     },
@@ -11612,7 +11646,7 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "TankData Splitter",
-        "func": "var pH_msg = {};\nvar temp_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar l3_msg = {};\n\nvar totalOutputs = 7;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\ntemp_msg.payload = Math.round((msg.payload.temperature) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nl1_msg.payload = msg.payload.level1_status;\nglobal.set(\"C1\", l1_msg.payload);\nl2_msg.payload = msg.payload.level2_status;\nglobal.set(\"C2\", l2_msg.payload);\nl3_msg.payload = msg.payload.level3_status;\nglobal.set(\"C3\", l3_msg.payload);\n\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\nreturnArray[2] = l1_msg;\nreturnArray[3] = l2_msg;\nreturnArray[4] = l3_msg;\n\n\nreturn returnArray;",
+        "func": "var pH_msg = {};\nvar temp_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar l3_msg = {};\n\nvar totalOutputs = 7;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\n//global.set(\"pH\", msg.payload);\n\ntemp_msg.payload = Math.round((msg.payload.temperature) * 100) / 100;\n//global.set(\"Temp1\", msg.payload);\n\nl1_msg.payload = msg.payload.level1_status;\nglobal.set(\"C1\", l1_msg.payload);\nl2_msg.payload = msg.payload.level2_status;\nglobal.set(\"C2\", l2_msg.payload);\nl3_msg.payload = msg.payload.level3_status;\nglobal.set(\"C3\", l3_msg.payload);\n\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\nreturnArray[2] = l1_msg;\nreturnArray[3] = l2_msg;\nreturnArray[4] = l3_msg;\n\n\nreturn returnArray;",
         "outputs": 5,
         "noerr": 0,
         "initialize": "",
@@ -12417,7 +12451,7 @@
         "finalize": "",
         "libs": [],
         "x": 220,
-        "y": 600,
+        "y": 620,
         "wires": [
             []
         ]
@@ -12864,8 +12898,8 @@
         "label": "",
         "format": "<font size = 100>{{msg.payload}}",
         "layout": "row-center",
-        "x": 490,
-        "y": 600,
+        "x": 230,
+        "y": 700,
         "wires": []
     },
     {
@@ -12932,8 +12966,8 @@
         "label": "",
         "format": "{{msg.payload}}",
         "layout": "col-center",
-        "x": 490,
-        "y": 700,
+        "x": 230,
+        "y": 780,
         "wires": []
     },
     {
@@ -12948,8 +12982,8 @@
         "label": "",
         "format": "{{msg.payload}}",
         "layout": "col-center",
-        "x": 490,
-        "y": 740,
+        "x": 230,
+        "y": 820,
         "wires": []
     },
     {
@@ -12964,8 +12998,8 @@
         "label": "",
         "format": "{{msg.payload}}",
         "layout": "col-center",
-        "x": 490,
-        "y": 780,
+        "x": 230,
+        "y": 860,
         "wires": []
     },
     {
@@ -13061,8 +13095,8 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 370,
-        "y": 1460,
+        "x": 410,
+        "y": 1440,
         "wires": [
             [
                 "65ed57481b45630b"
@@ -13130,8 +13164,8 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 340,
-        "y": 1500,
+        "x": 380,
+        "y": 1480,
         "wires": [
             [
                 "bf4cbfcb156c7c41"
@@ -13163,8 +13197,8 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 340,
-        "y": 1540,
+        "x": 380,
+        "y": 1520,
         "wires": [
             [
                 "c232b9d99bf9d0fe"
@@ -13196,8 +13230,8 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 340,
-        "y": 1580,
+        "x": 380,
+        "y": 1560,
         "wires": [
             [
                 "96d17c0d4187757a"
@@ -13229,8 +13263,8 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 340,
-        "y": 1620,
+        "x": 380,
+        "y": 1600,
         "wires": [
             [
                 "e75dbb222d125592"
@@ -13262,8 +13296,8 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 340,
-        "y": 1660,
+        "x": 380,
+        "y": 1640,
         "wires": [
             [
                 "737bd174d273954a"
@@ -13362,8 +13396,8 @@
         "label": "",
         "format": "{{msg.payload}}",
         "layout": "col-center",
-        "x": 490,
-        "y": 640,
+        "x": 230,
+        "y": 740,
         "wires": []
     },
     {
@@ -13378,8 +13412,8 @@
         "label": "",
         "format": "{{msg.payload}}",
         "layout": "col-center",
-        "x": 490,
-        "y": 840,
+        "x": 230,
+        "y": 900,
         "wires": []
     },
     {
@@ -13400,41 +13434,6 @@
         "y": 580,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "0d5fc5f88884b844",
-        "type": "inject",
-        "z": "16c561d0bd2db4f4",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "1",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "0.5",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 130,
-        "y": 1540,
-        "wires": [
-            [
-                "fa1e40127948deab",
-                "cd682105b51a0c4b",
-                "74db610522949130",
-                "3a30ba2893f3a494",
-                "9445133b8c752847",
-                "25feac56f032765e",
-                "dfa547a2d532c202"
-            ]
         ]
     },
     {
@@ -13509,7 +13508,7 @@
         "id": "2f9bbc4f83cab30a",
         "type": "function",
         "z": "16c561d0bd2db4f4",
-        "name": "assign BufferTank to topic",
+        "name": "assign Furnace1 to topic",
         "func": "var msg_Furnace1 = {};\nmsg_Furnace1.topic = msg.topic;\n\n//See node above for what goes on here.\nglobal.set(\"Topic_Furnace1\", String(msg_Furnace1.topic)); \n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
@@ -13746,7 +13745,7 @@
         "id": "b521c6669869f32e",
         "type": "function",
         "z": "16c561d0bd2db4f4",
-        "name": "assign BufferTank to topic",
+        "name": "assign Flowmeter to topic",
         "func": "var msg_Flow_Meter = {};\nmsg_Flow_Meter.topic = msg.topic;\n\n//See node above for what goes on here.\nglobal.set(\"Topic_Flow_Meter\", String(msg_Flow_Meter.topic)); \n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
@@ -13801,15 +13800,76 @@
         "type": "debug",
         "z": "16c561d0bd2db4f4",
         "name": "debug 3",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1880,
-        "y": 320,
+        "x": 940,
+        "y": 960,
         "wires": []
+    },
+    {
+        "id": "b2c98fb44e137d19",
+        "type": "OpcUa-Item",
+        "z": "16c561d0bd2db4f4",
+        "item": "ns=4;s=BUTTON_STATES",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "Button States",
+        "x": 240,
+        "y": 580,
+        "wires": [
+            [
+                "13ba622b453e61cf"
+            ]
+        ]
+    },
+    {
+        "id": "9603d40ae5245d92",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "function 2",
+        "func": "var index;\nvar numOutputs = node.numberOfOutputs;\nconst returnArray = new Array(numOutputs).fill(null);\nvar topic1 = global.get('Topic_button_states');\n\nvar EW_Circulation_msg = {};\nvar FAST_LOG_msg = {};\nvar T01_batch_ID_msg = {};\nvar T02_batch_ID_msg = {};\nvar T03_batch_ID_msg = {};\nvar T04_batch_ID_msg = {};\nvar T05_batch_ID_msg = {};\n\n\nif (msg.topic == topic1) {\n    \n    returnArray[0] = msg.payload.EW_DIAPHRAGM_ENABLE; \n    returnArray[1] = false ;//msg.payload.FAST_LOG;\n    returnArray[2] = msg.payload.T01_batch_ID;\n    returnArray[3] = msg.payload.T02_batch_ID;\n    returnArray[4] = msg.payload.T03_batch_ID;\n    returnArray[5] = msg.payload.T04_batch_ID; \n    returnArray[6] = msg.payload.T05_batch_ID;\n\n}\n\nreturn returnArray;",
+        "outputs": 7,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 160,
+        "y": 1520,
+        "wires": [
+            [],
+            [
+                "cd682105b51a0c4b",
+                "9a9221755928bf3f"
+            ],
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "13ba622b453e61cf",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "assign buttonstates to topic",
+        "func": "var msg_button_states = {};\nmsg_button_states.topic = msg.topic;\n\n//See node above for what goes on here.\nglobal.set(\"Topic_button_states\", String(msg_button_states.topic)); \n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 580,
+        "wires": [
+            [
+                "ee3a6572681df942"
+            ]
+        ]
     }
 ]
