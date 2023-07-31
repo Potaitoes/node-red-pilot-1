@@ -11427,7 +11427,7 @@
         "securitypolicy": "None",
         "folderName4PKI": "",
         "name": "",
-        "x": 1060,
+        "x": 1140,
         "y": 1620,
         "wires": [
             []
@@ -14084,11 +14084,40 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 840,
-        "y": 1620,
+        "x": 880,
+        "y": 1680,
         "wires": [
             [
                 "9a9221755928bf3f"
+            ]
+        ]
+    },
+    {
+        "id": "35a6ae8537a884c1",
+        "type": "inject",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 530,
+        "y": 1800,
+        "wires": [
+            [
+                "4f6980a98e857a12"
             ]
         ]
     }
