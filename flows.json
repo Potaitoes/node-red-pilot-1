@@ -11427,30 +11427,11 @@
         "securitypolicy": "None",
         "folderName4PKI": "",
         "name": "",
-        "x": 840,
-        "y": 1540,
+        "x": 1060,
+        "y": 1620,
         "wires": [
-            [
-                "cbf391f08b4a70a7"
-            ]
+            []
         ]
-    },
-    {
-        "id": "cbf391f08b4a70a7",
-        "type": "debug",
-        "z": "16c561d0bd2db4f4",
-        "name": "debug 2",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1000,
-        "y": 1540,
-        "wires": []
     },
     {
         "id": "fa1e40127948deab",
@@ -11477,7 +11458,7 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 420,
+        "x": 380,
         "y": 1400,
         "wires": [
             [
@@ -13093,11 +13074,11 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 410,
+        "x": 390,
         "y": 1440,
         "wires": [
             [
-                "e9934130a0021fd4"
+                "4f45d116cbb1aca3"
             ]
         ]
     },
@@ -13164,7 +13145,7 @@
         "y": 1480,
         "wires": [
             [
-                "e9934130a0021fd4"
+                "c7475d147f60e3f6"
             ]
         ]
     },
@@ -13197,7 +13178,7 @@
         "y": 1520,
         "wires": [
             [
-                "e9934130a0021fd4"
+                "90083f9da34829dd"
             ]
         ]
     },
@@ -13230,7 +13211,7 @@
         "y": 1560,
         "wires": [
             [
-                "e9934130a0021fd4"
+                "d3adf1404b1a9580"
             ]
         ]
     },
@@ -13263,7 +13244,7 @@
         "y": 1600,
         "wires": [
             [
-                "e9934130a0021fd4"
+                "fc888e1c5d72cf5d"
             ]
         ]
     },
@@ -13296,7 +13277,7 @@
         "y": 1640,
         "wires": [
             [
-                "e9934130a0021fd4"
+                "e8adca4ee5ad4d13"
             ]
         ]
     },
@@ -13793,8 +13774,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 440,
-        "y": 1240,
+        "x": 820,
+        "y": 1440,
         "wires": []
     },
     {
@@ -13890,19 +13871,17 @@
         "id": "e9934130a0021fd4",
         "type": "function",
         "z": "16c561d0bd2db4f4",
-        "name": "function 4",
-        "func": "if (msg.topic == 'EW_CIRCULATION') {\n    return msg;\n}\n",
+        "name": "Write Button states to global vars",
+        "func": "if (msg.topic === \"EW_Circulation\") {\n    global.set(\"EW_Circulation_Switch\", msg.payload);\n\n} else if (msg.topic === \"FAST_LOGGING\") {\n    global.set(\"FAST_LOGGING_Switch\", msg.payload);\n\n} else if (msg.topic === \"OPT01\") {\n    global.set(\"OPT01_Switch\", msg.payload);\n\n} else if (msg.topic === \"OPT02\") {\n    global.set(\"OPT02_Switch\", msg.payload);\n\n} else if (msg.topic === \"OPT03\") {\n    global.set(\"OPT03_Switch\", msg.payload);\n\n} else if (msg.topic === \"OPT04\") {\n    global.set(\"OPT04_Switch\", msg.payload);\n\n} else if (msg.topic === \"OPT05\") {\n    global.set(\"OPT05_Switch\", msg.payload);\n}\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 820,
-        "y": 1480,
+        "x": 860,
+        "y": 1520,
         "wires": [
-            [
-                "9a9221755928bf3f"
-            ]
+            []
         ]
     },
     {
@@ -13924,11 +13903,192 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 610,
+        "x": 590,
         "y": 1420,
         "wires": [
             [
                 "e9934130a0021fd4"
+            ]
+        ]
+    },
+    {
+        "id": "4f45d116cbb1aca3",
+        "type": "change",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "FAST_LOGGING",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 1460,
+        "wires": [
+            [
+                "e9934130a0021fd4"
+            ]
+        ]
+    },
+    {
+        "id": "c7475d147f60e3f6",
+        "type": "change",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "OPT01",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 1500,
+        "wires": [
+            [
+                "e9934130a0021fd4"
+            ]
+        ]
+    },
+    {
+        "id": "90083f9da34829dd",
+        "type": "change",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "OPT02",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 1540,
+        "wires": [
+            [
+                "e9934130a0021fd4"
+            ]
+        ]
+    },
+    {
+        "id": "d3adf1404b1a9580",
+        "type": "change",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "OPT03",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 1580,
+        "wires": [
+            [
+                "e9934130a0021fd4"
+            ]
+        ]
+    },
+    {
+        "id": "fc888e1c5d72cf5d",
+        "type": "change",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "OPT04",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 1620,
+        "wires": [
+            [
+                "e9934130a0021fd4"
+            ]
+        ]
+    },
+    {
+        "id": "e8adca4ee5ad4d13",
+        "type": "change",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "OPT05",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 1660,
+        "wires": [
+            [
+                "e9934130a0021fd4"
+            ]
+        ]
+    },
+    {
+        "id": "4f6980a98e857a12",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "Write Button States to OPC",
+        "func": "msg.payload = {\n    member1: global.get(\"EW_Circulation_Switch\"),\n    member2: global.get(\"FAST_LOGGING_Switch\"),\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 1620,
+        "wires": [
+            [
+                "9a9221755928bf3f"
             ]
         ]
     }
