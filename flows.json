@@ -11481,7 +11481,7 @@
         "y": 1400,
         "wires": [
             [
-                "e9934130a0021fd4"
+                "a60be7c832a3f829"
             ]
         ]
     },
@@ -13891,17 +13891,44 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "function 4",
-        "func": "if (msg.topic.FAST_LOGGING) {\n    return msg;\n}\n",
+        "func": "if (msg.topic == 'EW_CIRCULATION') {\n    return msg;\n}\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 640,
-        "y": 1520,
+        "x": 820,
+        "y": 1480,
         "wires": [
             [
                 "9a9221755928bf3f"
+            ]
+        ]
+    },
+    {
+        "id": "a60be7c832a3f829",
+        "type": "change",
+        "z": "16c561d0bd2db4f4",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "EW_CIRCULATION",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 1420,
+        "wires": [
+            [
+                "e9934130a0021fd4"
             ]
         ]
     }
