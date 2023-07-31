@@ -11427,8 +11427,8 @@
         "securitypolicy": "None",
         "folderName4PKI": "",
         "name": "",
-        "x": 1140,
-        "y": 1620,
+        "x": 1180,
+        "y": 1640,
         "wires": [
             []
         ]
@@ -13774,8 +13774,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 820,
-        "y": 1440,
+        "x": 860,
+        "y": 1780,
         "wires": []
     },
     {
@@ -14078,7 +14078,7 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "Write Button States to OPC",
-        "func": "msg.payload = {\n    member1: global.get(\"EW_Circulation_Switch\"),\n    member2: global.get(\"FAST_LOGGING_Switch\"),\n};\nreturn msg;",
+        "func": "msg.payload = {\n    FAST_LOG: global.get(\"FAST_LOGGING_Switch\"),\n    EW_DIAPHRAGM: global.get(\"EW_Circulation_Switch\"),\n    T01_batch_ID: global.get(\"OPT01_Switch\"),\n    T02_batch_ID: global.get(\"OPT01_Switch\"),\n    T03_batch_ID: global.get(\"OPT01_Switch\"),\n    T04_batch_ID: global.get(\"OPT01_Switch\"),\n    T05_batch_ID: global.get(\"OPT01_Switch\"),\n};\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -14118,6 +14118,22 @@
         "wires": [
             [
                 "4f6980a98e857a12"
+            ]
+        ]
+    },
+    {
+        "id": "e5c9ccbc0c818286",
+        "type": "OpcUa-Item",
+        "z": "16c561d0bd2db4f4",
+        "item": "ns=4;s=NodeREDButtonStates",
+        "datatype": "String",
+        "value": "",
+        "name": "Write-Button-States",
+        "x": 1110,
+        "y": 1780,
+        "wires": [
+            [
+                "5fc5cf3c28ed8110"
             ]
         ]
     }
