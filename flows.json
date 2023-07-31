@@ -13891,7 +13891,7 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "function 4",
-        "func": "\nreturn msg;",
+        "func": "if (msg.topic.FAST_LOGGING) {\n    return msg;\n}\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
