@@ -11456,7 +11456,7 @@
         "id": "fa1e40127948deab",
         "type": "ui_switch",
         "z": "16c561d0bd2db4f4",
-        "name": "",
+        "name": "EW_CIRCULATION",
         "label": "EW Circulation",
         "tooltip": "",
         "group": "701c917fb989f805",
@@ -11477,11 +11477,11 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 400,
+        "x": 420,
         "y": 1400,
         "wires": [
             [
-                "6bca2acab5cf3ecf"
+                "e9934130a0021fd4"
             ]
         ]
     },
@@ -11493,12 +11493,10 @@
         "datatype": "Boolean",
         "value": "",
         "name": "",
-        "x": 620,
-        "y": 1420,
+        "x": 140,
+        "y": 1620,
         "wires": [
-            [
-                "5fc5cf3c28ed8110"
-            ]
+            []
         ]
     },
     {
@@ -13074,7 +13072,7 @@
         "id": "cd682105b51a0c4b",
         "type": "ui_switch",
         "z": "16c561d0bd2db4f4",
-        "name": "",
+        "name": "FAST_LOGGING",
         "label": "FAST LOGGING",
         "tooltip": "",
         "group": "701c917fb989f805",
@@ -13099,7 +13097,7 @@
         "y": 1440,
         "wires": [
             [
-                "65ed57481b45630b"
+                "e9934130a0021fd4"
             ]
         ]
     },
@@ -13111,12 +13109,10 @@
         "datatype": "Boolean",
         "value": "",
         "name": "",
-        "x": 620,
-        "y": 1460,
+        "x": 140,
+        "y": 1660,
         "wires": [
-            [
-                "5fc5cf3c28ed8110"
-            ]
+            []
         ]
     },
     {
@@ -13168,7 +13164,7 @@
         "y": 1480,
         "wires": [
             [
-                "bf4cbfcb156c7c41"
+                "e9934130a0021fd4"
             ]
         ]
     },
@@ -13201,7 +13197,7 @@
         "y": 1520,
         "wires": [
             [
-                "c232b9d99bf9d0fe"
+                "e9934130a0021fd4"
             ]
         ]
     },
@@ -13234,7 +13230,7 @@
         "y": 1560,
         "wires": [
             [
-                "96d17c0d4187757a"
+                "e9934130a0021fd4"
             ]
         ]
     },
@@ -13267,7 +13263,7 @@
         "y": 1600,
         "wires": [
             [
-                "e75dbb222d125592"
+                "e9934130a0021fd4"
             ]
         ]
     },
@@ -13300,7 +13296,7 @@
         "y": 1640,
         "wires": [
             [
-                "737bd174d273954a"
+                "e9934130a0021fd4"
             ]
         ]
     },
@@ -13312,12 +13308,10 @@
         "datatype": "Boolean",
         "value": "",
         "name": "",
-        "x": 620,
-        "y": 1500,
+        "x": 140,
+        "y": 1700,
         "wires": [
-            [
-                "5fc5cf3c28ed8110"
-            ]
+            []
         ]
     },
     {
@@ -13328,12 +13322,10 @@
         "datatype": "Boolean",
         "value": "",
         "name": "",
-        "x": 620,
-        "y": 1540,
+        "x": 140,
+        "y": 1740,
         "wires": [
-            [
-                "5fc5cf3c28ed8110"
-            ]
+            []
         ]
     },
     {
@@ -13344,12 +13336,10 @@
         "datatype": "Boolean",
         "value": "",
         "name": "",
-        "x": 620,
-        "y": 1580,
+        "x": 140,
+        "y": 1780,
         "wires": [
-            [
-                "5fc5cf3c28ed8110"
-            ]
+            []
         ]
     },
     {
@@ -13360,12 +13350,10 @@
         "datatype": "Boolean",
         "value": "",
         "name": "",
-        "x": 620,
-        "y": 1620,
+        "x": 140,
+        "y": 1820,
         "wires": [
-            [
-                "5fc5cf3c28ed8110"
-            ]
+            []
         ]
     },
     {
@@ -13376,12 +13364,10 @@
         "datatype": "Boolean",
         "value": "",
         "name": "",
-        "x": 620,
-        "y": 1660,
+        "x": 140,
+        "y": 1860,
         "wires": [
-            [
-                "5fc5cf3c28ed8110"
-            ]
+            []
         ]
     },
     {
@@ -13832,7 +13818,7 @@
         "type": "function",
         "z": "16c561d0bd2db4f4",
         "name": "function 2",
-        "func": "var index;\nvar numOutputs = node.numberOfOutputs;\nconst returnArray = new Array(numOutputs).fill(null);\nvar topic1 = global.get('Topic_button_states');\n\nvar EW_Circulation_msg = {};\nvar FAST_LOG_msg = {};\nvar T01_batch_ID_msg = {};\nvar T02_batch_ID_msg = {};\nvar T03_batch_ID_msg = {};\nvar T04_batch_ID_msg = {};\nvar T05_batch_ID_msg = {};\n\n\n\n\nif (msg.topic == topic1) {\n\n    EW_Circulation_msg.payload = msg.payload.EW_DIAPHRAGM; \n    FAST_LOG_msg.payload = msg.payload.FAST_LOG;\n    T01_batch_ID_msg.payload = msg.payload.T01_batch_ID;\n    T02_batch_ID_msg.payload = msg.payload.T02_batch_ID;\n    T03_batch_ID_msg.payload = msg.payload.T03_batch_ID;\n    T04_batch_ID_msg.payload = msg.payload.T04_batch_ID;\n    T05_batch_ID_msg.payload = msg.payload.T05_batch_ID;\n    \n    FAST_LOG_msg.payload = false;\n\n    returnArray[0] = EW_Circulation_msg\n    returnArray[1] = FAST_LOG_msg\n    returnArray[2] = msg.payload.T01_batch_ID;\n    returnArray[3] = msg.payload.T02_batch_ID;\n    returnArray[4] = msg.payload.T03_batch_ID;\n    returnArray[5] = msg.payload.T04_batch_ID; \n    returnArray[6] = msg.payload.T05_batch_ID;\n\n}\n\n\n\nreturn returnArray;",
+        "func": "var index;\nvar numOutputs = node.numberOfOutputs;\nconst returnArray = new Array(numOutputs).fill(null);\nvar topic1 = global.get('Topic_button_states');\n\nvar EW_Circulation_msg = {};\nvar FAST_LOG_msg = {};\nvar T01_batch_ID_msg = {};\nvar T02_batch_ID_msg = {};\nvar T03_batch_ID_msg = {};\nvar T04_batch_ID_msg = {};\nvar T05_batch_ID_msg = {};\n\n\nif (msg.topic == topic1) {\n\n    EW_Circulation_msg.payload = msg.payload.EW_DIAPHRAGM; \n    FAST_LOG_msg.payload = msg.payload.FAST_LOG;\n    T01_batch_ID_msg.payload = msg.payload.T01_batch_ID;\n    T02_batch_ID_msg.payload = msg.payload.T02_batch_ID;\n    T03_batch_ID_msg.payload = msg.payload.T03_batch_ID;\n    T04_batch_ID_msg.payload = msg.payload.T04_batch_ID;\n    T05_batch_ID_msg.payload = msg.payload.T05_batch_ID;\n    \n    returnArray[0] = EW_Circulation_msg\n    returnArray[1] = FAST_LOG_msg\n    returnArray[2] = T01_batch_ID_msg;\n    returnArray[3] = T02_batch_ID_msg;\n    returnArray[4] = T03_batch_ID_msg;\n    returnArray[5] = T04_batch_ID_msg; \n    returnArray[6] = T05_batch_ID_msg;\n\n}\n\n\n\nreturn returnArray;",
         "outputs": 7,
         "noerr": 0,
         "initialize": "",
@@ -13841,16 +13827,27 @@
         "x": 160,
         "y": 1520,
         "wires": [
-            [],
             [
-                "cd682105b51a0c4b",
-                "9a9221755928bf3f"
+                "fa1e40127948deab"
             ],
-            [],
-            [],
-            [],
-            [],
-            []
+            [
+                "cd682105b51a0c4b"
+            ],
+            [
+                "74db610522949130"
+            ],
+            [
+                "3a30ba2893f3a494"
+            ],
+            [
+                "9445133b8c752847"
+            ],
+            [
+                "25feac56f032765e"
+            ],
+            [
+                "dfa547a2d532c202"
+            ]
         ]
     },
     {
@@ -13887,6 +13884,25 @@
         "y": 1400,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "e9934130a0021fd4",
+        "type": "function",
+        "z": "16c561d0bd2db4f4",
+        "name": "function 4",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 1520,
+        "wires": [
+            [
+                "9a9221755928bf3f"
+            ]
         ]
     }
 ]
