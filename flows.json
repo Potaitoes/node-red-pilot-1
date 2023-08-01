@@ -13763,22 +13763,6 @@
         "wires": []
     },
     {
-        "id": "9a9221755928bf3f",
-        "type": "debug",
-        "z": "16c561d0bd2db4f4",
-        "name": "debug 3",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 860,
-        "y": 1780,
-        "wires": []
-    },
-    {
         "id": "b2c98fb44e137d19",
         "type": "OpcUa-Item",
         "z": "16c561d0bd2db4f4",
@@ -14088,7 +14072,7 @@
         "y": 1680,
         "wires": [
             [
-                "9a9221755928bf3f"
+                "e5c9ccbc0c818286"
             ]
         ]
     },
