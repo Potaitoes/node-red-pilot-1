@@ -22396,8 +22396,8 @@
         "name": "Left",
         "tab": "c9351305241e3c3f",
         "order": 1,
-        "disp": true,
-        "width": 22,
+        "disp": false,
+        "width": "22",
         "collapse": false
     },
     {
