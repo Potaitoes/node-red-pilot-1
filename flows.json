@@ -16,6 +16,14 @@
         "env": []
     },
     {
+        "id": "ea4ba7b5729c4ade",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "e6d71b93752cf439",
         "type": "junction",
         "z": "af80505e1c4f7081",
@@ -19477,7 +19485,8 @@
         "y": 380,
         "wires": [
             [
-                "69248df9e3639b6f"
+                "69248df9e3639b6f",
+                "ab4a054806a1f249"
             ],
             [
                 "6b97e4b6921521d5"
@@ -21162,6 +21171,7 @@
         "name": "TankData Splitter",
         "func": "var T1_msg = {};\nvar T2_msg = {};\nvar T3_msg = {};\nvar T4_msg = {};\nvar T5_msg = {};\nvar T6_msg = {};\n\nvar totalOutputs = 6;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\nT1_msg.payload = Math.round((msg.payload.T1));\nglobal.set(\"T1\", msg.payload);\nT2_msg.payload = Math.round((msg.payload.T2));\nglobal.set(\"T2\", msg.payload);\nT3_msg.payload = Math.round((msg.payload.T3));\nglobal.set(\"T3\", msg.payload);\nT4_msg.payload = Math.round((msg.payload.T4));\nglobal.set(\"T4\", msg.payload);\nT5_msg.payload = Math.round((msg.payload.T5));\nglobal.set(\"T5\", msg.payload);\nT6_msg.payload = Math.round((msg.payload.T6));\nglobal.set(\"T6\", msg.payload);\n\nreturnArray[0] = T1_msg;\nreturnArray[1] = T2_msg;\nreturnArray[2] = T3_msg;\nreturnArray[3] = T4_msg;\nreturnArray[4] = T5_msg;\nreturnArray[5] = T6_msg;\n\n\nreturn returnArray;",
         "outputs": 6,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -22308,6 +22318,19 @@
         "wires": []
     },
     {
+        "id": "ab4a054806a1f249",
+        "type": "link out",
+        "z": "af80505e1c4f7081",
+        "name": "T-01 out",
+        "mode": "link",
+        "links": [
+            "dfe663d2f2317847"
+        ],
+        "x": 1185,
+        "y": 160,
+        "wires": []
+    },
+    {
         "id": "ea9cb40df63fb6ef",
         "type": "ui_numeric",
         "z": "772b9e461df7f6c1",
@@ -22368,5 +22391,55 @@
                 "f3f675eb7fe348b8"
             ]
         ]
+    },
+    {
+        "id": "42057ba3d38d3675",
+        "type": "mqtt out",
+        "z": "ea4ba7b5729c4ade",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "x": 270,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "dfe663d2f2317847",
+        "type": "link in",
+        "z": "ea4ba7b5729c4ade",
+        "name": "T-01 in",
+        "links": [
+            "ab4a054806a1f249"
+        ],
+        "x": 135,
+        "y": 280,
+        "wires": [
+            [
+                "42057ba3d38d3675",
+                "a28d35f156da0af2"
+            ]
+        ]
+    },
+    {
+        "id": "a28d35f156da0af2",
+        "type": "debug",
+        "z": "ea4ba7b5729c4ade",
+        "name": "debug 24",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 280,
+        "y": 340,
+        "wires": []
     }
 ]
