@@ -38,16 +38,52 @@
         ]
     },
     {
-        "id": "a053172554a6aedb",
-        "type": "OpcUa-Endpoint",
-        "endpoint": "opc.tcp://192.168.50.61:4840",
-        "secpol": "None",
-        "secmode": "None",
-        "none": false,
-        "login": true,
-        "usercert": false,
-        "usercertificate": "",
-        "userprivatekey": ""
+        "id": "d9f94d14648c2210",
+        "type": "mqtt-broker",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "NodeRedSQLClient",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "15",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "fb3e793aa41dfeaa",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "132.181.246.119",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
     },
     {
         "id": "10584f864ba3765e",
@@ -148,6 +184,94 @@
         }
     },
     {
+        "id": "359d48deb1e9e787",
+        "type": "ui_tab",
+        "name": "T-05",
+        "icon": "dashboard",
+        "order": 7,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "613ee8f0c2ded6bc",
+        "type": "ui_tab",
+        "name": "T-02",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "21385dd97135be68",
+        "type": "ui_tab",
+        "name": "T-04",
+        "icon": "dashboard",
+        "order": 6,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "0d272965d5394e35",
+        "type": "ui_tab",
+        "name": "Full System Overview",
+        "icon": "dashboard",
+        "order": 8,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "03b240a63333d7e8",
+        "type": "ui_tab",
+        "name": "T-03",
+        "icon": "dashboard",
+        "order": 5,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "234f07a00da93fe1",
+        "type": "ui_tab",
+        "name": "Furnace",
+        "icon": "dashboard",
+        "order": 9,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "1b6ec810edf1f944",
+        "type": "ui_tab",
+        "name": "T-01",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "5b2e7308d9975198",
+        "type": "ui_tab",
+        "name": "Phone Friendly",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c9351305241e3c3f",
+        "type": "ui_tab",
+        "name": "Controls",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "e14eefd868cc18c8",
+        "type": "ui_tab",
+        "name": "testing",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
         "id": "7b9307d1947a13f0",
         "type": "ui_group",
         "name": "Left",
@@ -178,33 +302,6 @@
         "collapse": false
     },
     {
-        "id": "359d48deb1e9e787",
-        "type": "ui_tab",
-        "name": "T-05",
-        "icon": "dashboard",
-        "order": 7,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "613ee8f0c2ded6bc",
-        "type": "ui_tab",
-        "name": "T-02",
-        "icon": "dashboard",
-        "order": 4,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "21385dd97135be68",
-        "type": "ui_tab",
-        "name": "T-04",
-        "icon": "dashboard",
-        "order": 6,
-        "disabled": false,
-        "hidden": false
-    },
-    {
         "id": "210d2df426365d31",
         "type": "ui_group",
         "name": "Left",
@@ -223,15 +320,6 @@
         "disp": true,
         "width": "25",
         "collapse": false
-    },
-    {
-        "id": "0d272965d5394e35",
-        "type": "ui_tab",
-        "name": "Full System Overview",
-        "icon": "dashboard",
-        "order": 8,
-        "disabled": false,
-        "hidden": false
     },
     {
         "id": "6bf19a83f26ccc65",
@@ -281,6 +369,111 @@
         "order": 2,
         "disp": false,
         "width": 11,
+        "collapse": false
+    },
+    {
+        "id": "8c961b69c1e99929",
+        "type": "ui_group",
+        "name": "Left",
+        "tab": "03b240a63333d7e8",
+        "order": 1,
+        "disp": false,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "5f3136f8b2944906",
+        "type": "ui_group",
+        "name": "Right",
+        "tab": "03b240a63333d7e8",
+        "order": 2,
+        "disp": false,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "941863dc0f83f5fd",
+        "type": "ui_group",
+        "name": "Left",
+        "tab": "1b6ec810edf1f944",
+        "order": 1,
+        "disp": false,
+        "width": 14,
+        "collapse": false
+    },
+    {
+        "id": "485fc22d5a0ba791",
+        "type": "ui_group",
+        "name": "Right",
+        "tab": "1b6ec810edf1f944",
+        "order": 3,
+        "disp": false,
+        "width": 15,
+        "collapse": false
+    },
+    {
+        "id": "c7eefe7417c9409d",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "5b2e7308d9975198",
+        "order": 1,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "59f0a3a4c021c1f8",
+        "type": "ui_group",
+        "name": "Group 2",
+        "tab": "5b2e7308d9975198",
+        "order": 2,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "813266fe1aeae7a9",
+        "type": "ui_group",
+        "name": "Group 3",
+        "tab": "5b2e7308d9975198",
+        "order": 3,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "5be3979a5a319ab1",
+        "type": "ui_group",
+        "name": "Group 4",
+        "tab": "5b2e7308d9975198",
+        "order": 4,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "48c91039c2bb5fe0",
+        "type": "ui_group",
+        "name": "Group 5",
+        "tab": "5b2e7308d9975198",
+        "order": 5,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "8c91fd541c551379",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "234f07a00da93fe1",
+        "order": 1,
+        "disp": false,
+        "width": 30,
+        "collapse": false
+    },
+    {
+        "id": "9f41ae3953064c26",
+        "type": "ui_group",
+        "name": "Left",
+        "tab": "c9351305241e3c3f",
+        "order": 1,
+        "disp": false,
+        "width": 30,
         "collapse": false
     },
     {
@@ -6674,35 +6867,6 @@
         "height": 1
     },
     {
-        "id": "03b240a63333d7e8",
-        "type": "ui_tab",
-        "name": "T-03",
-        "icon": "dashboard",
-        "order": 5,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "8c961b69c1e99929",
-        "type": "ui_group",
-        "name": "Left",
-        "tab": "03b240a63333d7e8",
-        "order": 1,
-        "disp": false,
-        "width": "12",
-        "collapse": false
-    },
-    {
-        "id": "5f3136f8b2944906",
-        "type": "ui_group",
-        "name": "Right",
-        "tab": "03b240a63333d7e8",
-        "order": 2,
-        "disp": false,
-        "width": "12",
-        "collapse": false
-    },
-    {
         "id": "2a6a59482edf47c6",
         "type": "ui_spacer",
         "z": "af80505e1c4f7081",
@@ -7513,44 +7677,6 @@
         "height": 1
     },
     {
-        "id": "234f07a00da93fe1",
-        "type": "ui_tab",
-        "name": "Furnace",
-        "icon": "dashboard",
-        "order": 9,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "1b6ec810edf1f944",
-        "type": "ui_tab",
-        "name": "T-01",
-        "icon": "dashboard",
-        "order": 3,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "941863dc0f83f5fd",
-        "type": "ui_group",
-        "name": "Left",
-        "tab": "1b6ec810edf1f944",
-        "order": 1,
-        "disp": false,
-        "width": 14,
-        "collapse": false
-    },
-    {
-        "id": "485fc22d5a0ba791",
-        "type": "ui_group",
-        "name": "Right",
-        "tab": "1b6ec810edf1f944",
-        "order": 3,
-        "disp": false,
-        "width": 15,
-        "collapse": false
-    },
-    {
         "id": "15727fad6ba3c33f",
         "type": "ui_spacer",
         "z": "af80505e1c4f7081",
@@ -7719,70 +7845,6 @@
         "order": 3,
         "width": 15,
         "height": 1
-    },
-    {
-        "id": "5b2e7308d9975198",
-        "type": "ui_tab",
-        "name": "Phone Friendly",
-        "icon": "dashboard",
-        "order": 1,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "c7eefe7417c9409d",
-        "type": "ui_group",
-        "name": "Group 1",
-        "tab": "5b2e7308d9975198",
-        "order": 1,
-        "disp": true,
-        "width": 6
-    },
-    {
-        "id": "59f0a3a4c021c1f8",
-        "type": "ui_group",
-        "name": "Group 2",
-        "tab": "5b2e7308d9975198",
-        "order": 2,
-        "disp": true,
-        "width": 6
-    },
-    {
-        "id": "813266fe1aeae7a9",
-        "type": "ui_group",
-        "name": "Group 3",
-        "tab": "5b2e7308d9975198",
-        "order": 3,
-        "disp": true,
-        "width": 6
-    },
-    {
-        "id": "5be3979a5a319ab1",
-        "type": "ui_group",
-        "name": "Group 4",
-        "tab": "5b2e7308d9975198",
-        "order": 4,
-        "disp": true,
-        "width": 6
-    },
-    {
-        "id": "48c91039c2bb5fe0",
-        "type": "ui_group",
-        "name": "Group 5",
-        "tab": "5b2e7308d9975198",
-        "order": 5,
-        "disp": true,
-        "width": 6
-    },
-    {
-        "id": "8c91fd541c551379",
-        "type": "ui_group",
-        "name": "Group 1",
-        "tab": "234f07a00da93fe1",
-        "order": 1,
-        "disp": false,
-        "width": 30,
-        "collapse": false
     },
     {
         "id": "29b372275022542f",
@@ -18415,45 +18477,6 @@
         "height": 1
     },
     {
-        "id": "d9f94d14648c2210",
-        "type": "mqtt-broker",
-        "broker": "localhost",
-        "port": "1883",
-        "clientid": "NodeRedSQLClient",
-        "usetls": false,
-        "compatmode": true,
-        "keepalive": "15",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": ""
-    },
-    {
-        "id": "224ff3e95b859ab1",
-        "type": "MSSQL-CN",
-        "name": "Dev",
-        "server": "localhost",
-        "encyption": false,
-        "database": "Dev"
-    },
-    {
-        "id": "b0e02dfae258cdcb",
-        "type": "OpcUa-Endpoint",
-        "endpoint": "opc.tcp://localhost:62544/Quickstarts/AlarmConditionServer",
-        "login": false
-    },
-    {
-        "id": "c9351305241e3c3f",
-        "type": "ui_tab",
-        "name": "Controls",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
         "id": "129fd0239d797a09",
         "type": "ui_spacer",
         "z": "af80505e1c4f7081",
@@ -18802,24 +18825,6 @@
         "order": 33,
         "width": 8,
         "height": 1
-    },
-    {
-        "id": "e14eefd868cc18c8",
-        "type": "ui_tab",
-        "name": "testing",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "9f41ae3953064c26",
-        "type": "ui_group",
-        "name": "Left",
-        "tab": "c9351305241e3c3f",
-        "order": 1,
-        "disp": false,
-        "width": 30,
-        "collapse": false
     },
     {
         "id": "ae7d3ceb11e7f8c8",
@@ -19262,35 +19267,22 @@
         "height": 1
     },
     {
-        "id": "fb3e793aa41dfeaa",
-        "type": "mqtt-broker",
-        "name": "",
-        "broker": "132.181.246.119",
-        "port": "1883",
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": "4",
-        "keepalive": "60",
-        "cleansession": true,
-        "autoUnsubscribe": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthRetain": "false",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closeRetain": "false",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willRetain": "false",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
+        "id": "a053172554a6aedb",
+        "type": "OpcUa-Endpoint",
+        "endpoint": "opc.tcp://192.168.50.61:4840",
+        "secpol": "None",
+        "secmode": "None",
+        "none": false,
+        "login": true,
+        "usercert": false,
+        "usercertificate": "",
+        "userprivatekey": ""
+    },
+    {
+        "id": "b0e02dfae258cdcb",
+        "type": "OpcUa-Endpoint",
+        "endpoint": "opc.tcp://localhost:62544/Quickstarts/AlarmConditionServer",
+        "login": false
     },
     {
         "id": "28306d59f714a835",
@@ -19301,33 +19293,6 @@
         "x": 130,
         "y": 220,
         "wires": []
-    },
-    {
-        "id": "2f3a55e86a6c30dc",
-        "type": "OpcUa-Client",
-        "z": "af80505e1c4f7081",
-        "endpoint": "a053172554a6aedb",
-        "action": "read",
-        "deadbandtype": "a",
-        "deadbandvalue": 1,
-        "time": "500",
-        "timeUnit": "ms",
-        "certificate": "n",
-        "localfile": "",
-        "localkeyfile": "",
-        "securitymode": "None",
-        "securitypolicy": "None",
-        "folderName4PKI": "",
-        "name": "",
-        "x": 760,
-        "y": 420,
-        "wires": [
-            [
-                "c8ed4d4e2ff65ebd",
-                "2a7f27115539af85",
-                "e6d71b93752cf439"
-            ]
-        ]
     },
     {
         "id": "3690815359ca7d3e",
@@ -19360,7 +19325,6 @@
                 "f64e49c2065b603a",
                 "ea492d30a5a383aa",
                 "8fecb748d2193153",
-                "7ffc1cf9de96e879",
                 "9151b42e057ac46d",
                 "fafc1f8d899453f4",
                 "756577b21cef2354"
@@ -19376,78 +19340,6 @@
         "x": 370,
         "y": 1300,
         "wires": []
-    },
-    {
-        "id": "d8a23248fa8225ea",
-        "type": "OpcUa-Client",
-        "z": "af80505e1c4f7081",
-        "endpoint": "a053172554a6aedb",
-        "action": "write",
-        "deadbandtype": "a",
-        "deadbandvalue": 1,
-        "time": "500",
-        "timeUnit": "ms",
-        "certificate": "n",
-        "localfile": "",
-        "localkeyfile": "",
-        "securitymode": "None",
-        "securitypolicy": "None",
-        "folderName4PKI": "",
-        "name": "",
-        "x": 1460,
-        "y": 1860,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "a2874c790f57d329",
-        "type": "ui_switch",
-        "z": "af80505e1c4f7081",
-        "name": "EW_CIRCULATION",
-        "label": "EW Circulation",
-        "tooltip": "",
-        "group": "9f41ae3953064c26",
-        "order": 4,
-        "width": 13,
-        "height": 3,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "x": 620,
-        "y": 1700,
-        "wires": [
-            [
-                "627efa8f3627b10b"
-            ]
-        ]
-    },
-    {
-        "id": "d3fc10823e618c25",
-        "type": "OpcUa-Item",
-        "z": "af80505e1c4f7081",
-        "item": "ns=4;s=WashDigestion",
-        "datatype": "String",
-        "value": "",
-        "name": "",
-        "x": 240,
-        "y": 300,
-        "wires": [
-            [
-                "0de7800a973778dc"
-            ]
-        ]
     },
     {
         "id": "0de7800a973778dc",
@@ -19540,22 +19432,6 @@
         ]
     },
     {
-        "id": "ddc2dc891f300804",
-        "type": "OpcUa-Item",
-        "z": "af80505e1c4f7081",
-        "item": "ns=4;s=Cementation",
-        "datatype": "String",
-        "value": "",
-        "name": "",
-        "x": 240,
-        "y": 340,
-        "wires": [
-            [
-                "db05ea03fd8ebf9f"
-            ]
-        ]
-    },
-    {
         "id": "db05ea03fd8ebf9f",
         "type": "function",
         "z": "af80505e1c4f7081",
@@ -19608,38 +19484,6 @@
         ]
     },
     {
-        "id": "7179279d253c6d7e",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "5f3136f8b2944906",
-        "order": 4,
-        "width": 10,
-        "height": 5,
-        "name": "",
-        "label": "pH",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 1690,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "ba1462401afc098d",
-        "type": "OpcUa-Item",
-        "z": "af80505e1c4f7081",
-        "item": "ns=4;s=Electrowinning",
-        "datatype": "String",
-        "value": "",
-        "name": "",
-        "x": 240,
-        "y": 380,
-        "wires": [
-            [
-                "90a590c9ed37c29a"
-            ]
-        ]
-    },
-    {
         "id": "90a590c9ed37c29a",
         "type": "function",
         "z": "af80505e1c4f7081",
@@ -19659,38 +19503,6 @@
         ]
     },
     {
-        "id": "d14a7bf051b0b8ce",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "65407f4518d0816a",
-        "order": 2,
-        "width": 11,
-        "height": 6,
-        "name": "",
-        "label": "pH",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "x": 1730,
-        "y": 640,
-        "wires": []
-    },
-    {
-        "id": "f64e49c2065b603a",
-        "type": "OpcUa-Item",
-        "z": "af80505e1c4f7081",
-        "item": "ns=4;s=OxPrecipitation",
-        "datatype": "String",
-        "value": "",
-        "name": "",
-        "x": 240,
-        "y": 420,
-        "wires": [
-            [
-                "22ab1281cf9066c6"
-            ]
-        ]
-    },
-    {
         "id": "22ab1281cf9066c6",
         "type": "function",
         "z": "af80505e1c4f7081",
@@ -19706,38 +19518,6 @@
         "wires": [
             [
                 "2f3a55e86a6c30dc"
-            ]
-        ]
-    },
-    {
-        "id": "e663a3c089598210",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "6bf19a83f26ccc65",
-        "order": 3,
-        "width": 14,
-        "height": 5,
-        "name": "",
-        "label": "",
-        "format": "{{msg.payload}} pH",
-        "layout": "row-right",
-        "x": 1710,
-        "y": 980,
-        "wires": []
-    },
-    {
-        "id": "ea492d30a5a383aa",
-        "type": "OpcUa-Item",
-        "z": "af80505e1c4f7081",
-        "item": "ns=4;s=BufferTank",
-        "datatype": "String",
-        "value": "",
-        "name": "",
-        "x": 240,
-        "y": 460,
-        "wires": [
-            [
-                "341f824420cdb1c0"
             ]
         ]
     },
@@ -19829,32 +19609,6 @@
                 "4e9cd7baf5741cdd"
             ]
         ]
-    },
-    {
-        "id": "cf2f101c5c46412e",
-        "type": "ui_gauge",
-        "z": "af80505e1c4f7081",
-        "name": "",
-        "group": "8c961b69c1e99929",
-        "order": 4,
-        "width": 12,
-        "height": 10,
-        "gtype": "wave",
-        "title": "",
-        "label": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "3",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 1870,
-        "y": 460,
-        "wires": []
     },
     {
         "id": "e019ef4035a6f5fc",
@@ -19998,58 +19752,6 @@
         ]
     },
     {
-        "id": "e241ffd1e5f20296",
-        "type": "ui_gauge",
-        "z": "af80505e1c4f7081",
-        "name": "",
-        "group": "210d2df426365d31",
-        "order": 6,
-        "width": 11,
-        "height": 9,
-        "gtype": "wave",
-        "title": "Level",
-        "label": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "2",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 1870,
-        "y": 740,
-        "wires": []
-    },
-    {
-        "id": "52dcffeb30934c21",
-        "type": "ui_gauge",
-        "z": "af80505e1c4f7081",
-        "name": "",
-        "group": "2761df262ae914fd",
-        "order": 6,
-        "width": 7,
-        "height": 6,
-        "gtype": "wave",
-        "title": "",
-        "label": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "3",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 1870,
-        "y": 1160,
-        "wires": []
-    },
-    {
         "id": "b064d9499d6923e2",
         "type": "function",
         "z": "af80505e1c4f7081",
@@ -20115,264 +19817,6 @@
         ]
     },
     {
-        "id": "146d41d9c5fbd120",
-        "type": "ui_chart",
-        "z": "af80505e1c4f7081",
-        "name": "",
-        "group": "3342ef65ea84e0bc",
-        "order": 6,
-        "width": 11,
-        "height": 6,
-        "label": "Temperature",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "0",
-        "ymax": "80",
-        "removeOlder": "20",
-        "removeOlderPoints": "",
-        "removeOlderUnit": "60",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#ff64ff",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "x": 1710,
-        "y": 1040,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "a1ce05848db0af19",
-        "type": "ui_gauge",
-        "z": "af80505e1c4f7081",
-        "name": "",
-        "group": "7b9307d1947a13f0",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "gtype": "wave",
-        "title": "Buffer Level",
-        "label": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "4",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 2010,
-        "y": 1380,
-        "wires": []
-    },
-    {
-        "id": "75888f73ce0f637f",
-        "type": "ui_gauge",
-        "z": "af80505e1c4f7081",
-        "name": "",
-        "group": "675036dd.603328",
-        "order": 5,
-        "width": "5",
-        "height": "5",
-        "gtype": "wave",
-        "title": "T-01",
-        "label": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "3",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 2310,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "4ed8ae7194dd96c8",
-        "type": "ui_gauge",
-        "z": "af80505e1c4f7081",
-        "name": "",
-        "group": "675036dd.603328",
-        "order": 6,
-        "width": "5",
-        "height": "5",
-        "gtype": "wave",
-        "title": "T-02",
-        "label": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "3",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 2310,
-        "y": 480,
-        "wires": []
-    },
-    {
-        "id": "b33c15b403dc2de4",
-        "type": "ui_gauge",
-        "z": "af80505e1c4f7081",
-        "name": "",
-        "group": "675036dd.603328",
-        "order": 7,
-        "width": "5",
-        "height": "5",
-        "gtype": "wave",
-        "title": "T-03",
-        "label": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "3",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 2310,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "9471aaa5dbc01fce",
-        "type": "ui_gauge",
-        "z": "af80505e1c4f7081",
-        "name": "",
-        "group": "675036dd.603328",
-        "order": 8,
-        "width": "5",
-        "height": "5",
-        "gtype": "wave",
-        "title": "T-04",
-        "label": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "4",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 2310,
-        "y": 560,
-        "wires": []
-    },
-    {
-        "id": "a9dea75f1173c19b",
-        "type": "ui_gauge",
-        "z": "af80505e1c4f7081",
-        "name": "",
-        "group": "675036dd.603328",
-        "order": 9,
-        "width": "5",
-        "height": "5",
-        "gtype": "wave",
-        "title": "EW",
-        "label": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "2",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 2310,
-        "y": 600,
-        "wires": []
-    },
-    {
-        "id": "9dc92ddb307b058c",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "6bf19a83f26ccc65",
-        "order": 2,
-        "width": 14,
-        "height": 5,
-        "name": "",
-        "label": "",
-        "format": "{{msg.payload}} mV",
-        "layout": "col-center",
-        "x": 1690,
-        "y": 1120,
-        "wires": []
-    },
-    {
-        "id": "21b9ebdb1b3edcaa",
-        "type": "ui_chart",
-        "z": "af80505e1c4f7081",
-        "name": "",
-        "group": "3342ef65ea84e0bc",
-        "order": 13,
-        "width": 11,
-        "height": 6,
-        "label": "Oxidation Reduction Potential",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "-1000",
-        "ymax": "1000",
-        "removeOlder": "20",
-        "removeOlderPoints": "",
-        "removeOlderUnit": "60",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#ff64ff",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#dd2727",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "x": 1770,
-        "y": 1080,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "8fecb748d2193153",
         "type": "function",
         "z": "af80505e1c4f7081",
@@ -20387,793 +19831,6 @@
         "y": 620,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "fab2ee849c046f97",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "6bf19a83f26ccc65",
-        "order": 1,
-        "width": 14,
-        "height": 6,
-        "name": "",
-        "label": "",
-        "format": "{{msg.payload}} °C",
-        "layout": "col-center",
-        "x": 1870,
-        "y": 1040,
-        "wires": []
-    },
-    {
-        "id": "5d3e748d74edcc11",
-        "type": "ui_template",
-        "z": "af80505e1c4f7081",
-        "group": "485fc22d5a0ba791",
-        "name": "",
-        "order": 24,
-        "width": 0,
-        "height": 0,
-        "format": "<style>\n\n  .nr-dashboard-text p.value{\n  font-size:160px !important\n  }\n  .nr-dashboard-text p.label{\n    font-size:60px\n    }\n\n  \n</style",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "x": 1000,
-        "y": 500,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "653caeee817235fe",
-        "type": "ui_template",
-        "z": "af80505e1c4f7081",
-        "group": "2761df262ae914fd",
-        "name": "",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "format": "<style>\n  .nr-dashboard-text p.value {\n    font-size: 150px !important\n  }\n\n  .nr-dashboard-text p.label {\n    font-size: 60px\n  }\n\n  </style",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "x": 1000,
-        "y": 540,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "20a359e2ccc12828",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "5f3136f8b2944906",
-        "order": 15,
-        "width": 12,
-        "height": 6,
-        "name": "",
-        "label": "",
-        "format": "{{msg.payload}} C",
-        "layout": "row-center",
-        "x": 1690,
-        "y": 500,
-        "wires": []
-    },
-    {
-        "id": "cd281d5cc3bcac06",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "69e0a1bd71cfcb0a",
-        "order": 3,
-        "width": 16,
-        "height": 10,
-        "name": "",
-        "label": "Temperature",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "x": 2010,
-        "y": 1320,
-        "wires": []
-    },
-    {
-        "id": "a19047a37253c397",
-        "type": "ui_template",
-        "z": "af80505e1c4f7081",
-        "group": "69e0a1bd71cfcb0a",
-        "name": "",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "format": "<style>\n  .nr-dashboard-text p.value {\n    font-size: 150px !important\n  }\n\n  .nr-dashboard-text p.label {\n    font-size: 60px\n  }\n\n  </style",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "x": 1000,
-        "y": 620,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "68049e6f367fd7be",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "c7eefe7417c9409d",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "T-01 pH",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 2620,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "8fa4670dfeaf1641",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "c7eefe7417c9409d",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "T-01 Temperature",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 2650,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "4e9cd7baf5741cdd",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "c7eefe7417c9409d",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "T-01 Level",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 2630,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "c62011d4f0dc020a",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "59f0a3a4c021c1f8",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "T-02 Temperature",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 2650,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "5a30e26f8840b25d",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "59f0a3a4c021c1f8",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "T-02 pH",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 2620,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "83ec1bc9e9424cb1",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "59f0a3a4c021c1f8",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "T-02 Level",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 2630,
-        "y": 480,
-        "wires": []
-    },
-    {
-        "id": "5ee1787b74c6d252",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "813266fe1aeae7a9",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "T-03 Temperature",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 2650,
-        "y": 580,
-        "wires": []
-    },
-    {
-        "id": "363dd4fccdf15443",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "813266fe1aeae7a9",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "T-03 pH",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 2620,
-        "y": 620,
-        "wires": []
-    },
-    {
-        "id": "6d4eda37cee54481",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "813266fe1aeae7a9",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "T-03 Level",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 2630,
-        "y": 660,
-        "wires": []
-    },
-    {
-        "id": "107cd8f6d4201596",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "5be3979a5a319ab1",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "T-04 Temperature",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 2650,
-        "y": 740,
-        "wires": []
-    },
-    {
-        "id": "e0502806d934203b",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "5be3979a5a319ab1",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "T-04 Level",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 2630,
-        "y": 780,
-        "wires": []
-    },
-    {
-        "id": "5790ea6a29ccb098",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "59f0a3a4c021c1f8",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "T-02 ORP",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 2620,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "6e6de9e8a109f6fe",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "48c91039c2bb5fe0",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "T-05 Temperature",
-        "format": "{{msg.payload}}°C",
-        "layout": "row-spread",
-        "x": 2650,
-        "y": 880,
-        "wires": []
-    },
-    {
-        "id": "f09c1af516ce50da",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "48c91039c2bb5fe0",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "T-05 Level",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 2630,
-        "y": 1040,
-        "wires": []
-    },
-    {
-        "id": "c97e35debf35925a",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "48c91039c2bb5fe0",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "T-05 Current",
-        "format": "{{msg.payload}} Amps",
-        "layout": "row-spread",
-        "x": 2630,
-        "y": 960,
-        "wires": []
-    },
-    {
-        "id": "4dc5a930777238a9",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "48c91039c2bb5fe0",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "T-05 Voltage",
-        "format": "{{msg.payload}}V",
-        "layout": "row-spread",
-        "x": 2630,
-        "y": 1000,
-        "wires": []
-    },
-    {
-        "id": "bff550b45bec5058",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "48c91039c2bb5fe0",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "T-05 pH",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 2620,
-        "y": 920,
-        "wires": []
-    },
-    {
-        "id": "220e2a90f76b004c",
-        "type": "ui_template",
-        "z": "af80505e1c4f7081",
-        "group": "7b9307d1947a13f0",
-        "name": "gauge-colour",
-        "order": 6,
-        "width": 0,
-        "height": 0,
-        "format": "<style ng-if=\"msg.payload > 2\">\n    .nr-dashboard-gauge circle {\n        fill: red !important;\n    }\n</style>\n",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "x": 2010,
-        "y": 1420,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7ffc1cf9de96e879",
-        "type": "moment",
-        "z": "af80505e1c4f7081",
-        "name": "",
-        "topic": "",
-        "input": "",
-        "inputType": "date",
-        "inTz": "Pacific/Auckland",
-        "adjAmount": 0,
-        "adjType": "days",
-        "adjDir": "add",
-        "format": "HH:mm:ss",
-        "locale": "en-US",
-        "output": "payload",
-        "outputType": "msg",
-        "outTz": "Pacific/Auckland",
-        "x": 220,
-        "y": 660,
-        "wires": [
-            [
-                "5cf63896e16bf265",
-                "68f36c6e8823ff1e",
-                "424865ebddecf1d7",
-                "341077e606a35f32",
-                "b0f4d3ed12fcdb51",
-                "98d26fafca523c81"
-            ]
-        ]
-    },
-    {
-        "id": "5cf63896e16bf265",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "675036dd.603328",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "",
-        "format": "<font size = 100>{{msg.payload}}",
-        "layout": "row-center",
-        "x": 230,
-        "y": 700,
-        "wires": []
-    },
-    {
-        "id": "dcf2ca5a2077025e",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "65407f4518d0816a",
-        "order": 4,
-        "width": 11,
-        "height": 5,
-        "name": "",
-        "label": "Voltage (V)",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "x": 1710,
-        "y": 780,
-        "wires": []
-    },
-    {
-        "id": "5172c2e2f453d700",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "65407f4518d0816a",
-        "order": 5,
-        "width": 11,
-        "height": 5,
-        "name": "",
-        "label": "Current (A)",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "x": 1710,
-        "y": 820,
-        "wires": []
-    },
-    {
-        "id": "4a11bae188dda7f8",
-        "type": "ui_template",
-        "z": "af80505e1c4f7081",
-        "group": "65407f4518d0816a",
-        "name": "",
-        "order": 6,
-        "width": 11,
-        "height": 1,
-        "format": "<style>\n  .nr-dashboard-text p.value {\n    font-size: 140px !important\n  }\n\n  .nr-dashboard-text p.label {\n    font-size: 40px\n  }\n\n  div {\n    padding: 0;\n    margin: 0;\n  }\n\n</style",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "x": 1000,
-        "y": 660,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "68f36c6e8823ff1e",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "3342ef65ea84e0bc",
-        "order": 2,
-        "width": 11,
-        "height": 2,
-        "name": "",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "x": 230,
-        "y": 780,
-        "wires": []
-    },
-    {
-        "id": "424865ebddecf1d7",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "210d2df426365d31",
-        "order": 2,
-        "width": 13,
-        "height": 2,
-        "name": "",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "x": 230,
-        "y": 820,
-        "wires": []
-    },
-    {
-        "id": "341077e606a35f32",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "7b9307d1947a13f0",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "x": 230,
-        "y": 860,
-        "wires": []
-    },
-    {
-        "id": "da39475d10126d34",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "e48f7d12aa97556a",
-        "order": 4,
-        "width": 11,
-        "height": 5,
-        "name": "ChlorineTag",
-        "label": "Chlorine (ppm)",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "x": 1510,
-        "y": 820,
-        "wires": []
-    },
-    {
-        "id": "7a92d692e4148071",
-        "type": "ui_template",
-        "z": "af80505e1c4f7081",
-        "group": "675036dd.603328",
-        "name": "gauge-colour",
-        "order": 6,
-        "width": 0,
-        "height": 0,
-        "format": "<style ng-if=\"msg.payload > 2\">\n    .nr-dashboard-gauge circle {\n        fill: red !important;\n    }\n</style>\n",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "x": 2010,
-        "y": 1460,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "1dd9a30126ba123f",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "e48f7d12aa97556a",
-        "order": 2,
-        "width": 11,
-        "height": 6,
-        "name": "",
-        "label": "Temperature",
-        "format": "{{msg.payload}}°C",
-        "layout": "col-center",
-        "x": 1750,
-        "y": 680,
-        "wires": []
-    },
-    {
-        "id": "826ca00412e83c8b",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "e48f7d12aa97556a",
-        "order": 3,
-        "width": 11,
-        "height": 6,
-        "name": "",
-        "label": "Hydrogen (%LEL)",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "x": 1530,
-        "y": 860,
-        "wires": []
-    },
-    {
-        "id": "47443ecc857d3d08",
-        "type": "ui_switch",
-        "z": "af80505e1c4f7081",
-        "name": "FAST_LOGGING",
-        "label": "FAST LOGGING",
-        "tooltip": "",
-        "group": "9f41ae3953064c26",
-        "order": 2,
-        "width": 14,
-        "height": 3,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "x": 610,
-        "y": 1660,
-        "wires": [
-            [
-                "6e1b82958d48c881"
-            ]
-        ]
-    },
-    {
-        "id": "3c6fabdb9d136690",
-        "type": "ui_template",
-        "z": "af80505e1c4f7081",
-        "group": "9f41ae3953064c26",
-        "name": "",
-        "order": 25,
-        "width": 6,
-        "height": 1,
-        "format": "<style>\n  md-switch {\n    scale: 400% !important\n  }\n\n  p.label {\n    font-size: 80px !important\n  }\n\n  .nr-dashboard-textinput input{\n    font-size: 80px !important\n    }\n\n  md-input-container .md-input {\n    height: 100px !important\n  }\n\n  p{\n    font-size: 80px !important\n  }\n\n</style",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "x": 620,
-        "y": 2160,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b0f4d3ed12fcdb51",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "485fc22d5a0ba791",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "x": 230,
-        "y": 740,
-        "wires": []
-    },
-    {
-        "id": "98d26fafca523c81",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "8c961b69c1e99929",
-        "order": 2,
-        "width": 12,
-        "height": 2,
-        "name": "",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "x": 230,
-        "y": 900,
-        "wires": []
-    },
-    {
-        "id": "26ca7005cb89a82d",
-        "type": "ui_template",
-        "z": "af80505e1c4f7081",
-        "group": "5f3136f8b2944906",
-        "name": "",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "format": "<style>\n  .nr-dashboard-text p.value {\n    font-size: 140px !important\n  }\n\n  .nr-dashboard-text p.label {\n    font-size: 40px\n  }\n\n  div {\n    padding: 0;\n    margin: 0;\n  }\n\n  </style",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "x": 1000,
-        "y": 580,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d03bc15f895096dc",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "48c91039c2bb5fe0",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "T-05 Chlorine",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 2640,
-        "y": 1080,
-        "wires": []
-    },
-    {
-        "id": "f3e157841cfa66c8",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "48c91039c2bb5fe0",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "T-05 Hydrogen",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 2640,
-        "y": 1120,
-        "wires": []
-    },
-    {
-        "id": "e17ee8c05428a427",
-        "type": "ui_template",
-        "z": "af80505e1c4f7081",
-        "group": "210d2df426365d31",
-        "name": "gauge-colour",
-        "order": 6,
-        "width": 0,
-        "height": 0,
-        "format": "<style ng-if=\"msg.payload > 0.9\">\n\nmd-card.nr-dashboard-text.layout-column.layout-align-center-center.nr-dashboard-widget-Hydrogen___LEL_.visible{\n//\nbackground-color: red !important;\ncolor: red !important;\n}\n\nmd-content._md.flex{\nbackground-color: red !important;\ncolor: red !important;\n}\n\n</style>\n",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "x": 1510,
-        "y": 900,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "9151b42e057ac46d",
-        "type": "OpcUa-Item",
-        "z": "af80505e1c4f7081",
-        "item": "ns=4;s=Furnace1",
-        "datatype": "String",
-        "value": "",
-        "name": "",
-        "x": 240,
-        "y": 500,
-        "wires": [
-            [
-                "a33accb21e23d12d"
-            ]
         ]
     },
     {
@@ -21231,190 +19888,6 @@
         ]
     },
     {
-        "id": "c31075c1fd44864e",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "8c91fd541c551379",
-        "order": 3,
-        "width": 9,
-        "height": 5,
-        "name": "",
-        "label": "T1",
-        "format": "{{msg.payload}}°C",
-        "layout": "col-center",
-        "x": 1710,
-        "y": 1540,
-        "wires": []
-    },
-    {
-        "id": "229ac4e2abe1c2f7",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "8c91fd541c551379",
-        "order": 5,
-        "width": 9,
-        "height": 5,
-        "name": "",
-        "label": "T2",
-        "format": "{{msg.payload}}°C",
-        "layout": "col-center",
-        "x": 1710,
-        "y": 1580,
-        "wires": []
-    },
-    {
-        "id": "975f81a7feced482",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "8c91fd541c551379",
-        "order": 7,
-        "width": 9,
-        "height": 5,
-        "name": "",
-        "label": "T3",
-        "format": "{{msg.payload}}°C",
-        "layout": "col-center",
-        "x": 1710,
-        "y": 1620,
-        "wires": []
-    },
-    {
-        "id": "a5378238e207e85a",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "8c91fd541c551379",
-        "order": 21,
-        "width": 9,
-        "height": 5,
-        "name": "",
-        "label": "T4",
-        "format": "{{msg.payload}}°C",
-        "layout": "col-center",
-        "x": 1710,
-        "y": 1660,
-        "wires": []
-    },
-    {
-        "id": "44d5a5907d34636c",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "8c91fd541c551379",
-        "order": 19,
-        "width": 9,
-        "height": 5,
-        "name": "",
-        "label": "T5",
-        "format": "{{msg.payload}}°C",
-        "layout": "col-center",
-        "x": 1710,
-        "y": 1700,
-        "wires": []
-    },
-    {
-        "id": "282f574838c8303b",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "8c91fd541c551379",
-        "order": 17,
-        "width": 9,
-        "height": 5,
-        "name": "",
-        "label": "T6",
-        "format": "{{msg.payload}}°C",
-        "layout": "col-center",
-        "x": 1710,
-        "y": 1740,
-        "wires": []
-    },
-    {
-        "id": "ce2fc6322f57903e",
-        "type": "ui_template",
-        "z": "af80505e1c4f7081",
-        "group": "8c91fd541c551379",
-        "name": "",
-        "order": 32,
-        "width": 11,
-        "height": 1,
-        "format": "<style>\n  .nr-dashboard-text p.value {\n    font-size: 140px !important\n  }\n\n  .nr-dashboard-text p.label {\n    font-size: 40px\n  }\n\n  div {\n    padding: 0;\n    margin: 0;\n  }\n\n</style",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "x": 1000,
-        "y": 700,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "1f95783c484444a2",
-        "type": "ui_template",
-        "z": "af80505e1c4f7081",
-        "group": "210d2df426365d31",
-        "name": "gauge-colour",
-        "order": 6,
-        "width": 0,
-        "height": 0,
-        "format": "<style ng-if=\"msg.payload > 19\">\n\nmd-card.nr-dashboard-text.layout-column.layout-align-center-center.nr-dashboard-widget-Chlorine__ppm_.visible{\n//\nbackground-color: red !important;\ncolor: red !important;\n}\n\nmd-content._md.flex{\nbackground-color: red !important;\ncolor: red !important;\n}\n\n</style>\n",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "x": 1510,
-        "y": 940,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "88c62a4a0a41550c",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "485fc22d5a0ba791",
-        "order": 6,
-        "width": 15,
-        "height": 6,
-        "name": "pH",
-        "label": "",
-        "format": "{{msg.payload}} pH",
-        "layout": "col-center",
-        "x": 1690,
-        "y": 60,
-        "wires": []
-    },
-    {
-        "id": "683638718c70fc11",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "485fc22d5a0ba791",
-        "order": 14,
-        "width": 15,
-        "height": 6,
-        "name": "Temperature T-01",
-        "label": "",
-        "format": "{{msg.payload}} °C",
-        "layout": "col-center",
-        "x": 1730,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "fafc1f8d899453f4",
-        "type": "OpcUa-Item",
-        "z": "af80505e1c4f7081",
-        "item": "ns=4;s=cumulative_flow",
-        "datatype": "String",
-        "value": "",
-        "name": "",
-        "x": 240,
-        "y": 540,
-        "wires": [
-            [
-                "ea46308679bd55bf"
-            ]
-        ]
-    },
-    {
         "id": "ea46308679bd55bf",
         "type": "function",
         "z": "af80505e1c4f7081",
@@ -21451,22 +19924,6 @@
                 "dba71392d58e65aa"
             ]
         ]
-    },
-    {
-        "id": "dba71392d58e65aa",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "485fc22d5a0ba791",
-        "order": 22,
-        "width": "15",
-        "height": 2,
-        "name": "Acid Volume",
-        "label": "",
-        "format": "{{msg.payload}} m3",
-        "layout": "row-spread",
-        "x": 1690,
-        "y": 260,
-        "wires": []
     },
     {
         "id": "bddb17a45cca7cc7",
@@ -21516,160 +19973,6 @@
         ]
     },
     {
-        "id": "0f2c3c899d00014c",
-        "type": "OpcUa-Item",
-        "z": "af80505e1c4f7081",
-        "item": "ns=4;s=FurnaceBatchID",
-        "datatype": "String",
-        "value": "",
-        "name": "FurnaceBatchID",
-        "x": 1220,
-        "y": 1980,
-        "wires": [
-            [
-                "d8a23248fa8225ea"
-            ]
-        ]
-    },
-    {
-        "id": "30ef25745bb9fe3a",
-        "type": "OpcUa-Item",
-        "z": "af80505e1c4f7081",
-        "item": "ns=4;s=T05BatchID",
-        "datatype": "String",
-        "value": "",
-        "name": "T05BatchID",
-        "x": 1210,
-        "y": 1940,
-        "wires": [
-            [
-                "d8a23248fa8225ea"
-            ]
-        ]
-    },
-    {
-        "id": "753ea934f92a3446",
-        "type": "OpcUa-Item",
-        "z": "af80505e1c4f7081",
-        "item": "ns=4;s=T04BatchID",
-        "datatype": "String",
-        "value": "",
-        "name": "T04BatchID",
-        "x": 1210,
-        "y": 1900,
-        "wires": [
-            [
-                "d8a23248fa8225ea"
-            ]
-        ]
-    },
-    {
-        "id": "2d5b5fc3e2e0c3fd",
-        "type": "OpcUa-Item",
-        "z": "af80505e1c4f7081",
-        "item": "ns=4;s=T03BatchID",
-        "datatype": "String",
-        "value": "",
-        "name": "T03BatchID",
-        "x": 1210,
-        "y": 1860,
-        "wires": [
-            [
-                "d8a23248fa8225ea"
-            ]
-        ]
-    },
-    {
-        "id": "4d4d0183d941f356",
-        "type": "OpcUa-Item",
-        "z": "af80505e1c4f7081",
-        "item": "ns=4;s=T02BatchID",
-        "datatype": "String",
-        "value": "",
-        "name": "T02BatchID",
-        "x": 1210,
-        "y": 1820,
-        "wires": [
-            [
-                "d8a23248fa8225ea"
-            ]
-        ]
-    },
-    {
-        "id": "1253528949a9d9da",
-        "type": "OpcUa-Item",
-        "z": "af80505e1c4f7081",
-        "item": "ns=4;s=T01BatchID",
-        "datatype": "String",
-        "value": "",
-        "name": "T01BatchID",
-        "x": 1210,
-        "y": 1780,
-        "wires": [
-            [
-                "d8a23248fa8225ea",
-                "2c64355c024fd9f7"
-            ]
-        ]
-    },
-    {
-        "id": "627efa8f3627b10b",
-        "type": "OpcUa-Item",
-        "z": "af80505e1c4f7081",
-        "item": "ns=4;s=EW_DIAPHRAGM_ENABLE",
-        "datatype": "Boolean",
-        "value": "",
-        "name": "EW_DIAPHRAGM_ENABLE",
-        "x": 1260,
-        "y": 1740,
-        "wires": [
-            [
-                "d8a23248fa8225ea"
-            ]
-        ]
-    },
-    {
-        "id": "6e1b82958d48c881",
-        "type": "OpcUa-Item",
-        "z": "af80505e1c4f7081",
-        "item": "ns=4;s=FAST_LOG",
-        "datatype": "Boolean",
-        "value": "",
-        "name": "FAST_LOG",
-        "x": 1210,
-        "y": 1700,
-        "wires": [
-            [
-                "d8a23248fa8225ea"
-            ]
-        ]
-    },
-    {
-        "id": "74e9ee21c852dc41",
-        "type": "ui_text_input",
-        "z": "af80505e1c4f7081",
-        "name": "BatchID_inputA",
-        "label": "<font size=100>Enter Batch 1 ID:",
-        "tooltip": "",
-        "group": "9f41ae3953064c26",
-        "order": 11,
-        "width": 12,
-        "height": 3,
-        "passthru": true,
-        "mode": "text",
-        "delay": 300,
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 820,
-        "y": 2160,
-        "wires": [
-            [
-                "123069a23d127dec",
-                "b7ede8204f6ca354"
-            ]
-        ]
-    },
-    {
         "id": "b7ede8204f6ca354",
         "type": "function",
         "z": "af80505e1c4f7081",
@@ -21685,38 +19988,6 @@
         "wires": [
             [
                 "17ee6985c82b1e48"
-            ]
-        ]
-    },
-    {
-        "id": "17ee6985c82b1e48",
-        "type": "OpcUa-Item",
-        "z": "af80505e1c4f7081",
-        "item": "ns=4;s=BatchID1",
-        "datatype": "String",
-        "value": "",
-        "name": "BatchID1",
-        "x": 1200,
-        "y": 2020,
-        "wires": [
-            [
-                "d8a23248fa8225ea"
-            ]
-        ]
-    },
-    {
-        "id": "e4737f79fed34fa0",
-        "type": "OpcUa-Item",
-        "z": "af80505e1c4f7081",
-        "item": "ns=4;s=BatchID2",
-        "datatype": "String",
-        "value": "",
-        "name": "BatchID2",
-        "x": 1200,
-        "y": 2060,
-        "wires": [
-            [
-                "d8a23248fa8225ea"
             ]
         ]
     },
@@ -21754,22 +20025,6 @@
         "wires": []
     },
     {
-        "id": "756577b21cef2354",
-        "type": "OpcUa-Item",
-        "z": "af80505e1c4f7081",
-        "item": "ns=4;s=NRButtStates",
-        "datatype": "String",
-        "value": "",
-        "name": "",
-        "x": 240,
-        "y": 580,
-        "wires": [
-            [
-                "4723e76f6714f39b"
-            ]
-        ]
-    },
-    {
         "id": "123069a23d127dec",
         "type": "debug",
         "z": "af80505e1c4f7081",
@@ -21784,38 +20039,6 @@
         "statusType": "auto",
         "x": 980,
         "y": 2280,
-        "wires": []
-    },
-    {
-        "id": "e568cd8fd166ca7b",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "9f41ae3953064c26",
-        "order": 10,
-        "width": 6,
-        "height": 3,
-        "name": "",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "x": 430,
-        "y": 2200,
-        "wires": []
-    },
-    {
-        "id": "db25722edaabf1dd",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "9f41ae3953064c26",
-        "order": 18,
-        "width": 6,
-        "height": 3,
-        "name": "",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "x": 430,
-        "y": 2260,
         "wires": []
     },
     {
@@ -21839,93 +20062,6 @@
             [
                 "7dea08b5b65afac3",
                 "f5731eb06cde0bc6"
-            ]
-        ]
-    },
-    {
-        "id": "583a90f79d426747",
-        "type": "ui_dropdown",
-        "z": "af80505e1c4f7081",
-        "name": "batch A",
-        "label": "",
-        "tooltip": "",
-        "place": "Select option",
-        "group": "9f41ae3953064c26",
-        "order": 12,
-        "width": 9,
-        "height": 3,
-        "passthru": true,
-        "multiple": false,
-        "options": [
-            {
-                "label": "T01",
-                "value": "T01",
-                "type": "str"
-            },
-            {
-                "label": "T02",
-                "value": "T02",
-                "type": "str"
-            },
-            {
-                "label": "T03",
-                "value": "T03",
-                "type": "str"
-            },
-            {
-                "label": "T04",
-                "value": "T04",
-                "type": "str"
-            },
-            {
-                "label": "T05",
-                "value": "T05",
-                "type": "str"
-            },
-            {
-                "label": "Furnace",
-                "value": "Furnace",
-                "type": "str"
-            },
-            {
-                "label": "NOT OPERATING",
-                "value": "NOT OPERATING",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 540,
-        "y": 1940,
-        "wires": [
-            [
-                "dde8bc3b4ccc42ad",
-                "924ede8fb23fe9b1"
-            ]
-        ]
-    },
-    {
-        "id": "8b80dc9f1eaf07fd",
-        "type": "ui_text_input",
-        "z": "af80505e1c4f7081",
-        "name": "BatchID_inputB",
-        "label": "<font size=100>Enter Batch 2 ID:",
-        "tooltip": "",
-        "group": "9f41ae3953064c26",
-        "order": 19,
-        "width": 12,
-        "height": 3,
-        "passthru": true,
-        "mode": "text",
-        "delay": 300,
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 820,
-        "y": 2220,
-        "wires": [
-            [
-                "1bba237091dc636a"
             ]
         ]
     },
@@ -22272,6 +20408,98 @@
         "wires": []
     },
     {
+        "id": "7dea08b5b65afac3",
+        "type": "debug",
+        "z": "af80505e1c4f7081",
+        "name": "debug 23",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 380,
+        "y": 2040,
+        "wires": []
+    },
+    {
+        "id": "ab4a054806a1f249",
+        "type": "link out",
+        "z": "af80505e1c4f7081",
+        "name": "T-01 out",
+        "mode": "link",
+        "links": [
+            "dfe663d2f2317847"
+        ],
+        "x": 1185,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "583a90f79d426747",
+        "type": "ui_dropdown",
+        "z": "af80505e1c4f7081",
+        "name": "batch A",
+        "label": "",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "9f41ae3953064c26",
+        "order": 12,
+        "width": 9,
+        "height": 3,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "T01",
+                "value": "T01",
+                "type": "str"
+            },
+            {
+                "label": "T02",
+                "value": "T02",
+                "type": "str"
+            },
+            {
+                "label": "T03",
+                "value": "T03",
+                "type": "str"
+            },
+            {
+                "label": "T04",
+                "value": "T04",
+                "type": "str"
+            },
+            {
+                "label": "T05",
+                "value": "T05",
+                "type": "str"
+            },
+            {
+                "label": "Furnace",
+                "value": "Furnace",
+                "type": "str"
+            },
+            {
+                "label": "NOT OPERATING",
+                "value": "NOT OPERATING",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 540,
+        "y": 1940,
+        "wires": [
+            [
+                "dde8bc3b4ccc42ad",
+                "924ede8fb23fe9b1"
+            ]
+        ]
+    },
+    {
         "id": "f5731eb06cde0bc6",
         "type": "ui_dropdown",
         "z": "af80505e1c4f7081",
@@ -22334,33 +20562,1815 @@
         ]
     },
     {
-        "id": "7dea08b5b65afac3",
-        "type": "debug",
+        "id": "a2874c790f57d329",
+        "type": "ui_switch",
         "z": "af80505e1c4f7081",
-        "name": "debug 23",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 380,
-        "y": 2040,
+        "name": "EW_CIRCULATION",
+        "label": "EW Circulation",
+        "tooltip": "",
+        "group": "9f41ae3953064c26",
+        "order": 4,
+        "width": 13,
+        "height": 3,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "x": 620,
+        "y": 1700,
+        "wires": [
+            [
+                "627efa8f3627b10b"
+            ]
+        ]
+    },
+    {
+        "id": "47443ecc857d3d08",
+        "type": "ui_switch",
+        "z": "af80505e1c4f7081",
+        "name": "FAST_LOGGING",
+        "label": "FAST LOGGING",
+        "tooltip": "",
+        "group": "9f41ae3953064c26",
+        "order": 2,
+        "width": 14,
+        "height": 3,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "x": 610,
+        "y": 1660,
+        "wires": [
+            [
+                "6e1b82958d48c881"
+            ]
+        ]
+    },
+    {
+        "id": "74e9ee21c852dc41",
+        "type": "ui_text_input",
+        "z": "af80505e1c4f7081",
+        "name": "BatchID_inputA",
+        "label": "<font size=100>Enter Batch 1 ID:",
+        "tooltip": "",
+        "group": "9f41ae3953064c26",
+        "order": 11,
+        "width": 12,
+        "height": 3,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 820,
+        "y": 2160,
+        "wires": [
+            [
+                "123069a23d127dec",
+                "b7ede8204f6ca354"
+            ]
+        ]
+    },
+    {
+        "id": "8b80dc9f1eaf07fd",
+        "type": "ui_text_input",
+        "z": "af80505e1c4f7081",
+        "name": "BatchID_inputB",
+        "label": "<font size=100>Enter Batch 2 ID:",
+        "tooltip": "",
+        "group": "9f41ae3953064c26",
+        "order": 19,
+        "width": 12,
+        "height": 3,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 820,
+        "y": 2220,
+        "wires": [
+            [
+                "1bba237091dc636a"
+            ]
+        ]
+    },
+    {
+        "id": "7179279d253c6d7e",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "5f3136f8b2944906",
+        "order": 4,
+        "width": 10,
+        "height": 5,
+        "name": "",
+        "label": "pH",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1690,
+        "y": 380,
         "wires": []
     },
     {
-        "id": "ab4a054806a1f249",
-        "type": "link out",
+        "id": "d14a7bf051b0b8ce",
+        "type": "ui_text",
         "z": "af80505e1c4f7081",
-        "name": "T-01 out",
-        "mode": "link",
-        "links": [
-            "dfe663d2f2317847"
-        ],
-        "x": 1185,
-        "y": 160,
+        "group": "65407f4518d0816a",
+        "order": 2,
+        "width": 11,
+        "height": 6,
+        "name": "",
+        "label": "pH",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 1730,
+        "y": 640,
         "wires": []
+    },
+    {
+        "id": "e663a3c089598210",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "6bf19a83f26ccc65",
+        "order": 3,
+        "width": 14,
+        "height": 5,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}} pH",
+        "layout": "row-right",
+        "x": 1710,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "9dc92ddb307b058c",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "6bf19a83f26ccc65",
+        "order": 2,
+        "width": 14,
+        "height": 5,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}} mV",
+        "layout": "col-center",
+        "x": 1690,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "fab2ee849c046f97",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "6bf19a83f26ccc65",
+        "order": 1,
+        "width": 14,
+        "height": 6,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}} °C",
+        "layout": "col-center",
+        "x": 1870,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "20a359e2ccc12828",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "5f3136f8b2944906",
+        "order": 15,
+        "width": 12,
+        "height": 6,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}} C",
+        "layout": "row-center",
+        "x": 1690,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "cd281d5cc3bcac06",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "69e0a1bd71cfcb0a",
+        "order": 3,
+        "width": 16,
+        "height": 10,
+        "name": "",
+        "label": "Temperature",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 2010,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "68049e6f367fd7be",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "c7eefe7417c9409d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "T-01 pH",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 2620,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "8fa4670dfeaf1641",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "c7eefe7417c9409d",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "T-01 Temperature",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 2650,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "4e9cd7baf5741cdd",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "c7eefe7417c9409d",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "T-01 Level",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 2630,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "c62011d4f0dc020a",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "59f0a3a4c021c1f8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "T-02 Temperature",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 2650,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "5a30e26f8840b25d",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "59f0a3a4c021c1f8",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "T-02 pH",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 2620,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "83ec1bc9e9424cb1",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "59f0a3a4c021c1f8",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "T-02 Level",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 2630,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "5ee1787b74c6d252",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "813266fe1aeae7a9",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "T-03 Temperature",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 2650,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "363dd4fccdf15443",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "813266fe1aeae7a9",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "T-03 pH",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 2620,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "6d4eda37cee54481",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "813266fe1aeae7a9",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "T-03 Level",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 2630,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "107cd8f6d4201596",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "5be3979a5a319ab1",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "T-04 Temperature",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 2650,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "e0502806d934203b",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "5be3979a5a319ab1",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "T-04 Level",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 2630,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "5790ea6a29ccb098",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "59f0a3a4c021c1f8",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "T-02 ORP",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 2620,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "6e6de9e8a109f6fe",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "48c91039c2bb5fe0",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "T-05 Temperature",
+        "format": "{{msg.payload}}°C",
+        "layout": "row-spread",
+        "x": 2650,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "f09c1af516ce50da",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "48c91039c2bb5fe0",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "T-05 Level",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 2630,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "c97e35debf35925a",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "48c91039c2bb5fe0",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "T-05 Current",
+        "format": "{{msg.payload}} Amps",
+        "layout": "row-spread",
+        "x": 2630,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "4dc5a930777238a9",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "48c91039c2bb5fe0",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "T-05 Voltage",
+        "format": "{{msg.payload}}V",
+        "layout": "row-spread",
+        "x": 2630,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "bff550b45bec5058",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "48c91039c2bb5fe0",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "T-05 pH",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 2620,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "5cf63896e16bf265",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "675036dd.603328",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "<font size = 100>{{msg.payload}}",
+        "layout": "row-center",
+        "x": 230,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "dcf2ca5a2077025e",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "65407f4518d0816a",
+        "order": 4,
+        "width": 11,
+        "height": 5,
+        "name": "",
+        "label": "Voltage (V)",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 1710,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "5172c2e2f453d700",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "65407f4518d0816a",
+        "order": 5,
+        "width": 11,
+        "height": 5,
+        "name": "",
+        "label": "Current (A)",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 1710,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "68f36c6e8823ff1e",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "3342ef65ea84e0bc",
+        "order": 2,
+        "width": 11,
+        "height": 2,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 230,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "424865ebddecf1d7",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "210d2df426365d31",
+        "order": 2,
+        "width": 13,
+        "height": 2,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 230,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "341077e606a35f32",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "7b9307d1947a13f0",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 230,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "da39475d10126d34",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "e48f7d12aa97556a",
+        "order": 4,
+        "width": 11,
+        "height": 5,
+        "name": "ChlorineTag",
+        "label": "Chlorine (ppm)",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 1510,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "1dd9a30126ba123f",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "e48f7d12aa97556a",
+        "order": 2,
+        "width": 11,
+        "height": 6,
+        "name": "",
+        "label": "Temperature",
+        "format": "{{msg.payload}}°C",
+        "layout": "col-center",
+        "x": 1750,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "826ca00412e83c8b",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "e48f7d12aa97556a",
+        "order": 3,
+        "width": 11,
+        "height": 6,
+        "name": "",
+        "label": "Hydrogen (%LEL)",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 1530,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "b0f4d3ed12fcdb51",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "485fc22d5a0ba791",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 230,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "98d26fafca523c81",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "8c961b69c1e99929",
+        "order": 2,
+        "width": 12,
+        "height": 2,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 230,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "d03bc15f895096dc",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "48c91039c2bb5fe0",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "T-05 Chlorine",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 2640,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "f3e157841cfa66c8",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "48c91039c2bb5fe0",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "T-05 Hydrogen",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 2640,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "c31075c1fd44864e",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "8c91fd541c551379",
+        "order": 3,
+        "width": 9,
+        "height": 5,
+        "name": "",
+        "label": "T1",
+        "format": "{{msg.payload}}°C",
+        "layout": "col-center",
+        "x": 1710,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "229ac4e2abe1c2f7",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "8c91fd541c551379",
+        "order": 5,
+        "width": 9,
+        "height": 5,
+        "name": "",
+        "label": "T2",
+        "format": "{{msg.payload}}°C",
+        "layout": "col-center",
+        "x": 1710,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "975f81a7feced482",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "8c91fd541c551379",
+        "order": 7,
+        "width": 9,
+        "height": 5,
+        "name": "",
+        "label": "T3",
+        "format": "{{msg.payload}}°C",
+        "layout": "col-center",
+        "x": 1710,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "a5378238e207e85a",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "8c91fd541c551379",
+        "order": 21,
+        "width": 9,
+        "height": 5,
+        "name": "",
+        "label": "T4",
+        "format": "{{msg.payload}}°C",
+        "layout": "col-center",
+        "x": 1710,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "44d5a5907d34636c",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "8c91fd541c551379",
+        "order": 19,
+        "width": 9,
+        "height": 5,
+        "name": "",
+        "label": "T5",
+        "format": "{{msg.payload}}°C",
+        "layout": "col-center",
+        "x": 1710,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "282f574838c8303b",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "8c91fd541c551379",
+        "order": 17,
+        "width": 9,
+        "height": 5,
+        "name": "",
+        "label": "T6",
+        "format": "{{msg.payload}}°C",
+        "layout": "col-center",
+        "x": 1710,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "88c62a4a0a41550c",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "485fc22d5a0ba791",
+        "order": 6,
+        "width": 15,
+        "height": 6,
+        "name": "pH",
+        "label": "",
+        "format": "{{msg.payload}} pH",
+        "layout": "col-center",
+        "x": 1690,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "683638718c70fc11",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "485fc22d5a0ba791",
+        "order": 14,
+        "width": 15,
+        "height": 6,
+        "name": "Temperature T-01",
+        "label": "",
+        "format": "{{msg.payload}} °C",
+        "layout": "col-center",
+        "x": 1730,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "dba71392d58e65aa",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "485fc22d5a0ba791",
+        "order": 22,
+        "width": "15",
+        "height": 2,
+        "name": "Acid Volume",
+        "label": "",
+        "format": "{{msg.payload}} m3",
+        "layout": "row-spread",
+        "x": 1690,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "e568cd8fd166ca7b",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "9f41ae3953064c26",
+        "order": 10,
+        "width": 6,
+        "height": 3,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 430,
+        "y": 2200,
+        "wires": []
+    },
+    {
+        "id": "db25722edaabf1dd",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "9f41ae3953064c26",
+        "order": 18,
+        "width": 6,
+        "height": 3,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 430,
+        "y": 2260,
+        "wires": []
+    },
+    {
+        "id": "cf2f101c5c46412e",
+        "type": "ui_gauge",
+        "z": "af80505e1c4f7081",
+        "name": "",
+        "group": "8c961b69c1e99929",
+        "order": 4,
+        "width": 12,
+        "height": 10,
+        "gtype": "wave",
+        "title": "",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "3",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1870,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "e241ffd1e5f20296",
+        "type": "ui_gauge",
+        "z": "af80505e1c4f7081",
+        "name": "",
+        "group": "210d2df426365d31",
+        "order": 6,
+        "width": 11,
+        "height": 9,
+        "gtype": "wave",
+        "title": "Level",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "2",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1870,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "52dcffeb30934c21",
+        "type": "ui_gauge",
+        "z": "af80505e1c4f7081",
+        "name": "",
+        "group": "2761df262ae914fd",
+        "order": 6,
+        "width": 7,
+        "height": 6,
+        "gtype": "wave",
+        "title": "",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "3",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1870,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "a1ce05848db0af19",
+        "type": "ui_gauge",
+        "z": "af80505e1c4f7081",
+        "name": "",
+        "group": "7b9307d1947a13f0",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "Buffer Level",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "4",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 2010,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "75888f73ce0f637f",
+        "type": "ui_gauge",
+        "z": "af80505e1c4f7081",
+        "name": "",
+        "group": "675036dd.603328",
+        "order": 5,
+        "width": "5",
+        "height": "5",
+        "gtype": "wave",
+        "title": "T-01",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "3",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 2310,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "4ed8ae7194dd96c8",
+        "type": "ui_gauge",
+        "z": "af80505e1c4f7081",
+        "name": "",
+        "group": "675036dd.603328",
+        "order": 6,
+        "width": "5",
+        "height": "5",
+        "gtype": "wave",
+        "title": "T-02",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "3",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 2310,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "b33c15b403dc2de4",
+        "type": "ui_gauge",
+        "z": "af80505e1c4f7081",
+        "name": "",
+        "group": "675036dd.603328",
+        "order": 7,
+        "width": "5",
+        "height": "5",
+        "gtype": "wave",
+        "title": "T-03",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "3",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 2310,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "9471aaa5dbc01fce",
+        "type": "ui_gauge",
+        "z": "af80505e1c4f7081",
+        "name": "",
+        "group": "675036dd.603328",
+        "order": 8,
+        "width": "5",
+        "height": "5",
+        "gtype": "wave",
+        "title": "T-04",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "4",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 2310,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "a9dea75f1173c19b",
+        "type": "ui_gauge",
+        "z": "af80505e1c4f7081",
+        "name": "",
+        "group": "675036dd.603328",
+        "order": 9,
+        "width": "5",
+        "height": "5",
+        "gtype": "wave",
+        "title": "EW",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "2",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 2310,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "146d41d9c5fbd120",
+        "type": "ui_chart",
+        "z": "af80505e1c4f7081",
+        "name": "",
+        "group": "3342ef65ea84e0bc",
+        "order": 6,
+        "width": 11,
+        "height": 6,
+        "label": "Temperature",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "80",
+        "removeOlder": "20",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ff64ff",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1710,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "21b9ebdb1b3edcaa",
+        "type": "ui_chart",
+        "z": "af80505e1c4f7081",
+        "name": "",
+        "group": "3342ef65ea84e0bc",
+        "order": 13,
+        "width": 11,
+        "height": 6,
+        "label": "Oxidation Reduction Potential",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-1000",
+        "ymax": "1000",
+        "removeOlder": "20",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ff64ff",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#dd2727",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1770,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5d3e748d74edcc11",
+        "type": "ui_template",
+        "z": "af80505e1c4f7081",
+        "group": "485fc22d5a0ba791",
+        "name": "",
+        "order": 24,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n\n  .nr-dashboard-text p.value{\n  font-size:160px !important\n  }\n  .nr-dashboard-text p.label{\n    font-size:60px\n    }\n\n  \n</style",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1000,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "653caeee817235fe",
+        "type": "ui_template",
+        "z": "af80505e1c4f7081",
+        "group": "2761df262ae914fd",
+        "name": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n  .nr-dashboard-text p.value {\n    font-size: 150px !important\n  }\n\n  .nr-dashboard-text p.label {\n    font-size: 60px\n  }\n\n  </style",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1000,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a19047a37253c397",
+        "type": "ui_template",
+        "z": "af80505e1c4f7081",
+        "group": "69e0a1bd71cfcb0a",
+        "name": "",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n  .nr-dashboard-text p.value {\n    font-size: 150px !important\n  }\n\n  .nr-dashboard-text p.label {\n    font-size: 60px\n  }\n\n  </style",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1000,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "220e2a90f76b004c",
+        "type": "ui_template",
+        "z": "af80505e1c4f7081",
+        "group": "7b9307d1947a13f0",
+        "name": "gauge-colour",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "format": "<style ng-if=\"msg.payload > 2\">\n    .nr-dashboard-gauge circle {\n        fill: red !important;\n    }\n</style>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 2010,
+        "y": 1420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4a11bae188dda7f8",
+        "type": "ui_template",
+        "z": "af80505e1c4f7081",
+        "group": "65407f4518d0816a",
+        "name": "",
+        "order": 6,
+        "width": 11,
+        "height": 1,
+        "format": "<style>\n  .nr-dashboard-text p.value {\n    font-size: 140px !important\n  }\n\n  .nr-dashboard-text p.label {\n    font-size: 40px\n  }\n\n  div {\n    padding: 0;\n    margin: 0;\n  }\n\n</style",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1000,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7a92d692e4148071",
+        "type": "ui_template",
+        "z": "af80505e1c4f7081",
+        "group": "675036dd.603328",
+        "name": "gauge-colour",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "format": "<style ng-if=\"msg.payload > 2\">\n    .nr-dashboard-gauge circle {\n        fill: red !important;\n    }\n</style>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 2010,
+        "y": 1460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3c6fabdb9d136690",
+        "type": "ui_template",
+        "z": "af80505e1c4f7081",
+        "group": "9f41ae3953064c26",
+        "name": "",
+        "order": 25,
+        "width": 6,
+        "height": 1,
+        "format": "<style>\n  md-switch {\n    scale: 400% !important\n  }\n\n  p.label {\n    font-size: 80px !important\n  }\n\n  .nr-dashboard-textinput input{\n    font-size: 80px !important\n    }\n\n  md-input-container .md-input {\n    height: 100px !important\n  }\n\n  p{\n    font-size: 80px !important\n  }\n\n</style",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 620,
+        "y": 2160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "26ca7005cb89a82d",
+        "type": "ui_template",
+        "z": "af80505e1c4f7081",
+        "group": "5f3136f8b2944906",
+        "name": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n  .nr-dashboard-text p.value {\n    font-size: 140px !important\n  }\n\n  .nr-dashboard-text p.label {\n    font-size: 40px\n  }\n\n  div {\n    padding: 0;\n    margin: 0;\n  }\n\n  </style",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1000,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e17ee8c05428a427",
+        "type": "ui_template",
+        "z": "af80505e1c4f7081",
+        "group": "210d2df426365d31",
+        "name": "gauge-colour",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "format": "<style ng-if=\"msg.payload > 0.9\">\n\nmd-card.nr-dashboard-text.layout-column.layout-align-center-center.nr-dashboard-widget-Hydrogen___LEL_.visible{\n//\nbackground-color: red !important;\ncolor: red !important;\n}\n\nmd-content._md.flex{\nbackground-color: red !important;\ncolor: red !important;\n}\n\n</style>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1510,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ce2fc6322f57903e",
+        "type": "ui_template",
+        "z": "af80505e1c4f7081",
+        "group": "8c91fd541c551379",
+        "name": "",
+        "order": 32,
+        "width": 11,
+        "height": 1,
+        "format": "<style>\n  .nr-dashboard-text p.value {\n    font-size: 140px !important\n  }\n\n  .nr-dashboard-text p.label {\n    font-size: 40px\n  }\n\n  div {\n    padding: 0;\n    margin: 0;\n  }\n\n</style",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1000,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1f95783c484444a2",
+        "type": "ui_template",
+        "z": "af80505e1c4f7081",
+        "group": "210d2df426365d31",
+        "name": "gauge-colour",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "format": "<style ng-if=\"msg.payload > 19\">\n\nmd-card.nr-dashboard-text.layout-column.layout-align-center-center.nr-dashboard-widget-Chlorine__ppm_.visible{\n//\nbackground-color: red !important;\ncolor: red !important;\n}\n\nmd-content._md.flex{\nbackground-color: red !important;\ncolor: red !important;\n}\n\n</style>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1510,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d3fc10823e618c25",
+        "type": "OpcUa-Item",
+        "z": "af80505e1c4f7081",
+        "item": "ns=4;s=WashDigestion",
+        "datatype": "String",
+        "value": "",
+        "name": "",
+        "x": 240,
+        "y": 300,
+        "wires": [
+            [
+                "0de7800a973778dc"
+            ]
+        ]
+    },
+    {
+        "id": "ddc2dc891f300804",
+        "type": "OpcUa-Item",
+        "z": "af80505e1c4f7081",
+        "item": "ns=4;s=Cementation",
+        "datatype": "String",
+        "value": "",
+        "name": "",
+        "x": 240,
+        "y": 340,
+        "wires": [
+            [
+                "db05ea03fd8ebf9f"
+            ]
+        ]
+    },
+    {
+        "id": "ba1462401afc098d",
+        "type": "OpcUa-Item",
+        "z": "af80505e1c4f7081",
+        "item": "ns=4;s=Electrowinning",
+        "datatype": "String",
+        "value": "",
+        "name": "",
+        "x": 240,
+        "y": 380,
+        "wires": [
+            [
+                "90a590c9ed37c29a"
+            ]
+        ]
+    },
+    {
+        "id": "f64e49c2065b603a",
+        "type": "OpcUa-Item",
+        "z": "af80505e1c4f7081",
+        "item": "ns=4;s=OxPrecipitation",
+        "datatype": "String",
+        "value": "",
+        "name": "",
+        "x": 240,
+        "y": 420,
+        "wires": [
+            [
+                "22ab1281cf9066c6"
+            ]
+        ]
+    },
+    {
+        "id": "ea492d30a5a383aa",
+        "type": "OpcUa-Item",
+        "z": "af80505e1c4f7081",
+        "item": "ns=4;s=BufferTank",
+        "datatype": "String",
+        "value": "",
+        "name": "",
+        "x": 240,
+        "y": 460,
+        "wires": [
+            [
+                "341f824420cdb1c0"
+            ]
+        ]
+    },
+    {
+        "id": "9151b42e057ac46d",
+        "type": "OpcUa-Item",
+        "z": "af80505e1c4f7081",
+        "item": "ns=4;s=Furnace1",
+        "datatype": "String",
+        "value": "",
+        "name": "",
+        "x": 240,
+        "y": 500,
+        "wires": [
+            [
+                "a33accb21e23d12d"
+            ]
+        ]
+    },
+    {
+        "id": "fafc1f8d899453f4",
+        "type": "OpcUa-Item",
+        "z": "af80505e1c4f7081",
+        "item": "ns=4;s=cumulative_flow",
+        "datatype": "String",
+        "value": "",
+        "name": "",
+        "x": 240,
+        "y": 540,
+        "wires": [
+            [
+                "ea46308679bd55bf"
+            ]
+        ]
+    },
+    {
+        "id": "0f2c3c899d00014c",
+        "type": "OpcUa-Item",
+        "z": "af80505e1c4f7081",
+        "item": "ns=4;s=FurnaceBatchID",
+        "datatype": "String",
+        "value": "",
+        "name": "FurnaceBatchID",
+        "x": 1220,
+        "y": 1980,
+        "wires": [
+            [
+                "d8a23248fa8225ea"
+            ]
+        ]
+    },
+    {
+        "id": "30ef25745bb9fe3a",
+        "type": "OpcUa-Item",
+        "z": "af80505e1c4f7081",
+        "item": "ns=4;s=T05BatchID",
+        "datatype": "String",
+        "value": "",
+        "name": "T05BatchID",
+        "x": 1210,
+        "y": 1940,
+        "wires": [
+            [
+                "d8a23248fa8225ea"
+            ]
+        ]
+    },
+    {
+        "id": "753ea934f92a3446",
+        "type": "OpcUa-Item",
+        "z": "af80505e1c4f7081",
+        "item": "ns=4;s=T04BatchID",
+        "datatype": "String",
+        "value": "",
+        "name": "T04BatchID",
+        "x": 1210,
+        "y": 1900,
+        "wires": [
+            [
+                "d8a23248fa8225ea"
+            ]
+        ]
+    },
+    {
+        "id": "2d5b5fc3e2e0c3fd",
+        "type": "OpcUa-Item",
+        "z": "af80505e1c4f7081",
+        "item": "ns=4;s=T03BatchID",
+        "datatype": "String",
+        "value": "",
+        "name": "T03BatchID",
+        "x": 1210,
+        "y": 1860,
+        "wires": [
+            [
+                "d8a23248fa8225ea"
+            ]
+        ]
+    },
+    {
+        "id": "4d4d0183d941f356",
+        "type": "OpcUa-Item",
+        "z": "af80505e1c4f7081",
+        "item": "ns=4;s=T02BatchID",
+        "datatype": "String",
+        "value": "",
+        "name": "T02BatchID",
+        "x": 1210,
+        "y": 1820,
+        "wires": [
+            [
+                "d8a23248fa8225ea"
+            ]
+        ]
+    },
+    {
+        "id": "1253528949a9d9da",
+        "type": "OpcUa-Item",
+        "z": "af80505e1c4f7081",
+        "item": "ns=4;s=T01BatchID",
+        "datatype": "String",
+        "value": "",
+        "name": "T01BatchID",
+        "x": 1210,
+        "y": 1780,
+        "wires": [
+            [
+                "d8a23248fa8225ea",
+                "2c64355c024fd9f7"
+            ]
+        ]
+    },
+    {
+        "id": "627efa8f3627b10b",
+        "type": "OpcUa-Item",
+        "z": "af80505e1c4f7081",
+        "item": "ns=4;s=EW_DIAPHRAGM_ENABLE",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "EW_DIAPHRAGM_ENABLE",
+        "x": 1260,
+        "y": 1740,
+        "wires": [
+            [
+                "d8a23248fa8225ea"
+            ]
+        ]
+    },
+    {
+        "id": "6e1b82958d48c881",
+        "type": "OpcUa-Item",
+        "z": "af80505e1c4f7081",
+        "item": "ns=4;s=FAST_LOG",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "FAST_LOG",
+        "x": 1210,
+        "y": 1700,
+        "wires": [
+            [
+                "d8a23248fa8225ea"
+            ]
+        ]
+    },
+    {
+        "id": "17ee6985c82b1e48",
+        "type": "OpcUa-Item",
+        "z": "af80505e1c4f7081",
+        "item": "ns=4;s=BatchID1",
+        "datatype": "String",
+        "value": "",
+        "name": "BatchID1",
+        "x": 1200,
+        "y": 2020,
+        "wires": [
+            [
+                "d8a23248fa8225ea"
+            ]
+        ]
+    },
+    {
+        "id": "e4737f79fed34fa0",
+        "type": "OpcUa-Item",
+        "z": "af80505e1c4f7081",
+        "item": "ns=4;s=BatchID2",
+        "datatype": "String",
+        "value": "",
+        "name": "BatchID2",
+        "x": 1200,
+        "y": 2060,
+        "wires": [
+            [
+                "d8a23248fa8225ea"
+            ]
+        ]
+    },
+    {
+        "id": "756577b21cef2354",
+        "type": "OpcUa-Item",
+        "z": "af80505e1c4f7081",
+        "item": "ns=4;s=NRButtStates",
+        "datatype": "String",
+        "value": "",
+        "name": "",
+        "x": 240,
+        "y": 580,
+        "wires": [
+            [
+                "4723e76f6714f39b"
+            ]
+        ]
+    },
+    {
+        "id": "2f3a55e86a6c30dc",
+        "type": "OpcUa-Client",
+        "z": "af80505e1c4f7081",
+        "endpoint": "a053172554a6aedb",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": "500",
+        "timeUnit": "ms",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "name": "",
+        "x": 760,
+        "y": 420,
+        "wires": [
+            [
+                "c8ed4d4e2ff65ebd",
+                "2a7f27115539af85",
+                "e6d71b93752cf439"
+            ]
+        ]
+    },
+    {
+        "id": "d8a23248fa8225ea",
+        "type": "OpcUa-Client",
+        "z": "af80505e1c4f7081",
+        "endpoint": "a053172554a6aedb",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": "500",
+        "timeUnit": "ms",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "name": "",
+        "x": 1460,
+        "y": 1860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7ffc1cf9de96e879",
+        "type": "moment",
+        "z": "af80505e1c4f7081",
+        "name": "",
+        "topic": "",
+        "input": "",
+        "inputType": "date",
+        "inTz": "Pacific/Auckland",
+        "adjAmount": 0,
+        "adjType": "days",
+        "adjDir": "add",
+        "format": "HH:mm:ss",
+        "locale": "en-US",
+        "output": "payload",
+        "outputType": "msg",
+        "outTz": "Pacific/Auckland",
+        "x": 220,
+        "y": 660,
+        "wires": [
+            [
+                "5cf63896e16bf265",
+                "68f36c6e8823ff1e",
+                "424865ebddecf1d7",
+                "341077e606a35f32",
+                "b0f4d3ed12fcdb51",
+                "98d26fafca523c81"
+            ]
+        ]
+    },
+    {
+        "id": "e1ef2bea2cbe974f",
+        "type": "function",
+        "z": "772b9e461df7f6c1",
+        "name": "function 7",
+        "func": "msg.payload = msg.payload * 2;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 200,
+        "wires": [
+            [
+                "f3f675eb7fe348b8"
+            ]
+        ]
     },
     {
         "id": "ea9cb40df63fb6ef",
@@ -22404,25 +22414,6 @@
         "x": 630,
         "y": 200,
         "wires": []
-    },
-    {
-        "id": "e1ef2bea2cbe974f",
-        "type": "function",
-        "z": "772b9e461df7f6c1",
-        "name": "function 7",
-        "func": "msg.payload = msg.payload * 2;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 420,
-        "y": 200,
-        "wires": [
-            [
-                "f3f675eb7fe348b8"
-            ]
-        ]
     },
     {
         "id": "42057ba3d38d3675",
