@@ -19773,8 +19773,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 940,
-        "y": 760,
+        "x": 1000,
+        "y": 740,
         "wires": []
     },
     {
