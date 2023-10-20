@@ -22350,7 +22350,7 @@
         "name": "report by exception",
         "info": "Only report if OPCUA node changes",
         "x": 1230,
-        "y": 1780,
+        "y": 1680,
         "wires": []
     },
     {
@@ -22366,7 +22366,7 @@
         "property": "payload",
         "topi": "topic",
         "x": 1230,
-        "y": 1700,
+        "y": 1740,
         "wires": [
             [
                 "6e1b82958d48c881"
@@ -22386,7 +22386,7 @@
         "property": "payload",
         "topi": "topic",
         "x": 1230,
-        "y": 1740,
+        "y": 1780,
         "wires": [
             [
                 "627efa8f3627b10b"
@@ -22731,5 +22731,15 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "a0221a7f6c15f209",
+        "type": "comment",
+        "z": "ea4ba7b5729c4ade",
+        "name": "report by exception",
+        "info": "Only report if OPCUA node changes",
+        "x": 330,
+        "y": 220,
+        "wires": []
     }
 ]
