@@ -22407,7 +22407,7 @@
         "correl": "",
         "expiry": "",
         "broker": "fb3e793aa41dfeaa",
-        "x": 680,
+        "x": 760,
         "y": 320,
         "wires": []
     },
@@ -22419,7 +22419,7 @@
         "links": [
             "ab4a054806a1f249"
         ],
-        "x": 195,
+        "x": 275,
         "y": 320,
         "wires": [
             [
@@ -22440,7 +22440,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 400,
+        "x": 480,
         "y": 260,
         "wires": []
     },
@@ -22452,7 +22452,7 @@
         "links": [
             "53e6f80510295a26"
         ],
-        "x": 195,
+        "x": 275,
         "y": 380,
         "wires": [
             [
@@ -22468,7 +22468,7 @@
         "links": [
             "c489dfaf9ea666b0"
         ],
-        "x": 195,
+        "x": 275,
         "y": 440,
         "wires": [
             [
@@ -22484,7 +22484,7 @@
         "links": [
             "708e7c0f3aa63576"
         ],
-        "x": 195,
+        "x": 275,
         "y": 500,
         "wires": [
             [
@@ -22500,7 +22500,7 @@
         "links": [
             "062d070574e08e54"
         ],
-        "x": 195,
+        "x": 275,
         "y": 560,
         "wires": [
             [
@@ -22516,7 +22516,7 @@
         "links": [
             "913f7875f03e7386"
         ],
-        "x": 195,
+        "x": 275,
         "y": 620,
         "wires": [
             [
@@ -22538,7 +22538,7 @@
         "correl": "",
         "expiry": "",
         "broker": "fb3e793aa41dfeaa",
-        "x": 680,
+        "x": 760,
         "y": 380,
         "wires": []
     },
@@ -22556,7 +22556,7 @@
         "correl": "",
         "expiry": "",
         "broker": "fb3e793aa41dfeaa",
-        "x": 680,
+        "x": 760,
         "y": 440,
         "wires": []
     },
@@ -22574,7 +22574,7 @@
         "correl": "",
         "expiry": "",
         "broker": "fb3e793aa41dfeaa",
-        "x": 680,
+        "x": 760,
         "y": 500,
         "wires": []
     },
@@ -22592,7 +22592,7 @@
         "correl": "",
         "expiry": "",
         "broker": "fb3e793aa41dfeaa",
-        "x": 680,
+        "x": 760,
         "y": 560,
         "wires": []
     },
@@ -22610,7 +22610,7 @@
         "correl": "",
         "expiry": "",
         "broker": "fb3e793aa41dfeaa",
-        "x": 680,
+        "x": 760,
         "y": 620,
         "wires": []
     },
@@ -22626,7 +22626,7 @@
         "septopics": true,
         "property": "payload",
         "topi": "topic",
-        "x": 390,
+        "x": 470,
         "y": 380,
         "wires": [
             [
@@ -22646,7 +22646,7 @@
         "septopics": true,
         "property": "payload",
         "topi": "topic",
-        "x": 390,
+        "x": 470,
         "y": 320,
         "wires": [
             [
@@ -22666,7 +22666,7 @@
         "septopics": true,
         "property": "payload",
         "topi": "topic",
-        "x": 390,
+        "x": 470,
         "y": 440,
         "wires": [
             [
@@ -22686,7 +22686,7 @@
         "septopics": true,
         "property": "payload",
         "topi": "topic",
-        "x": 390,
+        "x": 470,
         "y": 500,
         "wires": [
             [
@@ -22706,7 +22706,7 @@
         "septopics": true,
         "property": "payload",
         "topi": "topic",
-        "x": 390,
+        "x": 470,
         "y": 560,
         "wires": [
             [
@@ -22726,7 +22726,7 @@
         "septopics": true,
         "property": "payload",
         "topi": "topic",
-        "x": 388.33331298828125,
+        "x": 468.33331298828125,
         "y": 621.6666259765625,
         "wires": [
             []
@@ -22738,7 +22738,7 @@
         "z": "ea4ba7b5729c4ade",
         "name": "report by exception",
         "info": "Only report if OPCUA node changes",
-        "x": 430,
+        "x": 510,
         "y": 200,
         "wires": []
     }
