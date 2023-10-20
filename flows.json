@@ -22407,8 +22407,8 @@
         "correl": "",
         "expiry": "",
         "broker": "fb3e793aa41dfeaa",
-        "x": 620,
-        "y": 280,
+        "x": 680,
+        "y": 320,
         "wires": []
     },
     {
@@ -22419,8 +22419,8 @@
         "links": [
             "ab4a054806a1f249"
         ],
-        "x": 135,
-        "y": 280,
+        "x": 195,
+        "y": 320,
         "wires": [
             [
                 "a28d35f156da0af2",
@@ -22440,8 +22440,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 280,
-        "y": 340,
+        "x": 400,
+        "y": 260,
         "wires": []
     },
     {
@@ -22452,8 +22452,8 @@
         "links": [
             "53e6f80510295a26"
         ],
-        "x": 135,
-        "y": 400,
+        "x": 195,
+        "y": 380,
         "wires": [
             [
                 "85b9b01535d5236d"
@@ -22468,8 +22468,8 @@
         "links": [
             "c489dfaf9ea666b0"
         ],
-        "x": 135,
-        "y": 460,
+        "x": 195,
+        "y": 440,
         "wires": [
             [
                 "10c0162cfebba0ed"
@@ -22484,7 +22484,7 @@
         "links": [
             "708e7c0f3aa63576"
         ],
-        "x": 135,
+        "x": 195,
         "y": 500,
         "wires": [
             [
@@ -22500,8 +22500,8 @@
         "links": [
             "062d070574e08e54"
         ],
-        "x": 135,
-        "y": 540,
+        "x": 195,
+        "y": 560,
         "wires": [
             [
                 "5d9df8a45aa5ea9e"
@@ -22516,8 +22516,8 @@
         "links": [
             "913f7875f03e7386"
         ],
-        "x": 135,
-        "y": 580,
+        "x": 195,
+        "y": 620,
         "wires": [
             [
                 "ddf19d51ef3bb9ca"
@@ -22538,8 +22538,8 @@
         "correl": "",
         "expiry": "",
         "broker": "fb3e793aa41dfeaa",
-        "x": 620,
-        "y": 400,
+        "x": 680,
+        "y": 380,
         "wires": []
     },
     {
@@ -22556,8 +22556,8 @@
         "correl": "",
         "expiry": "",
         "broker": "fb3e793aa41dfeaa",
-        "x": 620,
-        "y": 460,
+        "x": 680,
+        "y": 440,
         "wires": []
     },
     {
@@ -22574,7 +22574,7 @@
         "correl": "",
         "expiry": "",
         "broker": "fb3e793aa41dfeaa",
-        "x": 620,
+        "x": 680,
         "y": 500,
         "wires": []
     },
@@ -22592,8 +22592,8 @@
         "correl": "",
         "expiry": "",
         "broker": "fb3e793aa41dfeaa",
-        "x": 620,
-        "y": 540,
+        "x": 680,
+        "y": 560,
         "wires": []
     },
     {
@@ -22610,8 +22610,8 @@
         "correl": "",
         "expiry": "",
         "broker": "fb3e793aa41dfeaa",
-        "x": 620,
-        "y": 580,
+        "x": 680,
+        "y": 620,
         "wires": []
     },
     {
@@ -22626,8 +22626,8 @@
         "septopics": true,
         "property": "payload",
         "topi": "topic",
-        "x": 330,
-        "y": 400,
+        "x": 390,
+        "y": 380,
         "wires": [
             [
                 "305fcb2096195599"
@@ -22646,8 +22646,8 @@
         "septopics": true,
         "property": "payload",
         "topi": "topic",
-        "x": 330,
-        "y": 280,
+        "x": 390,
+        "y": 320,
         "wires": [
             [
                 "42057ba3d38d3675"
@@ -22666,8 +22666,8 @@
         "septopics": true,
         "property": "payload",
         "topi": "topic",
-        "x": 330,
-        "y": 460,
+        "x": 390,
+        "y": 440,
         "wires": [
             [
                 "d06f86122f90e039"
@@ -22686,7 +22686,7 @@
         "septopics": true,
         "property": "payload",
         "topi": "topic",
-        "x": 330,
+        "x": 390,
         "y": 500,
         "wires": [
             [
@@ -22706,8 +22706,8 @@
         "septopics": true,
         "property": "payload",
         "topi": "topic",
-        "x": 330,
-        "y": 540,
+        "x": 390,
+        "y": 560,
         "wires": [
             [
                 "7ef6e18ded4b8ac3"
@@ -22726,8 +22726,8 @@
         "septopics": true,
         "property": "payload",
         "topi": "topic",
-        "x": 328.33331298828125,
-        "y": 581.6666259765625,
+        "x": 388.33331298828125,
+        "y": 621.6666259765625,
         "wires": [
             []
         ]
@@ -22738,8 +22738,8 @@
         "z": "ea4ba7b5729c4ade",
         "name": "report by exception",
         "info": "Only report if OPCUA node changes",
-        "x": 330,
-        "y": 220,
+        "x": 430,
+        "y": 200,
         "wires": []
     }
 ]
