@@ -8,14 +8,6 @@
         "env": []
     },
     {
-        "id": "772b9e461df7f6c1",
-        "type": "tab",
-        "label": "Flow 2",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "ea4ba7b5729c4ade",
         "type": "tab",
         "label": "Flow 3",
@@ -389,16 +381,6 @@
         "order": 2,
         "disp": false,
         "width": "12",
-        "collapse": false
-    },
-    {
-        "id": "941863dc0f83f5fd",
-        "type": "ui_group",
-        "name": "Left",
-        "tab": "1b6ec810edf1f944",
-        "order": 1,
-        "disp": false,
-        "width": 14,
         "collapse": false
     },
     {
@@ -7674,176 +7656,6 @@
         "group": "69e0a1bd71cfcb0a",
         "order": 2,
         "width": 16,
-        "height": 1
-    },
-    {
-        "id": "15727fad6ba3c33f",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "941863dc0f83f5fd",
-        "order": 1,
-        "width": 14,
-        "height": 1
-    },
-    {
-        "id": "fc7b7c021f5302fd",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "941863dc0f83f5fd",
-        "order": 3,
-        "width": 14,
-        "height": 1
-    },
-    {
-        "id": "500ed86a58ac6edd",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "941863dc0f83f5fd",
-        "order": 5,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "d82c1f16dd5e3307",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "941863dc0f83f5fd",
-        "order": 6,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "770f787e06fa5fee",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "941863dc0f83f5fd",
-        "order": 7,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "24662543fe53c5e4",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "941863dc0f83f5fd",
-        "order": 8,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "0387e103533926b4",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "941863dc0f83f5fd",
-        "order": 9,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "4a15d0117084e01d",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "941863dc0f83f5fd",
-        "order": 10,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "d554f0fda008f4dc",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "941863dc0f83f5fd",
-        "order": 11,
-        "width": 14,
-        "height": 1
-    },
-    {
-        "id": "20f523d3e0ada15d",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "941863dc0f83f5fd",
-        "order": 13,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "d2eed311225a5a30",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "941863dc0f83f5fd",
-        "order": 14,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "dff614dcb05622db",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "941863dc0f83f5fd",
-        "order": 15,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "27863476131edfc5",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "941863dc0f83f5fd",
-        "order": 16,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "fe2453ad9f079f22",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "941863dc0f83f5fd",
-        "order": 17,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "5f81f2ce0f2209ab",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "941863dc0f83f5fd",
-        "order": 18,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "f4af091a851162d9",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "485fc22d5a0ba791",
-        "order": 1,
-        "width": 15,
-        "height": 1
-    },
-    {
-        "id": "54157898cc9146a9",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "485fc22d5a0ba791",
-        "order": 3,
-        "width": 15,
         "height": 1
     },
     {
@@ -18287,196 +18099,6 @@
         "height": 1
     },
     {
-        "id": "e8fe028567be9fc6",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "485fc22d5a0ba791",
-        "order": 1,
-        "width": 18,
-        "height": 1
-    },
-    {
-        "id": "f4c9ea95b47c9ce6",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "485fc22d5a0ba791",
-        "order": 2,
-        "width": 18,
-        "height": 1
-    },
-    {
-        "id": "4af29941920f576c",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "485fc22d5a0ba791",
-        "order": 4,
-        "width": 18,
-        "height": 1
-    },
-    {
-        "id": "ed61e3eebab32957",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "485fc22d5a0ba791",
-        "order": 5,
-        "width": 18,
-        "height": 1
-    },
-    {
-        "id": "f617b9415b3759f4",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "485fc22d5a0ba791",
-        "order": 7,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "1a7ab9b8c4339229",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "485fc22d5a0ba791",
-        "order": 8,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "f3b943994329d58c",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "485fc22d5a0ba791",
-        "order": 9,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "8f37f30577f312d6",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "485fc22d5a0ba791",
-        "order": 10,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "5b3fb1457f948fcb",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "485fc22d5a0ba791",
-        "order": 11,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "7e1e36044b9df290",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "485fc22d5a0ba791",
-        "order": 12,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "4aaba3ef5338ec50",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "485fc22d5a0ba791",
-        "order": 13,
-        "width": 18,
-        "height": 1
-    },
-    {
-        "id": "edd3aafde78c96d3",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "485fc22d5a0ba791",
-        "order": 15,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "1179958b89e1188b",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "485fc22d5a0ba791",
-        "order": 16,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "3aeaeea5606f99e6",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "485fc22d5a0ba791",
-        "order": 17,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "908ad1404647562b",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "485fc22d5a0ba791",
-        "order": 18,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "4a129dd046bc7b3b",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "485fc22d5a0ba791",
-        "order": 19,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "236283bf75f7bc2f",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "485fc22d5a0ba791",
-        "order": 20,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "0b55fa29f9de4f37",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "485fc22d5a0ba791",
-        "order": 21,
-        "width": 18,
-        "height": 1
-    },
-    {
-        "id": "32b287f6ea4a772e",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "485fc22d5a0ba791",
-        "order": 23,
-        "width": 18,
-        "height": 1
-    },
-    {
         "id": "129fd0239d797a09",
         "type": "ui_spacer",
         "z": "af80505e1c4f7081",
@@ -19285,6 +18907,126 @@
         "login": false
     },
     {
+        "id": "25a3418541f2651f",
+        "type": "ui_spacer",
+        "z": "af80505e1c4f7081",
+        "name": "spacer",
+        "group": "485fc22d5a0ba791",
+        "order": 1,
+        "width": 15,
+        "height": 1
+    },
+    {
+        "id": "990c1ad008d2b697",
+        "type": "ui_spacer",
+        "z": "af80505e1c4f7081",
+        "name": "spacer",
+        "group": "485fc22d5a0ba791",
+        "order": 2,
+        "width": 15,
+        "height": 1
+    },
+    {
+        "id": "5d70039a28552d7d",
+        "type": "ui_spacer",
+        "z": "af80505e1c4f7081",
+        "name": "spacer",
+        "group": "485fc22d5a0ba791",
+        "order": 3,
+        "width": 15,
+        "height": 1
+    },
+    {
+        "id": "a3c25c49f558966f",
+        "type": "ui_spacer",
+        "z": "af80505e1c4f7081",
+        "name": "spacer",
+        "group": "485fc22d5a0ba791",
+        "order": 4,
+        "width": 15,
+        "height": 1
+    },
+    {
+        "id": "bb10ef2fe3875e85",
+        "type": "ui_spacer",
+        "z": "af80505e1c4f7081",
+        "name": "spacer",
+        "group": "485fc22d5a0ba791",
+        "order": 6,
+        "width": 15,
+        "height": 1
+    },
+    {
+        "id": "482a246149bd9e28",
+        "type": "ui_spacer",
+        "z": "af80505e1c4f7081",
+        "name": "spacer",
+        "group": "485fc22d5a0ba791",
+        "order": 7,
+        "width": 15,
+        "height": 1
+    },
+    {
+        "id": "d8d15f3cb5d18c92",
+        "type": "ui_spacer",
+        "z": "af80505e1c4f7081",
+        "name": "spacer",
+        "group": "485fc22d5a0ba791",
+        "order": 9,
+        "width": 15,
+        "height": 1
+    },
+    {
+        "id": "dd7d7c4b3f4fd938",
+        "type": "ui_spacer",
+        "z": "af80505e1c4f7081",
+        "name": "spacer",
+        "group": "485fc22d5a0ba791",
+        "order": 10,
+        "width": 15,
+        "height": 1
+    },
+    {
+        "id": "01784de8eb049bc6",
+        "type": "ui_spacer",
+        "z": "af80505e1c4f7081",
+        "name": "spacer",
+        "group": "485fc22d5a0ba791",
+        "order": 11,
+        "width": 15,
+        "height": 1
+    },
+    {
+        "id": "701c129ef3c125bc",
+        "type": "ui_spacer",
+        "z": "af80505e1c4f7081",
+        "name": "spacer",
+        "group": "485fc22d5a0ba791",
+        "order": 13,
+        "width": 15,
+        "height": 1
+    },
+    {
+        "id": "b72e9698480fde36",
+        "type": "ui_spacer",
+        "z": "af80505e1c4f7081",
+        "name": "spacer",
+        "group": "485fc22d5a0ba791",
+        "order": 14,
+        "width": 15,
+        "height": 1
+    },
+    {
+        "id": "eff237e33d83d053",
+        "type": "ui_spacer",
+        "z": "af80505e1c4f7081",
+        "name": "spacer",
+        "group": "485fc22d5a0ba791",
+        "order": 16,
+        "width": 15,
+        "height": 1
+    },
+    {
         "id": "28306d59f714a835",
         "type": "comment",
         "z": "af80505e1c4f7081",
@@ -19365,8 +19107,9 @@
         "type": "function",
         "z": "af80505e1c4f7081",
         "name": "TankData Splitter",
-        "func": "var pH_msg = {};\nvar temp_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar l3_msg = {};\n\nvar totalOutputs = 7;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\nglobal.set(\"pH_WD\", msg.payload);\n\ntemp_msg.payload = Math.round((msg.payload.temperature) * 100) / 100;\nglobal.set(\"Temp_WD\", msg.payload);\n\nl1_msg.payload = msg.payload.level1_status;\nglobal.set(\"WD1\", l1_msg.payload);\nl2_msg.payload = msg.payload.level2_status;\nglobal.set(\"WD2\", l2_msg.payload);\nl3_msg.payload = msg.payload.level3_status;\nglobal.set(\"WD3\", l3_msg.payload);\n\n\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\nreturnArray[2] = l1_msg;\nreturnArray[3] = l2_msg;\nreturnArray[4] = l3_msg;\n\n\nreturn returnArray;",
+        "func": "var pH_msg = {};\nvar temp_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar l3_msg = {};\n\nvar totalOutputs = 7;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\npH_msg.payload = msg.payload.pH;\nglobal.set(\"pH_WD\", msg.payload);\n\ntemp_msg.payload = msg.payload.temperature;\nglobal.set(\"Temp_WD\", msg.payload);\n\nl1_msg.payload = msg.payload.level1_status;\nglobal.set(\"WD1\", l1_msg.payload);\nl2_msg.payload = msg.payload.level2_status;\nglobal.set(\"WD2\", l2_msg.payload);\nl3_msg.payload = msg.payload.level3_status;\nglobal.set(\"WD3\", l3_msg.payload);\n\n\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\nreturnArray[2] = l1_msg;\nreturnArray[3] = l2_msg;\nreturnArray[4] = l3_msg;\n\n\nreturn returnArray;",
         "outputs": 5,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -19398,8 +19141,9 @@
         "type": "function",
         "z": "af80505e1c4f7081",
         "name": "Splits Topics into respective Outputs",
-        "func": "var index;\nvar numOutputs = node.numberOfOutputs;\n\nconst returnArray = new Array(numOutputs).fill(null);\n\nvar topic1 = global.get('Topic_WashDigestion');\nvar topic2 = global.get('Topic_Cementation');\nvar topic3 = global.get('Topic_Electrowinning');\nvar topic4 = global.get('Topic_OxPrecipitation');\nvar topic5 = global.get('Topic_BufferTank');\nvar topic6 = global.get('Topic_Furnace1');\nvar topic7 = global.get('Topic_Flow_Meter');\n\n\nif (msg.topic == topic1){\n    index = 0;\n    returnArray[0] = 1\n}\n\nif (msg.topic == topic2){\n    index = 1;\n}\n\nif (msg.topic == topic3){\n    index = 2;\n}\n\nif (msg.topic == topic4) {\n    index = 3;\n}\n\nif (msg.topic == topic5) {\n    index = 4;\n}\n\nif (msg.topic == topic6) {\n    index = 5;\n} \n\nif (msg.topic == topic7) {\n    index = 6;\n} \n\nreturnArray[index] = msg\nreturn returnArray;",
+        "func": "var index;\nvar numOutputs = node.numberOfOutputs;\n\nconst returnArray = new Array(numOutputs).fill(null);\n\nvar topic1 = global.get('Topic_WashDigestion');\nvar topic2 = global.get('Topic_Cementation');\nvar topic3 = global.get('Topic_Electrowinning');\nvar topic4 = global.get('Topic_OxPrecipitation');\nvar topic5 = global.get('Topic_BufferTank');\nvar topic6 = global.get('Topic_Furnace1');\nvar topic7 = global.get('Topic_Flow_Meter');\n\nif (msg.topic == topic1) {\n    index = 0;\n    returnArray[0] = 1;\n} else if (msg.topic == topic2) {\n    index = 1;\n} else if (msg.topic == topic3) {\n    index = 2;\n} else if (msg.topic == topic4) {\n    index = 3;\n} else if (msg.topic == topic5) {\n    index = 4;\n} else if (msg.topic == topic6) {\n    index = 5;\n} else if (msg.topic == topic7) {\n    index = 6;\n}\n\n// Parsing and modifying the payload\nlet parsedData = msg.payload;\n\nfor (let key in parsedData) {\n    if (typeof parsedData[key] === 'number') {\n        // Round to 2 decimal places if the value is numeric\n        parsedData[key] = parseFloat(parsedData[key].toFixed(1));\n    }\n}\n\nmsg.payload = parsedData;\n\nreturnArray[index] = msg;\nreturn returnArray;",
         "outputs": 7,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -19412,19 +19156,24 @@
                 "ab4a054806a1f249"
             ],
             [
-                "6b97e4b6921521d5"
+                "6b97e4b6921521d5",
+                "c489dfaf9ea666b0"
             ],
             [
-                "885259e791ebe366"
+                "885259e791ebe366",
+                "062d070574e08e54"
             ],
             [
-                "5bfe968cd79285dd"
+                "5bfe968cd79285dd",
+                "53e6f80510295a26"
             ],
             [
-                "5b2c2d69ad22fe9e"
+                "5b2c2d69ad22fe9e",
+                "708e7c0f3aa63576"
             ],
             [
-                "c767ab1bc631283c"
+                "c767ab1bc631283c",
+                "913f7875f03e7386"
             ],
             [
                 "bdf68699683d264a"
@@ -19455,8 +19204,9 @@
         "type": "function",
         "z": "af80505e1c4f7081",
         "name": "TankData Splitter",
-        "func": "var pH_msg = {};\nvar temp_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar l3_msg = {};\n\nvar totalOutputs = 7;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\n//global.set(\"pH\", msg.payload);\n\ntemp_msg.payload = Math.round((msg.payload.temperature) * 100) / 100;\n//global.set(\"Temp1\", msg.payload);\n\nl1_msg.payload = msg.payload.level1_status;\nglobal.set(\"C1\", l1_msg.payload);\nl2_msg.payload = msg.payload.level2_status;\nglobal.set(\"C2\", l2_msg.payload);\nl3_msg.payload = msg.payload.level3_status;\nglobal.set(\"C3\", l3_msg.payload);\n\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\nreturnArray[2] = l1_msg;\nreturnArray[3] = l2_msg;\nreturnArray[4] = l3_msg;\n\n\nreturn returnArray;",
+        "func": "var pH_msg = {};\nvar temp_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar l3_msg = {};\n\nvar totalOutputs = 7;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\npH_msg.payload = msg.payload.pH;\n//global.set(\"pH\", msg.payload);\n\ntemp_msg.payload = msg.payload.temperature;\n//global.set(\"Temp1\", msg.payload);\n\nl1_msg.payload = msg.payload.level1_status;\nglobal.set(\"C1\", l1_msg.payload);\nl2_msg.payload = msg.payload.level2_status;\nglobal.set(\"C2\", l2_msg.payload);\nl3_msg.payload = msg.payload.level3_status;\nglobal.set(\"C3\", l3_msg.payload);\n\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\nreturnArray[2] = l1_msg;\nreturnArray[3] = l2_msg;\nreturnArray[4] = l3_msg;\n\n\nreturn returnArray;",
         "outputs": 5,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -19636,8 +19386,9 @@
         "type": "function",
         "z": "af80505e1c4f7081",
         "name": "TankData Splitter",
-        "func": "var pH_msg = {};\nvar temp_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar current_msg = {};\nvar voltage_msg = {};\nvar chlorine_msg = {};\nvar hydrogen_msg = {};\n\nvar totalOutputs = 8;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\nglobal.set(\"pH1\", pH_msg.payload);\n\ntemp_msg.payload = Math.round((msg.payload.temperature) * 10) / 10;\nglobal.set(\"Temp1\", temp_msg.payload);\n\nl1_msg.payload = msg.payload.level1_status;\nglobal.set(\"EW1\", l1_msg.payload);\n\nl2_msg.payload = msg.payload.level2_status;\nglobal.set(\"EW2\", l2_msg.payload);\n\nvoltage_msg.payload = Math.round((msg.payload.voltage) * 10) /10;\nglobal.set(\"EW_Voltage\", voltage_msg.payload);\n\ncurrent_msg.payload = Math.round((msg.payload.current));\nglobal.set(\"EW_Current\", current_msg.payload);\n\nchlorine_msg.payload = Math.round((msg.payload.chlorine)*10)/ 10;\nglobal.set(\"Chlorine_Level\", chlorine_msg.payload);\n\nhydrogen_msg.payload = Math.round((msg.payload.hydrogen));\nglobal.set(\"Hydrogen_Level\", hydrogen_msg.payload)\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\nreturnArray[2] = l1_msg;\nreturnArray[3] = l2_msg;\nreturnArray[4] = voltage_msg;\nreturnArray[5] = current_msg;\nreturnArray[6] = chlorine_msg;\nreturnArray[7] = hydrogen_msg;\n\n\n\n\nreturn returnArray;",
+        "func": "var pH_msg = {};\nvar temp_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar current_msg = {};\nvar voltage_msg = {};\nvar chlorine_msg = {};\nvar hydrogen_msg = {};\n\nvar totalOutputs = 8;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\npH_msg.payload = msg.payload.pH;\nglobal.set(\"pH1\", pH_msg.payload);\n\ntemp_msg.payload = msg.payload.temperature;\nglobal.set(\"Temp1\", temp_msg.payload);\n\nl1_msg.payload = msg.payload.level1_status;\nglobal.set(\"EW1\", l1_msg.payload);\n\nl2_msg.payload = msg.payload.level2_status;\nglobal.set(\"EW2\", l2_msg.payload);\n\nvoltage_msg.payload = msg.payload.voltage;\nglobal.set(\"EW_Voltage\", voltage_msg.payload);\n\ncurrent_msg.payload = msg.payload.current;\nglobal.set(\"EW_Current\", current_msg.payload);\n\nchlorine_msg.payload = msg.payload.chlorine;\nglobal.set(\"Chlorine_Level\", chlorine_msg.payload);\n\nhydrogen_msg.payload = msg.payload.hydrogen;\nglobal.set(\"Hydrogen_Level\", hydrogen_msg.payload)\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\nreturnArray[2] = l1_msg;\nreturnArray[3] = l2_msg;\nreturnArray[4] = voltage_msg;\nreturnArray[5] = current_msg;\nreturnArray[6] = chlorine_msg;\nreturnArray[7] = hydrogen_msg;\n\n\n\n\nreturn returnArray;",
         "outputs": 8,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -19684,8 +19435,9 @@
         "type": "function",
         "z": "af80505e1c4f7081",
         "name": "TankData Splitter",
-        "func": "\nvar pH_msg = {};\nvar temp_msg = {};\nvar orp_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar l3_msg = {};\n\nvar totalOutputs = 7;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\nglobal.set(\"OpH\", pH_msg.payload);\n\ntemp_msg.payload = Math.round((msg.payload.temperature) * 100) / 100;\nglobal.set(\"OTemp\", temp_msg.payload);\n\norp_msg.payload = Math.round((msg.payload.ORP));\nglobal.set(\"OORP\", orp_msg.payload);\n\n\nl1_msg.payload = msg.payload.level1_status;\nglobal.set(\"O1\", l1_msg.payload);\nl2_msg.payload = msg.payload.level2_status;\nglobal.set(\"O2\", l2_msg.payload);\nl3_msg.payload = msg.payload.level3_status;\nglobal.set(\"O3\", l3_msg.payload);\n\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\nreturnArray[2] = orp_msg;\nreturnArray[3] = l1_msg;\nreturnArray[4] = l2_msg;\nreturnArray[5] = l3_msg;\n\nreturn returnArray;\n\n\n",
+        "func": "\nvar pH_msg = {};\nvar temp_msg = {};\nvar orp_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar l3_msg = {};\n\nvar totalOutputs = 7;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\npH_msg.payload = msg.payload.pH;\nglobal.set(\"OpH\", pH_msg.payload);\n\ntemp_msg.payload = msg.payload.temperature;\nglobal.set(\"OTemp\", temp_msg.payload);\n\norp_msg.payload = msg.payload.ORP;\nglobal.set(\"OORP\", orp_msg.payload);\n\n\nl1_msg.payload = msg.payload.level1_status;\nglobal.set(\"O1\", l1_msg.payload);\nl2_msg.payload = msg.payload.level2_status;\nglobal.set(\"O2\", l2_msg.payload);\nl3_msg.payload = msg.payload.level3_status;\nglobal.set(\"O3\", l3_msg.payload);\n\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\nreturnArray[2] = orp_msg;\nreturnArray[3] = l1_msg;\nreturnArray[4] = l2_msg;\nreturnArray[5] = l3_msg;\n\nreturn returnArray;\n\n\n",
         "outputs": 6,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -19723,8 +19475,9 @@
         "type": "function",
         "z": "af80505e1c4f7081",
         "name": "TankData Splitter",
-        "func": "var pH_msg = {};\nvar temp_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar l3_msg = {};\nvar l4_msg = {};\n\nvar totalOutputs = 7;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\npH_msg.payload = Math.round((msg.payload.pH) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\ntemp_msg.payload = Math.round((msg.payload.temperature) * 100) / 100;\nglobal.set(\"Temp1\", msg.payload);\n\nl1_msg.payload = msg.payload.level1_status;\nglobal.set(\"B1\", l1_msg.payload);\nl2_msg.payload = msg.payload.level2_status;\nglobal.set(\"B2\", l2_msg.payload);\nl3_msg.payload = msg.payload.level3_status;\nglobal.set(\"B3\", l3_msg.payload);\nl4_msg.payload = msg.payload.level4_status;\nglobal.set(\"B4\", l4_msg.payload);\n\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\nreturnArray[2] = l1_msg;\nreturnArray[3] = l2_msg;\nreturnArray[4] = l3_msg;\nreturnArray[5] = l4_msg;\n\n\nreturn returnArray;",
+        "func": "var pH_msg = {};\nvar temp_msg = {};\nvar l1_msg = {};\nvar l2_msg = {};\nvar l3_msg = {};\nvar l4_msg = {};\n\nvar totalOutputs = 7;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\npH_msg.payload = msg.payload.pH;\nglobal.set(\"Temp1\", msg.payload);\n\ntemp_msg.payload = msg.payload.temperature;\nglobal.set(\"Temp1\", msg.payload);\n\nl1_msg.payload = msg.payload.level1_status;\nglobal.set(\"B1\", l1_msg.payload);\nl2_msg.payload = msg.payload.level2_status;\nglobal.set(\"B2\", l2_msg.payload);\nl3_msg.payload = msg.payload.level3_status;\nglobal.set(\"B3\", l3_msg.payload);\nl4_msg.payload = msg.payload.level4_status;\nglobal.set(\"B4\", l4_msg.payload);\n\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\nreturnArray[2] = l1_msg;\nreturnArray[3] = l2_msg;\nreturnArray[4] = l3_msg;\nreturnArray[5] = l4_msg;\n\n\nreturn returnArray;",
         "outputs": 6,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -19857,7 +19610,7 @@
         "type": "function",
         "z": "af80505e1c4f7081",
         "name": "TankData Splitter",
-        "func": "var T1_msg = {};\nvar T2_msg = {};\nvar T3_msg = {};\nvar T4_msg = {};\nvar T5_msg = {};\nvar T6_msg = {};\n\nvar totalOutputs = 6;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\nT1_msg.payload = Math.round((msg.payload.T1));\nglobal.set(\"T1\", msg.payload);\nT2_msg.payload = Math.round((msg.payload.T2));\nglobal.set(\"T2\", msg.payload);\nT3_msg.payload = Math.round((msg.payload.T3));\nglobal.set(\"T3\", msg.payload);\nT4_msg.payload = Math.round((msg.payload.T4));\nglobal.set(\"T4\", msg.payload);\nT5_msg.payload = Math.round((msg.payload.T5));\nglobal.set(\"T5\", msg.payload);\nT6_msg.payload = Math.round((msg.payload.T6));\nglobal.set(\"T6\", msg.payload);\n\nreturnArray[0] = T1_msg;\nreturnArray[1] = T2_msg;\nreturnArray[2] = T3_msg;\nreturnArray[3] = T4_msg;\nreturnArray[4] = T5_msg;\nreturnArray[5] = T6_msg;\n\n\nreturn returnArray;",
+        "func": "var T1_msg = {};\nvar T2_msg = {};\nvar T3_msg = {};\nvar T4_msg = {};\nvar T5_msg = {};\nvar T6_msg = {};\n\nvar totalOutputs = 6;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\nT1_msg.payload = msg.payload.T1;\nglobal.set(\"T1\", msg.payload);\nT2_msg.payload = msg.payload.T2;\nglobal.set(\"T2\", msg.payload);\nT3_msg.payload = msg.payload.T3;\nglobal.set(\"T3\", msg.payload);\nT4_msg.payload = msg.payload.T4;\nglobal.set(\"T4\", msg.payload);\nT5_msg.payload = msg.payload.T5;\nglobal.set(\"T5\", msg.payload);\nT6_msg.payload = msg.payload.T6;\nglobal.set(\"T6\", msg.payload);\n\nreturnArray[0] = T1_msg;\nreturnArray[1] = T2_msg;\nreturnArray[2] = T3_msg;\nreturnArray[3] = T4_msg;\nreturnArray[4] = T5_msg;\nreturnArray[5] = T6_msg;\n\n\nreturn returnArray;",
         "outputs": 6,
         "timeout": "",
         "noerr": 0,
@@ -19987,7 +19740,7 @@
         "y": 2160,
         "wires": [
             [
-                "17ee6985c82b1e48"
+                "21c53d13e7293177"
             ]
         ]
     },
@@ -20004,8 +19757,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1660,
-        "y": 1960,
+        "x": 1920,
+        "y": 2000,
         "wires": []
     },
     {
@@ -20013,15 +19766,15 @@
         "type": "debug",
         "z": "af80505e1c4f7081",
         "name": "debug 7",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 880,
-        "y": 860,
+        "x": 940,
+        "y": 760,
         "wires": []
     },
     {
@@ -20104,7 +19857,7 @@
         "y": 2220,
         "wires": [
             [
-                "e4737f79fed34fa0"
+                "a806b59db13a9cc6"
             ]
         ]
     },
@@ -20187,6 +19940,7 @@
         "name": "function 6",
         "func": "//program writes batch ID to repsective outputs\n\n\n//create a return array and fill it with NOT OPERATING\nvar fill = {}\nfill.payload = \"NOT OPERATING\";\nvar numOutputs = node.numberOfOutputs;\nconst returnArray = new Array(numOutputs);\n\nreturnArray[0] = fill;\nreturnArray[1] = fill;\nreturnArray[2] = fill;\nreturnArray[3] = fill;\nreturnArray[4] = fill;\nreturnArray[5] = fill;\nreturnArray[6] = fill;\nreturnArray[7] = fill;\n\n//node.warn(returnArray);\n\n//get the operation that a batch has been set to.\nvar batchA_OP = global.get(\"batchA_OP\");\nvar batchB_OP = global.get(\"batchB_OP\");\n\n// grab index to write the batch ID to.\nvar indexA = batchA_OP[2];\nvar indexB = batchB_OP[2];\n\n//write to spare outputs if no process\nvar no_op_A = 7;\nvar no_op_B = 8;\n\n\n// Cover furnace or not operating conditions\nif (batchA_OP == \"NOT OPERATING\") {\n    indexA = no_op_A;\n} else if (indexA == 'r') {\n    indexA = 5;\n} else {\n    indexA = parseInt(indexA);\n}\n\n\nif (batchB_OP == \"NOT OPERATING\"){\n    indexB = no_op_B;\n}\nelse if (indexB == 'r') {\n    indexB = 6;\n} else {\n    indexB = parseInt(indexB);\n}\n\n\n//output\n\nvar ret_msg1 = {};\nvar ret_msg2 = {};\n\nret_msg1.payload = global.get(\"BATCH_ID_1\");\nret_msg2.payload = global.get(\"BATCH_ID_2\");\n\n\nreturnArray[indexA - 1] = ret_msg1;\nreturnArray[indexB - 1] = ret_msg2;\n\n\n//node.warn(returnArray);\n\nreturn returnArray;",
         "outputs": 8,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -20195,28 +19949,28 @@
         "y": 2060,
         "wires": [
             [
-                "1253528949a9d9da",
-                "c9ec98d84ed380b8"
+                "c9ec98d84ed380b8",
+                "c063f258bb35a506"
             ],
             [
                 "13ba37f344bb9ae7",
-                "4d4d0183d941f356"
+                "e7c2a2e317aef823"
             ],
             [
                 "c01e0a6be2b75298",
-                "2d5b5fc3e2e0c3fd"
+                "49b229c2edcfada0"
             ],
             [
                 "e52296321941157b",
-                "753ea934f92a3446"
+                "3dc0da952b664d9c"
             ],
             [
                 "5d7a3bdf43d9014a",
-                "30ef25745bb9fe3a"
+                "663fc7567cb5db13"
             ],
             [
                 "a709c287a04a8d42",
-                "0f2c3c899d00014c"
+                "2c687cf179c9c8b7"
             ],
             [
                 "d9167e71534ad957"
@@ -20268,8 +20022,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1260,
-        "y": 2120,
+        "x": 1240,
+        "y": 2180,
         "wires": []
     },
     {
@@ -20285,8 +20039,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1260,
-        "y": 2160,
+        "x": 1240,
+        "y": 2220,
         "wires": []
     },
     {
@@ -20302,8 +20056,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1260,
-        "y": 2200,
+        "x": 1240,
+        "y": 2260,
         "wires": []
     },
     {
@@ -20319,8 +20073,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1260,
-        "y": 2240,
+        "x": 1240,
+        "y": 2300,
         "wires": []
     },
     {
@@ -20336,8 +20090,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1260,
-        "y": 2280,
+        "x": 1240,
+        "y": 2340,
         "wires": []
     },
     {
@@ -20353,8 +20107,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1260,
-        "y": 2320,
+        "x": 1240,
+        "y": 2380,
         "wires": []
     },
     {
@@ -20370,8 +20124,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1260,
-        "y": 2360,
+        "x": 1240,
+        "y": 2420,
         "wires": []
     },
     {
@@ -20387,8 +20141,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1260,
-        "y": 2400,
+        "x": 1240,
+        "y": 2460,
         "wires": []
     },
     {
@@ -20432,8 +20186,8 @@
         "links": [
             "dfe663d2f2317847"
         ],
-        "x": 1185,
-        "y": 160,
+        "x": 1075,
+        "y": 40,
         "wires": []
     },
     {
@@ -20590,7 +20344,7 @@
         "y": 1700,
         "wires": [
             [
-                "627efa8f3627b10b"
+                "8549b94578438fc9"
             ]
         ]
     },
@@ -20623,7 +20377,7 @@
         "y": 1660,
         "wires": [
             [
-                "6e1b82958d48c881"
+                "253c1165779150ea"
             ]
         ]
     },
@@ -21017,7 +20771,7 @@
         "type": "ui_text",
         "z": "af80505e1c4f7081",
         "group": "48c91039c2bb5fe0",
-        "order": 3,
+        "order": 5,
         "width": 0,
         "height": 0,
         "name": "",
@@ -21033,7 +20787,7 @@
         "type": "ui_text",
         "z": "af80505e1c4f7081",
         "group": "48c91039c2bb5fe0",
-        "order": 4,
+        "order": 6,
         "width": 0,
         "height": 0,
         "name": "",
@@ -21049,7 +20803,7 @@
         "type": "ui_text",
         "z": "af80505e1c4f7081",
         "group": "48c91039c2bb5fe0",
-        "order": 5,
+        "order": 7,
         "width": 0,
         "height": 0,
         "name": "",
@@ -21209,7 +20963,7 @@
         "type": "ui_text",
         "z": "af80505e1c4f7081",
         "group": "485fc22d5a0ba791",
-        "order": 3,
+        "order": 5,
         "width": 0,
         "height": 0,
         "name": "",
@@ -21241,7 +20995,7 @@
         "type": "ui_text",
         "z": "af80505e1c4f7081",
         "group": "48c91039c2bb5fe0",
-        "order": 2,
+        "order": 3,
         "width": 0,
         "height": 0,
         "name": "",
@@ -21257,7 +21011,7 @@
         "type": "ui_text",
         "z": "af80505e1c4f7081",
         "group": "48c91039c2bb5fe0",
-        "order": 2,
+        "order": 4,
         "width": 0,
         "height": 0,
         "name": "",
@@ -21344,8 +21098,8 @@
         "label": "T5",
         "format": "{{msg.payload}}°C",
         "layout": "col-center",
-        "x": 1710,
-        "y": 1700,
+        "x": 1970,
+        "y": 1740,
         "wires": []
     },
     {
@@ -21360,8 +21114,8 @@
         "label": "T6",
         "format": "{{msg.payload}}°C",
         "layout": "col-center",
-        "x": 1710,
-        "y": 1740,
+        "x": 1970,
+        "y": 1780,
         "wires": []
     },
     {
@@ -21369,7 +21123,7 @@
         "type": "ui_text",
         "z": "af80505e1c4f7081",
         "group": "485fc22d5a0ba791",
-        "order": 6,
+        "order": 8,
         "width": 15,
         "height": 6,
         "name": "pH",
@@ -21385,7 +21139,7 @@
         "type": "ui_text",
         "z": "af80505e1c4f7081",
         "group": "485fc22d5a0ba791",
-        "order": 14,
+        "order": 12,
         "width": 15,
         "height": 6,
         "name": "Temperature T-01",
@@ -21400,9 +21154,10 @@
         "id": "dba71392d58e65aa",
         "type": "ui_text",
         "z": "af80505e1c4f7081",
+        "d": true,
         "group": "485fc22d5a0ba791",
-        "order": 22,
-        "width": "15",
+        "order": 15,
+        "width": 15,
         "height": 2,
         "name": "Acid Volume",
         "label": "",
@@ -21770,9 +21525,9 @@
         "z": "af80505e1c4f7081",
         "group": "485fc22d5a0ba791",
         "name": "",
-        "order": 24,
-        "width": 0,
-        "height": 0,
+        "order": 17,
+        "width": 15,
+        "height": 1,
         "format": "<style>\n\n  .nr-dashboard-text p.value{\n  font-size:160px !important\n  }\n  .nr-dashboard-text p.label{\n    font-size:60px\n    }\n\n  \n</style",
         "storeOutMessages": true,
         "fwdInMessages": true,
@@ -22104,8 +21859,8 @@
         "datatype": "String",
         "value": "",
         "name": "FurnaceBatchID",
-        "x": 1220,
-        "y": 1980,
+        "x": 1480,
+        "y": 2020,
         "wires": [
             [
                 "d8a23248fa8225ea"
@@ -22120,8 +21875,8 @@
         "datatype": "String",
         "value": "",
         "name": "T05BatchID",
-        "x": 1210,
-        "y": 1940,
+        "x": 1470,
+        "y": 1980,
         "wires": [
             [
                 "d8a23248fa8225ea"
@@ -22136,8 +21891,8 @@
         "datatype": "String",
         "value": "",
         "name": "T04BatchID",
-        "x": 1210,
-        "y": 1900,
+        "x": 1470,
+        "y": 1940,
         "wires": [
             [
                 "d8a23248fa8225ea"
@@ -22152,8 +21907,8 @@
         "datatype": "String",
         "value": "",
         "name": "T03BatchID",
-        "x": 1210,
-        "y": 1860,
+        "x": 1470,
+        "y": 1900,
         "wires": [
             [
                 "d8a23248fa8225ea"
@@ -22168,8 +21923,8 @@
         "datatype": "String",
         "value": "",
         "name": "T02BatchID",
-        "x": 1210,
-        "y": 1820,
+        "x": 1470,
+        "y": 1860,
         "wires": [
             [
                 "d8a23248fa8225ea"
@@ -22184,8 +21939,8 @@
         "datatype": "String",
         "value": "",
         "name": "T01BatchID",
-        "x": 1210,
-        "y": 1780,
+        "x": 1470,
+        "y": 1820,
         "wires": [
             [
                 "d8a23248fa8225ea",
@@ -22201,8 +21956,8 @@
         "datatype": "Boolean",
         "value": "",
         "name": "EW_DIAPHRAGM_ENABLE",
-        "x": 1260,
-        "y": 1740,
+        "x": 1520,
+        "y": 1780,
         "wires": [
             [
                 "d8a23248fa8225ea"
@@ -22217,8 +21972,8 @@
         "datatype": "Boolean",
         "value": "",
         "name": "FAST_LOG",
-        "x": 1210,
-        "y": 1700,
+        "x": 1470,
+        "y": 1740,
         "wires": [
             [
                 "d8a23248fa8225ea"
@@ -22233,8 +21988,8 @@
         "datatype": "String",
         "value": "",
         "name": "BatchID1",
-        "x": 1200,
-        "y": 2020,
+        "x": 1460,
+        "y": 2060,
         "wires": [
             [
                 "d8a23248fa8225ea"
@@ -22249,8 +22004,8 @@
         "datatype": "String",
         "value": "",
         "name": "BatchID2",
-        "x": 1200,
-        "y": 2060,
+        "x": 1460,
+        "y": 2100,
         "wires": [
             [
                 "d8a23248fa8225ea"
@@ -22317,8 +22072,8 @@
         "securitypolicy": "None",
         "folderName4PKI": "",
         "name": "",
-        "x": 1460,
-        "y": 1860,
+        "x": 1720,
+        "y": 1900,
         "wires": [
             []
         ]
@@ -22354,66 +22109,289 @@
         ]
     },
     {
-        "id": "e1ef2bea2cbe974f",
-        "type": "function",
-        "z": "772b9e461df7f6c1",
-        "name": "function 7",
-        "func": "msg.payload = msg.payload * 2;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 420,
-        "y": 200,
-        "wires": [
-            [
-                "f3f675eb7fe348b8"
-            ]
-        ]
+        "id": "c489dfaf9ea666b0",
+        "type": "link out",
+        "z": "af80505e1c4f7081",
+        "name": "T-03 Out",
+        "mode": "link",
+        "links": [
+            "fa74a071342b7982"
+        ],
+        "x": 1075,
+        "y": 80,
+        "wires": []
     },
     {
-        "id": "ea9cb40df63fb6ef",
-        "type": "ui_numeric",
-        "z": "772b9e461df7f6c1",
-        "name": "",
-        "label": "numeric",
-        "tooltip": "",
-        "group": "701c917fb989f805",
-        "order": 11,
-        "width": 0,
-        "height": 0,
-        "wrap": false,
-        "passthru": true,
-        "topic": "topic",
-        "topicType": "msg",
-        "format": "{{value}}",
-        "min": 0,
-        "max": 10,
-        "step": 1,
-        "x": 200,
-        "y": 200,
-        "wires": [
-            [
-                "e1ef2bea2cbe974f"
-            ]
-        ]
+        "id": "062d070574e08e54",
+        "type": "link out",
+        "z": "af80505e1c4f7081",
+        "name": "T-05 Out",
+        "mode": "link",
+        "links": [
+            "c97afe2983bf31a3"
+        ],
+        "x": 1075,
+        "y": 120,
+        "wires": []
     },
     {
-        "id": "f3f675eb7fe348b8",
-        "type": "ui_text",
-        "z": "772b9e461df7f6c1",
-        "group": "701c917fb989f805",
-        "order": 12,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "text",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 630,
+        "id": "53e6f80510295a26",
+        "type": "link out",
+        "z": "af80505e1c4f7081",
+        "name": "T-02 Out",
+        "mode": "link",
+        "links": [
+            "9ff6bb65290bac95"
+        ],
+        "x": 1075,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "708e7c0f3aa63576",
+        "type": "link out",
+        "z": "af80505e1c4f7081",
+        "name": "T-04 Out",
+        "mode": "link",
+        "links": [
+            "6d9acfed791dd18d"
+        ],
+        "x": 1075,
         "y": 200,
         "wires": []
+    },
+    {
+        "id": "913f7875f03e7386",
+        "type": "link out",
+        "z": "af80505e1c4f7081",
+        "name": "Furnace Out",
+        "mode": "link",
+        "links": [
+            "f6e507bb58b8bc25"
+        ],
+        "x": 1075,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "ca06011c4caacf35",
+        "type": "comment",
+        "z": "af80505e1c4f7081",
+        "name": "Furnace",
+        "info": "",
+        "x": 1440,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "c063f258bb35a506",
+        "type": "rbe",
+        "z": "af80505e1c4f7081",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1230,
+        "y": 1820,
+        "wires": [
+            [
+                "1253528949a9d9da"
+            ]
+        ]
+    },
+    {
+        "id": "e7c2a2e317aef823",
+        "type": "rbe",
+        "z": "af80505e1c4f7081",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1230,
+        "y": 1860,
+        "wires": [
+            [
+                "4d4d0183d941f356"
+            ]
+        ]
+    },
+    {
+        "id": "49b229c2edcfada0",
+        "type": "rbe",
+        "z": "af80505e1c4f7081",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1230,
+        "y": 1900,
+        "wires": [
+            [
+                "2d5b5fc3e2e0c3fd"
+            ]
+        ]
+    },
+    {
+        "id": "3dc0da952b664d9c",
+        "type": "rbe",
+        "z": "af80505e1c4f7081",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1230,
+        "y": 1940,
+        "wires": [
+            [
+                "753ea934f92a3446"
+            ]
+        ]
+    },
+    {
+        "id": "663fc7567cb5db13",
+        "type": "rbe",
+        "z": "af80505e1c4f7081",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1230,
+        "y": 1980,
+        "wires": [
+            [
+                "30ef25745bb9fe3a"
+            ]
+        ]
+    },
+    {
+        "id": "2c687cf179c9c8b7",
+        "type": "rbe",
+        "z": "af80505e1c4f7081",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1230,
+        "y": 2020,
+        "wires": [
+            [
+                "0f2c3c899d00014c"
+            ]
+        ]
+    },
+    {
+        "id": "21c53d13e7293177",
+        "type": "rbe",
+        "z": "af80505e1c4f7081",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1230,
+        "y": 2060,
+        "wires": [
+            [
+                "17ee6985c82b1e48"
+            ]
+        ]
+    },
+    {
+        "id": "a806b59db13a9cc6",
+        "type": "rbe",
+        "z": "af80505e1c4f7081",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1230,
+        "y": 2100,
+        "wires": [
+            [
+                "e4737f79fed34fa0"
+            ]
+        ]
+    },
+    {
+        "id": "81de93120daf0e59",
+        "type": "comment",
+        "z": "af80505e1c4f7081",
+        "name": "report by exception",
+        "info": "Only report if OPCUA node changes",
+        "x": 1230,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "253c1165779150ea",
+        "type": "rbe",
+        "z": "af80505e1c4f7081",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1230,
+        "y": 1700,
+        "wires": [
+            [
+                "6e1b82958d48c881"
+            ]
+        ]
+    },
+    {
+        "id": "8549b94578438fc9",
+        "type": "rbe",
+        "z": "af80505e1c4f7081",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1230,
+        "y": 1740,
+        "wires": [
+            [
+                "627efa8f3627b10b"
+            ]
+        ]
     },
     {
         "id": "42057ba3d38d3675",
@@ -22464,6 +22442,176 @@
         "statusType": "auto",
         "x": 280,
         "y": 340,
+        "wires": []
+    },
+    {
+        "id": "9ff6bb65290bac95",
+        "type": "link in",
+        "z": "ea4ba7b5729c4ade",
+        "name": "T-02 In",
+        "links": [
+            "53e6f80510295a26"
+        ],
+        "x": 135,
+        "y": 400,
+        "wires": [
+            [
+                "305fcb2096195599"
+            ]
+        ]
+    },
+    {
+        "id": "fa74a071342b7982",
+        "type": "link in",
+        "z": "ea4ba7b5729c4ade",
+        "name": "T-03 in",
+        "links": [
+            "c489dfaf9ea666b0"
+        ],
+        "x": 135,
+        "y": 460,
+        "wires": [
+            [
+                "d06f86122f90e039"
+            ]
+        ]
+    },
+    {
+        "id": "6d9acfed791dd18d",
+        "type": "link in",
+        "z": "ea4ba7b5729c4ade",
+        "name": "T-04 in",
+        "links": [
+            "708e7c0f3aa63576"
+        ],
+        "x": 135,
+        "y": 500,
+        "wires": [
+            [
+                "8ed5a4b2b716c49f"
+            ]
+        ]
+    },
+    {
+        "id": "c97afe2983bf31a3",
+        "type": "link in",
+        "z": "ea4ba7b5729c4ade",
+        "name": "T-05 in",
+        "links": [
+            "062d070574e08e54"
+        ],
+        "x": 135,
+        "y": 540,
+        "wires": [
+            [
+                "7ef6e18ded4b8ac3"
+            ]
+        ]
+    },
+    {
+        "id": "f6e507bb58b8bc25",
+        "type": "link in",
+        "z": "ea4ba7b5729c4ade",
+        "name": "Furnace in",
+        "links": [
+            "913f7875f03e7386"
+        ],
+        "x": 135,
+        "y": 580,
+        "wires": [
+            [
+                "ddf19d51ef3bb9ca"
+            ]
+        ]
+    },
+    {
+        "id": "305fcb2096195599",
+        "type": "mqtt out",
+        "z": "ea4ba7b5729c4ade",
+        "name": "",
+        "topic": "Zincovery/Christchurch/Hydro/T-01",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "fb3e793aa41dfeaa",
+        "x": 360,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "d06f86122f90e039",
+        "type": "mqtt out",
+        "z": "ea4ba7b5729c4ade",
+        "name": "",
+        "topic": "Zincovery/Christchurch/Hydro/T-02",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "fb3e793aa41dfeaa",
+        "x": 360,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "8ed5a4b2b716c49f",
+        "type": "mqtt out",
+        "z": "ea4ba7b5729c4ade",
+        "name": "",
+        "topic": "Zincovery/Christchurch/Hydro/T-03",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "fb3e793aa41dfeaa",
+        "x": 360,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "7ef6e18ded4b8ac3",
+        "type": "mqtt out",
+        "z": "ea4ba7b5729c4ade",
+        "name": "",
+        "topic": "Zincovery/Christchurch/Hydro/T-04",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "fb3e793aa41dfeaa",
+        "x": 360,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "ddf19d51ef3bb9ca",
+        "type": "mqtt out",
+        "z": "ea4ba7b5729c4ade",
+        "name": "",
+        "topic": "Zincovery/Christchurch/Hydro/T-05",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "fb3e793aa41dfeaa",
+        "x": 360,
+        "y": 580,
         "wires": []
     }
 ]
