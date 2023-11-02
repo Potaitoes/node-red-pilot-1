@@ -19653,8 +19653,8 @@
         "type": "function",
         "z": "af80505e1c4f7081",
         "name": "function 2",
-        "func": "var numOutputs = node.numberOfOutputs;\nconst returnArray = new Array(numOutputs).fill(null);\nvar topic1 = global.get('Topic_button_states');\n\nvar FAST_LOG_switch_msg = {};\nvar EW_Circulation_switch_msg = {};\nvar T01_switch_msg = {};\nvar T02_switch_msg = {};\nvar T03_switch_msg = {};\nvar T04_switch_msg = {};\nvar T05_switch_msg = {};\nvar Furnace_switch_msg = {};\n\n\nif (msg.topic == topic1) {\n\n    //Set Globals\n\n\n    global.set(\"FAST_LOG_Switch\", msg.payload.FAST_LOG);\n    global.set(\"EW_PUMP_OVERRIDE_Switch\", msg.payload.EW_PUMP_OVERRIDE);\n\n\n\n    FAST_LOG_switch_msg.payload = msg.payload.FAST_LOG;\n    EW_Circulation_switch_msg.payload = msg.payload.EW_PUMP_OVERRIDE; \n\n    returnArray[0] = FAST_LOG_switch_msg;\n    returnArray[1] = EW_Circulation_switch_msg;\n\n}\n\n\n\nreturn returnArray;",
-        "outputs": 2,
+        "func": "var numOutputs = node.numberOfOutputs;\nconst returnArray = new Array(numOutputs).fill(null);\nvar topic1 = global.get('Topic_button_states');\n\nvar FAST_LOG_switch_msg = {};\nvar EW_Circulation_switch_msg = {};\nvar OverRideEW2Buff_msg = {};\nvar OverRideBuff2EW_msg = {};\nvar T01_switch_msg = {};\nvar T02_switch_msg = {};\nvar T03_switch_msg = {};\nvar T04_switch_msg = {};\nvar T05_switch_msg = {};\nvar Furnace_switch_msg = {};\n\n\nif (msg.topic == topic1) {\n\n    //Set Globals\n\n\n    global.set(\"FAST_LOG_Switch\", msg.payload.FAST_LOG);\n    global.set(\"EW_PUMP_OVERRIDE_Switch\", msg.payload.EW_PUMP_OVERRIDE);\n\n\n\n    FAST_LOG_switch_msg.payload = msg.payload.FAST_LOG;\n    EW_Circulation_switch_msg.payload = msg.payload.EW_PUMP_OVERRIDE; \n    OverRideEW2Buff_msg.payload = msg.payload.OverRide1;\n    OverRideEW2Buff_msg.payload = msg.payload.OverRide2;\n\n    returnArray[0] = FAST_LOG_switch_msg;\n    returnArray[1] = EW_Circulation_switch_msg;\n    returnArray[2] = OverRideEW2Buff_msg;\n    returnArray[3] = OverRideBuff2EW_msg;\n\n}\n\n\n\nreturn returnArray;",
+        "outputs": 4,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
@@ -19668,6 +19668,12 @@
             ],
             [
                 "8273ecb8f1ebf0e3"
+            ],
+            [
+                "0f0476982fec7b16"
+            ],
+            [
+                "dcb61b611538f883"
             ]
         ]
     },
@@ -22392,7 +22398,9 @@
         "x": 590,
         "y": 1560,
         "wires": [
-            []
+            [
+                "2eb2c816deaaafe0"
+            ]
         ]
     },
     {
@@ -22423,7 +22431,9 @@
         "x": 590,
         "y": 1600,
         "wires": [
-            []
+            [
+                "081f9380deb6d6f8"
+            ]
         ]
     },
     {
@@ -22435,7 +22445,7 @@
         "value": "",
         "name": "ew2buffOverride",
         "x": 1480,
-        "y": 1820,
+        "y": 1780,
         "wires": [
             []
         ]
@@ -22449,7 +22459,7 @@
         "value": "",
         "name": "buff2ewOverride",
         "x": 1480,
-        "y": 1780,
+        "y": 1820,
         "wires": [
             []
         ]
@@ -22466,11 +22476,11 @@
         "septopics": true,
         "property": "payload",
         "topi": "topic",
-        "x": 1230,
+        "x": 1210,
         "y": 1780,
         "wires": [
             [
-                "dad78bdde4c2089d"
+                "67e5dcbb3257d696"
             ]
         ]
     },
@@ -22490,7 +22500,7 @@
         "y": 1820,
         "wires": [
             [
-                "67e5dcbb3257d696"
+                "dad78bdde4c2089d"
             ]
         ]
     },
