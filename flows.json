@@ -19989,7 +19989,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1240,
-        "y": 2180,
+        "y": 2300,
         "wires": []
     },
     {
@@ -20006,7 +20006,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1240,
-        "y": 2220,
+        "y": 2340,
         "wires": []
     },
     {
@@ -20023,7 +20023,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1240,
-        "y": 2260,
+        "y": 2380,
         "wires": []
     },
     {
@@ -20040,7 +20040,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1240,
-        "y": 2300,
+        "y": 2420,
         "wires": []
     },
     {
@@ -20057,7 +20057,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1240,
-        "y": 2340,
+        "y": 2460,
         "wires": []
     },
     {
@@ -20074,7 +20074,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1240,
-        "y": 2380,
+        "y": 2500,
         "wires": []
     },
     {
@@ -20091,7 +20091,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1240,
-        "y": 2420,
+        "y": 2540,
         "wires": []
     },
     {
@@ -20108,7 +20108,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1240,
-        "y": 2460,
+        "y": 2580,
         "wires": []
     },
     {
@@ -21793,7 +21793,7 @@
         "value": "",
         "name": "FurnaceBatchID",
         "x": 1480,
-        "y": 2020,
+        "y": 2140,
         "wires": [
             [
                 "d8a23248fa8225ea"
@@ -21809,7 +21809,7 @@
         "value": "",
         "name": "T05BatchID",
         "x": 1470,
-        "y": 1980,
+        "y": 2100,
         "wires": [
             [
                 "d8a23248fa8225ea"
@@ -21825,7 +21825,7 @@
         "value": "",
         "name": "T04BatchID",
         "x": 1470,
-        "y": 1940,
+        "y": 2060,
         "wires": [
             [
                 "d8a23248fa8225ea"
@@ -21841,7 +21841,7 @@
         "value": "",
         "name": "T03BatchID",
         "x": 1470,
-        "y": 1900,
+        "y": 2020,
         "wires": [
             [
                 "d8a23248fa8225ea"
@@ -21857,7 +21857,7 @@
         "value": "",
         "name": "T02BatchID",
         "x": 1470,
-        "y": 1860,
+        "y": 1980,
         "wires": [
             [
                 "d8a23248fa8225ea"
@@ -21873,7 +21873,7 @@
         "value": "",
         "name": "T01BatchID",
         "x": 1470,
-        "y": 1820,
+        "y": 1940,
         "wires": [
             [
                 "d8a23248fa8225ea",
@@ -21890,7 +21890,7 @@
         "value": "",
         "name": "FAST_LOG",
         "x": 1470,
-        "y": 1740,
+        "y": 1860,
         "wires": [
             [
                 "d8a23248fa8225ea"
@@ -21906,7 +21906,7 @@
         "value": "",
         "name": "BatchID1",
         "x": 1460,
-        "y": 2060,
+        "y": 2180,
         "wires": [
             [
                 "d8a23248fa8225ea"
@@ -21922,7 +21922,7 @@
         "value": "",
         "name": "BatchID2",
         "x": 1460,
-        "y": 2100,
+        "y": 2220,
         "wires": [
             [
                 "d8a23248fa8225ea"
@@ -21995,7 +21995,7 @@
         "folderName4PKI": "",
         "name": "",
         "x": 1720,
-        "y": 1900,
+        "y": 2020,
         "wires": [
             []
         ]
@@ -22118,7 +22118,7 @@
         "property": "payload",
         "topi": "topic",
         "x": 1230,
-        "y": 1820,
+        "y": 1940,
         "wires": [
             [
                 "1253528949a9d9da"
@@ -22138,7 +22138,7 @@
         "property": "payload",
         "topi": "topic",
         "x": 1230,
-        "y": 1860,
+        "y": 1980,
         "wires": [
             [
                 "4d4d0183d941f356"
@@ -22158,7 +22158,7 @@
         "property": "payload",
         "topi": "topic",
         "x": 1230,
-        "y": 1900,
+        "y": 2020,
         "wires": [
             [
                 "2d5b5fc3e2e0c3fd"
@@ -22178,7 +22178,7 @@
         "property": "payload",
         "topi": "topic",
         "x": 1230,
-        "y": 1940,
+        "y": 2060,
         "wires": [
             [
                 "753ea934f92a3446"
@@ -22198,7 +22198,7 @@
         "property": "payload",
         "topi": "topic",
         "x": 1230,
-        "y": 1980,
+        "y": 2100,
         "wires": [
             [
                 "30ef25745bb9fe3a"
@@ -22218,7 +22218,7 @@
         "property": "payload",
         "topi": "topic",
         "x": 1230,
-        "y": 2020,
+        "y": 2140,
         "wires": [
             [
                 "0f2c3c899d00014c"
@@ -22238,7 +22238,7 @@
         "property": "payload",
         "topi": "topic",
         "x": 1230,
-        "y": 2060,
+        "y": 2180,
         "wires": [
             [
                 "17ee6985c82b1e48"
@@ -22258,7 +22258,7 @@
         "property": "payload",
         "topi": "topic",
         "x": 1230,
-        "y": 2100,
+        "y": 2220,
         "wires": [
             [
                 "e4737f79fed34fa0"
@@ -22288,7 +22288,7 @@
         "property": "payload",
         "topi": "topic",
         "x": 1230,
-        "y": 1740,
+        "y": 1860,
         "wires": [
             [
                 "6e1b82958d48c881"
@@ -22341,7 +22341,7 @@
         "property": "payload",
         "topi": "topic",
         "x": 1230,
-        "y": 1780,
+        "y": 1900,
         "wires": [
             [
                 "cbd9d96946c28dbe"
@@ -22357,7 +22357,7 @@
         "value": "",
         "name": "OVERRIDE_EW_RECIRC",
         "x": 1520,
-        "y": 1780,
+        "y": 1900,
         "wires": [
             [
                 "d8a23248fa8225ea"
@@ -22424,6 +22424,74 @@
         "y": 1600,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "67e5dcbb3257d696",
+        "type": "OpcUa-Item",
+        "z": "af80505e1c4f7081",
+        "item": "ns=4;s=EW_TO_BUFFER_PUMP_OVERRIDE_VALUE",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "ew2buffOverride",
+        "x": 1480,
+        "y": 1820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dad78bdde4c2089d",
+        "type": "OpcUa-Item",
+        "z": "af80505e1c4f7081",
+        "item": "ns=4;s=BUFFER_TO_EW_PUMP_OVERRIDE_VALUE",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "buff2ewOverride",
+        "x": 1480,
+        "y": 1780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2eb2c816deaaafe0",
+        "type": "rbe",
+        "z": "af80505e1c4f7081",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1230,
+        "y": 1780,
+        "wires": [
+            [
+                "dad78bdde4c2089d"
+            ]
+        ]
+    },
+    {
+        "id": "081f9380deb6d6f8",
+        "type": "rbe",
+        "z": "af80505e1c4f7081",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1230,
+        "y": 1820,
+        "wires": [
+            [
+                "67e5dcbb3257d696"
+            ]
         ]
     },
     {
