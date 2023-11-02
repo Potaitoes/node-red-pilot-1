@@ -19683,8 +19683,8 @@
         "type": "function",
         "z": "af80505e1c4f7081",
         "name": "function 2",
-        "func": "var numOutputs = node.numberOfOutputs;\nconst returnArray = new Array(numOutputs).fill(null);\nvar topic1 = global.get('Topic_button_states');\n\nvar FAST_LOG_switch_msg = {};\nvar EW_Circulation_switch_msg = {};\nvar T01_switch_msg = {};\nvar T02_switch_msg = {};\nvar T03_switch_msg = {};\nvar T04_switch_msg = {};\nvar T05_switch_msg = {};\nvar Furnace_switch_msg = {};\n\n\nif (msg.topic == topic1) {\n\n    //Set Globals\n\n\n    global.set(\"FAST_LOG_Switch\", msg.payload.FAST_LOG);\n    global.set(\"EW_Diaphragm_Switch\", msg.payload.EW_DIAPHRAGM);\n    global.set(\"OPT01_Switch\", msg.payload.T01_batch_ID);\n    global.set(\"OPT02_Switch\", msg.payload.T02_batch_ID);\n    global.set(\"OPT03_Switch\", msg.payload.T03_batch_ID);\n    global.set(\"OPT04_Switch\", msg.payload.T04_batch_ID);\n    global.set(\"OPT05_Switch\", msg.payload.T05_batch_ID);\n    global.set(\"OPFurnace_Switch\", msg.payload.furnace_batch_ID);\n\n\n    FAST_LOG_switch_msg.payload = msg.payload.FAST_LOG;\n    EW_Circulation_switch_msg.payload = msg.payload.EW_DIAPHRAGM; \n\n    //Turn on switch if the respective operations batch ID matches that of the current.\n    T01_switch_msg.payload = msg.payload.T01_batch_ID == msg.payload.batchID1;\n    T02_switch_msg.payload = msg.payload.T02_batch_ID == msg.payload.batchID1;\n    T03_switch_msg.payload = msg.payload.T03_batch_ID == msg.payload.batchID1;\n    T04_switch_msg.payload = msg.payload.T04_batch_ID == msg.payload.batchID1;\n    T05_switch_msg.payload = msg.payload.T05_batch_ID == msg.payload.batchID1;\n    Furnace_switch_msg.payload = msg.payload.furnace_batch_ID == msg.payload.batchID1;\n\n    if (msg.payload.T01_batch_ID == msg.payload.batchID1) {\n        T01_switch_msg.payload ={S_Left : true, S_Right : false};\n    } else if (msg.payload.T01_batch_ID == msg.payload.batchID2) {\n        T01_switch_msg.payload = { S_Left: false, S_Right: true };\n    } else {\n        T01_switch_msg.payload = { S_Left: false, S_Right: false };\n    }\n\n    returnArray[0] = FAST_LOG_switch_msg\n    returnArray[1] = EW_Circulation_switch_msg\n    returnArray[2] = T01_switch_msg;\n    returnArray[3] = T02_switch_msg;\n    returnArray[4] = T03_switch_msg;\n    returnArray[5] = T04_switch_msg; \n    returnArray[6] = T05_switch_msg;\n    returnArray[7] = Furnace_switch_msg;\n\n}\n\n\n\nreturn returnArray;",
-        "outputs": 8,
+        "func": "var numOutputs = node.numberOfOutputs;\nconst returnArray = new Array(numOutputs).fill(null);\nvar topic1 = global.get('Topic_button_states');\n\nvar FAST_LOG_switch_msg = {};\nvar EW_Circulation_switch_msg = {};\nvar T01_switch_msg = {};\nvar T02_switch_msg = {};\nvar T03_switch_msg = {};\nvar T04_switch_msg = {};\nvar T05_switch_msg = {};\nvar Furnace_switch_msg = {};\n\n\nif (msg.topic == topic1) {\n\n    //Set Globals\n\n\n    global.set(\"FAST_LOG_Switch\", msg.payload.FAST_LOG);\n    global.set(\"EW_PUMP_OVERRIDE_Switch\", msg.payload.EW_PUMP_OVERRIDE);\n\n\n\n    FAST_LOG_switch_msg.payload = msg.payload.FAST_LOG;\n    EW_Circulation_switch_msg.payload = msg.payload.EW_PUMP_OVERRIDE; \n\n    returnArray[0] = FAST_LOG_switch_msg;\n    returnArray[1] = EW_Circulation_switch_msg;\n\n}\n\n\n\nreturn returnArray;",
+        "outputs": 2,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
@@ -19696,13 +19696,9 @@
             [
                 "47443ecc857d3d08"
             ],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            []
+            [
+                "8273ecb8f1ebf0e3"
+            ]
         ]
     },
     {
@@ -22326,6 +22322,75 @@
         "wires": [
             [
                 "6e1b82958d48c881"
+            ]
+        ]
+    },
+    {
+        "id": "8273ecb8f1ebf0e3",
+        "type": "ui_switch",
+        "z": "af80505e1c4f7081",
+        "name": "EW_PUMP_OVERRIDE",
+        "label": "EW PUMP OVERRIDE",
+        "tooltip": "",
+        "group": "9f41ae3953064c26",
+        "order": 2,
+        "width": 14,
+        "height": 3,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "x": 630,
+        "y": 1700,
+        "wires": [
+            [
+                "3f7cbed94d72cb73"
+            ]
+        ]
+    },
+    {
+        "id": "3f7cbed94d72cb73",
+        "type": "rbe",
+        "z": "af80505e1c4f7081",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1230,
+        "y": 1780,
+        "wires": [
+            [
+                "cbd9d96946c28dbe"
+            ]
+        ]
+    },
+    {
+        "id": "cbd9d96946c28dbe",
+        "type": "OpcUa-Item",
+        "z": "af80505e1c4f7081",
+        "item": "ns=4;s=OVERRIDE_EW_RECIRC",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "OVERRIDE_EW_RECIRC",
+        "x": 1520,
+        "y": 1780,
+        "wires": [
+            [
+                "d8a23248fa8225ea"
             ]
         ]
     },
