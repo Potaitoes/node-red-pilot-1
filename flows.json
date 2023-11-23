@@ -178,7 +178,7 @@
     {
         "id": "359d48deb1e9e787",
         "type": "ui_tab",
-        "name": "T-05",
+        "name": "T-06",
         "icon": "dashboard",
         "order": 7,
         "disabled": false,
@@ -187,7 +187,7 @@
     {
         "id": "613ee8f0c2ded6bc",
         "type": "ui_tab",
-        "name": "T-02",
+        "name": "T-03",
         "icon": "dashboard",
         "order": 4,
         "disabled": false,
@@ -196,7 +196,7 @@
     {
         "id": "21385dd97135be68",
         "type": "ui_tab",
-        "name": "T-04",
+        "name": "T-05",
         "icon": "dashboard",
         "order": 6,
         "disabled": false,
@@ -214,7 +214,7 @@
     {
         "id": "03b240a63333d7e8",
         "type": "ui_tab",
-        "name": "T-03",
+        "name": "T-04",
         "icon": "dashboard",
         "order": 5,
         "disabled": false,
@@ -234,7 +234,7 @@
         "type": "ui_tab",
         "name": "T-01",
         "icon": "dashboard",
-        "order": 3,
+        "order": 2,
         "disabled": false,
         "hidden": false
     },
@@ -252,6 +252,7 @@
         "type": "ui_tab",
         "name": "Controls",
         "icon": "dashboard",
+        "order": 10,
         "disabled": false,
         "hidden": false
     },
@@ -260,6 +261,7 @@
         "type": "ui_tab",
         "name": "testing",
         "icon": "dashboard",
+        "order": 11,
         "disabled": false,
         "hidden": false
     },
@@ -18997,6 +18999,25 @@
         "height": 1
     },
     {
+        "id": "f2ad22bf89d2b947",
+        "type": "ui_tab",
+        "name": "T-02",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "b14b500d2e61f20a",
+        "type": "ui_group",
+        "name": "Middle",
+        "tab": "f2ad22bf89d2b947",
+        "order": 1,
+        "disp": false,
+        "width": "15",
+        "collapse": false
+    },
+    {
         "id": "28306d59f714a835",
         "type": "comment",
         "z": "af80505e1c4f7081",
@@ -19039,7 +19060,8 @@
                 "8fecb748d2193153",
                 "9151b42e057ac46d",
                 "fafc1f8d899453f4",
-                "756577b21cef2354"
+                "756577b21cef2354",
+                "f89a1284daf893ef"
             ]
         ]
     },
@@ -19085,7 +19107,7 @@
         "finalize": "",
         "libs": [],
         "x": 1470,
-        "y": 140,
+        "y": 100,
         "wires": [
             [
                 "68049e6f367fd7be",
@@ -19111,8 +19133,8 @@
         "type": "function",
         "z": "af80505e1c4f7081",
         "name": "Splits Topics into respective Outputs",
-        "func": "var index;\nvar numOutputs = node.numberOfOutputs;\n\nconst returnArray = new Array(numOutputs).fill(null);\n\nvar topic1 = global.get('Topic_WashDigestion');\nvar topic2 = global.get('Topic_Cementation');\nvar topic3 = global.get('Topic_Electrowinning');\nvar topic4 = global.get('Topic_OxPrecipitation');\nvar topic5 = global.get('Topic_BufferTank');\nvar topic6 = global.get('Topic_Furnace1');\nvar topic7 = global.get('Topic_Flow_Meter');\n\nif (msg.topic == topic1) {\n    index = 0;\n    returnArray[0] = 1;\n} else if (msg.topic == topic2) {\n    index = 1;\n} else if (msg.topic == topic3) {\n    index = 2;\n} else if (msg.topic == topic4) {\n    index = 3;\n} else if (msg.topic == topic5) {\n    index = 4;\n} else if (msg.topic == topic6) {\n    index = 5;\n} else if (msg.topic == topic7) {\n    index = 6;\n}\n\n// Parsing and modifying the payload\nlet parsedData = msg.payload;\n\nfor (let key in parsedData) {\n    if (typeof parsedData[key] === 'number') {\n        // Round to 2 decimal places if the value is numeric\n        parsedData[key] = parseFloat(parsedData[key].toFixed(1));\n    }\n}\n\nmsg.payload = parsedData;\n\nreturnArray[index] = msg;\nreturn returnArray;",
-        "outputs": 7,
+        "func": "var index;\nvar numOutputs = node.numberOfOutputs;\n\nconst returnArray = new Array(numOutputs).fill(null);\n\nvar topic1 = global.get('Topic_WashDigestion');\nvar topic2 = global.get('Topic_Cementation');\nvar topic3 = global.get('Topic_Electrowinning');\nvar topic4 = global.get('Topic_OxPrecipitation');\nvar topic5 = global.get('Topic_BufferTank');\nvar topic6 = global.get('Topic_Furnace1');\nvar topic7 = global.get('Topic_Flow_Meter');\nvar topic8 = global.get('Topic_Leaching');\n\nif (msg.topic == topic1) {\n    index = 0;\n    returnArray[0] = 1;\n} else if (msg.topic == topic2) {\n    index = 1;\n} else if (msg.topic == topic3) {\n    index = 2;\n} else if (msg.topic == topic4) {\n    index = 3;\n} else if (msg.topic == topic5) {\n    index = 4;\n} else if (msg.topic == topic6) {\n    index = 5;\n} else if (msg.topic == topic7) {\n    index = 6;\n} else if (msg.topic == topic8) {\n    index = 7;\n}\n\n// Parsing and modifying the payload\nlet parsedData = msg.payload;\n\nfor (let key in parsedData) {\n    if (typeof parsedData[key] === 'number') {\n        // Round to 2 decimal places if the value is numeric\n        parsedData[key] = parseFloat(parsedData[key].toFixed(1));\n    }\n}\n\nmsg.payload = parsedData;\n\nreturnArray[index] = msg;\nreturn returnArray;",
+        "outputs": 8,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
@@ -19147,6 +19169,9 @@
             ],
             [
                 "bdf68699683d264a"
+            ],
+            [
+                "b8b8101ebec99536"
             ]
         ]
     },
@@ -19182,7 +19207,7 @@
         "finalize": "",
         "libs": [],
         "x": 1470,
-        "y": 420,
+        "y": 500,
         "wires": [
             [
                 "7179279d253c6d7e",
@@ -19267,7 +19292,7 @@
         "name": "Wash Digestion",
         "info": "",
         "x": 1480,
-        "y": 60,
+        "y": 20,
         "wires": []
     },
     {
@@ -19276,8 +19301,8 @@
         "z": "af80505e1c4f7081",
         "name": "Cementation",
         "info": "",
-        "x": 1470,
-        "y": 340,
+        "x": 1450,
+        "y": 440,
         "wires": []
     },
     {
@@ -19322,7 +19347,7 @@
         "finalize": "",
         "libs": [],
         "x": 1710,
-        "y": 180,
+        "y": 140,
         "wires": [
             [
                 "75888f73ce0f637f",
@@ -19342,7 +19367,7 @@
         "finalize": "",
         "libs": [],
         "x": 1710,
-        "y": 460,
+        "y": 540,
         "wires": [
             [
                 "cf2f101c5c46412e",
@@ -19641,7 +19666,7 @@
         "finalize": "",
         "libs": [],
         "x": 1440,
-        "y": 260,
+        "y": 180,
         "wires": [
             [
                 "dba71392d58e65aa"
@@ -20384,7 +20409,7 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "x": 1690,
-        "y": 380,
+        "y": 460,
         "wires": []
     },
     {
@@ -20464,7 +20489,7 @@
         "format": "{{msg.payload}} C",
         "layout": "row-center",
         "x": 1690,
-        "y": 500,
+        "y": 580,
         "wires": []
     },
     {
@@ -20495,8 +20520,8 @@
         "label": "T-01 pH",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 2620,
-        "y": 180,
+        "x": 2160,
+        "y": 100,
         "wires": []
     },
     {
@@ -20511,8 +20536,8 @@
         "label": "T-01 Temperature",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 2650,
-        "y": 220,
+        "x": 2190,
+        "y": 140,
         "wires": []
     },
     {
@@ -20527,8 +20552,8 @@
         "label": "T-01 Level",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 2630,
-        "y": 260,
+        "x": 2170,
+        "y": 180,
         "wires": []
     },
     {
@@ -21072,7 +21097,7 @@
         "format": "{{msg.payload}} pH",
         "layout": "col-center",
         "x": 1690,
-        "y": 60,
+        "y": 20,
         "wires": []
     },
     {
@@ -21088,7 +21113,7 @@
         "format": "{{msg.payload}} °C",
         "layout": "col-center",
         "x": 1730,
-        "y": 100,
+        "y": 60,
         "wires": []
     },
     {
@@ -21104,8 +21129,8 @@
         "label": "",
         "format": "{{msg.payload}} m3",
         "layout": "row-spread",
-        "x": 1690,
-        "y": 260,
+        "x": 1710,
+        "y": 200,
         "wires": []
     },
     {
@@ -21163,7 +21188,7 @@
         "seg1": "",
         "seg2": "",
         "x": 1950,
-        "y": 460,
+        "y": 540,
         "wires": []
     },
     {
@@ -22540,6 +22565,97 @@
         "statusType": "auto",
         "x": 480,
         "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "e7b4e47f7eef0a71",
+        "type": "function",
+        "z": "af80505e1c4f7081",
+        "name": "assign WashDigestion to topic",
+        "func": "var msg_Leaching = {};\nmsg_Leaching.topic = msg.topic;\n\n//Assigns a global variable identified by \"Topic_WashDigestion\" of value msg_WashDigestion.topic where the data type is converted to a string.\n//Don't know why it needs to be declared as a string type? Less memory assigned?\nglobal.set(\"Topic_Leaching\", String(msg_Leaching.topic)); \n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 260,
+        "wires": [
+            [
+                "2f3a55e86a6c30dc"
+            ]
+        ]
+    },
+    {
+        "id": "f89a1284daf893ef",
+        "type": "OpcUa-Item",
+        "z": "af80505e1c4f7081",
+        "item": "ns=4;s=Leach",
+        "datatype": "String",
+        "value": "",
+        "name": "",
+        "x": 240,
+        "y": 260,
+        "wires": [
+            [
+                "e7b4e47f7eef0a71"
+            ]
+        ]
+    },
+    {
+        "id": "b8b8101ebec99536",
+        "type": "function",
+        "z": "af80505e1c4f7081",
+        "name": "TankData Splitter",
+        "func": "var pH_msg = {};\nvar temp_msg = {};\n\nvar numOutputs = node.numberOfOutputs;\n\nconst returnArray = new Array(numOutputs).fill(null);\n\npH_msg.payload = msg.payload.pH;\nglobal.set(\"pH_Leach\", msg.payload);\n\ntemp_msg.payload = msg.payload.temperature;\nglobal.set(\"Temp_Leach\", msg.payload);\n\nreturnArray[0] = pH_msg;\nreturnArray[1] = temp_msg;\n\nreturn returnArray;",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1470,
+        "y": 320,
+        "wires": [
+            [
+                "adfa8140966e892e"
+            ],
+            [
+                "419c1e67eb4b49a1"
+            ]
+        ]
+    },
+    {
+        "id": "adfa8140966e892e",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "b14b500d2e61f20a",
+        "order": 8,
+        "width": 15,
+        "height": 6,
+        "name": "pH",
+        "label": "",
+        "format": "{{msg.payload}} pH",
+        "layout": "col-center",
+        "x": 1730,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "419c1e67eb4b49a1",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "b14b500d2e61f20a",
+        "order": 12,
+        "width": 15,
+        "height": 6,
+        "name": "Temperature T-02",
+        "label": "",
+        "format": "{{msg.payload}} °C",
+        "layout": "col-center",
+        "x": 1770,
+        "y": 340,
         "wires": []
     },
     {
