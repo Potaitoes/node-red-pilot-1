@@ -19765,7 +19765,7 @@
         "type": "debug",
         "z": "af80505e1c4f7081",
         "name": "debug 7",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
