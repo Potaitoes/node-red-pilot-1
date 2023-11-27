@@ -19824,12 +19824,13 @@
         "name": "BATCH ID ABSORBER",
         "func": "var numOutputs = node.numberOfOutputs;\nconst returnArray = new Array(numOutputs).fill(null);\nvar topic1 = global.get('Topic_button_states');\n\nvar BatchID1_msg = {};\nvar BatchID2_msg = {};\n\nif (msg.topic == topic1) {\n\n    //Set Globals\n\n    global.set(\"BATCH_ID_1\", msg.payload.batchID1);\n    global.set(\"BATCH_ID_2\", msg.payload.batchID2);\n\n    BatchID1_msg.payload = msg.payload.batchID1;\n    BatchID2_msg.payload = msg.payload.batchID2;\n\n\n    returnArray[0] = BatchID1_msg;\n    returnArray[1] = BatchID2_msg;\n\n    return returnArray\n}\n\n\n\n",
         "outputs": 2,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 230,
-        "y": 2220,
+        "y": 2260,
         "wires": [
             [
                 "e568cd8fd166ca7b",
@@ -19900,6 +19901,7 @@
         "name": "function 4",
         "func": "global.set(\"batchA_OP\", msg.payload);\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -19937,46 +19939,39 @@
         "type": "function",
         "z": "af80505e1c4f7081",
         "name": "function 6",
-        "func": "//program writes batch ID to repsective outputs\n\n\n//create a return array and fill it with NOT OPERATING\nvar fill = {}\nfill.payload = \"NOT OPERATING\";\nvar numOutputs = node.numberOfOutputs;\nconst returnArray = new Array(numOutputs);\n\nreturnArray[0] = fill;\nreturnArray[1] = fill;\nreturnArray[2] = fill;\nreturnArray[3] = fill;\nreturnArray[4] = fill;\nreturnArray[5] = fill;\nreturnArray[6] = fill;\nreturnArray[7] = fill;\n\n//node.warn(returnArray);\n\n//get the operation that a batch has been set to.\nvar batchA_OP = global.get(\"batchA_OP\");\nvar batchB_OP = global.get(\"batchB_OP\");\n\n// grab index to write the batch ID to.\nvar indexA = batchA_OP[2];\nvar indexB = batchB_OP[2];\n\n//write to spare outputs if no process\nvar no_op_A = 7;\nvar no_op_B = 8;\n\n\n// Cover furnace or not operating conditions\nif (batchA_OP == \"NOT OPERATING\") {\n    indexA = no_op_A;\n} else if (indexA == 'r') {\n    indexA = 5;\n} else {\n    indexA = parseInt(indexA);\n}\n\n\nif (batchB_OP == \"NOT OPERATING\"){\n    indexB = no_op_B;\n}\nelse if (indexB == 'r') {\n    indexB = 6;\n} else {\n    indexB = parseInt(indexB);\n}\n\n\n//output\n\nvar ret_msg1 = {};\nvar ret_msg2 = {};\n\nret_msg1.payload = global.get(\"BATCH_ID_1\");\nret_msg2.payload = global.get(\"BATCH_ID_2\");\n\n\nreturnArray[indexA - 1] = ret_msg1;\nreturnArray[indexB - 1] = ret_msg2;\n\n\n//node.warn(returnArray);\n\nreturn returnArray;",
-        "outputs": 8,
+        "func": "//program writes batch ID to repsective outputs\n\n\n//create a return array and fill it with NOT OPERATING\nvar fill = {}\nfill.payload = \"NOT OPERATING\";\nvar numOutputs = node.numberOfOutputs;\nconst returnArray = new Array(numOutputs);\n\nreturnArray[0] = fill;\nreturnArray[1] = fill;\nreturnArray[2] = fill;\nreturnArray[3] = fill;\nreturnArray[4] = fill;\nreturnArray[5] = fill;\nreturnArray[6] = fill;\nreturnArray[7] = fill;\nreturnArray[8] = fill;\n\n//node.warn(returnArray);\n\n//get the operation that a batch has been set to.\nvar batchA_OP = global.get(\"batchA_OP\");\nvar batchB_OP = global.get(\"batchB_OP\");\n\n// grab index to write the batch ID to.\nvar indexA = batchA_OP[2];\nvar indexB = batchB_OP[2];\n\n//write to spare outputs if no process\nvar no_op_A = 7; //Are these lines even needed? 27/11/23\nvar no_op_B = 8;\n\n\n\n// Cover furnace or not operating conditions\nif (batchA_OP == \"NOT OPERATING\") {\n    indexA = no_op_A;\n} else if (indexA == 'r') {\n    indexA = 6;\n} else {\n    indexA = parseInt(indexA);\n}\n\n\nif (batchB_OP == \"NOT OPERATING\"){\n    indexB = no_op_B;\n}\nelse if (indexB == 'r') {\n    indexB = 7;\n} else {\n    indexB = parseInt(indexB);\n}\n\n\n//output\n\nvar ret_msg1 = {};\nvar ret_msg2 = {};\n\nret_msg1.payload = global.get(\"BATCH_ID_1\");\nret_msg2.payload = global.get(\"BATCH_ID_2\");\n\n\nreturnArray[indexA - 1] = ret_msg1;\nreturnArray[indexB - 1] = ret_msg2;\n\n\n\nreturn returnArray;",
+        "outputs": 9,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 900,
-        "y": 2060,
+        "y": 2020,
         "wires": [
             [
-                "c9ec98d84ed380b8",
                 "c063f258bb35a506"
             ],
             [
-                "13ba37f344bb9ae7",
                 "e7c2a2e317aef823"
             ],
             [
-                "c01e0a6be2b75298",
                 "49b229c2edcfada0"
             ],
             [
-                "e52296321941157b",
                 "3dc0da952b664d9c"
             ],
             [
-                "5d7a3bdf43d9014a",
                 "663fc7567cb5db13"
             ],
             [
-                "a709c287a04a8d42",
+                "b6b5a7e4fcd921ae"
+            ],
+            [
                 "2c687cf179c9c8b7"
             ],
-            [
-                "d9167e71534ad957"
-            ],
-            [
-                "03b88caef7afef21"
-            ]
+            [],
+            []
         ]
     },
     {
@@ -20009,142 +20004,6 @@
         ]
     },
     {
-        "id": "c9ec98d84ed380b8",
-        "type": "debug",
-        "z": "af80505e1c4f7081",
-        "name": "debug 14",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1240,
-        "y": 2300,
-        "wires": []
-    },
-    {
-        "id": "13ba37f344bb9ae7",
-        "type": "debug",
-        "z": "af80505e1c4f7081",
-        "name": "debug 15",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1240,
-        "y": 2340,
-        "wires": []
-    },
-    {
-        "id": "c01e0a6be2b75298",
-        "type": "debug",
-        "z": "af80505e1c4f7081",
-        "name": "debug 16",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1240,
-        "y": 2380,
-        "wires": []
-    },
-    {
-        "id": "e52296321941157b",
-        "type": "debug",
-        "z": "af80505e1c4f7081",
-        "name": "debug 17",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1240,
-        "y": 2420,
-        "wires": []
-    },
-    {
-        "id": "5d7a3bdf43d9014a",
-        "type": "debug",
-        "z": "af80505e1c4f7081",
-        "name": "debug 18",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1240,
-        "y": 2460,
-        "wires": []
-    },
-    {
-        "id": "a709c287a04a8d42",
-        "type": "debug",
-        "z": "af80505e1c4f7081",
-        "name": "debug 19",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1240,
-        "y": 2500,
-        "wires": []
-    },
-    {
-        "id": "d9167e71534ad957",
-        "type": "debug",
-        "z": "af80505e1c4f7081",
-        "name": "debug 20",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1240,
-        "y": 2540,
-        "wires": []
-    },
-    {
-        "id": "03b88caef7afef21",
-        "type": "debug",
-        "z": "af80505e1c4f7081",
-        "name": "debug 21",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1240,
-        "y": 2580,
-        "wires": []
-    },
-    {
         "id": "881e303bb9e0d007",
         "type": "debug",
         "z": "af80505e1c4f7081",
@@ -20156,7 +20015,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 320,
+        "x": 460,
         "y": 2320,
         "wires": []
     },
@@ -20340,7 +20199,7 @@
         "offcolor": "",
         "animate": false,
         "x": 610,
-        "y": 1660,
+        "y": 1700,
         "wires": [
             [
                 "253c1165779150ea"
@@ -21145,7 +21004,7 @@
         "label": "",
         "format": "{{msg.payload}}",
         "layout": "col-center",
-        "x": 430,
+        "x": 450,
         "y": 2200,
         "wires": []
     },
@@ -21161,7 +21020,7 @@
         "label": "",
         "format": "{{msg.payload}}",
         "layout": "col-center",
-        "x": 430,
+        "x": 450,
         "y": 2260,
         "wires": []
     },
@@ -21826,7 +21685,7 @@
         "value": "",
         "name": "FurnaceBatchID",
         "x": 1480,
-        "y": 2140,
+        "y": 2180,
         "wires": [
             [
                 "d8a23248fa8225ea"
@@ -21939,7 +21798,7 @@
         "value": "",
         "name": "BatchID1",
         "x": 1460,
-        "y": 2180,
+        "y": 2260,
         "wires": [
             [
                 "d8a23248fa8225ea"
@@ -21955,7 +21814,7 @@
         "value": "",
         "name": "BatchID2",
         "x": 1460,
-        "y": 2220,
+        "y": 2300,
         "wires": [
             [
                 "d8a23248fa8225ea"
@@ -22026,6 +21885,11 @@
         "securitymode": "None",
         "securitypolicy": "None",
         "folderName4PKI": "",
+        "useTransport": false,
+        "maxChunkCount": "",
+        "maxMessageSize": "",
+        "receiveBufferSize": "",
+        "sendBufferSize": "",
         "name": "",
         "x": 1720,
         "y": 2020,
@@ -22251,7 +22115,7 @@
         "property": "payload",
         "topi": "topic",
         "x": 1230,
-        "y": 2140,
+        "y": 2180,
         "wires": [
             [
                 "0f2c3c899d00014c"
@@ -22271,7 +22135,7 @@
         "property": "payload",
         "topi": "topic",
         "x": 1230,
-        "y": 2180,
+        "y": 2260,
         "wires": [
             [
                 "17ee6985c82b1e48"
@@ -22291,7 +22155,7 @@
         "property": "payload",
         "topi": "topic",
         "x": 1230,
-        "y": 2220,
+        "y": 2300,
         "wires": [
             [
                 "e4737f79fed34fa0"
@@ -22354,7 +22218,7 @@
         "offcolor": "",
         "animate": false,
         "x": 630,
-        "y": 1700,
+        "y": 1760,
         "wires": [
             [
                 "3f7cbed94d72cb73"
@@ -22422,8 +22286,8 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 590,
-        "y": 1560,
+        "x": 570,
+        "y": 1580,
         "wires": [
             [
                 "2eb2c816deaaafe0"
@@ -22455,8 +22319,8 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 590,
-        "y": 1600,
+        "x": 570,
+        "y": 1640,
         "wires": [
             [
                 "081f9380deb6d6f8"
@@ -22507,7 +22371,7 @@
         "septopics": true,
         "property": "payload",
         "topi": "topic",
-        "x": 1210,
+        "x": 1230,
         "y": 1780,
         "wires": [
             [
@@ -22676,6 +22540,40 @@
         "y": 500,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "004b2442e5741e6d",
+        "type": "OpcUa-Item",
+        "z": "af80505e1c4f7081",
+        "item": "ns=4;s=T06BatchID",
+        "datatype": "String",
+        "value": "",
+        "name": "T06BatchID",
+        "x": 1470,
+        "y": 2140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b6b5a7e4fcd921ae",
+        "type": "rbe",
+        "z": "af80505e1c4f7081",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1230,
+        "y": 2140,
+        "wires": [
+            [
+                "004b2442e5741e6d"
+            ]
         ]
     },
     {
