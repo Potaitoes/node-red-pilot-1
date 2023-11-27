@@ -20089,6 +20089,11 @@
                 "type": "str"
             },
             {
+                "label": "T06",
+                "value": "T06",
+                "type": "str"
+            },
+            {
                 "label": "Furnace",
                 "value": "Furnace",
                 "type": "str"
@@ -20149,6 +20154,11 @@
             {
                 "label": "T05",
                 "value": "T05",
+                "type": "str"
+            },
+            {
+                "label": "T06",
+                "value": "T06",
                 "type": "str"
             },
             {
