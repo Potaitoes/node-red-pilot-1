@@ -19514,7 +19514,6 @@
         "y": 740,
         "wires": [
             [
-                "e241ffd1e5f20296",
                 "a9dea75f1173c19b",
                 "f09c1af516ce50da"
             ]
@@ -21060,32 +21059,6 @@
         "seg2": "",
         "x": 1950,
         "y": 540,
-        "wires": []
-    },
-    {
-        "id": "e241ffd1e5f20296",
-        "type": "ui_gauge",
-        "z": "af80505e1c4f7081",
-        "name": "",
-        "group": "210d2df426365d31",
-        "order": 6,
-        "width": 11,
-        "height": 9,
-        "gtype": "wave",
-        "title": "Level",
-        "label": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "2",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 2390,
-        "y": 760,
         "wires": []
     },
     {
