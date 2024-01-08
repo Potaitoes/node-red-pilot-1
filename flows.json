@@ -51,7 +51,7 @@
         "type": "mqtt-broker",
         "name": "",
         "broker": "132.181.246.233",
-        "port": "1883",
+        "port": "1884",
         "clientid": "",
         "autoConnect": true,
         "usetls": false,
