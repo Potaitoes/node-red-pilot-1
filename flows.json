@@ -19604,8 +19604,8 @@
         "type": "function",
         "z": "af80505e1c4f7081",
         "name": "TankData Splitter",
-        "func": "var T1_msg = {};\nvar T2_msg = {};\nvar T3_msg = {};\nvar T4_msg = {};\nvar T5_msg = {};\nvar T6_msg = {};\n\nvar totalOutputs = 6;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\nT1_msg.payload = msg.payload.T1;\nglobal.set(\"T1\", msg.payload);\nT2_msg.payload = msg.payload.T2;\nglobal.set(\"T2\", msg.payload);\nT3_msg.payload = msg.payload.T3;\nglobal.set(\"T3\", msg.payload);\nT4_msg.payload = msg.payload.T4;\nglobal.set(\"T4\", msg.payload);\nT5_msg.payload = msg.payload.T5;\nglobal.set(\"T5\", msg.payload);\nT6_msg.payload = msg.payload.T6;\nglobal.set(\"T6\", msg.payload);\n\nreturnArray[0] = T1_msg;\nreturnArray[1] = T2_msg;\nreturnArray[2] = T3_msg;\nreturnArray[3] = T4_msg;\nreturnArray[4] = T5_msg;\nreturnArray[5] = T6_msg;\n\n\nreturn returnArray;",
-        "outputs": 6,
+        "func": "var T1_msg = {};\nvar T2_msg = {};\nvar T3_msg = {};\nvar T4_msg = {};\nvar T5_msg = {};\nvar T6_msg = {};\nvar T7_msg = {};\nvar T8_msg = {};\nvar T9_msg = {};\n\n\nvar totalOutputs = 6;\n\nconst returnArray = new Array(totalOutputs).fill(null);\n\nT1_msg.payload = msg.payload.T1;\nglobal.set(\"T1\", msg.payload);\nT2_msg.payload = msg.payload.T2;\nglobal.set(\"T2\", msg.payload);\nT3_msg.payload = msg.payload.T3;\nglobal.set(\"T3\", msg.payload);\nT4_msg.payload = msg.payload.T4;\nglobal.set(\"T4\", msg.payload);\nT5_msg.payload = msg.payload.T5;\nglobal.set(\"T5\", msg.payload);\nT6_msg.payload = msg.payload.T6;\nglobal.set(\"T6\", msg.payload);\nT7_msg.payload = msg.payload.T7;\nglobal.set(\"T7\", msg.payload);\nT8_msg.payload = msg.payload.T8;\nglobal.set(\"T8\", msg.payload);\nT9_msg.payload = msg.payload.T9;\nglobal.set(\"T9\", msg.payload);\n\nreturnArray[0] = T1_msg;\nreturnArray[1] = T2_msg;\nreturnArray[2] = T3_msg;\nreturnArray[3] = T4_msg;\nreturnArray[4] = T5_msg;\nreturnArray[5] = T6_msg;\nreturnArray[6] = T7_msg;\nreturnArray[7] = T8_msg;\nreturnArray[8] = T9_msg;\n\n\nreturn returnArray;",
+        "outputs": 9,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
@@ -19631,6 +19631,15 @@
             ],
             [
                 "282f574838c8303b"
+            ],
+            [
+                "d8c5f2866bb106a0"
+            ],
+            [
+                "a21d28b7c502d0ff"
+            ],
+            [
+                "6b671175038d9852"
             ]
         ]
     },
@@ -20046,7 +20055,7 @@
             "dfe663d2f2317847"
         ],
         "x": 955,
-        "y": 80,
+        "y": 60,
         "wires": []
     },
     {
@@ -20934,8 +20943,8 @@
         "label": "T5",
         "format": "{{msg.payload}}°C",
         "layout": "col-center",
-        "x": 1970,
-        "y": 1740,
+        "x": 1850,
+        "y": 1540,
         "wires": []
     },
     {
@@ -20950,8 +20959,8 @@
         "label": "T6",
         "format": "{{msg.payload}}°C",
         "layout": "col-center",
-        "x": 1970,
-        "y": 1780,
+        "x": 1850,
+        "y": 1580,
         "wires": []
     },
     {
@@ -22577,6 +22586,54 @@
         "statusType": "auto",
         "x": 1240,
         "y": 2460,
+        "wires": []
+    },
+    {
+        "id": "d8c5f2866bb106a0",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "8c91fd541c551379",
+        "order": 17,
+        "width": 9,
+        "height": 5,
+        "name": "",
+        "label": "T7",
+        "format": "{{msg.payload}}°C",
+        "layout": "col-center",
+        "x": 1850,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "a21d28b7c502d0ff",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "8c91fd541c551379",
+        "order": 17,
+        "width": 9,
+        "height": 5,
+        "name": "",
+        "label": "T8",
+        "format": "{{msg.payload}}°C",
+        "layout": "col-center",
+        "x": 1850,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "6b671175038d9852",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "8c91fd541c551379",
+        "order": 17,
+        "width": 9,
+        "height": 5,
+        "name": "",
+        "label": "T9",
+        "format": "{{msg.payload}}°C",
+        "layout": "col-center",
+        "x": 1850,
+        "y": 1700,
         "wires": []
     },
     {
