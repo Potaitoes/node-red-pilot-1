@@ -16,14 +16,6 @@
         "env": []
     },
     {
-        "id": "6af818bde94351a4",
-        "type": "tab",
-        "label": "Flow 2",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "e6d71b93752cf439",
         "type": "junction",
         "z": "af80505e1c4f7081",
