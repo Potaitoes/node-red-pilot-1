@@ -19797,9 +19797,7 @@
         "x": 1710,
         "y": 520,
         "wires": [
-            [
-                "6d4eda37cee54481"
-            ]
+            []
         ]
     },
     {
@@ -20812,22 +20810,6 @@
         "layout": "row-spread",
         "x": 2620,
         "y": 620,
-        "wires": []
-    },
-    {
-        "id": "6d4eda37cee54481",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "813266fe1aeae7a9",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "T-03 Level",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 2630,
-        "y": 660,
         "wires": []
     },
     {
