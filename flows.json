@@ -19240,8 +19240,8 @@
         "z": "af80505e1c4f7081",
         "name": "Read data from PLC",
         "info": "",
-        "x": 430,
-        "y": 660,
+        "x": 330,
+        "y": 140,
         "wires": []
     },
     {
@@ -19265,8 +19265,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 330,
-        "y": 860,
+        "x": 230,
+        "y": 340,
         "wires": [
             [
                 "d3fc10823e618c25",
@@ -19293,8 +19293,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 770,
-        "y": 740,
+        "x": 670,
+        "y": 220,
         "wires": [
             [
                 "2f3a55e86a6c30dc"
@@ -19313,8 +19313,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1350,
-        "y": 820,
+        "x": 1250,
+        "y": 300,
         "wires": [
             [
                 "ab4a054806a1f249"
@@ -19350,8 +19350,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 760,
-        "y": 780,
+        "x": 660,
+        "y": 260,
         "wires": [
             [
                 "2f3a55e86a6c30dc"
@@ -19369,8 +19369,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 770,
-        "y": 820,
+        "x": 670,
+        "y": 300,
         "wires": [
             [
                 "2f3a55e86a6c30dc"
@@ -19388,8 +19388,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 770,
-        "y": 860,
+        "x": 670,
+        "y": 340,
         "wires": [
             [
                 "2f3a55e86a6c30dc"
@@ -19407,8 +19407,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 750,
-        "y": 900,
+        "x": 650,
+        "y": 380,
         "wires": [
             [
                 "2f3a55e86a6c30dc"
@@ -19426,8 +19426,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 520,
-        "y": 1060,
+        "x": 420,
+        "y": 540,
         "wires": [
             []
         ]
@@ -19443,8 +19443,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 750,
-        "y": 940,
+        "x": 650,
+        "y": 420,
         "wires": [
             [
                 "2f3a55e86a6c30dc"
@@ -19462,8 +19462,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 750,
-        "y": 980,
+        "x": 650,
+        "y": 460,
         "wires": [
             [
                 "2f3a55e86a6c30dc"
@@ -19482,8 +19482,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 760,
-        "y": 1020,
+        "x": 660,
+        "y": 500,
         "wires": [
             [
                 "2f3a55e86a6c30dc"
@@ -19500,8 +19500,8 @@
             "dfe663d2f2317847",
             "7e31e69b4bc7f011"
         ],
-        "x": 1715,
-        "y": 700,
+        "x": 1615,
+        "y": 180,
         "wires": []
     },
     {
@@ -19516,8 +19516,8 @@
         "label": "",
         "format": "<font size = 100>{{msg.payload}}",
         "layout": "row-center",
-        "x": 530,
-        "y": 1140,
+        "x": 430,
+        "y": 620,
         "wires": []
     },
     {
@@ -19532,8 +19532,8 @@
         "label": "",
         "format": "{{msg.payload}}",
         "layout": "col-center",
-        "x": 530,
-        "y": 1220,
+        "x": 430,
+        "y": 700,
         "wires": []
     },
     {
@@ -19548,8 +19548,8 @@
         "label": "",
         "format": "{{msg.payload}}",
         "layout": "col-center",
-        "x": 530,
-        "y": 1260,
+        "x": 430,
+        "y": 740,
         "wires": []
     },
     {
@@ -19564,8 +19564,8 @@
         "label": "",
         "format": "{{msg.payload}}",
         "layout": "col-center",
-        "x": 530,
-        "y": 1300,
+        "x": 430,
+        "y": 780,
         "wires": []
     },
     {
@@ -19580,8 +19580,8 @@
         "label": "",
         "format": "{{msg.payload}}",
         "layout": "col-center",
-        "x": 530,
-        "y": 1180,
+        "x": 430,
+        "y": 660,
         "wires": []
     },
     {
@@ -19596,8 +19596,8 @@
         "label": "",
         "format": "{{msg.payload}}",
         "layout": "col-center",
-        "x": 530,
-        "y": 1340,
+        "x": 430,
+        "y": 820,
         "wires": []
     },
     {
@@ -19614,8 +19614,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1260,
-        "y": 900,
+        "x": 1160,
+        "y": 380,
         "wires": [
             []
         ]
@@ -19634,8 +19634,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1260,
-        "y": 980,
+        "x": 1160,
+        "y": 460,
         "wires": [
             []
         ]
@@ -19654,8 +19654,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1260,
-        "y": 1060,
+        "x": 1160,
+        "y": 540,
         "wires": [
             []
         ]
@@ -19674,8 +19674,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1260,
-        "y": 1100,
+        "x": 1160,
+        "y": 580,
         "wires": [
             []
         ]
@@ -19694,8 +19694,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1260,
-        "y": 1020,
+        "x": 1160,
+        "y": 500,
         "wires": [
             []
         ]
@@ -19714,8 +19714,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1260,
-        "y": 1140,
+        "x": 1160,
+        "y": 620,
         "wires": [
             []
         ]
@@ -19728,8 +19728,8 @@
         "datatype": "String",
         "value": "",
         "name": "",
-        "x": 540,
-        "y": 740,
+        "x": 440,
+        "y": 220,
         "wires": [
             [
                 "0de7800a973778dc"
@@ -19744,8 +19744,8 @@
         "datatype": "String",
         "value": "",
         "name": "",
-        "x": 540,
-        "y": 780,
+        "x": 440,
+        "y": 260,
         "wires": [
             [
                 "db05ea03fd8ebf9f"
@@ -19760,8 +19760,8 @@
         "datatype": "String",
         "value": "",
         "name": "",
-        "x": 540,
-        "y": 820,
+        "x": 440,
+        "y": 300,
         "wires": [
             [
                 "90a590c9ed37c29a"
@@ -19776,8 +19776,8 @@
         "datatype": "String",
         "value": "",
         "name": "",
-        "x": 540,
-        "y": 860,
+        "x": 440,
+        "y": 340,
         "wires": [
             [
                 "22ab1281cf9066c6"
@@ -19792,8 +19792,8 @@
         "datatype": "String",
         "value": "",
         "name": "",
-        "x": 540,
-        "y": 900,
+        "x": 440,
+        "y": 380,
         "wires": [
             [
                 "341f824420cdb1c0"
@@ -19808,8 +19808,8 @@
         "datatype": "String",
         "value": "",
         "name": "",
-        "x": 540,
-        "y": 940,
+        "x": 440,
+        "y": 420,
         "wires": [
             [
                 "a33accb21e23d12d"
@@ -19824,8 +19824,8 @@
         "datatype": "String",
         "value": "",
         "name": "",
-        "x": 540,
-        "y": 980,
+        "x": 440,
+        "y": 460,
         "wires": [
             [
                 "ea46308679bd55bf"
@@ -19840,8 +19840,8 @@
         "datatype": "String",
         "value": "",
         "name": "",
-        "x": 540,
-        "y": 1020,
+        "x": 440,
+        "y": 500,
         "wires": [
             [
                 "4723e76f6714f39b"
@@ -19870,8 +19870,8 @@
         "receiveBufferSize": "",
         "sendBufferSize": "",
         "name": "",
-        "x": 1060,
-        "y": 860,
+        "x": 960,
+        "y": 340,
         "wires": [
             [
                 "c8ed4d4e2ff65ebd",
@@ -19896,8 +19896,8 @@
         "output": "payload",
         "outputType": "msg",
         "outTz": "Pacific/Auckland",
-        "x": 520,
-        "y": 1100,
+        "x": 420,
+        "y": 580,
         "wires": [
             [
                 "5cf63896e16bf265",
@@ -19919,8 +19919,8 @@
             "fa74a071342b7982",
             "0928068143f3b68e"
         ],
-        "x": 1715,
-        "y": 780,
+        "x": 1615,
+        "y": 260,
         "wires": []
     },
     {
@@ -19933,8 +19933,8 @@
             "c97afe2983bf31a3",
             "dbc79fe7ffde9515"
         ],
-        "x": 1715,
-        "y": 860,
+        "x": 1615,
+        "y": 340,
         "wires": []
     },
     {
@@ -19947,8 +19947,8 @@
             "9ff6bb65290bac95",
             "1b852a0468dab09b"
         ],
-        "x": 1715,
-        "y": 740,
+        "x": 1615,
+        "y": 220,
         "wires": []
     },
     {
@@ -19961,8 +19961,8 @@
             "6d9acfed791dd18d",
             "be2bcc71c988e809"
         ],
-        "x": 1715,
-        "y": 820,
+        "x": 1615,
+        "y": 300,
         "wires": []
     },
     {
@@ -19975,8 +19975,8 @@
             "f6e507bb58b8bc25",
             "6d884becabf1fbc9"
         ],
-        "x": 1715,
-        "y": 940,
+        "x": 1615,
+        "y": 420,
         "wires": []
     },
     {
@@ -19991,8 +19991,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 770,
-        "y": 700,
+        "x": 670,
+        "y": 180,
         "wires": [
             [
                 "2f3a55e86a6c30dc"
@@ -20007,8 +20007,8 @@
         "datatype": "String",
         "value": "",
         "name": "",
-        "x": 540,
-        "y": 700,
+        "x": 440,
+        "y": 180,
         "wires": [
             [
                 "e7b4e47f7eef0a71"
@@ -20029,8 +20029,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1260,
-        "y": 940,
+        "x": 1160,
+        "y": 420,
         "wires": [
             []
         ]
@@ -20041,8 +20041,8 @@
         "z": "af80505e1c4f7081",
         "name": "Set text size on UI",
         "info": "",
-        "x": 1430,
-        "y": 920,
+        "x": 1330,
+        "y": 400,
         "wires": []
     },
     {
@@ -20055,8 +20055,8 @@
             "17c0964335fc0510",
             "11cc8d14ae469e6f"
         ],
-        "x": 945,
-        "y": 1280,
+        "x": 845,
+        "y": 760,
         "wires": []
     },
     {
@@ -20065,8 +20065,8 @@
         "z": "af80505e1c4f7081",
         "name": "TO CONTROLS",
         "info": "",
-        "x": 1040,
-        "y": 1280,
+        "x": 940,
+        "y": 760,
         "wires": []
     },
     {
@@ -20079,8 +20079,8 @@
             "f7feeec51755c734",
             "e2923fec0b88ee08"
         ],
-        "x": 1715,
-        "y": 900,
+        "x": 1615,
+        "y": 380,
         "wires": []
     },
     {
@@ -21628,8 +21628,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1470,
-        "y": 280,
+        "x": 970,
+        "y": 140,
         "wires": [
             [
                 "88c62a4a0a41550c"
@@ -21660,8 +21660,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1470,
-        "y": 680,
+        "x": 970,
+        "y": 540,
         "wires": [
             [
                 "7179279d253c6d7e"
@@ -21686,8 +21686,8 @@
         "z": "c53c8744c8bcddc4",
         "name": "Wash Digestion",
         "info": "",
-        "x": 1480,
-        "y": 200,
+        "x": 980,
+        "y": 60,
         "wires": []
     },
     {
@@ -21696,8 +21696,8 @@
         "z": "c53c8744c8bcddc4",
         "name": "Cementation",
         "info": "",
-        "x": 1450,
-        "y": 620,
+        "x": 950,
+        "y": 480,
         "wires": []
     },
     {
@@ -21706,8 +21706,8 @@
         "z": "c53c8744c8bcddc4",
         "name": "Electrowinning",
         "info": "",
-        "x": 1460,
-        "y": 1260,
+        "x": 960,
+        "y": 1120,
         "wires": []
     },
     {
@@ -21716,8 +21716,8 @@
         "z": "c53c8744c8bcddc4",
         "name": "Oxidation Precipitation",
         "info": "",
-        "x": 1460,
-        "y": 840,
+        "x": 960,
+        "y": 700,
         "wires": []
     },
     {
@@ -21726,8 +21726,8 @@
         "z": "c53c8744c8bcddc4",
         "name": "Buffer Tank",
         "info": "",
-        "x": 1420,
-        "y": 1040,
+        "x": 920,
+        "y": 900,
         "wires": []
     },
     {
@@ -21741,8 +21741,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1710,
-        "y": 320,
+        "x": 1210,
+        "y": 180,
         "wires": [
             []
         ]
@@ -21759,8 +21759,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1710,
-        "y": 700,
+        "x": 1210,
+        "y": 560,
         "wires": [
             []
         ]
@@ -21777,8 +21777,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1450,
-        "y": 1340,
+        "x": 950,
+        "y": 1200,
         "wires": [
             [
                 "d14a7bf051b0b8ce",
@@ -21826,8 +21826,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1450,
-        "y": 920,
+        "x": 950,
+        "y": 780,
         "wires": [
             [
                 "e663a3c089598210"
@@ -21863,8 +21863,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1450,
-        "y": 1140,
+        "x": 950,
+        "y": 1000,
         "wires": [
             [],
             [
@@ -21895,8 +21895,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1690,
-        "y": 1380,
+        "x": 1190,
+        "y": 1240,
         "wires": [
             [
                 "a9dea75f1173c19b",
@@ -21915,8 +21915,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1690,
-        "y": 1000,
+        "x": 1190,
+        "y": 860,
         "wires": [
             []
         ]
@@ -21932,8 +21932,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1670,
-        "y": 1160,
+        "x": 1170,
+        "y": 1020,
         "wires": [
             [
                 "a1ce05848db0af19",
@@ -21954,8 +21954,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1450,
-        "y": 1740,
+        "x": 950,
+        "y": 1600,
         "wires": [
             [
                 "c31075c1fd44864e"
@@ -21998,8 +21998,8 @@
         "label": "pH",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 1690,
-        "y": 620,
+        "x": 1190,
+        "y": 480,
         "wires": []
     },
     {
@@ -22014,8 +22014,8 @@
         "label": "pH",
         "format": "{{msg.payload}}",
         "layout": "col-center",
-        "x": 1670,
-        "y": 1280,
+        "x": 1170,
+        "y": 1140,
         "wires": []
     },
     {
@@ -22030,8 +22030,8 @@
         "label": "",
         "format": "{{msg.payload}} pH",
         "layout": "row-right",
-        "x": 1670,
-        "y": 840,
+        "x": 1170,
+        "y": 700,
         "wires": []
     },
     {
@@ -22046,8 +22046,8 @@
         "label": "",
         "format": "{{msg.payload}} mV",
         "layout": "col-center",
-        "x": 1670,
-        "y": 960,
+        "x": 1170,
+        "y": 820,
         "wires": []
     },
     {
@@ -22062,8 +22062,8 @@
         "label": "",
         "format": "{{msg.payload}} °C",
         "layout": "col-center",
-        "x": 1830,
-        "y": 880,
+        "x": 1330,
+        "y": 740,
         "wires": []
     },
     {
@@ -22078,8 +22078,8 @@
         "label": "",
         "format": "{{msg.payload}} C",
         "layout": "row-center",
-        "x": 1690,
-        "y": 660,
+        "x": 1190,
+        "y": 520,
         "wires": []
     },
     {
@@ -22094,8 +22094,8 @@
         "label": "Temperature",
         "format": "{{msg.payload}}",
         "layout": "col-center",
-        "x": 1850,
-        "y": 1080,
+        "x": 1350,
+        "y": 940,
         "wires": []
     },
     {
@@ -22110,8 +22110,8 @@
         "label": "Voltage (V)",
         "format": "{{msg.payload}}",
         "layout": "col-center",
-        "x": 1690,
-        "y": 1420,
+        "x": 1190,
+        "y": 1280,
         "wires": []
     },
     {
@@ -22126,8 +22126,8 @@
         "label": "Current (A)",
         "format": "{{msg.payload}}",
         "layout": "col-center",
-        "x": 1690,
-        "y": 1460,
+        "x": 1190,
+        "y": 1320,
         "wires": []
     },
     {
@@ -22142,8 +22142,8 @@
         "label": "Chlorine (ppm)",
         "format": "{{msg.payload}}",
         "layout": "col-center",
-        "x": 1430,
-        "y": 1460,
+        "x": 930,
+        "y": 1320,
         "wires": []
     },
     {
@@ -22158,8 +22158,8 @@
         "label": "Temperature",
         "format": "{{msg.payload}}°C",
         "layout": "col-center",
-        "x": 1690,
-        "y": 1320,
+        "x": 1190,
+        "y": 1180,
         "wires": []
     },
     {
@@ -22174,8 +22174,8 @@
         "label": "Hydrogen (%LEL)",
         "format": "{{msg.payload}}",
         "layout": "col-center",
-        "x": 1450,
-        "y": 1500,
+        "x": 950,
+        "y": 1360,
         "wires": []
     },
     {
@@ -22190,8 +22190,8 @@
         "label": "T1",
         "format": "{{msg.payload}}°C",
         "layout": "col-center",
-        "x": 1690,
-        "y": 1660,
+        "x": 1190,
+        "y": 1520,
         "wires": []
     },
     {
@@ -22206,8 +22206,8 @@
         "label": "T2",
         "format": "{{msg.payload}}°C",
         "layout": "col-center",
-        "x": 1690,
-        "y": 1700,
+        "x": 1190,
+        "y": 1560,
         "wires": []
     },
     {
@@ -22222,8 +22222,8 @@
         "label": "T3",
         "format": "{{msg.payload}}°C",
         "layout": "col-center",
-        "x": 1690,
-        "y": 1740,
+        "x": 1190,
+        "y": 1600,
         "wires": []
     },
     {
@@ -22238,8 +22238,8 @@
         "label": "T4",
         "format": "{{msg.payload}}°C",
         "layout": "col-center",
-        "x": 1690,
-        "y": 1780,
+        "x": 1190,
+        "y": 1640,
         "wires": []
     },
     {
@@ -22254,8 +22254,8 @@
         "label": "T5",
         "format": "{{msg.payload}}°C",
         "layout": "col-center",
-        "x": 1830,
-        "y": 1660,
+        "x": 1330,
+        "y": 1520,
         "wires": []
     },
     {
@@ -22270,8 +22270,8 @@
         "label": "T6",
         "format": "{{msg.payload}}°C",
         "layout": "col-center",
-        "x": 1830,
-        "y": 1700,
+        "x": 1330,
+        "y": 1560,
         "wires": []
     },
     {
@@ -22286,8 +22286,8 @@
         "label": "",
         "format": "{{msg.payload}} pH",
         "layout": "col-center",
-        "x": 1690,
-        "y": 240,
+        "x": 1190,
+        "y": 100,
         "wires": []
     },
     {
@@ -22302,8 +22302,8 @@
         "label": "",
         "format": "{{msg.payload}} °C",
         "layout": "col-center",
-        "x": 1730,
-        "y": 280,
+        "x": 1230,
+        "y": 140,
         "wires": []
     },
     {
@@ -22328,8 +22328,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1850,
-        "y": 1120,
+        "x": 1350,
+        "y": 980,
         "wires": []
     },
     {
@@ -22354,8 +22354,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1670,
-        "y": 1500,
+        "x": 1170,
+        "y": 1360,
         "wires": []
     },
     {
@@ -22395,8 +22395,8 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "x": 1690,
-        "y": 880,
+        "x": 1190,
+        "y": 740,
         "wires": [
             []
         ]
@@ -22438,8 +22438,8 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "x": 1750,
-        "y": 920,
+        "x": 1250,
+        "y": 780,
         "wires": [
             []
         ]
@@ -22458,8 +22458,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1850,
-        "y": 1160,
+        "x": 1350,
+        "y": 1020,
         "wires": [
             []
         ]
@@ -22478,8 +22478,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1850,
-        "y": 1200,
+        "x": 1350,
+        "y": 1060,
         "wires": [
             []
         ]
@@ -22498,8 +22498,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1430,
-        "y": 1540,
+        "x": 930,
+        "y": 1400,
         "wires": [
             []
         ]
@@ -22518,8 +22518,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 1430,
-        "y": 1580,
+        "x": 930,
+        "y": 1440,
         "wires": [
             []
         ]
@@ -22530,8 +22530,8 @@
         "z": "c53c8744c8bcddc4",
         "name": "Furnace",
         "info": "",
-        "x": 1420,
-        "y": 1660,
+        "x": 920,
+        "y": 1520,
         "wires": []
     },
     {
@@ -22546,8 +22546,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1470,
-        "y": 500,
+        "x": 970,
+        "y": 360,
         "wires": [
             [
                 "adfa8140966e892e"
@@ -22569,8 +22569,8 @@
         "label": "",
         "format": "{{msg.payload}} pH",
         "layout": "col-center",
-        "x": 1690,
-        "y": 480,
+        "x": 1190,
+        "y": 340,
         "wires": []
     },
     {
@@ -22585,8 +22585,8 @@
         "label": "",
         "format": "{{msg.payload}} °C",
         "layout": "col-center",
-        "x": 1730,
-        "y": 520,
+        "x": 1230,
+        "y": 380,
         "wires": []
     },
     {
@@ -22601,8 +22601,8 @@
         "label": "T7",
         "format": "{{msg.payload}}°C",
         "layout": "col-center",
-        "x": 1830,
-        "y": 1740,
+        "x": 1330,
+        "y": 1600,
         "wires": []
     },
     {
@@ -22617,8 +22617,8 @@
         "label": "T8",
         "format": "{{msg.payload}}°C",
         "layout": "col-center",
-        "x": 1830,
-        "y": 1780,
+        "x": 1330,
+        "y": 1640,
         "wires": []
     },
     {
@@ -22633,8 +22633,8 @@
         "label": "T9",
         "format": "{{msg.payload}}°C",
         "layout": "col-center",
-        "x": 1830,
-        "y": 1820,
+        "x": 1330,
+        "y": 1680,
         "wires": []
     },
     {
@@ -22649,8 +22649,8 @@
         "label": "T-05 Temperature",
         "format": "{{msg.payload}}°C",
         "layout": "row-spread",
-        "x": 2330,
-        "y": 1260,
+        "x": 1830,
+        "y": 1120,
         "wires": []
     },
     {
@@ -22665,8 +22665,8 @@
         "label": "T-05 Level",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 2310,
-        "y": 1420,
+        "x": 1810,
+        "y": 1280,
         "wires": []
     },
     {
@@ -22681,8 +22681,8 @@
         "label": "T-05 Current",
         "format": "{{msg.payload}} Amps",
         "layout": "row-spread",
-        "x": 2310,
-        "y": 1340,
+        "x": 1810,
+        "y": 1200,
         "wires": []
     },
     {
@@ -22697,8 +22697,8 @@
         "label": "T-05 Voltage",
         "format": "{{msg.payload}}V",
         "layout": "row-spread",
-        "x": 2310,
-        "y": 1380,
+        "x": 1810,
+        "y": 1240,
         "wires": []
     },
     {
@@ -22713,8 +22713,8 @@
         "label": "T-05 pH",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 2300,
-        "y": 1300,
+        "x": 1800,
+        "y": 1160,
         "wires": []
     },
     {
@@ -22729,8 +22729,8 @@
         "label": "T-05 Chlorine",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 2320,
-        "y": 1460,
+        "x": 1820,
+        "y": 1320,
         "wires": []
     },
     {
@@ -22745,8 +22745,8 @@
         "label": "T-05 Hydrogen",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 2320,
-        "y": 1500,
+        "x": 1820,
+        "y": 1360,
         "wires": []
     },
     {
@@ -22757,8 +22757,8 @@
         "links": [
             "ab4a054806a1f249"
         ],
-        "x": 705,
-        "y": 760,
+        "x": 205,
+        "y": 620,
         "wires": [
             [
                 "69248df9e3639b6f"
@@ -22773,8 +22773,8 @@
         "links": [
             "53e6f80510295a26"
         ],
-        "x": 705,
-        "y": 820,
+        "x": 205,
+        "y": 680,
         "wires": [
             [
                 "b8b8101ebec99536"
@@ -22789,8 +22789,8 @@
         "links": [
             "c489dfaf9ea666b0"
         ],
-        "x": 705,
-        "y": 880,
+        "x": 205,
+        "y": 740,
         "wires": [
             [
                 "6b97e4b6921521d5"
@@ -22805,8 +22805,8 @@
         "links": [
             "708e7c0f3aa63576"
         ],
-        "x": 705,
-        "y": 940,
+        "x": 205,
+        "y": 800,
         "wires": [
             [
                 "5bfe968cd79285dd"
@@ -22821,8 +22821,8 @@
         "links": [
             "062d070574e08e54"
         ],
-        "x": 705,
-        "y": 1000,
+        "x": 205,
+        "y": 860,
         "wires": [
             [
                 "5b2c2d69ad22fe9e"
@@ -22837,8 +22837,8 @@
         "links": [
             "913f7875f03e7386"
         ],
-        "x": 706.6666870117188,
-        "y": 1118.3333740234375,
+        "x": 206.66668701171875,
+        "y": 978.3333740234375,
         "wires": [
             [
                 "c767ab1bc631283c"
@@ -22853,8 +22853,8 @@
         "links": [
             "c43327fd7b1cbd74"
         ],
-        "x": 705,
-        "y": 1060,
+        "x": 205,
+        "y": 920,
         "wires": [
             [
                 "885259e791ebe366"
@@ -22867,8 +22867,8 @@
         "z": "c53c8744c8bcddc4",
         "name": "Mobile Friendly Electrowinning Checks",
         "info": "",
-        "x": 2390,
-        "y": 1200,
+        "x": 1890,
+        "y": 1060,
         "wires": []
     }
 ]
