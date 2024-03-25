@@ -273,7 +273,7 @@
         "tab": "613ee8f0c2ded6bc",
         "order": 1,
         "disp": false,
-        "width": "13",
+        "width": 13,
         "collapse": false
     },
     {
@@ -19117,7 +19117,7 @@
         "height": 1
     },
     {
-        "id": "4453d06a25d91839",
+        "id": "14d2e857341f3e61",
         "type": "ui_spacer",
         "z": "af80505e1c4f7081",
         "name": "spacer",
@@ -19127,7 +19127,7 @@
         "height": 1
     },
     {
-        "id": "b0bb9fcb239a9d91",
+        "id": "3fc350f51dfec5fe",
         "type": "ui_spacer",
         "z": "af80505e1c4f7081",
         "name": "spacer",
@@ -19137,17 +19137,7 @@
         "height": 1
     },
     {
-        "id": "21ae7adcc95d81e9",
-        "type": "ui_spacer",
-        "z": "af80505e1c4f7081",
-        "name": "spacer",
-        "group": "3342ef65ea84e0bc",
-        "order": 4,
-        "width": 13,
-        "height": 1
-    },
-    {
-        "id": "af48f71a5274b553",
+        "id": "59480d78f67a6923",
         "type": "ui_spacer",
         "z": "af80505e1c4f7081",
         "name": "spacer",
@@ -19157,7 +19147,7 @@
         "height": 1
     },
     {
-        "id": "3bf68409ea948030",
+        "id": "c51eb584a334131e",
         "type": "ui_spacer",
         "z": "af80505e1c4f7081",
         "name": "spacer",
@@ -19167,12 +19157,22 @@
         "height": 1
     },
     {
-        "id": "b0198c05575b56de",
+        "id": "df3c417cb3ffd8e1",
         "type": "ui_spacer",
         "z": "af80505e1c4f7081",
         "name": "spacer",
         "group": "3342ef65ea84e0bc",
         "order": 7,
+        "width": 13,
+        "height": 1
+    },
+    {
+        "id": "8ebe8a25c411be0c",
+        "type": "ui_spacer",
+        "z": "af80505e1c4f7081",
+        "name": "spacer",
+        "group": "3342ef65ea84e0bc",
+        "order": 9,
         "width": 13,
         "height": 1
     },
@@ -20335,7 +20335,7 @@
         "type": "ui_text",
         "z": "af80505e1c4f7081",
         "group": "6bf19a83f26ccc65",
-        "order": 3,
+        "order": 4,
         "width": 14,
         "height": 5,
         "name": "",
@@ -20351,7 +20351,7 @@
         "type": "ui_text",
         "z": "af80505e1c4f7081",
         "group": "6bf19a83f26ccc65",
-        "order": 2,
+        "order": 3,
         "width": 14,
         "height": 5,
         "name": "",
@@ -21171,7 +21171,7 @@
         "z": "af80505e1c4f7081",
         "name": "",
         "group": "3342ef65ea84e0bc",
-        "order": 9,
+        "order": 10,
         "width": 0,
         "height": 0,
         "label": "Oxidation Reduction Potential",
@@ -21234,7 +21234,7 @@
         "z": "af80505e1c4f7081",
         "group": "6bf19a83f26ccc65",
         "name": "",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
         "format": "<style>\n  .nr-dashboard-text p.value {\n    font-size: 150px !important\n  }\n\n  .nr-dashboard-text p.label {\n    font-size: 60px\n  }\n\n  </style",
