@@ -19957,11 +19957,7 @@
         "x": 1710,
         "y": 1160,
         "wires": [
-            [
-                "52dcffeb30934c21",
-                "4ed8ae7194dd96c8",
-                "83ec1bc9e9424cb1"
-            ]
+            []
         ]
     },
     {
@@ -20765,22 +20761,6 @@
         "wires": []
     },
     {
-        "id": "83ec1bc9e9424cb1",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "59f0a3a4c021c1f8",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "T-02 Level",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 2630,
-        "y": 480,
-        "wires": []
-    },
-    {
         "id": "5ee1787b74c6d252",
         "type": "ui_text",
         "z": "af80505e1c4f7081",
@@ -21309,32 +21289,6 @@
         "wires": []
     },
     {
-        "id": "52dcffeb30934c21",
-        "type": "ui_gauge",
-        "z": "af80505e1c4f7081",
-        "name": "",
-        "group": "2761df262ae914fd",
-        "order": 6,
-        "width": 7,
-        "height": 6,
-        "gtype": "wave",
-        "title": "",
-        "label": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "3",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 1870,
-        "y": 1160,
-        "wires": []
-    },
-    {
         "id": "a1ce05848db0af19",
         "type": "ui_gauge",
         "z": "af80505e1c4f7081",
@@ -21384,32 +21338,6 @@
         "seg2": "",
         "x": 2150,
         "y": 260,
-        "wires": []
-    },
-    {
-        "id": "4ed8ae7194dd96c8",
-        "type": "ui_gauge",
-        "z": "af80505e1c4f7081",
-        "name": "",
-        "group": "675036dd.603328",
-        "order": 6,
-        "width": "5",
-        "height": "5",
-        "gtype": "wave",
-        "title": "T-02",
-        "label": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "3",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 2150,
-        "y": 300,
         "wires": []
     },
     {
