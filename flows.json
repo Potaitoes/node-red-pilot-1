@@ -21209,8 +21209,8 @@
         "z": "ec520f7208a61e6a",
         "name": "Description of Flow",
         "info": "Displays OPCUA variables, allowing user\nto change them. Writes back to OPCUA for\nPLC to read.",
-        "x": 1710,
-        "y": 40,
+        "x": 1030,
+        "y": 160,
         "wires": []
     },
     {
