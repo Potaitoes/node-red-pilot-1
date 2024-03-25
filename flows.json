@@ -19798,7 +19798,6 @@
         "y": 520,
         "wires": [
             [
-                "b33c15b403dc2de4",
                 "6d4eda37cee54481"
             ]
         ]
@@ -21429,32 +21428,6 @@
         "seg2": "",
         "x": 2150,
         "y": 300,
-        "wires": []
-    },
-    {
-        "id": "b33c15b403dc2de4",
-        "type": "ui_gauge",
-        "z": "af80505e1c4f7081",
-        "name": "",
-        "group": "675036dd.603328",
-        "order": 7,
-        "width": "5",
-        "height": "5",
-        "gtype": "wave",
-        "title": "T-03",
-        "label": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "3",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 2150,
-        "y": 340,
         "wires": []
     },
     {
