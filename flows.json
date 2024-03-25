@@ -21701,7 +21701,7 @@
         "order": 25,
         "width": 6,
         "height": 1,
-        "format": "<style>\n  md-switch {\n    scale: 400% !important\n  }\n\n  .nr-dashboard-text p.label {\n  font-size: 40px\n  }\n\n  .nr-dashboard-textinput input{\n    font-size: 80px !important\n    }\n\n  md-input-container .md-input {\n    height: 100px !important\n  }\n\n  /* p{\n    font-size: 80px !important\n  } */\n\n</style\n\n\n\n\n",
+        "format": "<style>\n  md-switch {\n    scale: 400% !important\n  }\n\n  .nr-dashboard-text p.label {\n  font-size: 40px\n  }\n\n  .nr-dashboard-textinput input{\n    font-size: 80px !important\n    }\n\n  md-input-container .md-input {\n    height: 100px !important\n  }\n  .nr-dashboard-text p.value {\n  font-size: 140px !important\n  }\n  \n\n  /* p{\n    font-size: 80px !important\n  } */\n\n</style\n\n\n\n\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
