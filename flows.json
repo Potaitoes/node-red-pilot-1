@@ -21204,6 +21204,16 @@
         "wires": []
     },
     {
+        "id": "a176cbb694816375",
+        "type": "comment",
+        "z": "ec520f7208a61e6a",
+        "name": "Description of Flow",
+        "info": "Displays OPCUA variables, allowing user\nto change them. Writes back to OPCUA for\nPLC to read.",
+        "x": 1710,
+        "y": 40,
+        "wires": []
+    },
+    {
         "id": "42057ba3d38d3675",
         "type": "mqtt out",
         "z": "ea4ba7b5729c4ade",
