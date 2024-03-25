@@ -19596,9 +19596,7 @@
                 "c767ab1bc631283c",
                 "913f7875f03e7386"
             ],
-            [
-                "bdf68699683d264a"
-            ],
+            [],
             [
                 "b8b8101ebec99536"
             ]
@@ -20088,25 +20086,6 @@
         "wires": [
             [
                 "2f3a55e86a6c30dc"
-            ]
-        ]
-    },
-    {
-        "id": "bdf68699683d264a",
-        "type": "function",
-        "z": "af80505e1c4f7081",
-        "name": "function 1",
-        "func": "msg.payload = Math.round((msg.payload) * 1000) / 1000;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1440,
-        "y": 180,
-        "wires": [
-            [
-                "dba71392d58e65aa"
             ]
         ]
     },
@@ -21422,23 +21401,6 @@
         "layout": "col-center",
         "x": 1730,
         "y": 60,
-        "wires": []
-    },
-    {
-        "id": "dba71392d58e65aa",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "d": true,
-        "group": "485fc22d5a0ba791",
-        "order": 15,
-        "width": 15,
-        "height": 2,
-        "name": "Acid Volume",
-        "label": "",
-        "format": "{{msg.payload}} m3",
-        "layout": "row-spread",
-        "x": 1710,
-        "y": 200,
         "wires": []
     },
     {
