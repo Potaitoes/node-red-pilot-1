@@ -19695,7 +19695,6 @@
         "wires": [
             [
                 "a1ce05848db0af19",
-                "9471aaa5dbc01fce",
                 "220e2a90f76b004c",
                 "7a92d692e4148071"
             ]
@@ -20299,32 +20298,6 @@
         "seg2": "",
         "x": 2530,
         "y": 360,
-        "wires": []
-    },
-    {
-        "id": "9471aaa5dbc01fce",
-        "type": "ui_gauge",
-        "z": "af80505e1c4f7081",
-        "name": "",
-        "group": "675036dd.603328",
-        "order": 8,
-        "width": "5",
-        "height": "5",
-        "gtype": "wave",
-        "title": "T-04",
-        "label": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "4",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "x": 2530,
-        "y": 480,
         "wires": []
     },
     {
