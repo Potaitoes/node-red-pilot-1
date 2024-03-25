@@ -21323,7 +21323,7 @@
         "initialize": "",
         "finalize": "// Code added here will be run when the\n// node is being stopped or re-deployed.\n// node.warn(typeof global.get(\"FAST_LOGGING_Switch\"));\n\n\n// node.warn(typeof global.get(\"OPT01_Switch\"));\n// node.warn(typeof global.get(\"OPT02_Switch\"));\n// node.warn(typeof global.get(\"OPT03_Switch\"));\n// node.warn(typeof global.get(\"OPT04_Switch\"));\n// node.warn(typeof global.get(\"OPT05_Switch\"));\n// node.warn(typeof global.get(\"OPFurnace_Switch\"));",
         "libs": [],
-        "x": 1010,
+        "x": 1070,
         "y": 640,
         "wires": [
             [
