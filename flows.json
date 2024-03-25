@@ -19365,10 +19365,12 @@
         "y": 600,
         "wires": [
             [
-                "7179279d253c6d7e"
+                "7179279d253c6d7e",
+                "363dd4fccdf15443"
             ],
             [
-                "20a359e2ccc12828"
+                "20a359e2ccc12828",
+                "5ee1787b74c6d252"
             ],
             [
                 "e019ef4035a6f5fc"
@@ -19542,10 +19544,12 @@
         "y": 800,
         "wires": [
             [
-                "d14a7bf051b0b8ce"
+                "d14a7bf051b0b8ce",
+                "bff550b45bec5058"
             ],
             [
-                "1dd9a30126ba123f"
+                "1dd9a30126ba123f",
+                "6e6de9e8a109f6fe"
             ],
             [
                 "b064d9499d6923e2"
@@ -19554,18 +19558,22 @@
                 "b064d9499d6923e2"
             ],
             [
-                "dcf2ca5a2077025e"
+                "dcf2ca5a2077025e",
+                "4dc5a930777238a9"
             ],
             [
-                "5172c2e2f453d700"
+                "5172c2e2f453d700",
+                "c97e35debf35925a"
             ],
             [
                 "da39475d10126d34",
-                "1f95783c484444a2"
+                "1f95783c484444a2",
+                "d03bc15f895096dc"
             ],
             [
                 "826ca00412e83c8b",
-                "e17ee8c05428a427"
+                "e17ee8c05428a427",
+                "f3e157841cfa66c8"
             ]
         ]
     },
@@ -19585,15 +19593,18 @@
         "y": 1180,
         "wires": [
             [
-                "e663a3c089598210"
+                "e663a3c089598210",
+                "5a30e26f8840b25d"
             ],
             [
                 "146d41d9c5fbd120",
-                "fab2ee849c046f97"
+                "fab2ee849c046f97",
+                "c62011d4f0dc020a"
             ],
             [
                 "9dc92ddb307b058c",
-                "21b9ebdb1b3edcaa"
+                "21b9ebdb1b3edcaa",
+                "5790ea6a29ccb098"
             ],
             [
                 "ebb34d426764007f"
@@ -19623,7 +19634,8 @@
         "wires": [
             [],
             [
-                "cd281d5cc3bcac06"
+                "cd281d5cc3bcac06",
+                "107cd8f6d4201596"
             ],
             [
                 "7e3857c823ebc2e3"
@@ -19654,7 +19666,8 @@
         "y": 840,
         "wires": [
             [
-                "a9dea75f1173c19b"
+                "a9dea75f1173c19b",
+                "f09c1af516ce50da"
             ]
         ]
     },
@@ -19693,7 +19706,8 @@
                 "a1ce05848db0af19",
                 "9471aaa5dbc01fce",
                 "220e2a90f76b004c",
-                "7a92d692e4148071"
+                "7a92d692e4148071",
+                "e0502806d934203b"
             ]
         ]
     },
@@ -20367,8 +20381,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 2370,
-        "y": 1380,
+        "x": 2530,
+        "y": 480,
         "wires": []
     },
     {
@@ -21138,6 +21152,230 @@
         "info": "",
         "x": 1160,
         "y": 940,
+        "wires": []
+    },
+    {
+        "id": "c62011d4f0dc020a",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "59f0a3a4c021c1f8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "T-02 Temperature",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 3030,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "5a30e26f8840b25d",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "59f0a3a4c021c1f8",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "T-02 pH",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 3000,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "5ee1787b74c6d252",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "813266fe1aeae7a9",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "T-03 Temperature",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 3030,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "363dd4fccdf15443",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "813266fe1aeae7a9",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "T-03 pH",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 3000,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "107cd8f6d4201596",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "5be3979a5a319ab1",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "T-04 Temperature",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 3030,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "e0502806d934203b",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "5be3979a5a319ab1",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "T-04 Level",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 3010,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "5790ea6a29ccb098",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "59f0a3a4c021c1f8",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "T-02 ORP",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 3000,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "6e6de9e8a109f6fe",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "48c91039c2bb5fe0",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "T-05 Temperature",
+        "format": "{{msg.payload}}°C",
+        "layout": "row-spread",
+        "x": 3030,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "f09c1af516ce50da",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "48c91039c2bb5fe0",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "T-05 Level",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 3010,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "c97e35debf35925a",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "48c91039c2bb5fe0",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "T-05 Current",
+        "format": "{{msg.payload}} Amps",
+        "layout": "row-spread",
+        "x": 3010,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "4dc5a930777238a9",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "48c91039c2bb5fe0",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "T-05 Voltage",
+        "format": "{{msg.payload}}V",
+        "layout": "row-spread",
+        "x": 3010,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "bff550b45bec5058",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "48c91039c2bb5fe0",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "T-05 pH",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 3000,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "d03bc15f895096dc",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "48c91039c2bb5fe0",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "T-05 Chlorine",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 3020,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "f3e157841cfa66c8",
+        "type": "ui_text",
+        "z": "af80505e1c4f7081",
+        "group": "48c91039c2bb5fe0",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "T-05 Hydrogen",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 3020,
+        "y": 1220,
         "wires": []
     },
     {
