@@ -2,7 +2,15 @@
     {
         "id": "af80505e1c4f7081",
         "type": "tab",
-        "label": "Flow 1",
+        "label": "OPCUA IN",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ec520f7208a61e6a",
+        "type": "tab",
+        "label": "CONTROLS",
         "disabled": false,
         "info": "",
         "env": []
@@ -10,7 +18,7 @@
     {
         "id": "ea4ba7b5729c4ade",
         "type": "tab",
-        "label": "Flow 3",
+        "label": "MQTT OUT",
         "disabled": false,
         "info": "",
         "env": []
@@ -18,9 +26,9 @@
     {
         "id": "e6d71b93752cf439",
         "type": "junction",
-        "z": "af80505e1c4f7081",
-        "x": 460,
-        "y": 1880,
+        "z": "ec520f7208a61e6a",
+        "x": 880,
+        "y": 460,
         "wires": [
             [
                 "15a7dc88c5b2b839",
@@ -19225,16 +19233,6 @@
         ]
     },
     {
-        "id": "83c6252ceb443183",
-        "type": "comment",
-        "z": "af80505e1c4f7081",
-        "name": "Write Data to PLC",
-        "info": "There is a limited number of clients you can use.\nYou can string commands together and push into a single client.",
-        "x": 750,
-        "y": 1400,
-        "wires": []
-    },
-    {
         "id": "0de7800a973778dc",
         "type": "function",
         "z": "af80505e1c4f7081",
@@ -19813,35 +19811,6 @@
         ]
     },
     {
-        "id": "bddb17a45cca7cc7",
-        "type": "function",
-        "z": "af80505e1c4f7081",
-        "name": "function 2",
-        "func": "var numOutputs = node.numberOfOutputs;\nconst returnArray = new Array(numOutputs).fill(null);\nvar topic1 = global.get('Topic_button_states');\n\nvar FAST_LOG_switch_msg = {};\nvar EW_Circulation_switch_msg = {};\nvar OverRideEW2Buff_msg = {};\nvar OverRideBuff2EW_msg = {};\nvar T01_switch_msg = {};\nvar T02_switch_msg = {};\nvar T03_switch_msg = {};\nvar T04_switch_msg = {};\nvar T05_switch_msg = {};\nvar Furnace_switch_msg = {};\n\n\nif (msg.topic == topic1) {\n\n    //Set Globals\n\n\n    global.set(\"FAST_LOG_Switch\", msg.payload.FAST_LOG);\n    global.set(\"EW_PUMP_OVERRIDE_Switch\", msg.payload.EW_PUMP_OVERRIDE);\n\n\n\n    FAST_LOG_switch_msg.payload = msg.payload.FAST_LOG;\n    EW_Circulation_switch_msg.payload = msg.payload.EW_PUMP_OVERRIDE; \n    OverRideEW2Buff_msg.payload = msg.payload.overRide1;\n    OverRideBuff2EW_msg.payload = msg.payload.overRide2;\n\n    returnArray[0] = FAST_LOG_switch_msg;\n    returnArray[1] = EW_Circulation_switch_msg;\n    returnArray[2] = OverRideEW2Buff_msg;\n    returnArray[3] = OverRideBuff2EW_msg;\n\n}\n\n\n\nreturn returnArray;",
-        "outputs": 4,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "// Code added here will be run when the\n// node is being stopped or re-deployed.\n// node.warn(typeof global.get(\"FAST_LOGGING_Switch\"));\n\n\n// node.warn(typeof global.get(\"OPT01_Switch\"));\n// node.warn(typeof global.get(\"OPT02_Switch\"));\n// node.warn(typeof global.get(\"OPT03_Switch\"));\n// node.warn(typeof global.get(\"OPT04_Switch\"));\n// node.warn(typeof global.get(\"OPT05_Switch\"));\n// node.warn(typeof global.get(\"OPFurnace_Switch\"));",
-        "libs": [],
-        "x": 620,
-        "y": 1740,
-        "wires": [
-            [
-                "47443ecc857d3d08"
-            ],
-            [
-                "8273ecb8f1ebf0e3"
-            ],
-            [
-                "0f0476982fec7b16"
-            ],
-            [
-                "dcb61b611538f883"
-            ]
-        ]
-    },
-    {
         "id": "4723e76f6714f39b",
         "type": "function",
         "z": "af80505e1c4f7081",
@@ -19862,25 +19831,6 @@
         ]
     },
     {
-        "id": "b7ede8204f6ca354",
-        "type": "function",
-        "z": "af80505e1c4f7081",
-        "name": "input handler",
-        "func": "if (msg.payload == ''){\n    //node.warn(\"entered loop\");\n} else {\n    global.set(\"BATCH_ID_1\", msg.payload);\n    //node.warn(\"restarted but loop not entered: error\");\n}\n\nmsg.payload = global.get(\"BATCH_ID_1\");\n\nreturn msg",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1290,
-        "y": 2340,
-        "wires": [
-            [
-                "21c53d13e7293177"
-            ]
-        ]
-    },
-    {
         "id": "2a7f27115539af85",
         "type": "debug",
         "z": "af80505e1c4f7081",
@@ -19897,180 +19847,6 @@
         "wires": []
     },
     {
-        "id": "15a7dc88c5b2b839",
-        "type": "function",
-        "z": "af80505e1c4f7081",
-        "name": "Drop List Assigner",
-        "func": "var index;\nvar numOutputs = node.numberOfOutputs;\nconst returnArray = new Array(numOutputs).fill(null);\nvar topic1 = global.get('Topic_button_states');\n\nvar batchA_msg = {};\nvar batchB_msg = {};\n\nif (msg.topic == topic1) {\n\n    //Set Globals\n\n    global.set(\"BATCH_ID_1\", msg.payload.batchID1);\n    global.set(\"BATCH_ID_2\", msg.payload.batchID2);\n\n    //Send through the state of the drop down list for batchA\n    if (msg.payload.T01_batch_ID == msg.payload.batchID1) {\n        batchA_msg.payload = \"T01\";\n    } else if (msg.payload.T02_batch_ID == msg.payload.batchID1) {\n        batchA_msg.payload = \"T02\";\n    } else if (msg.payload.T03_batch_ID == msg.payload.batchID1) {\n        batchA_msg.payload = \"T03\";\n    } else if (msg.payload.T04_batch_ID == msg.payload.batchID1) {\n        batchA_msg.payload = \"T04\";\n    } else if (msg.payload.T05_batch_ID == msg.payload.batchID1) {\n        batchA_msg.payload = \"T05\";\n    } else if (msg.payload.T06_batch_ID == msg.payload.batchID1) {\n        batchA_msg.payload = \"T06\";\n    } else if (msg.payload.furnace_batch_ID == msg.payload.batchID1) {\n        batchA_msg.payload = \"Furnace\";\n    } else {\n        batchA_msg.payload = \"NOT OPERATING\";\n    }\n    \n    //Send through the state of the dropdown list for batchB\n    if (msg.payload.T01_batch_ID == msg.payload.batchID2) {\n        batchB_msg.payload = \"T01\";\n    } else if (msg.payload.T02_batch_ID == msg.payload.batchID2) {\n        batchB_msg.payload = \"T02\";\n    } else if (msg.payload.T03_batch_ID == msg.payload.batchID2) {\n        batchB_msg.payload = \"T03\";\n    } else if (msg.payload.T04_batch_ID == msg.payload.batchID2) {\n        batchB_msg.payload = \"T04\";\n    } else if (msg.payload.T05_batch_ID == msg.payload.batchID2) {\n        batchB_msg.payload = \"T05\";\n    } else if (msg.payload.T06_batch_ID == msg.payload.batchID2) {\n        batchB_msg.payload = \"T06\";\n    } else if (msg.payload.furnace_batch_ID == msg.payload.batchID2) {\n        batchB_msg.payload = \"Furnace\";\n    } else {\n        batchB_msg.payload = \"NOT OPERATING\";\n    }\n\n    batchA_msg.topic = \"batchA\";\n    batchB_msg.topic = \"batchB\";\n\n\n    returnArray[0] = batchA_msg;\n    returnArray[1] = batchB_msg;\n\n    return returnArray;\n\n}\n\n\n",
-        "outputs": 2,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "// Code added here will be run when the\n// node is being stopped or re-deployed.\n// node.warn(typeof global.get(\"FAST_LOGGING_Switch\"));\n\n\n// node.warn(typeof global.get(\"OPT01_Switch\"));\n// node.warn(typeof global.get(\"OPT02_Switch\"));\n// node.warn(typeof global.get(\"OPT03_Switch\"));\n// node.warn(typeof global.get(\"OPT04_Switch\"));\n// node.warn(typeof global.get(\"OPT05_Switch\"));\n// node.warn(typeof global.get(\"OPFurnace_Switch\"));",
-        "libs": [],
-        "x": 590,
-        "y": 2060,
-        "wires": [
-            [
-                "583a90f79d426747"
-            ],
-            [
-                "f5731eb06cde0bc6"
-            ]
-        ]
-    },
-    {
-        "id": "34f967fb9a6e3cb3",
-        "type": "function",
-        "z": "af80505e1c4f7081",
-        "name": "BATCH ID ABSORBER",
-        "func": "var numOutputs = node.numberOfOutputs;\nconst returnArray = new Array(numOutputs).fill(null);\nvar topic1 = global.get('Topic_button_states');\n\nvar BatchID1_msg = {};\nvar BatchID2_msg = {};\n\nif (msg.topic == topic1) {\n\n    //Set Globals\n\n    global.set(\"BATCH_ID_1\", msg.payload.batchID1);\n    global.set(\"BATCH_ID_2\", msg.payload.batchID2);\n\n    BatchID1_msg.payload = msg.payload.batchID1;\n    BatchID2_msg.payload = msg.payload.batchID2;\n\n\n    returnArray[0] = BatchID1_msg;\n    returnArray[1] = BatchID2_msg;\n\n    return returnArray\n}\n\n\n\n",
-        "outputs": 2,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 610,
-        "y": 2360,
-        "wires": [
-            [
-                "e568cd8fd166ca7b"
-            ],
-            [
-                "db25722edaabf1dd"
-            ]
-        ]
-    },
-    {
-        "id": "1bba237091dc636a",
-        "type": "function",
-        "z": "af80505e1c4f7081",
-        "name": "input handler",
-        "func": "if (msg.payload == ''){\n    //node.warn(\"entered loop\");\n} else {\n    global.set(\"BATCH_ID_2\", msg.payload);\n    //node.warn(\"restarted but loop not entered: error\");\n}\n\nmsg.payload = global.get(\"BATCH_ID_2\");\n\nreturn msg",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1290,
-        "y": 2420,
-        "wires": [
-            [
-                "a806b59db13a9cc6"
-            ]
-        ]
-    },
-    {
-        "id": "dde8bc3b4ccc42ad",
-        "type": "function",
-        "z": "af80505e1c4f7081",
-        "name": "function 4",
-        "func": "global.set(\"batchA_OP\", msg.payload);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1100,
-        "y": 2040,
-        "wires": [
-            [
-                "921b65dca4379646"
-            ]
-        ]
-    },
-    {
-        "id": "21af615086db6370",
-        "type": "function",
-        "z": "af80505e1c4f7081",
-        "name": "function 5",
-        "func": "global.set(\"batchB_OP\", msg.payload);\n//node.warn(msg.payload);\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1100,
-        "y": 2100,
-        "wires": [
-            [
-                "921b65dca4379646"
-            ]
-        ]
-    },
-    {
-        "id": "921b65dca4379646",
-        "type": "function",
-        "z": "af80505e1c4f7081",
-        "name": "function 6",
-        "func": "//program writes batch ID to repsective outputs\n\n\n//create a return array and fill it with NOT OPERATING\nvar fill = {}\nfill.payload = \"NOT OPERATING\";\nvar numOutputs = node.numberOfOutputs;\nconst returnArray = new Array(numOutputs);\n\nreturnArray[0] = fill;\nreturnArray[1] = fill;\nreturnArray[2] = fill;\nreturnArray[3] = fill;\nreturnArray[4] = fill;\nreturnArray[5] = fill;\nreturnArray[6] = fill;\nreturnArray[7] = fill;\nreturnArray[8] = fill;\n\n//node.warn(returnArray);\n\n//get the operation that a batch has been set to.\nvar batchA_OP = global.get(\"batchA_OP\");\nvar batchB_OP = global.get(\"batchB_OP\");\n\n// grab index to write the batch ID to.\nvar indexA = batchA_OP[2];\nvar indexB = batchB_OP[2];\n\n//write to spare outputs if no process\nvar no_op_A = 7; //Are these lines even needed? 27/11/23\nvar no_op_B = 8;\n\n\n\n// Cover furnace or not operating conditions\nif (batchA_OP == \"NOT OPERATING\") {\n    indexA = no_op_A;\n} else if (indexA == 'r') {\n    indexA = 6;\n} else {\n    indexA = parseInt(indexA);\n}\n\n\nif (batchB_OP == \"NOT OPERATING\"){\n    indexB = no_op_B;\n}\nelse if (indexB == 'r') {\n    indexB = 7;\n} else {\n    indexB = parseInt(indexB);\n}\n\n\n//output\n\nvar ret_msg1 = {};\nvar ret_msg2 = {};\n\nret_msg1.payload = global.get(\"BATCH_ID_1\");\nret_msg2.payload = global.get(\"BATCH_ID_2\");\n\n\nreturnArray[indexA - 1] = ret_msg1;\nreturnArray[indexB - 1] = ret_msg2;\n\n\n\nreturn returnArray;",
-        "outputs": 9,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1280,
-        "y": 2120,
-        "wires": [
-            [
-                "c063f258bb35a506"
-            ],
-            [
-                "e7c2a2e317aef823"
-            ],
-            [
-                "49b229c2edcfada0"
-            ],
-            [
-                "3dc0da952b664d9c"
-            ],
-            [
-                "663fc7567cb5db13"
-            ],
-            [
-                "b6b5a7e4fcd921ae"
-            ],
-            [
-                "2c687cf179c9c8b7"
-            ],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "cc8cad26527477fc",
-        "type": "inject",
-        "z": "af80505e1c4f7081",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "2",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1090,
-        "y": 2160,
-        "wires": [
-            [
-                "921b65dca4379646"
-            ]
-        ]
-    },
-    {
         "id": "ab4a054806a1f249",
         "type": "link out",
         "z": "af80505e1c4f7081",
@@ -20082,221 +19858,6 @@
         "x": 1335,
         "y": 160,
         "wires": []
-    },
-    {
-        "id": "583a90f79d426747",
-        "type": "ui_dropdown",
-        "z": "af80505e1c4f7081",
-        "name": "batch A",
-        "label": "",
-        "tooltip": "",
-        "place": "Select option",
-        "group": "9f41ae3953064c26",
-        "order": 12,
-        "width": 9,
-        "height": 3,
-        "passthru": true,
-        "multiple": false,
-        "options": [
-            {
-                "label": "T01",
-                "value": "T01",
-                "type": "str"
-            },
-            {
-                "label": "T02",
-                "value": "T02",
-                "type": "str"
-            },
-            {
-                "label": "T03",
-                "value": "T03",
-                "type": "str"
-            },
-            {
-                "label": "T04",
-                "value": "T04",
-                "type": "str"
-            },
-            {
-                "label": "T05",
-                "value": "T05",
-                "type": "str"
-            },
-            {
-                "label": "T06",
-                "value": "T06",
-                "type": "str"
-            },
-            {
-                "label": "Furnace",
-                "value": "Furnace",
-                "type": "str"
-            },
-            {
-                "label": "NOT OPERATING",
-                "value": "NOT OPERATING",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 920,
-        "y": 2040,
-        "wires": [
-            [
-                "dde8bc3b4ccc42ad"
-            ]
-        ]
-    },
-    {
-        "id": "f5731eb06cde0bc6",
-        "type": "ui_dropdown",
-        "z": "af80505e1c4f7081",
-        "name": "batch A",
-        "label": "",
-        "tooltip": "",
-        "place": "Select option",
-        "group": "9f41ae3953064c26",
-        "order": 20,
-        "width": 9,
-        "height": 3,
-        "passthru": true,
-        "multiple": false,
-        "options": [
-            {
-                "label": "T01",
-                "value": "T01",
-                "type": "str"
-            },
-            {
-                "label": "T02",
-                "value": "T02",
-                "type": "str"
-            },
-            {
-                "label": "T03",
-                "value": "T03",
-                "type": "str"
-            },
-            {
-                "label": "T04",
-                "value": "T04",
-                "type": "str"
-            },
-            {
-                "label": "T05",
-                "value": "T05",
-                "type": "str"
-            },
-            {
-                "label": "T06",
-                "value": "T06",
-                "type": "str"
-            },
-            {
-                "label": "Furnace",
-                "value": "Furnace",
-                "type": "str"
-            },
-            {
-                "label": "NOT OPERATING",
-                "value": "NOT OPERATING",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 920,
-        "y": 2100,
-        "wires": [
-            [
-                "21af615086db6370"
-            ]
-        ]
-    },
-    {
-        "id": "47443ecc857d3d08",
-        "type": "ui_switch",
-        "z": "af80505e1c4f7081",
-        "name": "FAST_LOGGING",
-        "label": "FAST LOGGING",
-        "tooltip": "",
-        "group": "9f41ae3953064c26",
-        "order": 2,
-        "width": 14,
-        "height": 3,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "x": 990,
-        "y": 1800,
-        "wires": [
-            [
-                "253c1165779150ea"
-            ]
-        ]
-    },
-    {
-        "id": "74e9ee21c852dc41",
-        "type": "ui_text_input",
-        "z": "af80505e1c4f7081",
-        "name": "BatchID_inputA",
-        "label": "<font size=100>Enter Batch 1 ID:",
-        "tooltip": "",
-        "group": "9f41ae3953064c26",
-        "order": 11,
-        "width": 12,
-        "height": 3,
-        "passthru": true,
-        "mode": "text",
-        "delay": 300,
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 1120,
-        "y": 2340,
-        "wires": [
-            [
-                "b7ede8204f6ca354"
-            ]
-        ]
-    },
-    {
-        "id": "8b80dc9f1eaf07fd",
-        "type": "ui_text_input",
-        "z": "af80505e1c4f7081",
-        "name": "BatchID_inputB",
-        "label": "<font size=100>Enter Batch 2 ID:",
-        "tooltip": "",
-        "group": "9f41ae3953064c26",
-        "order": 19,
-        "width": 12,
-        "height": 3,
-        "passthru": true,
-        "mode": "text",
-        "delay": 300,
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 1120,
-        "y": 2420,
-        "wires": [
-            [
-                "1bba237091dc636a"
-            ]
-        ]
     },
     {
         "id": "7179279d253c6d7e",
@@ -20987,38 +20548,6 @@
         "wires": []
     },
     {
-        "id": "e568cd8fd166ca7b",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "9f41ae3953064c26",
-        "order": 10,
-        "width": 6,
-        "height": 3,
-        "name": "",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "x": 830,
-        "y": 2300,
-        "wires": []
-    },
-    {
-        "id": "db25722edaabf1dd",
-        "type": "ui_text",
-        "z": "af80505e1c4f7081",
-        "group": "9f41ae3953064c26",
-        "order": 18,
-        "width": 6,
-        "height": 3,
-        "name": "",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "x": 830,
-        "y": 2360,
-        "wires": []
-    },
-    {
         "id": "a1ce05848db0af19",
         "type": "ui_gauge",
         "z": "af80505e1c4f7081",
@@ -21329,26 +20858,6 @@
         ]
     },
     {
-        "id": "3c6fabdb9d136690",
-        "type": "ui_template",
-        "z": "af80505e1c4f7081",
-        "group": "9f41ae3953064c26",
-        "name": "",
-        "order": 25,
-        "width": 6,
-        "height": 1,
-        "format": "<style>\n  md-switch {\n    scale: 400% !important\n  }\n\n  p.label {\n    font-size: 80px !important\n  }\n\n  .nr-dashboard-textinput input{\n    font-size: 80px !important\n    }\n\n  md-input-container .md-input {\n    height: 100px !important\n  }\n\n  p{\n    font-size: 80px !important\n  }\n\n</style",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "x": 1000,
-        "y": 2260,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "26ca7005cb89a82d",
         "type": "ui_template",
         "z": "af80505e1c4f7081",
@@ -21541,150 +21050,6 @@
         ]
     },
     {
-        "id": "0f2c3c899d00014c",
-        "type": "OpcUa-Item",
-        "z": "af80505e1c4f7081",
-        "item": "ns=4;s=FurnaceBatchID",
-        "datatype": "String",
-        "value": "",
-        "name": "FurnaceBatchID",
-        "x": 1860,
-        "y": 2280,
-        "wires": [
-            [
-                "d8a23248fa8225ea"
-            ]
-        ]
-    },
-    {
-        "id": "30ef25745bb9fe3a",
-        "type": "OpcUa-Item",
-        "z": "af80505e1c4f7081",
-        "item": "ns=4;s=T05BatchID",
-        "datatype": "String",
-        "value": "",
-        "name": "T05BatchID",
-        "x": 1850,
-        "y": 2200,
-        "wires": [
-            [
-                "d8a23248fa8225ea"
-            ]
-        ]
-    },
-    {
-        "id": "753ea934f92a3446",
-        "type": "OpcUa-Item",
-        "z": "af80505e1c4f7081",
-        "item": "ns=4;s=T04BatchID",
-        "datatype": "String",
-        "value": "",
-        "name": "T04BatchID",
-        "x": 1850,
-        "y": 2160,
-        "wires": [
-            [
-                "d8a23248fa8225ea"
-            ]
-        ]
-    },
-    {
-        "id": "2d5b5fc3e2e0c3fd",
-        "type": "OpcUa-Item",
-        "z": "af80505e1c4f7081",
-        "item": "ns=4;s=T03BatchID",
-        "datatype": "String",
-        "value": "",
-        "name": "T03BatchID",
-        "x": 1850,
-        "y": 2120,
-        "wires": [
-            [
-                "d8a23248fa8225ea"
-            ]
-        ]
-    },
-    {
-        "id": "4d4d0183d941f356",
-        "type": "OpcUa-Item",
-        "z": "af80505e1c4f7081",
-        "item": "ns=4;s=T02BatchID",
-        "datatype": "String",
-        "value": "",
-        "name": "T02BatchID",
-        "x": 1850,
-        "y": 2080,
-        "wires": [
-            [
-                "d8a23248fa8225ea"
-            ]
-        ]
-    },
-    {
-        "id": "1253528949a9d9da",
-        "type": "OpcUa-Item",
-        "z": "af80505e1c4f7081",
-        "item": "ns=4;s=T01BatchID",
-        "datatype": "String",
-        "value": "",
-        "name": "T01BatchID",
-        "x": 1850,
-        "y": 2040,
-        "wires": [
-            [
-                "d8a23248fa8225ea"
-            ]
-        ]
-    },
-    {
-        "id": "6e1b82958d48c881",
-        "type": "OpcUa-Item",
-        "z": "af80505e1c4f7081",
-        "item": "ns=4;s=FAST_LOG",
-        "datatype": "Boolean",
-        "value": "",
-        "name": "FAST_LOG",
-        "x": 1850,
-        "y": 1960,
-        "wires": [
-            [
-                "d8a23248fa8225ea"
-            ]
-        ]
-    },
-    {
-        "id": "17ee6985c82b1e48",
-        "type": "OpcUa-Item",
-        "z": "af80505e1c4f7081",
-        "item": "ns=4;s=BatchID1",
-        "datatype": "String",
-        "value": "",
-        "name": "BatchID1",
-        "x": 1840,
-        "y": 2360,
-        "wires": [
-            [
-                "d8a23248fa8225ea"
-            ]
-        ]
-    },
-    {
-        "id": "e4737f79fed34fa0",
-        "type": "OpcUa-Item",
-        "z": "af80505e1c4f7081",
-        "item": "ns=4;s=BatchID2",
-        "datatype": "String",
-        "value": "",
-        "name": "BatchID2",
-        "x": 1840,
-        "y": 2400,
-        "wires": [
-            [
-                "d8a23248fa8225ea"
-            ]
-        ]
-    },
-    {
         "id": "756577b21cef2354",
         "type": "OpcUa-Item",
         "z": "af80505e1c4f7081",
@@ -21728,36 +21093,8 @@
             [
                 "c8ed4d4e2ff65ebd",
                 "2a7f27115539af85",
-                "e6d71b93752cf439"
+                "d614598a83661ccc"
             ]
-        ]
-    },
-    {
-        "id": "d8a23248fa8225ea",
-        "type": "OpcUa-Client",
-        "z": "af80505e1c4f7081",
-        "endpoint": "a053172554a6aedb",
-        "action": "write",
-        "deadbandtype": "a",
-        "deadbandvalue": 1,
-        "time": "500",
-        "timeUnit": "ms",
-        "certificate": "n",
-        "localfile": "",
-        "localkeyfile": "",
-        "securitymode": "None",
-        "securitypolicy": "None",
-        "folderName4PKI": "",
-        "useTransport": false,
-        "maxChunkCount": "",
-        "maxMessageSize": "",
-        "receiveBufferSize": "",
-        "sendBufferSize": "",
-        "name": "",
-        "x": 2100,
-        "y": 2120,
-        "wires": [
-            []
         ]
     },
     {
@@ -21864,403 +21201,6 @@
         "x": 1820,
         "y": 1600,
         "wires": []
-    },
-    {
-        "id": "c063f258bb35a506",
-        "type": "rbe",
-        "z": "af80505e1c4f7081",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": true,
-        "property": "payload",
-        "topi": "topic",
-        "x": 1610,
-        "y": 2040,
-        "wires": [
-            [
-                "1253528949a9d9da"
-            ]
-        ]
-    },
-    {
-        "id": "e7c2a2e317aef823",
-        "type": "rbe",
-        "z": "af80505e1c4f7081",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": true,
-        "property": "payload",
-        "topi": "topic",
-        "x": 1610,
-        "y": 2080,
-        "wires": [
-            [
-                "4d4d0183d941f356"
-            ]
-        ]
-    },
-    {
-        "id": "49b229c2edcfada0",
-        "type": "rbe",
-        "z": "af80505e1c4f7081",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": true,
-        "property": "payload",
-        "topi": "topic",
-        "x": 1610,
-        "y": 2120,
-        "wires": [
-            [
-                "2d5b5fc3e2e0c3fd"
-            ]
-        ]
-    },
-    {
-        "id": "3dc0da952b664d9c",
-        "type": "rbe",
-        "z": "af80505e1c4f7081",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": true,
-        "property": "payload",
-        "topi": "topic",
-        "x": 1610,
-        "y": 2160,
-        "wires": [
-            [
-                "753ea934f92a3446"
-            ]
-        ]
-    },
-    {
-        "id": "663fc7567cb5db13",
-        "type": "rbe",
-        "z": "af80505e1c4f7081",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": true,
-        "property": "payload",
-        "topi": "topic",
-        "x": 1610,
-        "y": 2200,
-        "wires": [
-            [
-                "30ef25745bb9fe3a"
-            ]
-        ]
-    },
-    {
-        "id": "2c687cf179c9c8b7",
-        "type": "rbe",
-        "z": "af80505e1c4f7081",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": true,
-        "property": "payload",
-        "topi": "topic",
-        "x": 1610,
-        "y": 2280,
-        "wires": [
-            [
-                "0f2c3c899d00014c"
-            ]
-        ]
-    },
-    {
-        "id": "21c53d13e7293177",
-        "type": "rbe",
-        "z": "af80505e1c4f7081",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": true,
-        "property": "payload",
-        "topi": "topic",
-        "x": 1610,
-        "y": 2360,
-        "wires": [
-            [
-                "17ee6985c82b1e48"
-            ]
-        ]
-    },
-    {
-        "id": "a806b59db13a9cc6",
-        "type": "rbe",
-        "z": "af80505e1c4f7081",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": true,
-        "property": "payload",
-        "topi": "topic",
-        "x": 1610,
-        "y": 2400,
-        "wires": [
-            [
-                "e4737f79fed34fa0"
-            ]
-        ]
-    },
-    {
-        "id": "81de93120daf0e59",
-        "type": "comment",
-        "z": "af80505e1c4f7081",
-        "name": "report by exception",
-        "info": "Only report if OPCUA node changes",
-        "x": 1610,
-        "y": 1780,
-        "wires": []
-    },
-    {
-        "id": "253c1165779150ea",
-        "type": "rbe",
-        "z": "af80505e1c4f7081",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": true,
-        "property": "payload",
-        "topi": "topic",
-        "x": 1610,
-        "y": 1960,
-        "wires": [
-            [
-                "6e1b82958d48c881"
-            ]
-        ]
-    },
-    {
-        "id": "8273ecb8f1ebf0e3",
-        "type": "ui_switch",
-        "z": "af80505e1c4f7081",
-        "name": "EW_PUMP_OVERRIDE",
-        "label": "EW PUMP OVERRIDE",
-        "tooltip": "",
-        "group": "9f41ae3953064c26",
-        "order": 3,
-        "width": 14,
-        "height": 3,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "x": 1010,
-        "y": 1860,
-        "wires": [
-            [
-                "3f7cbed94d72cb73"
-            ]
-        ]
-    },
-    {
-        "id": "3f7cbed94d72cb73",
-        "type": "rbe",
-        "z": "af80505e1c4f7081",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": true,
-        "property": "payload",
-        "topi": "topic",
-        "x": 1610,
-        "y": 2000,
-        "wires": [
-            [
-                "cbd9d96946c28dbe"
-            ]
-        ]
-    },
-    {
-        "id": "cbd9d96946c28dbe",
-        "type": "OpcUa-Item",
-        "z": "af80505e1c4f7081",
-        "item": "ns=4;s=OVERRIDE_EW_RECIRC",
-        "datatype": "Boolean",
-        "value": "",
-        "name": "OVERRIDE_EW_RECIRC",
-        "x": 1900,
-        "y": 2000,
-        "wires": [
-            [
-                "d8a23248fa8225ea"
-            ]
-        ]
-    },
-    {
-        "id": "0f0476982fec7b16",
-        "type": "ui_switch",
-        "z": "af80505e1c4f7081",
-        "name": "",
-        "label": "P1",
-        "tooltip": "",
-        "group": "9f41ae3953064c26",
-        "order": 5,
-        "width": 7,
-        "height": 3,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "x": 950,
-        "y": 1680,
-        "wires": [
-            [
-                "2eb2c816deaaafe0"
-            ]
-        ]
-    },
-    {
-        "id": "dcb61b611538f883",
-        "type": "ui_switch",
-        "z": "af80505e1c4f7081",
-        "name": "",
-        "label": "P2",
-        "tooltip": "",
-        "group": "9f41ae3953064c26",
-        "order": 6,
-        "width": 7,
-        "height": 3,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "x": 950,
-        "y": 1740,
-        "wires": [
-            [
-                "081f9380deb6d6f8"
-            ]
-        ]
-    },
-    {
-        "id": "67e5dcbb3257d696",
-        "type": "OpcUa-Item",
-        "z": "af80505e1c4f7081",
-        "item": "ns=4;s=EW_TO_BUFFER_PUMP_OVERRIDE_VALUE",
-        "datatype": "Boolean",
-        "value": "",
-        "name": "ew2buffOverride",
-        "x": 1860,
-        "y": 1880,
-        "wires": [
-            [
-                "d8a23248fa8225ea"
-            ]
-        ]
-    },
-    {
-        "id": "dad78bdde4c2089d",
-        "type": "OpcUa-Item",
-        "z": "af80505e1c4f7081",
-        "item": "ns=4;s=BUFFER_TO_EW_PUMP_OVERRIDE_VALUE",
-        "datatype": "Boolean",
-        "value": "",
-        "name": "buff2ewOverride",
-        "x": 1860,
-        "y": 1920,
-        "wires": [
-            [
-                "d8a23248fa8225ea"
-            ]
-        ]
-    },
-    {
-        "id": "2eb2c816deaaafe0",
-        "type": "rbe",
-        "z": "af80505e1c4f7081",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": true,
-        "property": "payload",
-        "topi": "topic",
-        "x": 1610,
-        "y": 1880,
-        "wires": [
-            [
-                "67e5dcbb3257d696"
-            ]
-        ]
-    },
-    {
-        "id": "081f9380deb6d6f8",
-        "type": "rbe",
-        "z": "af80505e1c4f7081",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": true,
-        "property": "payload",
-        "topi": "topic",
-        "x": 1610,
-        "y": 1920,
-        "wires": [
-            [
-                "dad78bdde4c2089d"
-            ]
-        ]
     },
     {
         "id": "e7b4e47f7eef0a71",
@@ -22374,42 +21314,6 @@
         ]
     },
     {
-        "id": "004b2442e5741e6d",
-        "type": "OpcUa-Item",
-        "z": "af80505e1c4f7081",
-        "item": "ns=4;s=T06BatchID",
-        "datatype": "String",
-        "value": "",
-        "name": "T06BatchID",
-        "x": 1850,
-        "y": 2240,
-        "wires": [
-            [
-                "d8a23248fa8225ea"
-            ]
-        ]
-    },
-    {
-        "id": "b6b5a7e4fcd921ae",
-        "type": "rbe",
-        "z": "af80505e1c4f7081",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": true,
-        "property": "payload",
-        "topi": "topic",
-        "x": 1610,
-        "y": 2240,
-        "wires": [
-            [
-                "004b2442e5741e6d"
-            ]
-        ]
-    },
-    {
         "id": "d8c5f2866bb106a0",
         "type": "ui_text",
         "z": "af80505e1c4f7081",
@@ -22465,6 +21369,1140 @@
         "info": "",
         "x": 1550,
         "y": 580,
+        "wires": []
+    },
+    {
+        "id": "d614598a83661ccc",
+        "type": "link out",
+        "z": "af80505e1c4f7081",
+        "name": "OPCUA Tags Out",
+        "mode": "link",
+        "links": [
+            "17c0964335fc0510",
+            "11cc8d14ae469e6f"
+        ],
+        "x": 1305,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "921b65dca4379646",
+        "type": "function",
+        "z": "ec520f7208a61e6a",
+        "name": "function 6",
+        "func": "//program writes batch ID to repsective outputs\n\n\n//create a return array and fill it with NOT OPERATING\nvar fill = {}\nfill.payload = \"NOT OPERATING\";\nvar numOutputs = node.numberOfOutputs;\nconst returnArray = new Array(numOutputs);\n\nreturnArray[0] = fill;\nreturnArray[1] = fill;\nreturnArray[2] = fill;\nreturnArray[3] = fill;\nreturnArray[4] = fill;\nreturnArray[5] = fill;\nreturnArray[6] = fill;\nreturnArray[7] = fill;\nreturnArray[8] = fill;\n\n//node.warn(returnArray);\n\n//get the operation that a batch has been set to.\nvar batchA_OP = global.get(\"batchA_OP\");\nvar batchB_OP = global.get(\"batchB_OP\");\n\n// grab index to write the batch ID to.\nvar indexA = batchA_OP[2];\nvar indexB = batchB_OP[2];\n\n//write to spare outputs if no process\nvar no_op_A = 7; //Are these lines even needed? 27/11/23\nvar no_op_B = 8;\n\n\n\n// Cover furnace or not operating conditions\nif (batchA_OP == \"NOT OPERATING\") {\n    indexA = no_op_A;\n} else if (indexA == 'r') {\n    indexA = 6;\n} else {\n    indexA = parseInt(indexA);\n}\n\n\nif (batchB_OP == \"NOT OPERATING\"){\n    indexB = no_op_B;\n}\nelse if (indexB == 'r') {\n    indexB = 7;\n} else {\n    indexB = parseInt(indexB);\n}\n\n\n//output\n\nvar ret_msg1 = {};\nvar ret_msg2 = {};\n\nret_msg1.payload = global.get(\"BATCH_ID_1\");\nret_msg2.payload = global.get(\"BATCH_ID_2\");\n\n\nreturnArray[indexA - 1] = ret_msg1;\nreturnArray[indexB - 1] = ret_msg2;\n\n\n\nreturn returnArray;",
+        "outputs": 9,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1700,
+        "y": 700,
+        "wires": [
+            [
+                "c063f258bb35a506"
+            ],
+            [
+                "e7c2a2e317aef823"
+            ],
+            [
+                "49b229c2edcfada0"
+            ],
+            [
+                "3dc0da952b664d9c"
+            ],
+            [
+                "663fc7567cb5db13"
+            ],
+            [
+                "b6b5a7e4fcd921ae"
+            ],
+            [
+                "2c687cf179c9c8b7"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "bddb17a45cca7cc7",
+        "type": "function",
+        "z": "ec520f7208a61e6a",
+        "name": "function 2",
+        "func": "var numOutputs = node.numberOfOutputs;\nconst returnArray = new Array(numOutputs).fill(null);\nvar topic1 = global.get('Topic_button_states');\n\nvar FAST_LOG_switch_msg = {};\nvar EW_Circulation_switch_msg = {};\nvar OverRideEW2Buff_msg = {};\nvar OverRideBuff2EW_msg = {};\nvar T01_switch_msg = {};\nvar T02_switch_msg = {};\nvar T03_switch_msg = {};\nvar T04_switch_msg = {};\nvar T05_switch_msg = {};\nvar Furnace_switch_msg = {};\n\n\nif (msg.topic == topic1) {\n\n    //Set Globals\n\n\n    global.set(\"FAST_LOG_Switch\", msg.payload.FAST_LOG);\n    global.set(\"EW_PUMP_OVERRIDE_Switch\", msg.payload.EW_PUMP_OVERRIDE);\n\n\n\n    FAST_LOG_switch_msg.payload = msg.payload.FAST_LOG;\n    EW_Circulation_switch_msg.payload = msg.payload.EW_PUMP_OVERRIDE; \n    OverRideEW2Buff_msg.payload = msg.payload.overRide1;\n    OverRideBuff2EW_msg.payload = msg.payload.overRide2;\n\n    returnArray[0] = FAST_LOG_switch_msg;\n    returnArray[1] = EW_Circulation_switch_msg;\n    returnArray[2] = OverRideEW2Buff_msg;\n    returnArray[3] = OverRideBuff2EW_msg;\n\n}\n\n\n\nreturn returnArray;",
+        "outputs": 4,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "// Code added here will be run when the\n// node is being stopped or re-deployed.\n// node.warn(typeof global.get(\"FAST_LOGGING_Switch\"));\n\n\n// node.warn(typeof global.get(\"OPT01_Switch\"));\n// node.warn(typeof global.get(\"OPT02_Switch\"));\n// node.warn(typeof global.get(\"OPT03_Switch\"));\n// node.warn(typeof global.get(\"OPT04_Switch\"));\n// node.warn(typeof global.get(\"OPT05_Switch\"));\n// node.warn(typeof global.get(\"OPFurnace_Switch\"));",
+        "libs": [],
+        "x": 1000,
+        "y": 440,
+        "wires": [
+            [
+                "47443ecc857d3d08"
+            ],
+            [
+                "8273ecb8f1ebf0e3"
+            ],
+            [
+                "0f0476982fec7b16"
+            ],
+            [
+                "dcb61b611538f883"
+            ]
+        ]
+    },
+    {
+        "id": "b7ede8204f6ca354",
+        "type": "function",
+        "z": "ec520f7208a61e6a",
+        "name": "input handler",
+        "func": "if (msg.payload == ''){\n    //node.warn(\"entered loop\");\n} else {\n    global.set(\"BATCH_ID_1\", msg.payload);\n    //node.warn(\"restarted but loop not entered: error\");\n}\n\nmsg.payload = global.get(\"BATCH_ID_1\");\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1710,
+        "y": 920,
+        "wires": [
+            [
+                "21c53d13e7293177"
+            ]
+        ]
+    },
+    {
+        "id": "15a7dc88c5b2b839",
+        "type": "function",
+        "z": "ec520f7208a61e6a",
+        "name": "Drop List Assigner",
+        "func": "var index;\nvar numOutputs = node.numberOfOutputs;\nconst returnArray = new Array(numOutputs).fill(null);\nvar topic1 = global.get('Topic_button_states');\n\nvar batchA_msg = {};\nvar batchB_msg = {};\n\nif (msg.topic == topic1) {\n\n    //Set Globals\n\n    global.set(\"BATCH_ID_1\", msg.payload.batchID1);\n    global.set(\"BATCH_ID_2\", msg.payload.batchID2);\n\n    //Send through the state of the drop down list for batchA\n    if (msg.payload.T01_batch_ID == msg.payload.batchID1) {\n        batchA_msg.payload = \"T01\";\n    } else if (msg.payload.T02_batch_ID == msg.payload.batchID1) {\n        batchA_msg.payload = \"T02\";\n    } else if (msg.payload.T03_batch_ID == msg.payload.batchID1) {\n        batchA_msg.payload = \"T03\";\n    } else if (msg.payload.T04_batch_ID == msg.payload.batchID1) {\n        batchA_msg.payload = \"T04\";\n    } else if (msg.payload.T05_batch_ID == msg.payload.batchID1) {\n        batchA_msg.payload = \"T05\";\n    } else if (msg.payload.T06_batch_ID == msg.payload.batchID1) {\n        batchA_msg.payload = \"T06\";\n    } else if (msg.payload.furnace_batch_ID == msg.payload.batchID1) {\n        batchA_msg.payload = \"Furnace\";\n    } else {\n        batchA_msg.payload = \"NOT OPERATING\";\n    }\n    \n    //Send through the state of the dropdown list for batchB\n    if (msg.payload.T01_batch_ID == msg.payload.batchID2) {\n        batchB_msg.payload = \"T01\";\n    } else if (msg.payload.T02_batch_ID == msg.payload.batchID2) {\n        batchB_msg.payload = \"T02\";\n    } else if (msg.payload.T03_batch_ID == msg.payload.batchID2) {\n        batchB_msg.payload = \"T03\";\n    } else if (msg.payload.T04_batch_ID == msg.payload.batchID2) {\n        batchB_msg.payload = \"T04\";\n    } else if (msg.payload.T05_batch_ID == msg.payload.batchID2) {\n        batchB_msg.payload = \"T05\";\n    } else if (msg.payload.T06_batch_ID == msg.payload.batchID2) {\n        batchB_msg.payload = \"T06\";\n    } else if (msg.payload.furnace_batch_ID == msg.payload.batchID2) {\n        batchB_msg.payload = \"Furnace\";\n    } else {\n        batchB_msg.payload = \"NOT OPERATING\";\n    }\n\n    batchA_msg.topic = \"batchA\";\n    batchB_msg.topic = \"batchB\";\n\n\n    returnArray[0] = batchA_msg;\n    returnArray[1] = batchB_msg;\n\n    return returnArray;\n\n}\n\n\n",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "// Code added here will be run when the\n// node is being stopped or re-deployed.\n// node.warn(typeof global.get(\"FAST_LOGGING_Switch\"));\n\n\n// node.warn(typeof global.get(\"OPT01_Switch\"));\n// node.warn(typeof global.get(\"OPT02_Switch\"));\n// node.warn(typeof global.get(\"OPT03_Switch\"));\n// node.warn(typeof global.get(\"OPT04_Switch\"));\n// node.warn(typeof global.get(\"OPT05_Switch\"));\n// node.warn(typeof global.get(\"OPFurnace_Switch\"));",
+        "libs": [],
+        "x": 1010,
+        "y": 640,
+        "wires": [
+            [
+                "583a90f79d426747"
+            ],
+            [
+                "f5731eb06cde0bc6"
+            ]
+        ]
+    },
+    {
+        "id": "34f967fb9a6e3cb3",
+        "type": "function",
+        "z": "ec520f7208a61e6a",
+        "name": "BATCH ID ABSORBER",
+        "func": "var numOutputs = node.numberOfOutputs;\nconst returnArray = new Array(numOutputs).fill(null);\nvar topic1 = global.get('Topic_button_states');\n\nvar BatchID1_msg = {};\nvar BatchID2_msg = {};\n\nif (msg.topic == topic1) {\n\n    //Set Globals\n\n    global.set(\"BATCH_ID_1\", msg.payload.batchID1);\n    global.set(\"BATCH_ID_2\", msg.payload.batchID2);\n\n    BatchID1_msg.payload = msg.payload.batchID1;\n    BatchID2_msg.payload = msg.payload.batchID2;\n\n\n    returnArray[0] = BatchID1_msg;\n    returnArray[1] = BatchID2_msg;\n\n    return returnArray\n}\n\n\n\n",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1030,
+        "y": 940,
+        "wires": [
+            [
+                "e568cd8fd166ca7b"
+            ],
+            [
+                "db25722edaabf1dd"
+            ]
+        ]
+    },
+    {
+        "id": "1bba237091dc636a",
+        "type": "function",
+        "z": "ec520f7208a61e6a",
+        "name": "input handler",
+        "func": "if (msg.payload == ''){\n    //node.warn(\"entered loop\");\n} else {\n    global.set(\"BATCH_ID_2\", msg.payload);\n    //node.warn(\"restarted but loop not entered: error\");\n}\n\nmsg.payload = global.get(\"BATCH_ID_2\");\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1710,
+        "y": 1000,
+        "wires": [
+            [
+                "a806b59db13a9cc6"
+            ]
+        ]
+    },
+    {
+        "id": "dde8bc3b4ccc42ad",
+        "type": "function",
+        "z": "ec520f7208a61e6a",
+        "name": "function 4",
+        "func": "global.set(\"batchA_OP\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1520,
+        "y": 620,
+        "wires": [
+            [
+                "921b65dca4379646"
+            ]
+        ]
+    },
+    {
+        "id": "21af615086db6370",
+        "type": "function",
+        "z": "ec520f7208a61e6a",
+        "name": "function 5",
+        "func": "global.set(\"batchB_OP\", msg.payload);\n//node.warn(msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1520,
+        "y": 680,
+        "wires": [
+            [
+                "921b65dca4379646"
+            ]
+        ]
+    },
+    {
+        "id": "cc8cad26527477fc",
+        "type": "inject",
+        "z": "ec520f7208a61e6a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1510,
+        "y": 740,
+        "wires": [
+            [
+                "921b65dca4379646"
+            ]
+        ]
+    },
+    {
+        "id": "583a90f79d426747",
+        "type": "ui_dropdown",
+        "z": "ec520f7208a61e6a",
+        "name": "batch A",
+        "label": "",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "9f41ae3953064c26",
+        "order": 12,
+        "width": 9,
+        "height": 3,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "T01",
+                "value": "T01",
+                "type": "str"
+            },
+            {
+                "label": "T02",
+                "value": "T02",
+                "type": "str"
+            },
+            {
+                "label": "T03",
+                "value": "T03",
+                "type": "str"
+            },
+            {
+                "label": "T04",
+                "value": "T04",
+                "type": "str"
+            },
+            {
+                "label": "T05",
+                "value": "T05",
+                "type": "str"
+            },
+            {
+                "label": "T06",
+                "value": "T06",
+                "type": "str"
+            },
+            {
+                "label": "Furnace",
+                "value": "Furnace",
+                "type": "str"
+            },
+            {
+                "label": "NOT OPERATING",
+                "value": "NOT OPERATING",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1340,
+        "y": 620,
+        "wires": [
+            [
+                "dde8bc3b4ccc42ad"
+            ]
+        ]
+    },
+    {
+        "id": "f5731eb06cde0bc6",
+        "type": "ui_dropdown",
+        "z": "ec520f7208a61e6a",
+        "name": "batch A",
+        "label": "",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "9f41ae3953064c26",
+        "order": 20,
+        "width": 9,
+        "height": 3,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "T01",
+                "value": "T01",
+                "type": "str"
+            },
+            {
+                "label": "T02",
+                "value": "T02",
+                "type": "str"
+            },
+            {
+                "label": "T03",
+                "value": "T03",
+                "type": "str"
+            },
+            {
+                "label": "T04",
+                "value": "T04",
+                "type": "str"
+            },
+            {
+                "label": "T05",
+                "value": "T05",
+                "type": "str"
+            },
+            {
+                "label": "T06",
+                "value": "T06",
+                "type": "str"
+            },
+            {
+                "label": "Furnace",
+                "value": "Furnace",
+                "type": "str"
+            },
+            {
+                "label": "NOT OPERATING",
+                "value": "NOT OPERATING",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1340,
+        "y": 680,
+        "wires": [
+            [
+                "21af615086db6370"
+            ]
+        ]
+    },
+    {
+        "id": "47443ecc857d3d08",
+        "type": "ui_switch",
+        "z": "ec520f7208a61e6a",
+        "name": "FAST_LOGGING",
+        "label": "FAST LOGGING",
+        "tooltip": "",
+        "group": "9f41ae3953064c26",
+        "order": 2,
+        "width": 14,
+        "height": 3,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "x": 1370,
+        "y": 500,
+        "wires": [
+            [
+                "253c1165779150ea"
+            ]
+        ]
+    },
+    {
+        "id": "74e9ee21c852dc41",
+        "type": "ui_text_input",
+        "z": "ec520f7208a61e6a",
+        "name": "BatchID_inputA",
+        "label": "<font size=100>Enter Batch 1 ID:",
+        "tooltip": "",
+        "group": "9f41ae3953064c26",
+        "order": 11,
+        "width": 12,
+        "height": 3,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1540,
+        "y": 920,
+        "wires": [
+            [
+                "b7ede8204f6ca354"
+            ]
+        ]
+    },
+    {
+        "id": "8b80dc9f1eaf07fd",
+        "type": "ui_text_input",
+        "z": "ec520f7208a61e6a",
+        "name": "BatchID_inputB",
+        "label": "<font size=100>Enter Batch 2 ID:",
+        "tooltip": "",
+        "group": "9f41ae3953064c26",
+        "order": 19,
+        "width": 12,
+        "height": 3,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1540,
+        "y": 1000,
+        "wires": [
+            [
+                "1bba237091dc636a"
+            ]
+        ]
+    },
+    {
+        "id": "e568cd8fd166ca7b",
+        "type": "ui_text",
+        "z": "ec520f7208a61e6a",
+        "group": "9f41ae3953064c26",
+        "order": 10,
+        "width": 6,
+        "height": 3,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 1250,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "db25722edaabf1dd",
+        "type": "ui_text",
+        "z": "ec520f7208a61e6a",
+        "group": "9f41ae3953064c26",
+        "order": 18,
+        "width": 6,
+        "height": 3,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 1250,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "3c6fabdb9d136690",
+        "type": "ui_template",
+        "z": "ec520f7208a61e6a",
+        "group": "9f41ae3953064c26",
+        "name": "",
+        "order": 25,
+        "width": 6,
+        "height": 1,
+        "format": "<style>\n  md-switch {\n    scale: 400% !important\n  }\n\n  p.label {\n    font-size: 80px !important\n  }\n\n  .nr-dashboard-textinput input{\n    font-size: 80px !important\n    }\n\n  md-input-container .md-input {\n    height: 100px !important\n  }\n\n  p{\n    font-size: 80px !important\n  }\n\n</style",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1420,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0f2c3c899d00014c",
+        "type": "OpcUa-Item",
+        "z": "ec520f7208a61e6a",
+        "item": "ns=4;s=FurnaceBatchID",
+        "datatype": "String",
+        "value": "",
+        "name": "FurnaceBatchID",
+        "x": 2280,
+        "y": 860,
+        "wires": [
+            [
+                "d8a23248fa8225ea"
+            ]
+        ]
+    },
+    {
+        "id": "30ef25745bb9fe3a",
+        "type": "OpcUa-Item",
+        "z": "ec520f7208a61e6a",
+        "item": "ns=4;s=T05BatchID",
+        "datatype": "String",
+        "value": "",
+        "name": "T05BatchID",
+        "x": 2270,
+        "y": 780,
+        "wires": [
+            [
+                "d8a23248fa8225ea"
+            ]
+        ]
+    },
+    {
+        "id": "753ea934f92a3446",
+        "type": "OpcUa-Item",
+        "z": "ec520f7208a61e6a",
+        "item": "ns=4;s=T04BatchID",
+        "datatype": "String",
+        "value": "",
+        "name": "T04BatchID",
+        "x": 2270,
+        "y": 740,
+        "wires": [
+            [
+                "d8a23248fa8225ea"
+            ]
+        ]
+    },
+    {
+        "id": "2d5b5fc3e2e0c3fd",
+        "type": "OpcUa-Item",
+        "z": "ec520f7208a61e6a",
+        "item": "ns=4;s=T03BatchID",
+        "datatype": "String",
+        "value": "",
+        "name": "T03BatchID",
+        "x": 2270,
+        "y": 700,
+        "wires": [
+            [
+                "d8a23248fa8225ea"
+            ]
+        ]
+    },
+    {
+        "id": "4d4d0183d941f356",
+        "type": "OpcUa-Item",
+        "z": "ec520f7208a61e6a",
+        "item": "ns=4;s=T02BatchID",
+        "datatype": "String",
+        "value": "",
+        "name": "T02BatchID",
+        "x": 2270,
+        "y": 660,
+        "wires": [
+            [
+                "d8a23248fa8225ea"
+            ]
+        ]
+    },
+    {
+        "id": "1253528949a9d9da",
+        "type": "OpcUa-Item",
+        "z": "ec520f7208a61e6a",
+        "item": "ns=4;s=T01BatchID",
+        "datatype": "String",
+        "value": "",
+        "name": "T01BatchID",
+        "x": 2270,
+        "y": 620,
+        "wires": [
+            [
+                "d8a23248fa8225ea"
+            ]
+        ]
+    },
+    {
+        "id": "6e1b82958d48c881",
+        "type": "OpcUa-Item",
+        "z": "ec520f7208a61e6a",
+        "item": "ns=4;s=FAST_LOG",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "FAST_LOG",
+        "x": 2270,
+        "y": 540,
+        "wires": [
+            [
+                "d8a23248fa8225ea"
+            ]
+        ]
+    },
+    {
+        "id": "17ee6985c82b1e48",
+        "type": "OpcUa-Item",
+        "z": "ec520f7208a61e6a",
+        "item": "ns=4;s=BatchID1",
+        "datatype": "String",
+        "value": "",
+        "name": "BatchID1",
+        "x": 2260,
+        "y": 940,
+        "wires": [
+            [
+                "d8a23248fa8225ea"
+            ]
+        ]
+    },
+    {
+        "id": "e4737f79fed34fa0",
+        "type": "OpcUa-Item",
+        "z": "ec520f7208a61e6a",
+        "item": "ns=4;s=BatchID2",
+        "datatype": "String",
+        "value": "",
+        "name": "BatchID2",
+        "x": 2260,
+        "y": 980,
+        "wires": [
+            [
+                "d8a23248fa8225ea"
+            ]
+        ]
+    },
+    {
+        "id": "d8a23248fa8225ea",
+        "type": "OpcUa-Client",
+        "z": "ec520f7208a61e6a",
+        "endpoint": "a053172554a6aedb",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": "500",
+        "timeUnit": "ms",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "folderName4PKI": "",
+        "useTransport": false,
+        "maxChunkCount": "",
+        "maxMessageSize": "",
+        "receiveBufferSize": "",
+        "sendBufferSize": "",
+        "name": "",
+        "x": 2520,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c063f258bb35a506",
+        "type": "rbe",
+        "z": "ec520f7208a61e6a",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 2030,
+        "y": 620,
+        "wires": [
+            [
+                "1253528949a9d9da"
+            ]
+        ]
+    },
+    {
+        "id": "e7c2a2e317aef823",
+        "type": "rbe",
+        "z": "ec520f7208a61e6a",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 2030,
+        "y": 660,
+        "wires": [
+            [
+                "4d4d0183d941f356"
+            ]
+        ]
+    },
+    {
+        "id": "49b229c2edcfada0",
+        "type": "rbe",
+        "z": "ec520f7208a61e6a",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 2030,
+        "y": 700,
+        "wires": [
+            [
+                "2d5b5fc3e2e0c3fd"
+            ]
+        ]
+    },
+    {
+        "id": "3dc0da952b664d9c",
+        "type": "rbe",
+        "z": "ec520f7208a61e6a",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 2030,
+        "y": 740,
+        "wires": [
+            [
+                "753ea934f92a3446"
+            ]
+        ]
+    },
+    {
+        "id": "663fc7567cb5db13",
+        "type": "rbe",
+        "z": "ec520f7208a61e6a",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 2030,
+        "y": 780,
+        "wires": [
+            [
+                "30ef25745bb9fe3a"
+            ]
+        ]
+    },
+    {
+        "id": "2c687cf179c9c8b7",
+        "type": "rbe",
+        "z": "ec520f7208a61e6a",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 2030,
+        "y": 860,
+        "wires": [
+            [
+                "0f2c3c899d00014c"
+            ]
+        ]
+    },
+    {
+        "id": "21c53d13e7293177",
+        "type": "rbe",
+        "z": "ec520f7208a61e6a",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 2030,
+        "y": 940,
+        "wires": [
+            [
+                "17ee6985c82b1e48"
+            ]
+        ]
+    },
+    {
+        "id": "a806b59db13a9cc6",
+        "type": "rbe",
+        "z": "ec520f7208a61e6a",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 2030,
+        "y": 980,
+        "wires": [
+            [
+                "e4737f79fed34fa0"
+            ]
+        ]
+    },
+    {
+        "id": "81de93120daf0e59",
+        "type": "comment",
+        "z": "ec520f7208a61e6a",
+        "name": "report by exception",
+        "info": "Only report if OPCUA node changes",
+        "x": 2030,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "253c1165779150ea",
+        "type": "rbe",
+        "z": "ec520f7208a61e6a",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 2030,
+        "y": 540,
+        "wires": [
+            [
+                "6e1b82958d48c881"
+            ]
+        ]
+    },
+    {
+        "id": "8273ecb8f1ebf0e3",
+        "type": "ui_switch",
+        "z": "ec520f7208a61e6a",
+        "name": "EW_PUMP_OVERRIDE",
+        "label": "EW PUMP OVERRIDE",
+        "tooltip": "",
+        "group": "9f41ae3953064c26",
+        "order": 3,
+        "width": 14,
+        "height": 3,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "x": 1390,
+        "y": 560,
+        "wires": [
+            [
+                "3f7cbed94d72cb73"
+            ]
+        ]
+    },
+    {
+        "id": "3f7cbed94d72cb73",
+        "type": "rbe",
+        "z": "ec520f7208a61e6a",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 2030,
+        "y": 580,
+        "wires": [
+            [
+                "cbd9d96946c28dbe"
+            ]
+        ]
+    },
+    {
+        "id": "cbd9d96946c28dbe",
+        "type": "OpcUa-Item",
+        "z": "ec520f7208a61e6a",
+        "item": "ns=4;s=OVERRIDE_EW_RECIRC",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "OVERRIDE_EW_RECIRC",
+        "x": 2320,
+        "y": 580,
+        "wires": [
+            [
+                "d8a23248fa8225ea"
+            ]
+        ]
+    },
+    {
+        "id": "0f0476982fec7b16",
+        "type": "ui_switch",
+        "z": "ec520f7208a61e6a",
+        "name": "",
+        "label": "P1",
+        "tooltip": "",
+        "group": "9f41ae3953064c26",
+        "order": 5,
+        "width": 7,
+        "height": 3,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "x": 1330,
+        "y": 400,
+        "wires": [
+            [
+                "2eb2c816deaaafe0"
+            ]
+        ]
+    },
+    {
+        "id": "dcb61b611538f883",
+        "type": "ui_switch",
+        "z": "ec520f7208a61e6a",
+        "name": "",
+        "label": "P2",
+        "tooltip": "",
+        "group": "9f41ae3953064c26",
+        "order": 6,
+        "width": 7,
+        "height": 3,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "x": 1330,
+        "y": 440,
+        "wires": [
+            [
+                "081f9380deb6d6f8"
+            ]
+        ]
+    },
+    {
+        "id": "67e5dcbb3257d696",
+        "type": "OpcUa-Item",
+        "z": "ec520f7208a61e6a",
+        "item": "ns=4;s=EW_TO_BUFFER_PUMP_OVERRIDE_VALUE",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "ew2buffOverride",
+        "x": 2280,
+        "y": 460,
+        "wires": [
+            [
+                "d8a23248fa8225ea"
+            ]
+        ]
+    },
+    {
+        "id": "dad78bdde4c2089d",
+        "type": "OpcUa-Item",
+        "z": "ec520f7208a61e6a",
+        "item": "ns=4;s=BUFFER_TO_EW_PUMP_OVERRIDE_VALUE",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "buff2ewOverride",
+        "x": 2280,
+        "y": 500,
+        "wires": [
+            [
+                "d8a23248fa8225ea"
+            ]
+        ]
+    },
+    {
+        "id": "2eb2c816deaaafe0",
+        "type": "rbe",
+        "z": "ec520f7208a61e6a",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 2030,
+        "y": 460,
+        "wires": [
+            [
+                "67e5dcbb3257d696"
+            ]
+        ]
+    },
+    {
+        "id": "081f9380deb6d6f8",
+        "type": "rbe",
+        "z": "ec520f7208a61e6a",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 2030,
+        "y": 500,
+        "wires": [
+            [
+                "dad78bdde4c2089d"
+            ]
+        ]
+    },
+    {
+        "id": "004b2442e5741e6d",
+        "type": "OpcUa-Item",
+        "z": "ec520f7208a61e6a",
+        "item": "ns=4;s=T06BatchID",
+        "datatype": "String",
+        "value": "",
+        "name": "T06BatchID",
+        "x": 2270,
+        "y": 820,
+        "wires": [
+            [
+                "d8a23248fa8225ea"
+            ]
+        ]
+    },
+    {
+        "id": "b6b5a7e4fcd921ae",
+        "type": "rbe",
+        "z": "ec520f7208a61e6a",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 2030,
+        "y": 820,
+        "wires": [
+            [
+                "004b2442e5741e6d"
+            ]
+        ]
+    },
+    {
+        "id": "11cc8d14ae469e6f",
+        "type": "link in",
+        "z": "ec520f7208a61e6a",
+        "name": "link in 1",
+        "links": [
+            "d614598a83661ccc"
+        ],
+        "x": 735,
+        "y": 460,
+        "wires": [
+            [
+                "e6d71b93752cf439"
+            ]
+        ]
+    },
+    {
+        "id": "83c6252ceb443183",
+        "type": "comment",
+        "z": "ec520f7208a61e6a",
+        "name": "Write Data to PLC",
+        "info": "There is a limited number of clients you can use.\nYou can string commands together and push into a single client.",
+        "x": 1030,
+        "y": 320,
         "wires": []
     },
     {
