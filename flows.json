@@ -19112,7 +19112,7 @@
         "z": "af80505e1c4f7081",
         "name": "spacer",
         "group": "485fc22d5a0ba791",
-        "order": 10,
+        "order": 9,
         "width": 15,
         "height": 1
     },
@@ -20319,7 +20319,7 @@
         "type": "ui_text",
         "z": "af80505e1c4f7081",
         "group": "485fc22d5a0ba791",
-        "order": 9,
+        "order": 10,
         "width": 0,
         "height": 0,
         "name": "Temperature T-01",
