@@ -21838,7 +21838,7 @@
             ],
             [
                 "9dc92ddb307b058c",
-                "21b9ebdb1b3edcaa"
+                "f9f1b6fd63c94719"
             ],
             [
                 "ebb34d426764007f"
@@ -22419,7 +22419,7 @@
         "dot": false,
         "ymin": "0",
         "ymax": "500",
-        "removeOlder": "20",
+        "removeOlder": "60",
         "removeOlderPoints": "",
         "removeOlderUnit": "60",
         "cutout": 0,
@@ -22438,7 +22438,7 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "x": 1250,
+        "x": 1590,
         "y": 780,
         "wires": [
             []
@@ -22870,5 +22870,25 @@
         "x": 1890,
         "y": 1060,
         "wires": []
+    },
+    {
+        "id": "f9f1b6fd63c94719",
+        "type": "rbe",
+        "z": "c53c8744c8bcddc4",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1330,
+        "y": 780,
+        "wires": [
+            [
+                "21b9ebdb1b3edcaa"
+            ]
+        ]
     }
 ]
