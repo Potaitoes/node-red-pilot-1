@@ -21937,8 +21937,7 @@
         "wires": [
             [
                 "a1ce05848db0af19",
-                "220e2a90f76b004c",
-                "7a92d692e4148071"
+                "220e2a90f76b004c"
             ]
         ]
     },
@@ -22460,26 +22459,6 @@
         "templateScope": "local",
         "x": 1350,
         "y": 1020,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7a92d692e4148071",
-        "type": "ui_template",
-        "z": "c53c8744c8bcddc4",
-        "group": "675036dd.603328",
-        "name": "gauge-colour",
-        "order": 6,
-        "width": 0,
-        "height": 0,
-        "format": "<style ng-if=\"msg.payload > 2\">\n    .nr-dashboard-gauge circle {\n        fill: red !important;\n    }\n</style>\n",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "x": 1350,
-        "y": 1060,
         "wires": [
             []
         ]
