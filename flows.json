@@ -22793,7 +22793,7 @@
         "y": 740,
         "wires": [
             [
-                "5bfe968cd79285dd"
+                "3af21339fa345789"
             ]
         ]
     },
@@ -22888,6 +22888,26 @@
         "wires": [
             [
                 "21b9ebdb1b3edcaa"
+            ]
+        ]
+    },
+    {
+        "id": "3af21339fa345789",
+        "type": "rbe",
+        "z": "c53c8744c8bcddc4",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 630,
+        "y": 760,
+        "wires": [
+            [
+                "5bfe968cd79285dd"
             ]
         ]
     }
