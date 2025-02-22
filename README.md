@@ -1,7 +1,7 @@
-ZincAutomation
+DemoAutomation
 ==============
 
-Automation Dashboard and Controller for Zincovery pilot plant.
+Demonstration Automation Dashboard and Controller for a pilot plant.
 
 ### About
 
